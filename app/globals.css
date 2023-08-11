@@ -3,25 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --neutral-dark: #443e53;
+  --neutral-n-10: #ffffff;
+  --neutral-n-30: #f5f5f5;
+  --neutral-n-40: #e0e0e0;
+  --neutral-n-50: #cfd1d4;
+  --neutral-n-70: #878b93;
+  --neutral-n-90: #383f4c;
+  --neutral-n-100: #101828;
+
+  --primary: #1f40ae;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  /* text color */
+  .text-neutral-dark {
+    color: var(--neutral-dark);
   }
-}
+  .text-neutral-n-10 {
+    color: var(--neutral-n-10);
+  }
+  .text-neutral-n-70 {
+    color: var(--neutral-n-70);
+  }
+  .text-neutral-n-90 {
+    color: var(--neutral-n-90);
+  }
+  .text-neutral-n-100 {
+    color: var(--neutral-n-100);
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background color */
+  .bg-primary-main {
+    background-color: var(--primary);
+  }
+  .bg-neutral-n-10 {
+    background-color: var(--neutral-n-10);
+  }
+  .bg-neutral-n-30 {
+    background-color: var(--neutral-n-30);
+  }
+  .bg-neutral-n-50 {
+    background-color: var(--neutral-n-50);
+  }
+
+  /* buttons */
+  .btn-primary {
+    border-radius: 6px;
+    background-color: var(--primary);
+  }
+
+  .btn-border-primary {
+    border-radius: 6px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+  }
+
+  .btn-border-n-40 {
+    border-radius: 6px;
+    border: 1px solid var(--neutral-n-40);
+  }
 }
