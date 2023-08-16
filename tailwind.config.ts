@@ -10,6 +10,6 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/line-clamp")],
 };
 export default config;

@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={instrument_sans.className}>
         <NavbarWithCTAButton />
         {children}
-        {/* <FooterWithSocialMediaIcons /> */}
+        <FooterWithSocialMediaIcons />
       </body>
     </html>
   );
