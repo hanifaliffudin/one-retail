@@ -5,7 +5,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import TalkToUs from "./components/TalkToUs";
 import Testimonial from "./components/Testimonial";
-import ExploreAccordion from "./components/ExploreAccordionItem";
 import ExploreAccordionItem from "./components/ExploreAccordionItem";
 
 export default function Home() {
@@ -102,7 +101,7 @@ export default function Home() {
                 initial={{ position: "absolute", opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  x: [100, 0],
+                  // x: [100, 0],
                   transition: { duration: 0.5, delay: 2 },
                 }}
               >
