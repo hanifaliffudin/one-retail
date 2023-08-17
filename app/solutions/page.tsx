@@ -14,14 +14,14 @@ const SolutionsPage = () => {
     <main>
       <section>
         <div className="mt-44 flex-col items-center">
-          <p className="mb-5 text-center text-neutral-n-80">
+          <p className="mb-5 text-center text-neutral-n-80 px-4">
             One Retail : Smart Retail Platform builder made special for Your
             business
           </p>
-          <div className="flex justify-center">
-            <h1 className="mb-10 text-center text-neutral-n-90 font-bold sm:text-[40px] sm:leading-[50px] md:w-[683px]">
-              <span className="text-primary">Simplify</span> your day-to-day
-              operations to scale up your business
+          <div className="flex justify-center px-4">
+            <h1 className="mb-10 text-center text-neutral-n-90 font-bold text-[40px] leading-[50px] md:w-[683px]">
+              <span className="text-primary">Simplify</span> Your Day-to-day
+              Operations to Scale Up Your Business
             </h1>
           </div>
           <div className="flex justify-center mb-20">
@@ -32,9 +32,9 @@ const SolutionsPage = () => {
               Learn More
             </Link>
           </div>
-          <div className="flex gap-x-7 items-end">
-            <div className="w-[250px] mb-[44PX] ml-7 text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
-              <p className="font-medium mb-7">
+          <div className="flex gap-x-7 items-end overflow-x-auto">
+            <div className="sm:w-[250px] min-w-[250px] mb-[44PX] ml-7 text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+              <p className="font-medium mb-7 ">
                 “One of the best retail service for me. Loved the community too.
                 Very helpful.”
               </p>
@@ -66,7 +66,7 @@ const SolutionsPage = () => {
       </section>
 
       <section>
-        <div className="py-20">
+        <div className="py-20 px-4">
           <div className="flex justify-center">
             <h2 className="font-bold text-center text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[824px]">
               Revolutionize your business operations with{" "}
@@ -79,8 +79,8 @@ const SolutionsPage = () => {
             tools and data-driven systems to enhance your overall retail
             productivity and customer experience
           </p>
-          <div className="grid grid-cols-3 gap-x-6 sm:px-[155px]">
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+          <div className="grid grid-cols-3 gap-6 sm:px-[155px]">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <p className="text-primary-p-50 font-semibold mb-3">
                 Satisfaction with Digital Shopping
               </p>
@@ -95,7 +95,7 @@ const SolutionsPage = () => {
               </p>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <p className="text-primary-p-50 font-semibold mb-3">
                 Strengthen Competitiveness
               </p>
@@ -111,7 +111,7 @@ const SolutionsPage = () => {
               </p>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <p className="text-primary-p-50 font-semibold mb-3">
                 Enhance efficiency, Reduce costs
               </p>
@@ -135,20 +135,20 @@ const SolutionsPage = () => {
           <p className="text-center text-primary font-semibold mb-5">
             Business Solutions
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <h2 className="font-bold text-center text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[824px]">
               Powerful tools to deliver{" "}
               <span className="text-primary">world-class</span> customer
               experiences
             </h2>
           </div>
-          <p className="text-center text-neutral-n-90 mb-16">
+          <p className="text-center text-neutral-n-90 mb-16 px-4">
             Unleash the power of our One Retail solutions to create exceptional
             customer experiences. Elevate your business with our powerful tools
             and drive growth in the competitive retail landscape.
           </p>
 
-          <div className="flex justify-center uppercase mb-10">
+          <div className="flex justify-center uppercase mb-10 px-4">
             <p
               onClick={() => setSolution(0)}
               className={`w-[162px] cursor-pointer pb-3 text-center text-sm ${
@@ -182,21 +182,29 @@ const SolutionsPage = () => {
           </div>
 
           {solution == 0 && (
-            <img className="w-full" src="/solutions/retail.svg" alt="retail" />
+            <img
+              className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
+              src="/solutions/retail.svg"
+              alt="retail"
+            />
           )}
           {solution == 1 && (
-            <img className="w-full" src="/solutions/cafe.svg" alt="cafe" />
+            <img
+              className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
+              src="/solutions/cafe.svg"
+              alt="cafe"
+            />
           )}
           {solution == 2 && (
             <img
-              className="w-full"
+              className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
               src="/solutions/restaurant.svg"
               alt="restaurant"
             />
           )}
 
-          <div className="grid grid-cols-3 gap-6 mt-10 mb-20">
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+          <div className="grid grid-cols-3 gap-6 mt-10 mb-20 px-4">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <div className="flex gap-x-4 items-center">
                 <img src="/icons/pos-icon.svg" alt="pos" />
                 <h4 className="font-bold text-neutral-n-100">Point of Sales</h4>
@@ -215,7 +223,7 @@ const SolutionsPage = () => {
               </Link>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <div className="flex gap-x-4 items-center">
                 <img src="/icons/sco-icon.svg" alt="sco" />
                 <h4 className="font-bold text-neutral-n-100">
@@ -236,7 +244,7 @@ const SolutionsPage = () => {
               </Link>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <div className="flex gap-x-4 items-center">
                 <img src="/icons/so-icon.svg" alt="so" />
                 <h4 className="font-bold text-neutral-n-100">Self-ordering</h4>
@@ -255,7 +263,7 @@ const SolutionsPage = () => {
               </Link>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <div className="flex gap-x-4 items-center">
                 <img src="/icons/cel-icon.svg" alt="cel" />
                 <h4 className="font-bold text-neutral-n-100">
@@ -276,7 +284,7 @@ const SolutionsPage = () => {
               </Link>
             </div>
 
-            <div className="border border-[#E0E0E0] rounded-lg p-5">
+            <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
               <div className="flex gap-x-4 items-center">
                 <img src="/icons/ess-icon.svg" alt="ess" />
                 <h4 className="font-bold text-neutral-n-100">
