@@ -4,11 +4,15 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavbarWithCTAButton() {
+  const pathname = usePathname();
   const [dropdownProduct, setDropdownProduct] = useState(false);
   const [showProduct, setShowProduct] = useState(1);
   const [menuMobile, setMenuMobile] = useState(false);
+
+  console.log(pathname);
 
   return (
     <>
@@ -75,7 +79,9 @@ export default function NavbarWithCTAButton() {
               <li>
                 <Link
                   href="/"
-                  className="text-neutral-n-90 font-semibold"
+                  className={
+                    pathname == "/" ? "text-neutral-n-90 font-semibold" : ""
+                  }
                   aria-current="page"
                 >
                   Home
@@ -476,13 +482,38 @@ export default function NavbarWithCTAButton() {
                 </AnimatePresence>
               </li>
               <li>
-                <Link href="solutions">Solutions</Link>
+                <Link
+                  href="solutions"
+                  className={
+                    pathname == "/solutions"
+                      ? "text-neutral-n-90 font-semibold"
+                      : ""
+                  }
+                >
+                  Solutions
+                </Link>
               </li>
               <li>
-                <a href="#">Hardware</a>
+                <Link
+                  href="#"
+                  className={
+                    pathname == "/hardware"
+                      ? "text-neutral-n-90 font-semibold"
+                      : ""
+                  }
+                >
+                  Hardware
+                </Link>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <Link
+                  href="#"
+                  className={
+                    pathname == "/blog" ? "text-neutral-n-90 font-semibold" : ""
+                  }
+                >
+                  Blog
+                </Link>
               </li>
             </ul>
           </div>
