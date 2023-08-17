@@ -146,17 +146,37 @@ export default function Home() {
             transition: { duration: 0.5, delay: 3 },
           }}
         >
-          <div className="flex gap-x-8 items-center overflow-x-auto">
-            <img src="/home/aeon.svg" alt="aeon" />
-            <img src="/home/cmhl.svg" alt="cmhl" />
-            <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
-            <img src="/home/aeon-big.svg" alt="aeon-big" />
-            <img src="/home/pahtama.svg" alt="pahtama" />
-            <img src="/home/city.svg" alt="city" />
-            <img src="/home/png.svg" alt="png" />
-            <img src="/home/kids.svg" alt="kids" />
-            <img src="/home/komaiso.svg" alt="komaiso" />
-            <img src="/home/daiso.svg" alt="daiso" />
+          <div className="been-trusted-track gap-x-8 flex items-center">
+            <div className="slide">
+              <img src="/home/aeon.svg" alt="aeon" />
+            </div>
+            <div className="slide">
+              <img src="/home/cmhl.svg" alt="cmhl" />
+            </div>
+            <div className="slide">
+              <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
+            </div>
+            <div className="slide">
+              <img src="/home/aeon-big.svg" alt="aeon-big" />
+            </div>
+            <div className="slide">
+              <img src="/home/pahtama.svg" alt="pahtama" />
+            </div>
+            <div className="slide">
+              <img src="/home/city.svg" alt="city" />
+            </div>
+            <div className="slide">
+              <img src="/home/png.svg" alt="png" />
+            </div>
+            <div className="slide">
+              <img src="/home/kids.svg" alt="kids" />
+            </div>
+            <div className="slide">
+              <img src="/home/komaiso.svg" alt="komaiso" />
+            </div>
+            <div className="slide">
+              <img src="/home/daiso.svg" alt="daiso" />
+            </div>
           </div>
         </motion.div>
       </section>

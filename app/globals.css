@@ -92,3 +92,29 @@
     border: 1px solid var(--neutral-n-40);
   }
 }
+
+/* animation slider auto */
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-188px * 5));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-188px * 5));
+  }
+}
+
+.been-trusted-track {
+  -webkit-animation: scroll 10s linear infinite;
+  animation: scroll 10s linear infinite;
+  display: flex;
+  width: calc(188px * 10);
+}

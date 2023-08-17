@@ -495,7 +495,7 @@ export default function NavbarWithCTAButton() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="hardware"
                   className={
                     pathname == "/hardware"
                       ? "text-neutral-n-90 font-semibold"
@@ -507,7 +507,7 @@ export default function NavbarWithCTAButton() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="blog"
                   className={
                     pathname == "/blog" ? "text-neutral-n-90 font-semibold" : ""
                   }
