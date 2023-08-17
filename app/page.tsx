@@ -1356,12 +1356,12 @@ export default function Home() {
           <div className="flex items-center">
             <div className="grid grid-cols-3 pl-24 gap-x-20">
               <motion.div
-                initial={{ borderBottom: "1px solid transparent" }}
-                whileHover={{
-                  borderBottom: "1px solid blue",
-                  width: [0, 50, 100],
-                  transition: { duration: 1 },
-                }}
+              // initial={{ borderBottom: "1px solid transparent" }}
+              // whileHover={{
+              //   borderBottom: "1px solid blue",
+              //   width: [0, 50, 100],
+              //   transition: { duration: 1 },
+              // }}
               >
                 <a href="#">
                   <img
