@@ -73,13 +73,13 @@ export default function NavbarWithCTAButton() {
           >
             <ul className="flex flex-col p-4 xl:p-0 mt-4 text-neutral-n-70 font-medium border border-gray-100 rounded-lg bg-gray-50 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white ">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="text-neutral-n-90 font-semibold"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -476,19 +476,13 @@ export default function NavbarWithCTAButton() {
                 </AnimatePresence>
               </li>
               <li>
-                <a href="#" className="">
-                  Solutions
-                </a>
+                <Link href="solutions">Solutions</Link>
               </li>
               <li>
-                <a href="#" className="">
-                  Hardware
-                </a>
+                <a href="#">Hardware</a>
               </li>
               <li>
-                <a href="#" className="">
-                  Blog
-                </a>
+                <a href="#">Blog</a>
               </li>
             </ul>
           </div>
@@ -547,7 +541,7 @@ export default function NavbarWithCTAButton() {
                         >
                           <div className="flex flex-col gap-y-4">
                             <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div className="">
+                              <div>
                                 <div className="flex items-center gap-x-4 mb-2.5">
                                   <img
                                     src="/icons/oms-icon-blue.svg"
@@ -575,7 +569,7 @@ export default function NavbarWithCTAButton() {
                             </div>
 
                             <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div className="">
+                              <div>
                                 <div className="flex items-center gap-x-4 mb-2.5">
                                   <img
                                     src="/icons/crm-icon-blue.svg"
@@ -603,7 +597,7 @@ export default function NavbarWithCTAButton() {
                             </div>
 
                             <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div className="">
+                              <div>
                                 <div className="flex items-center gap-x-4 mb-2.5">
                                   <img
                                     src="/icons/oa-icon-blue.svg"
@@ -631,7 +625,7 @@ export default function NavbarWithCTAButton() {
                             </div>
 
                             <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div className="">
+                              <div>
                                 <div className="flex items-center gap-x-4 mb-2.5">
                                   <img
                                     src="/icons/sm-icon-blue.svg"

@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <main className="">
+    <main>
       <section className="bg-white">
         <div className="grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
           <div className="md:ml-24 px-4 md:px-0 md:mt-[180px] mt-6 mb-7 place-self-center lg:col-span-5 col-span-12 order-last md:order-first">
@@ -105,7 +105,7 @@ export default function Home() {
                   transition: { duration: 0.5, delay: 2 },
                 }}
               >
-                <img className="" src="/home/hero-2.svg" alt="hero-2" />
+                <img src="/home/hero-2.svg" alt="hero-2" />
               </motion.div>
               <motion.div
                 className="absolute xl:bottom-24 bottom-10 xl:right-[340px] w-1/2 xl:w-auto"
@@ -116,7 +116,7 @@ export default function Home() {
                   transition: { duration: 0.5, delay: 2 },
                 }}
               >
-                <img className="" src="/home/hero-3.svg" alt="hero-3" />
+                <img src="/home/hero-3.svg" alt="hero-3" />
               </motion.div>
             </div>
           </div>
@@ -1315,7 +1315,7 @@ export default function Home() {
       <section className="hidden md:block">
         <div className="py-24 mb-20">
           <div className="flex justify-between items-center px-24 mb-[38px]">
-            <div className="">
+            <div>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -1363,7 +1363,7 @@ export default function Home() {
                   transition: { duration: 1 },
                 }}
               >
-                <a href="#" className="">
+                <a href="#">
                   <img
                     className="w-full h-[236px] rounded-lg mb-5 object-cover"
                     src="/home/article-1.svg"
@@ -1384,7 +1384,7 @@ export default function Home() {
                 </a>
               </motion.div>
 
-              <a href="#" className="">
+              <a href="#">
                 <img
                   className="w-full h-[236px] rounded-lg mb-5 object-cover"
                   src="/home/article-2.svg"
@@ -1403,7 +1403,7 @@ export default function Home() {
                 </p>
               </a>
 
-              <a href="#" className="">
+              <a href="#">
                 <img
                   className="w-full h-[236px] rounded-lg mb-5 object-cover"
                   src="/home/article-1.svg"

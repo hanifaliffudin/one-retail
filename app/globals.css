@@ -16,6 +16,7 @@
   --neutral-n-700: #616161;
 
   --primary: #1f40ae;
+  --primary-p-50: #4460bb;
 }
 
 @layer utilities {
@@ -23,11 +24,17 @@
   .text-primary {
     color: var(--primary);
   }
+  .text-primary-p-50 {
+    color: var(--primary-p-50);
+  }
   .text-neutral-dark {
     color: var(--neutral-dark);
   }
   .text-neutral-n-10 {
     color: var(--neutral-n-10);
+  }
+  .text-neutral-n-50 {
+    color: var(--neutral-n-50);
   }
   .text-neutral-n-60 {
     color: var(--neutral-n-60);
