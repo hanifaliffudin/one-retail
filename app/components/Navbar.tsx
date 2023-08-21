@@ -12,8 +12,6 @@ export default function NavbarWithCTAButton() {
   const [showProduct, setShowProduct] = useState(1);
   const [menuMobile, setMenuMobile] = useState(false);
 
-  console.log(pathname);
-
   return (
     <>
       <nav
@@ -533,16 +531,16 @@ export default function NavbarWithCTAButton() {
               <div className="sm:hidden h-screen overflow-y-auto bg-white w-full z-[1000] fixed border-t border-[#EDEDED] px-4">
                 <div className="w-full h-[calc(100%-80px)] flex text-white flex-col">
                   <div className="flex flex-col">
-                    <a
+                    <Link
                       className={`my-4 ${
                         dropdownProduct
                           ? "font-medium text-neutral-n-70"
                           : "font-bold text-neutral-n-100"
                       }`}
-                      href="#"
+                      href="/"
                     >
                       Home
-                    </a>
+                    </Link>
                     <div
                       onClick={() => setDropdownProduct(!dropdownProduct)}
                       className={` my-4 flex items-center justify-between ${
@@ -687,12 +685,18 @@ export default function NavbarWithCTAButton() {
                       )}
                     </AnimatePresence>
 
-                    <a className="font-medium text-neutral-n-70 my-4" href="#">
+                    <Link
+                      className="font-medium text-neutral-n-70 my-4"
+                      href="solutions"
+                    >
                       Solutions
-                    </a>
-                    <a className="font-medium text-neutral-n-70 my-4" href="#">
+                    </Link>
+                    <Link
+                      className="font-medium text-neutral-n-70 my-4"
+                      href="hardware"
+                    >
                       Hardware
-                    </a>
+                    </Link>
                   </div>
                   <div className="flex-1"></div>
                   <div className="flex justify-between items-center">

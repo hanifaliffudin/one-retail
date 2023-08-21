@@ -4,13 +4,9 @@ import Testimonial from "../components/Testimonial";
 import FAQ from "../components/FAQ";
 import TalkToUs from "../components/TalkToUs";
 import Link from "next/link";
-import { useState } from "react";
-import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
 const SolutionsPage = () => {
-  const [solution, setSolution] = useState(0);
-
   return (
     <main>
       <section>
@@ -49,21 +45,64 @@ const SolutionsPage = () => {
               transition: { duration: 0.5, delay: 1 },
             }}
           >
-            <div className="flex gap-x-7 items-end overflow-x-auto">
-              <img src="/hardware/hardware-1.svg" alt="image" />
-              <img src="/hardware/hardware-2.svg" alt="image" />
-              <img src="/hardware/hardware-3.svg" alt="image" />
-              <img src="/hardware/hardware-4.svg" alt="image" />
-              <img
-                className="mb-[51px]"
-                src="/hardware/hardware-5.svg"
-                alt="image"
-              />
-              <img
-                className="mb-6"
-                src="/hardware/hardware-6.svg"
-                alt="image"
-              />
+            <div className="hardware scroller__wrapper">
+              <div className="scroller__container">
+                <div className="scroller !items-center">
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-1.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-2.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-3.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-4.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img
+                      className=" !w-[147px]"
+                      src="/hardware/hardware-5.svg"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="scroller__item">
+                    <img
+                      className="!w-[144px]"
+                      src="/hardware/hardware-6.svg"
+                      alt="image"
+                    />
+                  </div>
+
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-1.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-2.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-3.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-4.svg" alt="image" />
+                  </div>
+                  <div className="scroller__item">
+                    <img
+                      className=" !w-[147px]"
+                      src="/hardware/hardware-5.svg"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="scroller__item">
+                    <img
+                      className="!w-[144px]"
+                      src="/hardware/hardware-6.svg"
+                      alt="image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

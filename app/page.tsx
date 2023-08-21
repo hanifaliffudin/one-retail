@@ -1,11 +1,12 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import TalkToUs from "./components/TalkToUs";
 import Testimonial from "./components/Testimonial";
 import ExploreAccordionItem from "./components/ExploreAccordionItem";
+import Link from "next/link";
 
 export default function Home() {
   const [imageSlideIndex, setImageSlideIndex] = useState(1);
@@ -61,23 +62,27 @@ export default function Home() {
                 transition: { duration: 0.5, delay: 1 },
               }}
             >
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="btn-primary text-neutral-n-10 py-2.5 px-4 font-semibold mr-5"
               >
                 Let’s Get Demo!
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/#discover"
                 className="btn-border-primary py-2.5 px-4 font-semibold"
               >
                 Learn More
-              </a>
+              </Link>
               <div className="mt-6 font-semibold text-neutral-dark">
-                <a className="flex items-center gap-x-1" href="#">
+                <Link
+                  className="flex items-center gap-x-1"
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=+62821001775"
+                >
                   Talk to sales{" "}
                   <Icon width={24} icon="material-symbols:chevron-right" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -138,6 +143,7 @@ export default function Home() {
             </h2>
           </motion.div>
         </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -146,43 +152,110 @@ export default function Home() {
             transition: { duration: 0.5, delay: 3 },
           }}
         >
-          <div className="been-trusted-track gap-x-8 flex items-center">
-            <div className="slide">
-              <img src="/home/aeon.svg" alt="aeon" />
-            </div>
-            <div className="slide">
-              <img src="/home/cmhl.svg" alt="cmhl" />
-            </div>
-            <div className="slide">
-              <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
-            </div>
-            <div className="slide">
-              <img src="/home/aeon-big.svg" alt="aeon-big" />
-            </div>
-            <div className="slide">
-              <img src="/home/pahtama.svg" alt="pahtama" />
-            </div>
-            <div className="slide">
-              <img src="/home/city.svg" alt="city" />
-            </div>
-            <div className="slide">
-              <img src="/home/png.svg" alt="png" />
-            </div>
-            <div className="slide">
-              <img src="/home/kids.svg" alt="kids" />
-            </div>
-            <div className="slide">
-              <img src="/home/komaiso.svg" alt="komaiso" />
-            </div>
-            <div className="slide">
-              <img src="/home/daiso.svg" alt="daiso" />
+          <div className="home scroller__wrapper">
+            <div className="scroller__container">
+              <div className="home scroller">
+                <div className="scroller__item">
+                  <img src="/home/aeon.svg" alt="aeon" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/cmhl.svg" alt="cmhl" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/aeon-big.svg" alt="aeon-big" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/pahtama.svg" alt="pahtama" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/city.svg" alt="city" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/png.svg" alt="png" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/kids.svg" alt="kids" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/komaiso.svg" alt="komaiso" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/daiso.svg" alt="daiso" />
+                </div>
+
+                <div className="scroller__item">
+                  <img src="/home/aeon.svg" alt="aeon" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/cmhl.svg" alt="cmhl" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/aeon-big.svg" alt="aeon-big" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/pahtama.svg" alt="pahtama" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/city.svg" alt="city" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/png.svg" alt="png" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/kids.svg" alt="kids" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/komaiso.svg" alt="komaiso" />
+                </div>
+                <div className="scroller__item">
+                  <img src="/home/daiso.svg" alt="daiso" />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
       </section>
 
-      <section className="mb-20">
-        <div className="absolute bg-[#EDEFF7] w-full -z-10 h-[422px]"></div>
+      <section id="discover" className="mb-20">
+        <div className="absolute bg-[#EDEFF7] w-full -z-10 h-[422px]">
+          <motion.div
+            className="relative w-full h-full"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+          >
+            <img
+              className="absolute sm:top-[27px]"
+              src="/home/Isolation_Mode1.svg"
+              alt="Isolation_Mode1"
+            />
+            <img
+              className="absolute sm:bottom-[146px] sm:left-[165px]"
+              src="/home/Isolation_Mode2.svg"
+              alt="Isolation_Mode2"
+            />
+            <img
+              className="absolute sm:top-[58px] sm:right-[175px]"
+              src="/home/Isolation_Mode3.svg"
+              alt="Isolation_Mode3"
+            />
+            <img
+              className="absolute sm:right-7 bottom-0"
+              src="/home/Isolation_Mode4.svg"
+              alt="Isolation_Mode4"
+            />
+          </motion.div>
+        </div>
+
         <div className="pt-[34px] px-4 md:px-0 text-center flex flex-col items-center mb-11">
           <motion.div
             initial={{ opacity: 0 }}
@@ -217,6 +290,7 @@ export default function Home() {
           </motion.div>
         </div>
         <motion.div
+          className="scroll-horizontal"
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,

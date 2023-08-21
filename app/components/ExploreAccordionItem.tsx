@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface AccordionProps {
