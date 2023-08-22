@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={instrument_sans.className}>
-        <button className="fixed z-30 right-10 bottom-14">
+        <button className="fixed z-20 sm:right-10 sm:bottom-14 right-2 bottom-2">
           <img src="/WhatsApp.svg" alt="wa" />
         </button>
         <NavbarWithCTAButton />

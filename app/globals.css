@@ -93,6 +93,8 @@
   }
 }
 
+/* image slider */
+
 .home.scroller {
   animation-duration: calc(
     var(--scrolling-gallery-item-duration, 1s) /
@@ -152,6 +154,8 @@
   }
 }
 
+/* scroll horizontal home */
+
 .scroll-horizontal {
   scroll-behavior: smooth;
 }
@@ -203,6 +207,20 @@
     overflow: hidden;
     will-change: transform;
   }
+}
+
+/* border bottom animation */
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -49,9 +49,6 @@ const ContactPage = () => {
         <div className="grid grid-cols-2 md:px-24 pb-32 mb-8 bg-[#F5F5F5] relative">
           <div className="absolute -z-10 -mt-24 top-0 right-0 w-2/3 h-[100px]">
             <img src="/contact/trapesium.svg" alt="trapesium" />
-            {/* <div className="relative bg-[#F5F5F5] w-full h-full">
-              <div className="absolute top-0 left-0 border-solid rotate-45 border-r-black border-r-8 border-y-transparent border-y-8 border-l-0"></div>
-            </div> */}
           </div>
 
           <div className="col-span-2 sm:col-span-1 text-neutral-dark sm:w-[338px] pt-[108px]">

@@ -34,7 +34,7 @@ const SolutionsPage = () => {
             </div>
             <div className="flex justify-center mb-20">
               <Link
-                href="#"
+                href="#revolutionize"
                 className="btn-border-primary py-2.5 px-4 font-semibold"
               >
                 Learn More
@@ -128,36 +128,6 @@ const SolutionsPage = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="flex gap-x-7 items-end overflow-x-auto">
-              <div className="sm:w-[250px] min-w-[250px] mb-[44PX] ml-7 text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
-                <p className="font-medium mb-7 ">
-                  “One of the best retail service for me. Loved the community
-                  too. Very helpful.”
-                </p>
-                <div className="flex gap-x-3">
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    src="/solutions/avatar.svg"
-                    alt="avatar"
-                  />
-                  <div>
-                    <p className="font-semibold">John Doe</p>
-                    <p className="text-neutral-n-70">CEO of P&G</p>
-                  </div>
-                </div>
-              </div>
-
-              <img src="/solutions/slider-1.svg" alt="image" />
-              <img src="/solutions/slider-2.svg" alt="image" />
-              <img src="/solutions/slider-3.svg" alt="image" />
-
-              <div className="bg-[#0A153A] mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
-                <p className="font-bold text-[40px] mb-2.5">24</p>
-                <p className="mb-2 font-semibold">
-                  happy <br /> customers
-                </p>
-              </div>
-            </div> */}
           </motion.div>
         </div>
       </section>
@@ -172,7 +142,7 @@ const SolutionsPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col items-center">
+            <div id="revolutionize" className="flex flex-col items-center">
               <h2 className="font-bold text-center text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[824px]">
                 Revolutionize your business operations with{" "}
                 <span className="text-primary">All-in-One</span> Retail

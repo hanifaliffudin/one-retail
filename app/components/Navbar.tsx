@@ -89,14 +89,13 @@ export default function NavbarWithCTAButton() {
                 </Link>
               </li>
               <li>
-                <a
+                <div
                   onMouseEnter={() => setDropdownProduct(true)}
-                  href="#"
-                  className="flex items-center gap-x-1"
+                  className="flex items-center gap-x-1 cursor-pointer"
                 >
                   Products
                   <Icon icon="carbon:chevron-down" />
-                </a>
+                </div>
 
                 <AnimatePresence initial={false}>
                   {dropdownProduct && (
@@ -363,13 +362,16 @@ export default function NavbarWithCTAButton() {
                                     <h2 className="font-medium text-base">
                                       Office Automation
                                     </h2>
-                                    <button className="btn-border-primary flex items-center text-xs py-1.5 px-4">
+                                    <Link
+                                      href={"/products/office-automation"}
+                                      className="btn-border-primary flex items-center text-xs py-1.5 px-4"
+                                    >
                                       Learn more
                                       <Icon
                                         className="ml-1"
                                         icon="ri:arrow-right-line"
                                       />
-                                    </button>
+                                    </Link>
                                   </div>
                                   <p className="text-neutral-n-70 text-sm font-normal mt-2">
                                     Office automation streamlines tasks and
@@ -484,7 +486,7 @@ export default function NavbarWithCTAButton() {
               </li>
               <li>
                 <Link
-                  href="solutions"
+                  href="/solutions"
                   className={
                     pathname == "/solutions"
                       ? "text-neutral-n-90 font-semibold"
@@ -496,7 +498,7 @@ export default function NavbarWithCTAButton() {
               </li>
               <li>
                 <Link
-                  href="hardware"
+                  href="/hardware"
                   className={
                     pathname == "/hardware"
                       ? "text-neutral-n-90 font-semibold"
@@ -508,7 +510,7 @@ export default function NavbarWithCTAButton() {
               </li>
               <li>
                 <Link
-                  href="blog"
+                  href="/blog"
                   className={
                     pathname == "/blog" ? "text-neutral-n-90 font-semibold" : ""
                   }
@@ -690,13 +692,13 @@ export default function NavbarWithCTAButton() {
 
                     <Link
                       className="font-medium text-neutral-n-70 my-4"
-                      href="solutions"
+                      href="/solutions"
                     >
                       Solutions
                     </Link>
                     <Link
                       className="font-medium text-neutral-n-70 my-4"
-                      href="hardware"
+                      href="/hardware"
                     >
                       Hardware
                     </Link>

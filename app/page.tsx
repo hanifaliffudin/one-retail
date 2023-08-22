@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import TalkToUs from "./components/TalkToUs";
 import Testimonial from "./components/Testimonial";
@@ -1449,55 +1449,7 @@ export default function Home() {
 
           <div className="flex items-center">
             <div className="grid grid-cols-3 pl-24 gap-x-20">
-              <motion.div
-              // initial={{ borderBottom: "1px solid transparent" }}
-              // whileHover={{
-              //   borderBottom: "1px solid blue",
-              //   width: [0, 50, 100],
-              //   transition: { duration: 1 },
-              // }}
-              >
-                <a href="#">
-                  <img
-                    className="w-full h-[236px] rounded-lg mb-5 object-cover"
-                    src="/home/article-1.svg"
-                    alt="thumbnail"
-                  />
-                  <p className="text-primary font-semibold mb-2.5">
-                    Product Analytics
-                  </p>
-                  <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
-                    How to optimize and expand your business with product
-                    analytics
-                  </h3>
-                  <p className="line-clamp-3 text-neutral-n-90">
-                    When we set out to bring product analytics to our business,
-                    we knew that analytics for company revenue, in
-                    particular,...
-                  </p>
-                </a>
-              </motion.div>
-
-              <a href="#">
-                <img
-                  className="w-full h-[236px] rounded-lg mb-5 object-cover"
-                  src="/home/article-2.svg"
-                  alt="thumbnail"
-                />
-                <p className="text-primary font-semibold mb-2.5">
-                  Customer Experience
-                </p>
-                <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
-                  Customer Journey : Definitions, analysis and best practices
-                </h3>
-                <p className="line-clamp-3 text-neutral-n-90">
-                  Customer journey is one of the most powerful tools for
-                  building great experience. An when employed to thoughtfullness
-                  and...
-                </p>
-              </a>
-
-              <a href="#">
+              <Link className="cool-link pb-4" href="#">
                 <img
                   className="w-full h-[236px] rounded-lg mb-5 object-cover"
                   src="/home/article-1.svg"
@@ -1510,11 +1462,49 @@ export default function Home() {
                   How to optimize and expand your business with product
                   analytics
                 </h3>
-                <p className="line-clamp-3 text-neutral-n-90">
+                <p className="line-clamp-3 text-neutral-n-90 mb-8">
                   When we set out to bring product analytics to our business, we
                   knew that analytics for company revenue, in particular,...
                 </p>
-              </a>
+              </Link>
+
+              <Link className="cool-link pb-4" href="#">
+                <img
+                  className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                  src="/home/article-2.svg"
+                  alt="thumbnail"
+                />
+                <p className="text-primary font-semibold mb-2.5">
+                  Customer Experience
+                </p>
+                <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                  Customer Journey : Definitions, analysis and best practices
+                </h3>
+                <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                  Customer journey is one of the most powerful tools for
+                  building great experience. An when employed to thoughtfullness
+                  and...
+                </p>
+              </Link>
+
+              <Link className="cool-link pb-4" href="#">
+                <img
+                  className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                  src="/home/article-1.svg"
+                  alt="thumbnail"
+                />
+                <p className="text-primary font-semibold mb-2.5">
+                  Product Analytics
+                </p>
+                <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                  How to optimize and expand your business with product
+                  analytics
+                </h3>
+                <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                  When we set out to bring product analytics to our business, we
+                  knew that analytics for company revenue, in particular,...
+                </p>
+              </Link>
             </div>
 
             <div className="mx-[24px]">
