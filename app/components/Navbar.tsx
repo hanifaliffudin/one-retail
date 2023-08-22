@@ -33,9 +33,12 @@ export default function NavbarWithCTAButton() {
               <Icon icon="carbon:chevron-down" />
             </button>
             <div className="xl:inline-block mx-4 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
-            <button className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 hidden xl:block">
+            <Link
+              href={"/contact"}
+              className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 hidden xl:block"
+            >
               Get Demo
-            </button>
+            </Link>
             <button
               onClick={() => setMenuMobile(!menuMobile)}
               type="button"
