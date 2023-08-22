@@ -537,6 +537,7 @@ export default function NavbarWithCTAButton() {
                 <div className="w-full h-[calc(100%-80px)] flex text-white flex-col">
                   <div className="flex flex-col">
                     <Link
+                      onClick={() => setMenuMobile(!menuMobile)}
                       className={`my-4 ${
                         dropdownProduct
                           ? "font-medium text-neutral-n-70"
@@ -548,7 +549,7 @@ export default function NavbarWithCTAButton() {
                     </Link>
                     <div
                       onClick={() => setDropdownProduct(!dropdownProduct)}
-                      className={` my-4 flex items-center justify-between ${
+                      className={`my-4 flex items-center justify-between ${
                         dropdownProduct
                           ? "font-bold text-neutral-n-100"
                           : "font-medium text-neutral-n-70"
@@ -691,12 +692,14 @@ export default function NavbarWithCTAButton() {
                     </AnimatePresence>
 
                     <Link
+                      onClick={() => setMenuMobile(!menuMobile)}
                       className="font-medium text-neutral-n-70 my-4"
                       href="/solutions"
                     >
                       Solutions
                     </Link>
                     <Link
+                      onClick={() => setMenuMobile(!menuMobile)}
                       className="font-medium text-neutral-n-70 my-4"
                       href="/hardware"
                     >
@@ -715,9 +718,13 @@ export default function NavbarWithCTAButton() {
                       <Icon icon="carbon:chevron-down" />
                     </button>
                   </div>
-                  <button className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4">
+                  <Link
+                    href={"/contact"}
+                    onClick={() => setMenuMobile(!menuMobile)}
+                    className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4"
+                  >
                     Get Demo
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
