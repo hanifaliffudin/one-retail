@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import FAQAccordionItem from "./FAQAccordionItem";
+import { useState } from "react";
 
 const FAQ = () => {
+  const [faqActive, setFaqActive] = useState(0);
+
   const accordionData = [
     {
       title: "How can I start setting up the systems on to my business?",
@@ -22,6 +25,10 @@ const FAQ = () => {
     },
   ];
 
+  const setActive = (index: number) => {
+    setFaqActive(index);
+  };
+
   return (
     <section>
       <motion.div
@@ -34,10 +41,10 @@ const FAQ = () => {
       >
         <div className="grid grid-cols-3 pt-20 pb-[104px] md:px-[188px] px-4 gap-y-5 gap-x-[120px] mb-20">
           <div className="md:col-span-1 col-span-3">
-            <h2 className="font-bold text-[32px] mb-5">
+            <h2 className="font-bold sm:text-[32px] text-xl mb-5">
               Frequently Asked Questions
             </h2>
-            <p className="text-neutral-n-90">
+            <p className="text-neutral-n-90 max-sm:text-sm">
               Find answers to commonly asked questions about One Retail
               solutions, empowering you with the knowledge you need for seamless
               operations and business growth.
@@ -47,13 +54,15 @@ const FAQ = () => {
             {accordionData.map(({ title, content }, index) => (
               <>
                 <FAQAccordionItem
+                  setActive={setActive}
                   index={index}
                   title={title}
                   content={content}
+                  active={faqActive == index}
                 />
               </>
             ))}
-            <div className="text-primary font-medium mt-10">
+            <div className="text-primary max-sm:text-sm font-medium mt-10">
               <Link href={"#"}>Any further question? contact us!</Link>
             </div>
           </div>

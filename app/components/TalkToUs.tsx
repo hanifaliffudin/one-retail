@@ -16,19 +16,19 @@ const TalkToUs = () => {
             viewport={{ once: true }}
           >
             <div className="bg-[#0F2057] h-[588px] relative rounded-xl text-white py-10 px-12">
-              <h2 className="font-bold text-[32px] text-neutral-n-10 mb-5">
+              <h2 className="font-bold sm:text-[32px] text-xl text-neutral-n-10 mb-5">
                 Talk to us and see how One Retail work for your business
               </h2>
-              <p>
+              <p className="max-sm:text-sm">
                 Give us a call if you need help picking a One Retail product.
               </p>
               <div className="absolute bottom-10 z-10">
-                <p className="mb-5 font-semibold text-xl">Contact</p>
-                <div className="flex gap-x-3 items-center mb-3">
+                <p className="mb-5 font-semibold sm:text-xl">Contact</p>
+                <div className="flex gap-x-3 items-center mb-3 max-sm:text-sm">
                   <Icon icon="ant-design:phone-filled" />
                   0852 6654 1121
                 </div>
-                <div className="flex gap-x-3 items-center">
+                <div className="flex gap-x-3 items-center max-sm:text-sm">
                   <Icon icon="ant-design:mail-filled" color="white" />
                   hello@theoneretail.com
                 </div>

@@ -14,7 +14,7 @@ const Testimonial = () => {
           viewport={{ once: true }}
         >
           <img className="mb-2.5" src="/home/format-quote.svg" alt="quote" />
-          <p className="text-neutral-n-90 mb-6 text-2xl font-semibold">
+          <p className="text-neutral-n-90 mb-6 sm:text-2xl font-semibold">
             Payments, inventory, and e-Commerce are just the start. One Retail
             POS is your{" "}
             <span className="text-primary font-bold">
@@ -23,10 +23,12 @@ const Testimonial = () => {
             every tool that keeps your business moving — so you can shape what’s
             next.
           </p>
-          <p className="text-neutral-n-80 mb-2 text-xl font-semibold">
+          <p className="text-neutral-n-80 mb-2 sm:text-xl text-sm font-semibold">
             Jenny Wilson
           </p>
-          <p className="text-neutral-n-70 mb-6">CEO & Co-Founder of Jolla.</p>
+          <p className="text-neutral-n-70 mb-6 max-sm:text-xs">
+            CEO & Co-Founder of Jolla.
+          </p>
         </motion.div>
       </div>
     </section>

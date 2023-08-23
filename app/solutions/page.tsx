@@ -22,12 +22,12 @@ const SolutionsPage = () => {
               transition: { duration: 0.5 },
             }}
           >
-            <p className="mb-5 text-center text-neutral-n-80 px-4">
+            <p className="mb-5 text-center text-neutral-n-80 px-4 max-sm:text-sm">
               One Retail : Smart Retail Platform builder made special for Your
               business
             </p>
             <div className="flex justify-center px-4">
-              <h1 className="mb-10 text-center text-neutral-n-90 font-bold text-[40px] leading-[50px] md:w-[683px]">
+              <h1 className="mb-10 text-center text-neutral-n-90 font-bold sm:text-[40px] text-[22px] sm:leading-[50px] leading-[33px] md:w-[683px]">
                 <span className="text-primary">Simplify</span> Your Day-to-day
                 Operations to Scale Up Your Business
               </h1>
@@ -35,7 +35,7 @@ const SolutionsPage = () => {
             <div className="flex justify-center mb-20">
               <Link
                 href="#revolutionize"
-                className="btn-border-primary py-2.5 px-4 font-semibold"
+                className="btn-border-primary max-sm:text-xs py-2.5 px-4 font-semibold"
               >
                 Learn More
               </Link>
@@ -132,7 +132,7 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="revolutionize">
         <div className="py-20 px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -142,13 +142,13 @@ const SolutionsPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div id="revolutionize" className="flex flex-col items-center">
-              <h2 className="font-bold text-center text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[824px]">
+            <div className="flex flex-col items-center">
+              <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:w-[824px]">
                 Revolutionize your business operations with{" "}
                 <span className="text-primary">All-in-One</span> Retail
                 Solutions Platform
               </h2>
-              <p className="text-center text-neutral-n-90 mb-16 md:w-[824px]">
+              <p className="text-center max-sm:text-sm text-neutral-n-90 mb-16 md:w-[824px]">
                 Advanced technological solutions that integrate various digital
                 tools and data-driven systems to enhance your overall retail
                 productivity and customer experience
@@ -167,13 +167,13 @@ const SolutionsPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <p className="text-primary-p-50 font-semibold mb-3">
+              <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs">
                 Satisfaction with Digital Shopping
               </p>
-              <p className="text-primary-p-50 font-bold text-[32px] mb-5">
+              <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
                 79-85%
               </p>
-              <p className="text-neutral-n-90 mb-11">
+              <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
                 Customers satisfied with online digital shopping experience.
               </p>
               <p className="text-neutral-n-70 text-xs">
@@ -191,13 +191,13 @@ const SolutionsPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <p className="text-primary-p-50 font-semibold mb-3">
+              <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs">
                 Strengthen Competitiveness
               </p>
-              <p className="text-primary-p-50 font-bold text-[32px] mb-5">
+              <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
                 70%
               </p>
-              <p className="text-neutral-n-90 mb-11">
+              <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
                 Reporting high in digital transformation for business can
                 improve competitive insights
               </p>
@@ -216,13 +216,13 @@ const SolutionsPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <p className="text-primary-p-50 font-semibold mb-3">
+              <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs">
                 Enhance efficiency, Reduce costs
               </p>
-              <p className="text-primary-p-50 font-bold text-[32px] mb-5">
+              <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
                 69%
               </p>
-              <p className="text-neutral-n-90 mb-11">
+              <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
                 Digital transformation on retail can improve efficiency and
                 reducing cost at the same time
               </p>
@@ -244,16 +244,16 @@ const SolutionsPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <p className="text-center text-primary font-semibold mb-5">
+            <p className="text-center max-sm:text-xs text-primary font-semibold mb-5">
               Business Solutions
             </p>
             <div className="flex flex-col items-center px-4">
-              <h2 className="font-bold text-center text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[824px]">
+              <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:w-[824px]">
                 Powerful tools to deliver{" "}
                 <span className="text-primary">world-class</span> customer
                 experiences
               </h2>
-              <p className="text-center text-neutral-n-90 mb-16 px-4 md:w-[824px]">
+              <p className="text-center max-sm:text-sm text-neutral-n-90 mb-16 px-4 md:w-[824px]">
                 Unleash the power of our One Retail solutions to create
                 exceptional customer experiences. Elevate your business with our
                 powerful tools and drive growth in the competitive retail
@@ -329,18 +329,18 @@ const SolutionsPage = () => {
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                 <div className="flex gap-x-4 items-center">
                   <img src="/icons/pos-icon.svg" alt="pos" />
-                  <h4 className="font-bold text-neutral-n-100">
+                  <h4 className="font-bold text-neutral-n-100 max-sm:text-sm">
                     Point of Sales
                   </h4>
                 </div>
-                <p className="my-5 text-neutral-n-90">
+                <p className="my-5 text-neutral-n-90 max-sm:text-sm">
                   Simplify sales, accept diverse payments, and integrate loyalty
                   programs with our versatile POS system. Boost efficiency and
                   customer satisfaction.
                 </p>
                 <Link
                   href={"#"}
-                  className="flex items-center text-primary font-medium text-sm"
+                  className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                 >
                   Explore product{" "}
                   <Icon className="ml-2" icon="ri:arrow-right-line" />
@@ -350,18 +350,18 @@ const SolutionsPage = () => {
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                 <div className="flex gap-x-4 items-center">
                   <img src="/icons/sco-icon.svg" alt="sco" />
-                  <h4 className="font-bold text-neutral-n-100">
+                  <h4 className="font-bold text-neutral-n-100 max-sm:text-sm">
                     Self-checkout (SCO)
                   </h4>
                 </div>
-                <p className="my-5 text-neutral-n-90">
+                <p className="my-5 text-neutral-n-90 max-sm:text-sm">
                   Revolutionize the checkout experience with our Self Check Out
                   (SCO) feature, enabling customers to scan and pay for items
                   themselves, reducing queues and enhancing convenience.
                 </p>
                 <Link
                   href={"#"}
-                  className="flex items-center text-primary font-medium text-sm"
+                  className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                 >
                   Explore product{" "}
                   <Icon className="ml-2" icon="ri:arrow-right-line" />
@@ -371,18 +371,18 @@ const SolutionsPage = () => {
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                 <div className="flex gap-x-4 items-center">
                   <img src="/icons/so-icon.svg" alt="so" />
-                  <h4 className="font-bold text-neutral-n-100">
+                  <h4 className="font-bold text-neutral-n-100 max-sm:text-sm">
                     Self-ordering
                   </h4>
                 </div>
-                <p className="my-5 text-neutral-n-90">
+                <p className="my-5 text-neutral-n-90 max-sm:text-sm">
                   Empower retail customers with seamless self-ordering—scan,
                   browse, and shop effortlessly. Enhance efficiency, reduce wait
                   times, and deliver a personalized experience.
                 </p>
                 <Link
                   href={"#"}
-                  className="flex items-center text-primary font-medium text-sm"
+                  className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                 >
                   Explore product{" "}
                   <Icon className="ml-2" icon="ri:arrow-right-line" />
@@ -392,18 +392,18 @@ const SolutionsPage = () => {
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                 <div className="flex gap-x-4 items-center">
                   <img src="/icons/cel-icon.svg" alt="cel" />
-                  <h4 className="font-bold text-neutral-n-100">
+                  <h4 className="font-bold text-neutral-n-100 max-sm:text-sm">
                     Customer Relationship Management
                   </h4>
                 </div>
-                <p className="my-5 text-neutral-n-90">
+                <p className="my-5 text-neutral-n-90 max-sm:text-sm">
                   Strengthen customer relationships with advanced CRM
                   technology, leveraging data analysis to enhance business
                   performance and satisfaction.
                 </p>
                 <Link
                   href={"#"}
-                  className="flex items-center text-primary font-medium text-sm"
+                  className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                 >
                   Explore product{" "}
                   <Icon className="ml-2" icon="ri:arrow-right-line" />
@@ -413,18 +413,18 @@ const SolutionsPage = () => {
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                 <div className="flex gap-x-4 items-center">
                   <img src="/icons/ess-icon.svg" alt="ess" />
-                  <h4 className="font-bold text-neutral-n-100">
+                  <h4 className="font-bold text-neutral-n-100 max-sm:text-sm">
                     Office Automation
                   </h4>
                 </div>
-                <p className="my-5 text-neutral-n-90">
+                <p className="my-5 text-neutral-n-90 max-sm:text-sm">
                   Streamline your office operations. Automate inventory
                   management, order processing, and sales reporting to improve
                   efficiency and collaboration among your retail team.
                 </p>
                 <Link
                   href={"#"}
-                  className="flex items-center text-primary font-medium text-sm"
+                  className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                 >
                   Explore product{" "}
                   <Icon className="ml-2" icon="ri:arrow-right-line" />

@@ -19,9 +19,9 @@ export default function NavbarWithCTAButton() {
         className="bg-white fixed w-full z-20 top-0 left-0 border-b border-[#EDEDED]"
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img src="/logo-navbar.svg" className="mr-3" alt="Logo" />
-          </a>
+          </Link>
           <div className="flex xl:order-2">
             <div className="xl:flex items-center text-neutral-dark font-semibold mr-6 hidden">
               <Icon icon="carbon:phone-filled" />

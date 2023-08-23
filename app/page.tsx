@@ -7,6 +7,7 @@ import TalkToUs from "./components/TalkToUs";
 import Testimonial from "./components/Testimonial";
 import ExploreAccordionItem from "./components/ExploreAccordionItem";
 import Link from "next/link";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   const [imageSlideIndex, setImageSlideIndex] = useState(1);
@@ -44,11 +45,11 @@ export default function Home() {
                 transition: { duration: 0.5 },
               }}
             >
-              <h1 className="text-[40px] text-neutral-n-90 leading-[60px] font-bold mb-5">
+              <h1 className="sm:text-[40px] text-[22px] text-neutral-n-90 sm:leading-[60px] leading-[33px] font-bold mb-5">
                 Transform Your Business with Advanced Retail Technology
               </h1>
 
-              <p className="text-xl font-extralight mb-14 text-neutral-n-80 leading-[30px]">
+              <p className="sm:text-xl text-sm font-extralight mb-14 text-neutral-n-80 leading-[30px]">
                 Designed to optimize your business operations with tools that
                 help you enhance operational efficiency, improve customer
                 experiences, and drive business growth with competitive
@@ -64,13 +65,13 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="btn-primary text-neutral-n-10 py-2.5 px-4 font-semibold mr-5"
+                className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
               >
                 Let’s Get Demo!
               </Link>
               <Link
                 href="/#discover"
-                className="btn-border-primary py-2.5 px-4 font-semibold"
+                className="btn-border-primary py-2.5 px-4 max-sm:text-xs font-semibold"
               >
                 Learn More
               </Link>
@@ -106,7 +107,7 @@ export default function Home() {
                 initial={{ position: "absolute", opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  // x: [100, 0],
+                  x: [100, 0],
                   transition: { duration: 0.5, delay: 2 },
                 }}
               >
@@ -152,7 +153,7 @@ export default function Home() {
             transition: { duration: 0.5, delay: 3 },
           }}
         >
-          <div className="home scroller__wrapper">
+          <div className="home scroller__wrapper" id="discover">
             <div className="scroller__container">
               <div className="home scroller">
                 <div className="scroller__item">
@@ -222,7 +223,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="discover" className="mb-20">
+      <section className="mb-20">
         <div className="absolute bg-[#EDEFF7] w-full -z-10 h-[422px]">
           <motion.div
             className="relative w-full h-full"
@@ -266,7 +267,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <h2 className="font-bold text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:w-[679px]">
+            <h2 className="font-bold text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:w-[679px]">
               Discover The Power of{" "}
               <span className="text-primary">One Retail</span> and Transform
               Your Business Today!
@@ -282,7 +283,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <p className="md:w-[679px] text-neutral-n-700">
+            <p className="md:w-[679px] max-sm:text-sm text-neutral-n-700">
               Unlock the full potential of your retail business with our
               innovative solutions. Explore the unrivaled benefits that make us
               the ultimate choice for retailers.
@@ -307,7 +308,7 @@ export default function Home() {
               <h3 className="mb-3 font-bold">
                 Standard retail operations worldwide
               </h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 Has best practices and industry standards tailoring your digital
                 operations to meet your unique business goals and customer needs
               </p>
@@ -319,7 +320,7 @@ export default function Home() {
               <h3 className="mb-3 font-bold">
                 Deepen your customer experience
               </h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 With One Retail you can enhance the overall satisfaction, and
                 emotional connection to your customers to build strong and
                 long-lasting relationship
@@ -330,7 +331,7 @@ export default function Home() {
                 <img src="/icons/FundView.svg" alt="FundView" />
               </div>
               <h3 className="mb-3 font-bold">Valuable data-driven insights</h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 Meaningful and actionable information extracted from data
                 analysis that can drive informed decision-making and improve
                 business outcomes
@@ -343,7 +344,7 @@ export default function Home() {
               <h3 className="mb-3 font-bold">
                 Seamless business operations flow
               </h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 One Retail can help you ensuring tasks, information, and
                 resources move seamlessly from through one step to another
               </p>
@@ -355,7 +356,7 @@ export default function Home() {
               <h3 className="mb-3 font-bold">
                 Drive business growth in a rapidly evolving retail landscapes
               </h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 Expand your business to meet customer expectations in a dynamic
                 growth with One Retail CRM
               </p>
@@ -365,7 +366,7 @@ export default function Home() {
                 <img src="/icons/DollarCircle.svg" alt="DollarCircle" />
               </div>
               <h3 className="mb-3 font-bold">Cost saving potentials</h3>
-              <p className="text-neutral-n-90">
+              <p className="text-neutral-n-90 max-sm:text-sm">
                 Implementing cost-saving measures, your business can increase
                 profitability, reinvest your resources into growth initiatives,
                 and gain a competitive edge
@@ -386,7 +387,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <h2 className="font-bold text-neutral-n-90 text-[32px] leading-[48px] mb-5 md:mb-0 md:w-[679px]">
+            <h2 className="font-bold text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:mb-0 md:w-[679px]">
               One Retail <span className="text-primary">Integrated</span> system
               <br className="hidden md:block" /> Bringing All Together
             </h2>
@@ -401,7 +402,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <p className="text-neutral-n-80">
+            <p className="text-neutral-n-80 max-sm:text-sm">
               Integrated system will allows you maintain seamless workflow
               across many stakeholders. We will help and guide your team
               understanding how easy all can be.
@@ -430,12 +431,12 @@ export default function Home() {
                 />
                 <h3>Point of Sale (POS)</h3>
               </div>
-              <h3 className="text-neutral-n-90 font-bold text-2xl mb-5">
+              <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
                 Seamless Transactions and{" "}
                 <span className="text-primary">Enhanced</span> Efficiency with
                 Our Point of Sale
               </h3>
-              <p className="text-neutral-n-90 mb-5">
+              <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
                 One Retail Point of Sale is a combination of hardware and
                 software that highly support transaction process. POS accept any
                 payments type such as credit/debit card, cash, vouchers, points.{" "}
@@ -615,7 +616,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <h2 className="font-bold text-neutral-n-90 text-[32px] leading-[48px] mb-10 text-center">
+            <h2 className="font-bold text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-10 text-center">
               Explore All You Can Do with{" "}
               <span className="text-primary">One Retail</span>
             </h2>
@@ -643,10 +644,10 @@ export default function Home() {
                     setmaxLength(3);
                   }}
                 >
-                  <h3 className="text-primary font-bold text-xl mb-3">
+                  <h3 className="text-primary font-bold sm:text-xl mb-3">
                     Order Management System
                   </h3>
-                  <p>
+                  <p className="max-sm:text-sm">
                     A way to reduce long queue at your store and faster checkout
                     process!
                   </p>
@@ -663,10 +664,10 @@ export default function Home() {
                     setmaxLength(5);
                   }}
                 >
-                  <h3 className="text-primary font-bold text-xl mb-3">
+                  <h3 className="text-primary font-bold sm:text-xl mb-3">
                     Customer Relationship Management
                   </h3>
-                  <p>
+                  <p className="max-sm:text-sm">
                     Leverage technology, analyze customer data, and build strong
                     relationships. Discover with One Retail!
                   </p>
@@ -683,10 +684,10 @@ export default function Home() {
                     setmaxLength(3);
                   }}
                 >
-                  <h3 className="text-primary font-bold text-xl mb-3">
+                  <h3 className="text-primary font-bold sm:text-xl mb-3">
                     Office Automation
                   </h3>
-                  <p>
+                  <p className="max-sm:text-sm">
                     Revolutionize retail with our all-in-One solutions. Goodbye
                     manual, Hello efficiency!
                   </p>
@@ -703,10 +704,10 @@ export default function Home() {
                     setmaxLength(2);
                   }}
                 >
-                  <h3 className="text-primary font-bold text-xl mb-3">
+                  <h3 className="text-primary font-bold sm:text-xl mb-3">
                     Supplier Management
                   </h3>
-                  <p>
+                  <p className="max-sm:text-sm">
                     Allows your business to collaborate and interact with
                     suppliers in a centralized and efficient manner through
                     digital interface.
@@ -737,7 +738,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-neutral-n-100 text-xl font-semibold">
+                      <h3 className="text-neutral-n-100 sm:text-xl font-semibold">
                         {imageSlideIndex == 1 && "Point of Sale (POS)"}
                         {imageSlideIndex == 2 && "Self Check-out (SCO)"}
                         {imageSlideIndex == 3 && "Self Ordering"}
@@ -784,7 +785,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail is a combination of hardware and software that highly support transaction process. POS accept any payments type such as credit/debit card, cash, vouchers, points. Record transaction and payment."}
                     {imageSlideIndex == 2 &&
@@ -826,7 +827,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-neutral-n-100 text-xl font-semibold">
+                      <h3 className="text-neutral-n-100 sm:text-xl font-semibold">
                         {imageSlideIndex == 1 &&
                           "Customer Engagement & Loyalty"}
                         {imageSlideIndex == 2 && "Gamification"}
@@ -893,7 +894,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail is a combination of hardware and software that highly support transaction process. POS accept any payments type such as credit/debit card, cash, vouchers, points. Record transaction and payment."}
                     {imageSlideIndex == 2 &&
@@ -933,7 +934,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-neutral-n-100 text-xl font-semibold">
+                      <h3 className="text-neutral-n-100 sm:text-xl font-semibold">
                         {imageSlideIndex == 1 && "Employee Self Service"}
                         {imageSlideIndex == 2 && "Store Daily Operations"}
                         {imageSlideIndex == 3 && "Repair & Maintenance"}
@@ -980,7 +981,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "Empower employees with One Retail ESS: Real-time access to credentials data, online attendance, bookings, and additional features like employee feedback, live chat, e-learning, and more."}
                     {imageSlideIndex == 2 &&
@@ -1013,7 +1014,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-neutral-n-100 text-xl font-semibold">
+                      <h3 className="text-neutral-n-100 sm:text-xl font-semibold">
                         {imageSlideIndex == 1 && "Partner Platform"}
                         {imageSlideIndex == 2 && "Non-Trade Portal"}
                       </h3>
@@ -1051,7 +1052,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail Partner Platform system is designed to support suppliers in managing their data and purchases at real time. This also allow company to manages their supplier and allow them to announce any important message to supplier instantly throughs announcement feature"}
                     {imageSlideIndex == 2 &&
@@ -1096,14 +1097,14 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-neutral-n-100 text-xl font-semibold">
+                      <h3 className="text-neutral-n-100 sm:text-xl font-semibold">
                         {imageSlideIndex == 1 && "Point of Sale (POS)"}
                         {imageSlideIndex == 2 && "Self Check-out (SCO)"}
                         {imageSlideIndex == 3 && "Self Ordering"}
                       </h3>
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail is a combination of hardware and software that highly support transaction process. POS accept any payments type such as credit/debit card, cash, vouchers, points. Record transaction and payment."}
                     {imageSlideIndex == 2 &&
@@ -1112,7 +1113,7 @@ export default function Home() {
                       "One Retail Self-order providing deep personalized customer experience by quick scanning the product barcode and allow them to view the menu then can quickly add it to cart. This also reduce business cost because customer no longer need server assistance"}
                   </p>
                   <div className="flex items-center justify-between">
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
                       Learn more
                     </button>
                     <div className="flex items-center gap-x-2">
@@ -1196,7 +1197,7 @@ export default function Home() {
                       </h3>
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail is a combination of hardware and software that highly support transaction process. POS accept any payments type such as credit/debit card, cash, vouchers, points. Record transaction and payment."}
                     {imageSlideIndex == 2 &&
@@ -1205,7 +1206,7 @@ export default function Home() {
                       "One Retail Self-order providing deep personalized customer experience by quick scanning the product barcode and allow them to view the menu then can quickly add it to cart. This also reduce business cost because customer no longer need server assistance"}
                   </p>
                   <div className="flex items-center justify-between">
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
                       Learn more
                     </button>
                     <div className="flex items-center gap-x-2">
@@ -1292,7 +1293,7 @@ export default function Home() {
                       </h3>
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "Empower employees with One Retail ESS: Real-time access to credentials data, online attendance, bookings, and additional features like employee feedback, live chat, e-learning, and more."}
                     {imageSlideIndex == 2 &&
@@ -1301,7 +1302,7 @@ export default function Home() {
                       "Efficiently manage maintenance with One Retail: Set recurring schedules, submit help requests, track issue status, and ensure prompt resolution for technical issues."}
                   </p>
                   <div className="flex items-center justify-between">
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
                       Learn more
                     </button>
                     <div className="flex items-center gap-x-2">
@@ -1368,14 +1369,14 @@ export default function Home() {
                       </h3>
                     </div>
                   </div>
-                  <p className="mb-6 text-neutral-n-90">
+                  <p className="mb-6 text-neutral-n-90 max-sm:text-sm">
                     {imageSlideIndex == 1 &&
                       "One Retail Partner Platform system is designed to support suppliers in managing their data and purchases at real time. This also allow company to manages their supplier and allow them to announce any important message to supplier instantly throughs announcement feature"}
                     {imageSlideIndex == 2 &&
                       "One Retail Non Trade Portal supplier support  registration form with level of approval, allow Non Trade Supplier to access their Purchase Order process to end (Invoice). Non Trade Portal integration can track of approvals, rejections, and pending requests along with rejection reasons."}
                   </p>
                   <div className="flex items-center justify-between">
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
                       Learn more
                     </button>
                     <div className="flex items-center gap-x-2">
@@ -1419,7 +1420,7 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
               >
-                <h2 className="mb-3.5 text-[#0A0A0A] font-bold text-[32px]">
+                <h2 className="mb-3.5 text-[#0A0A0A] font-bold sm:text-[32px]">
                   <span className="text-primary">Browse and explore</span> your
                   business potential
                 </h2>
@@ -1519,6 +1520,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <TalkToUs />
     </main>
