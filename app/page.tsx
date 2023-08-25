@@ -1475,9 +1475,13 @@ export default function Home() {
                     {imageSlideIndex == 1 &&
                       "One Retail is a combination of hardware and software that highly support transaction process. POS accept any payments type such as credit/debit card, cash, vouchers, points. Record transaction and payment."}
                     {imageSlideIndex == 2 &&
-                      "Optimized customer entire check-out process with One Retail SCO Platform to support adding or scanning item to payment. It’s also integrated with payment system so customer can pay at once with their desired payment method."}
+                      "Provide game-like elements and dynamics inside app such as Gacha, Spin the Wheel, Lucky Draw, Duck Hunt, and customized games also can increase user participation inside your loyalty app. Let's get your customer engaged with One Retail Gamification"}
                     {imageSlideIndex == 3 &&
-                      "One Retail Self-order providing deep personalized customer experience by quick scanning the product barcode and allow them to view the menu then can quickly add it to cart. This also reduce business cost because customer no longer need server assistance"}
+                      "Business to Business (B2B) E-commerce support selling process between businesses. B2B provide order and payment report for business to track the overall sales data and activity, these all features can lead your business to get customer long term relation and repeat bulk purchases"}
+                    {imageSlideIndex == 4 &&
+                      "With One Retail's B2C E-commerce solution, businesses can effortlessly sell to end-customers around the clock, eliminating the need for physical store visits. Integrated with loyalty programs, customers can enjoy rewards and stay updated on the latest promotions and discounts."}
+                    {imageSlideIndex == 5 &&
+                      "Effortlessly centralize and update complex product data with One Retail PIM. Streamline your operations, improve collaboration, and deliver exceptional customer experiences with real-time, automated communication."}
                   </p>
                   <div className="flex items-center justify-between">
                     <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">

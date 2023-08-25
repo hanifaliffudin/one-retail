@@ -539,9 +539,9 @@ export default function NavbarWithCTAButton() {
                     <Link
                       onClick={() => setMenuMobile(!menuMobile)}
                       className={`my-4 ${
-                        dropdownProduct
-                          ? "font-medium text-neutral-n-70"
-                          : "font-bold text-neutral-n-100"
+                        pathname == "/"
+                          ? "font-bold text-neutral-n-100"
+                          : "font-medium text-neutral-n-70"
                       }`}
                       href="/"
                     >
@@ -693,14 +693,22 @@ export default function NavbarWithCTAButton() {
 
                     <Link
                       onClick={() => setMenuMobile(!menuMobile)}
-                      className="font-medium text-neutral-n-70 my-4"
+                      className={`my-4 ${
+                        pathname == "/solutions"
+                          ? "font-bold text-neutral-n-100"
+                          : "font-medium text-neutral-n-70"
+                      }`}
                       href="/solutions"
                     >
                       Solutions
                     </Link>
                     <Link
                       onClick={() => setMenuMobile(!menuMobile)}
-                      className="font-medium text-neutral-n-70 my-4"
+                      className={`my-4 ${
+                        pathname == "/hardware"
+                          ? "font-bold text-neutral-n-100"
+                          : "font-medium text-neutral-n-70"
+                      }`}
                       href="/hardware"
                     >
                       Hardware
