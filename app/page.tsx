@@ -8,13 +8,27 @@ import Testimonial from "./components/Testimonial";
 import ExploreAccordionItem from "./components/ExploreAccordionItem";
 import Link from "next/link";
 import FAQ from "./components/FAQ";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 export default function Home() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const [imageSlideIndex, setImageSlideIndex] = useState(1);
   const [maxLength, setmaxLength] = useState(3);
   const [exploreIndex, setExploreIndex] = useState(1);
   const [integratedStar, setIntegratedStar] = useState("");
   const [activeExploreAccordion, setActiveExploreAccordion] = useState(1);
+  const [integrated, setIntegrated] = useState(0);
 
   const slideRight = () => {
     imageSlideIndex + 1 == maxLength + 1
@@ -70,7 +84,8 @@ export default function Home() {
                 Let’s Get Demo!
               </Link>
               <Link
-                href="/#discover"
+                href="#discover"
+                onClick={handleScroll}
                 className="btn-border-primary py-2.5 px-4 max-sm:text-xs font-semibold"
               >
                 Learn More
@@ -423,28 +438,248 @@ export default function Home() {
         >
           <div className="grid grid-cols-12 mb-40">
             <div className="md:col-span-7 col-span-12 bg-[#EDEFF7] py-10 md:pr-10 md:pl-24 px-4 rounded-r-[20px] order-last md:order-first">
-              <div className="flex items-center gap-x-4 mb-5">
-                <img
-                  className="-ml-3"
-                  src="/icons/pos-icon-red.svg"
-                  alt="pos"
-                />
-                <h3>Point of Sale (POS)</h3>
-              </div>
-              <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
-                Seamless Transactions and{" "}
-                <span className="text-primary">Enhanced</span> Efficiency with
-                Our Point of Sale
-              </h3>
-              <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
-                One Retail Point of Sale is a combination of hardware and
-                software that highly support transaction process. POS accept any
-                payments type such as credit/debit card, cash, vouchers, points.{" "}
-              </p>
-              <div className="flex items-center gap-x-2 text-sm font-medium text-primary">
-                Explore Point of Sale (POS){" "}
-                <Icon className="text-primary" icon="ri:arrow-right-line" />
-              </div>
+              {integrated == 0 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/pos-icon-red.svg"
+                      alt=""
+                    />
+                    <h3>Point of Sale (POS)</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    Seamless Transactions and{" "}
+                    <span className="text-primary">Enhanced</span> Efficiency
+                    with Our Point of Sale
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    One Retail Point of Sale is a combination of hardware and
+                    software that highly support transaction process. POS accept
+                    any payments type such as credit/debit card, cash, vouchers,
+                    points.
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Point of Sale (POS)
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
+              {integrated == 1 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/smo-icon-yellow.svg"
+                      alt=""
+                    />
+                    <h3>Self Mobile Ordering</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    Effortless Ordering at Your{" "}
+                    <span className="text-primary">Fingertips</span> with Self
+                    Mobile Ordering
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    One Retail Self-order providing deep personalized customer
+                    experience by quick scanning the product barcode and allow
+                    them to view the menu then can quickly add it to cart.
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Self Mobile Ordering
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
+              {integrated == 2 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/ose-icon-blue.svg"
+                      alt=""
+                    />
+                    <h3>Online Shopping Experience</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    The Ultimate Online Shopping Destination: Discover{" "}
+                    <span className="text-primary">Convenience</span> and
+                    Variety
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    nurturing strong and lasting relationships with customers by
+                    utilize advanced technology to leverage your business
+                    performance in order to enhance customer satisfaction.
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Online Shopping Experience
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
+              {integrated == 3 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/sp-icon-green.svg"
+                      alt=""
+                    />
+                    <h3>Supplier Portal</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    Efficient Supplier Management Made{" "}
+                    <span className="text-primary">Easy</span> : Introducing Our
+                    Supplier Portal
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    Streamline tedious manual processes and communications with
+                    key business partners through a digital interface.
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Supplier Portal
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
+              {integrated == 4 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/sdo-icon-red.svg"
+                      alt=""
+                    />
+                    <h3>Store Daily Operation</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    Behind the Scenes:{" "}
+                    <span className="text-primary">Managing</span> Store Daily
+                    Operations with Excellence
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    Get your store daily operations done smoothly with One
+                    Retail Daily Operations that support your team in doing
+                    their daily operations in store. Replacing traditional way
+                    to save data through manual key in and paper.
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Store Daily Operation
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
+              {integrated == 5 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/api-icon-blue.svg"
+                      alt=""
+                    />
+                    <h3>API Integration</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    Building Bridges with API Integration: Unleash the{" "}
+                    <span className="text-primary">Potential</span> of Your
+                    Applications
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    Unlock full potential of One Retail with our powerful API
+                    integration, seamlessly connecting your POS, CRM, employee
+                    management, and more. Experience streamlined workflows,
+                    real-time data synchronization, and endless possibilities
+                    for business optimization.
+                  </p>
+                </motion.div>
+              )}
+              {integrated == 6 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <div className="flex items-center gap-x-4 mb-5">
+                    <img
+                      className="-ml-3 -mb-2"
+                      src="/icons/ess-icon-green.svg"
+                      alt=""
+                    />
+                    <h3>Employee Self Service</h3>
+                  </div>
+                  <h3 className="text-neutral-n-90 font-bold sm:text-2xl mb-5">
+                    "Putting Employees in the{" "}
+                    <span className="text-primary">Driver's Seat</span> :
+                    Discover the Power of Self-Service"
+                  </h3>
+                  <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
+                    Streamline automation within your office or workplace
+                    environment to enhance your team productivity, efficiency,
+                    and collaboration by reducing manual effort . Let's say Hi
+                    to automation, Goodbye manual!
+                  </p>
+                  <Link
+                    href={"#"}
+                    className="flex items-center gap-x-2 text-sm font-medium text-primary"
+                  >
+                    Explore Employee Self Service
+                    <Icon className="text-primary" icon="ri:arrow-right-line" />
+                  </Link>
+                </motion.div>
+              )}
             </div>
             <div className="md:col-span-5 col-span-12 flex justify-center sm:block">
               <div className="relative max-w-[400px] max-h-[400px] h-[490px] md:ml-24">
@@ -458,6 +693,7 @@ export default function Home() {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-[400px] sm:h-[400px] w-[280px] h-[280px] rounded-full border-[4px] border-dashed border-[#D2D9EF]">
                   <div className="relative h-full w-full">
                     <img
+                      onClick={() => setIntegrated(6)}
                       onMouseEnter={() => setIntegratedStar("ESS")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute sm:top-16 sm:left-11 top-7 left-11 cursor-pointer "
@@ -478,6 +714,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(1)}
                       onMouseEnter={() => setIntegratedStar("SMO")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute sm:right-16 sm:top-11 right-11 top-7 cursor-pointer"
@@ -498,6 +735,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(5)}
                       onMouseEnter={() => setIntegratedStar("API")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute sm:left-5 sm:bottom-24 left-4 bottom-16 cursor-pointer"
@@ -518,6 +756,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(3)}
                       onMouseEnter={() => setIntegratedStar("SP")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute sm:right-12 sm:bottom-14 right-7 bottom-12 cursor-pointer"
@@ -538,6 +777,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(0)}
                       onMouseEnter={() => setIntegratedStar("POS")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute -top-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
@@ -558,6 +798,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(4)}
                       onMouseEnter={() => setIntegratedStar("SDO")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
@@ -578,6 +819,7 @@ export default function Home() {
                       </motion.div>
                     )}
                     <img
+                      onClick={() => setIntegrated(2)}
                       onMouseEnter={() => setIntegratedStar("OSE")}
                       onMouseOut={() => setIntegratedStar("")}
                       className="absolute top-1/2 -right-8 transform -translate-y-1/2 cursor-pointer"
@@ -606,7 +848,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="md:px-24 mb-20">
+        <div className="md:px-24 mb-20 px-4">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -1068,6 +1310,8 @@ export default function Home() {
 
           <div className="sm:hidden block">
             <ExploreAccordionItem
+              resetSlideIndex={resetSlideIndex}
+              setmaxLength={setmaxLength}
               index={1}
               setActiveExploreAccordion={setActiveExploreAccordion}
               isActive={activeExploreAccordion == 1}
@@ -1076,11 +1320,22 @@ export default function Home() {
               content={
                 <div>
                   <div className="flex justify-center">
-                    <img
-                      className="md:h-[329px] object-cover"
-                      src={`/home/oms-${imageSlideIndex}.svg`}
-                      alt=""
-                    />
+                    <Swiper
+                      slidesPerView={1}
+                      onSlideNextTransitionEnd={slideRight}
+                      onSlidePrevTransitionEnd={slideLeft}
+                      loop={true}
+                    >
+                      <SwiperSlide>
+                        <img src="/home/oms-1.svg" alt="oms" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/oms-2.svg" alt="oms" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/oms-3.svg" alt="oms" />
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                   <div className="flex justify-between mt-4 mb-3 items-center">
                     <div className="flex gap-x-3 items-center">
@@ -1121,7 +1376,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(1)}
+                          // onClick={() => setImageSlideIndex(1)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1129,7 +1384,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(2)}
+                          // onClick={() => setImageSlideIndex(2)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1137,7 +1392,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(3)}
+                          // onClick={() => setImageSlideIndex(3)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1148,6 +1403,8 @@ export default function Home() {
             />
 
             <ExploreAccordionItem
+              resetSlideIndex={resetSlideIndex}
+              setmaxLength={setmaxLength}
               index={2}
               setActiveExploreAccordion={setActiveExploreAccordion}
               isActive={activeExploreAccordion == 2}
@@ -1156,11 +1413,28 @@ export default function Home() {
               content={
                 <div>
                   <div className="flex justify-center">
-                    <img
-                      className="md:h-[329px] object-cover"
-                      src={`/home/crm-${imageSlideIndex}.svg`}
-                      alt=""
-                    />
+                    <Swiper
+                      slidesPerView={1}
+                      onSlideNextTransitionEnd={slideRight}
+                      onSlidePrevTransitionEnd={slideLeft}
+                      loop={true}
+                    >
+                      <SwiperSlide>
+                        <img src="/home/crm-1.svg" alt="crm" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/crm-2.svg" alt="crm" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/crm-3.svg" alt="crm" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/crm-4.svg" alt="crm" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/crm-5.svg" alt="crm" />
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                   <div className="flex justify-between mt-4 mb-3 items-center">
                     <div className="flex gap-x-3 items-center">
@@ -1214,7 +1488,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(1)}
+                          // onClick={() => setImageSlideIndex(1)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1222,7 +1496,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(2)}
+                          // onClick={() => setImageSlideIndex(2)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1230,7 +1504,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(3)}
+                          // onClick={() => setImageSlideIndex(3)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1238,7 +1512,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(4)}
+                          // onClick={() => setImageSlideIndex(4)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1246,7 +1520,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(5)}
+                          // onClick={() => setImageSlideIndex(5)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1257,6 +1531,8 @@ export default function Home() {
             />
 
             <ExploreAccordionItem
+              resetSlideIndex={resetSlideIndex}
+              setmaxLength={setmaxLength}
               index={3}
               setActiveExploreAccordion={setActiveExploreAccordion}
               isActive={activeExploreAccordion == 3}
@@ -1265,11 +1541,22 @@ export default function Home() {
               content={
                 <div>
                   <div className="flex justify-center">
-                    <img
-                      className="md:h-[329px] object-cover"
-                      src={`/home/oa-${imageSlideIndex}.svg`}
-                      alt=""
-                    />
+                    <Swiper
+                      slidesPerView={1}
+                      onSlideNextTransitionEnd={slideRight}
+                      onSlidePrevTransitionEnd={slideLeft}
+                      loop={true}
+                    >
+                      <SwiperSlide>
+                        <img src="/home/oa-1.svg" alt="oa" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/oa-2.svg" alt="oa" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/oa-3.svg" alt="oa" />
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                   <div className="flex justify-between mt-4 mb-3 items-center">
                     <div className="flex gap-x-3 items-center">
@@ -1310,7 +1597,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(1)}
+                          // onClick={() => setImageSlideIndex(1)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1318,7 +1605,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(2)}
+                          // onClick={() => setImageSlideIndex(2)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1326,7 +1613,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(3)}
+                          // onClick={() => setImageSlideIndex(3)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1337,6 +1624,8 @@ export default function Home() {
             />
 
             <ExploreAccordionItem
+              resetSlideIndex={resetSlideIndex}
+              setmaxLength={setmaxLength}
               index={4}
               setActiveExploreAccordion={setActiveExploreAccordion}
               isActive={activeExploreAccordion == 4}
@@ -1345,11 +1634,19 @@ export default function Home() {
               content={
                 <div>
                   <div className="flex justify-center">
-                    <img
-                      className="md:h-[329px] object-cover"
-                      src={`/home/sm-${imageSlideIndex}.svg`}
-                      alt=""
-                    />
+                    <Swiper
+                      slidesPerView={1}
+                      onSlideNextTransitionEnd={slideRight}
+                      onSlidePrevTransitionEnd={slideLeft}
+                      loop={true}
+                    >
+                      <SwiperSlide>
+                        <img src="/home/sm-1.svg" alt="sm" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/home/sm-2.svg" alt="sm" />
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                   <div className="flex justify-between mt-4 mb-3 items-center">
                     <div className="flex gap-x-3 items-center">
@@ -1384,7 +1681,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(1)}
+                          // onClick={() => setImageSlideIndex(1)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}
@@ -1392,7 +1689,7 @@ export default function Home() {
                         <img src="/icons/dot-active.svg" alt="active" />
                       ) : (
                         <div
-                          onClick={() => setImageSlideIndex(2)}
+                          // onClick={() => setImageSlideIndex(2)}
                           className="cursor-pointer w-[10px] h-[10px] bg-neutral-n-40 rounded-full"
                         ></div>
                       )}

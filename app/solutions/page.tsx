@@ -7,9 +7,21 @@ import Link from "next/link";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import SwiperSolutionsTabs from "../components/SwiperSolutionsTabs";
+
+import "swiper/css";
 
 const SolutionsPage = () => {
-  const [solution, setSolution] = useState(0);
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <main>
@@ -34,6 +46,7 @@ const SolutionsPage = () => {
             </div>
             <div className="flex justify-center mb-20">
               <Link
+                onClick={handleScroll}
                 href="#revolutionize"
                 className="btn-border-primary max-sm:text-xs py-2.5 px-4 font-semibold"
               >
@@ -53,7 +66,7 @@ const SolutionsPage = () => {
               <div className="scroller__container">
                 <div className="scroller">
                   <div className="scroller__item">
-                    <div className="sm:w-[250px] min-w-[250px] ml-4 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                    <div className="sm:w-[250px] sm:min-w-[250px] ml-4 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
                       <p className="font-medium mb-7 ">
                         “One of the best retail service for me. Loved the
                         community too. Very helpful.”
@@ -90,7 +103,7 @@ const SolutionsPage = () => {
                   </div>
 
                   <div className="scroller__item">
-                    <div className="sm:w-[250px] min-w-[250px] ml-4 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                    <div className="sm:w-[250px] sm:min-w-[250px] ml-4 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
                       <p className="font-medium mb-7 ">
                         “One of the best retail service for me. Loved the
                         community too. Very helpful.”
@@ -270,60 +283,29 @@ const SolutionsPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="flex justify-center uppercase mb-10 px-4">
-              <p
-                onClick={() => setSolution(0)}
-                className={`w-[162px] cursor-pointer pb-3 text-center text-sm ${
-                  solution == 0
-                    ? "font-bold text-primary border-b border-[#1F40AE]"
-                    : "font-semibold text-neutral-n-50"
-                }`}
-              >
-                retail
-              </p>
-              <p
-                onClick={() => setSolution(1)}
-                className={`w-[162px] cursor-pointer pb-3 text-center text-sm ${
-                  solution == 1
-                    ? "font-bold text-primary border-b border-[#1F40AE]"
-                    : "font-semibold text-neutral-n-50"
-                }`}
-              >
-                cafe
-              </p>
-              <p
-                onClick={() => setSolution(2)}
-                className={`w-[162px] cursor-pointer pb-3 text-center text-sm ${
-                  solution == 2
-                    ? "font-bold text-primary border-b border-[#1F40AE]"
-                    : "font-semibold text-neutral-n-50"
-                }`}
-              >
-                Restaurant
-              </p>
-            </div>
+            <Swiper
+              className="!flex !flex-col"
+              slidesPerView={1}
+              allowTouchMove={false}
+            >
+              <SwiperSolutionsTabs />
 
-            {solution == 0 && (
-              <img
-                className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
-                src="/solutions/retail.svg"
-                alt="retail"
-              />
-            )}
-            {solution == 1 && (
-              <img
-                className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
-                src="/solutions/cafe.svg"
-                alt="cafe"
-              />
-            )}
-            {solution == 2 && (
-              <img
-                className="w-full px-4 sm:px-0 h-[320px] sm:h-auto object-cover rounded-lg"
-                src="/solutions/restaurant.svg"
-                alt="restaurant"
-              />
-            )}
+              <SwiperSlide>
+                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                  <img src="/solutions/retail.svg" alt="retail" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                  <img src="/solutions/cafe.svg" alt="cafe" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                  <img src="/solutions/restaurant.svg" alt="restaurant" />
+                </div>
+              </SwiperSlide>
+            </Swiper>
 
             <div className="grid grid-cols-3 gap-6 mt-10 mb-20 px-4 sm:px-0">
               <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">

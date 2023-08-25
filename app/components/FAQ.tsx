@@ -54,6 +54,7 @@ const FAQ = () => {
             {accordionData.map(({ title, content }, index) => (
               <>
                 <FAQAccordionItem
+                  key={index}
                   setActive={setActive}
                   index={index}
                   title={title}

@@ -9,6 +9,8 @@ interface AccordionProps {
   content: ReactNode;
   setActiveExploreAccordion: any;
   isActive: boolean;
+  setmaxLength: (length: number) => void;
+  resetSlideIndex: () => void;
 }
 
 const ExploreAccordionItem = ({
@@ -18,12 +20,34 @@ const ExploreAccordionItem = ({
   content,
   setActiveExploreAccordion,
   isActive,
+  setmaxLength,
+  resetSlideIndex,
 }: AccordionProps) => {
   return (
     <>
-      <div className="px-4">
+      <div className="sm:px-4">
         <div
-          onClick={() => setActiveExploreAccordion(index)}
+          onClick={() => {
+            setActiveExploreAccordion(index);
+            resetSlideIndex();
+            switch (index) {
+              case 1:
+                setmaxLength(3);
+                break;
+              case 2:
+                setmaxLength(5);
+                break;
+              case 3:
+                setmaxLength(3);
+                break;
+              case 4:
+                setmaxLength(2);
+                break;
+
+              default:
+                break;
+            }
+          }}
           className="flex mb-2 justify-between gap-x-2"
         >
           <div>
@@ -37,29 +61,35 @@ const ExploreAccordionItem = ({
             <p className="text-sm text-neutral-n-100">{desc}</p>
           </div>
           <div>
-            {isActive ? (
-              <motion.div
-                initial={{ opacity: 0.6 }}
-                whileInView={{
-                  opacity: 1,
-                  rotate: 180,
-                  transition: { duration: 0.3 },
-                }}
-              >
-                <Icon icon="mdi:chevron-up" />
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0.6 }}
-                whileInView={{
-                  opacity: 1,
-                  rotate: 180,
-                  transition: { duration: 0.3 },
-                }}
-              >
-                <Icon icon="mdi:chevron-down" />
-              </motion.div>
-            )}
+            <AnimatePresence>
+              {isActive && (
+                <motion.div
+                  initial={{ opacity: 0.6 }}
+                  animate={{
+                    opacity: 1,
+                    rotate: -180,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <Icon icon="mdi:chevron-down" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+              {!isActive && (
+                <motion.div
+                  initial={{ opacity: 0.6 }}
+                  animate={{
+                    opacity: 1,
+                    rotate: 180,
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <Icon icon="mdi:chevron-up" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 

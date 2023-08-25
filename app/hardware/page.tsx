@@ -7,6 +7,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const SolutionsPage = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <main>
       <section>
@@ -30,6 +40,7 @@ const SolutionsPage = () => {
             </div>
             <div className="flex justify-center mb-20">
               <Link
+                onClick={handleScroll}
                 href="#oneretail"
                 className="btn-border-primary max-sm:text-xs py-2.5 px-4 font-semibold"
               >
@@ -60,17 +71,17 @@ const SolutionsPage = () => {
                   <div className="scroller__item">
                     <img src="/hardware/hardware-4.svg" alt="image" />
                   </div>
-                  <div className="scroller__item">
+                  <div className="scroller__item special">
                     <img
-                      className=" !w-[147px]"
+                      className="!w-[137px]"
                       src="/hardware/hardware-5.svg"
                       alt="image"
                     />
                   </div>
                   <div className="scroller__item">
                     <img
-                      className="!w-[144px]"
-                      src="/hardware/hardware-6.svg"
+                      className=""
+                      src="/hardware/hardware-6.jpeg"
                       alt="image"
                     />
                   </div>
@@ -87,19 +98,22 @@ const SolutionsPage = () => {
                   <div className="scroller__item">
                     <img src="/hardware/hardware-4.svg" alt="image" />
                   </div>
-                  <div className="scroller__item">
+                  <div className="scroller__item special">
                     <img
-                      className=" !w-[147px]"
+                      className="!w-[137px]"
                       src="/hardware/hardware-5.svg"
                       alt="image"
                     />
                   </div>
                   <div className="scroller__item">
                     <img
-                      className="!w-[144px]"
-                      src="/hardware/hardware-6.svg"
+                      className=""
+                      src="/hardware/hardware-6.jpeg"
                       alt="image"
                     />
+                  </div>
+                  <div className="scroller__item">
+                    <img src="/hardware/hardware-1.svg" alt="image" />
                   </div>
                 </div>
               </div>
