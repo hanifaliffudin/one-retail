@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 const ContactPage = () => {
   return (
-    <main>
+    <main className="max-w-screen-2xl mx-auto">
       <div className="sm:w-[540px] sm:h-[540px] -z-10 rounded-full blur-xl bg-[#A9B3D626] absolute -top-[187px] -left-[105px]"></div>
       <section>
         <div className="mt-44 grid grid-cols-2 md:px-24">

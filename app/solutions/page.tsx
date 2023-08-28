@@ -26,7 +26,7 @@ const SolutionsPage = () => {
   const [indexTabs, setIndexTabs] = useState(0);
 
   return (
-    <main>
+    <main className="max-w-screen-2xl mx-auto">
       <section>
         <div className="mt-44 flex-col items-center">
           <motion.div

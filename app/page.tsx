@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main className="max-w-screen-2xl mx-auto">
       <section className="bg-white">
         <div className="grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
           <div className="md:ml-24 px-4 md:px-0 md:mt-[180px] mt-6 mb-7 place-self-center lg:col-span-5 col-span-12 order-last md:order-first">
@@ -238,7 +238,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="mb-20">
+      <section className="mb-20 relative">
         <div className="absolute bg-[#EDEFF7] w-full -z-10 h-[422px]">
           <motion.div
             className="relative w-full h-full"

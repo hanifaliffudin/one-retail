@@ -21,6 +21,7 @@ html {
   --neutral-n-700: #616161;
 
   --primary: #1f40ae;
+  --primary-p-40: #6a80c9;
   --primary-p-50: #4460bb;
 }
 
@@ -28,6 +29,9 @@ html {
   /* text color */
   .text-primary {
     color: var(--primary);
+  }
+  .text-primary-p-40 {
+    color: var(--primary-p-40);
   }
   .text-primary-p-50 {
     color: var(--primary-p-50);
@@ -37,6 +41,9 @@ html {
   }
   .text-neutral-n-10 {
     color: var(--neutral-n-10);
+  }
+  .text-neutral-n-30 {
+    color: var(--neutral-n-30);
   }
   .text-neutral-n-50 {
     color: var(--neutral-n-50);
@@ -84,6 +91,10 @@ html {
   .btn-primary {
     border-radius: 6px;
     background-color: var(--primary);
+  }
+
+  .btn-primary-40 {
+    background-color: var(--primary-p-40);
   }
 
   .btn-border-primary {

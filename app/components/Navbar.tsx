@@ -18,7 +18,7 @@ export default function NavbarWithCTAButton() {
         onMouseLeave={() => setDropdownProduct(false)}
         className="bg-white fixed w-full z-20 top-0 left-0 border-b border-[#EDEDED]"
       >
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl relative flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
             <img src="/logo-navbar.svg" className="mr-3" alt="Logo" />
           </Link>
@@ -83,7 +83,6 @@ export default function NavbarWithCTAButton() {
                   className={
                     pathname == "/" ? "text-neutral-n-90 font-semibold" : ""
                   }
-                  aria-current="page"
                 >
                   Home
                 </Link>
@@ -91,7 +90,11 @@ export default function NavbarWithCTAButton() {
               <li>
                 <div
                   onMouseEnter={() => setDropdownProduct(true)}
-                  className="flex items-center gap-x-1 cursor-pointer"
+                  className={`flex items-center gap-x-1 cursor-pointer ${
+                    pathname.includes("/products/")
+                      ? "text-neutral-n-90 font-semibold"
+                      : ""
+                  }`}
                 >
                   Products
                   <Icon icon="carbon:chevron-down" />
@@ -521,6 +524,49 @@ export default function NavbarWithCTAButton() {
             </ul>
           </div>
         </div>
+        {pathname.includes("/products/") && (
+          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="flex items-center gap-x-5">
+              <img src="/products/oa/icon-navbar-oa.svg" alt="icon oa" />
+              <h2 className="text-neutral-n-100 text-lg">Office Automation</h2>
+            </div>
+
+            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+
+            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <Link
+                href={"#"}
+                className="text-primary pt-4 pb-[14px] border-b-[3px] border-b-[#1F40AE]"
+              >
+                Overview
+              </Link>
+              <Link
+                href={"#"}
+                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+              >
+                Benefits
+              </Link>
+              <Link
+                href={"#"}
+                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+              >
+                Employee Self Service
+              </Link>
+              <Link
+                href={"#"}
+                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+              >
+                Store Daily Operation
+              </Link>
+              <Link
+                href={"#"}
+                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+              >
+                Repair & Maintenance
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* Menu Mobile */}
         <AnimatePresence initial={false}>
