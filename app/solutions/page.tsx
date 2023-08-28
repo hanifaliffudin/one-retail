@@ -294,27 +294,27 @@ const SolutionsPage = () => {
               <SwiperSolutionsTabs />
 
               <SwiperSlide>
-                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                <div className="img-hover-zoom flex rounded-lg max-sm:px-4">
                   <img
-                    className="h-full object-cover"
+                    className="h-full object-cover w-full"
                     src="/solutions/retail.svg"
                     alt="retail"
                   />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                <div className="img-hover-zoom flex rounded-lg max-sm:px-4">
                   <img
-                    className="h-full object-cover"
+                    className="h-full object-cover w-full"
                     src="/solutions/cafe.svg"
                     alt="cafe"
                   />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="img-hover-zoom rounded-lg max-sm:px-4">
+                <div className="img-hover-zoom flex rounded-lg max-sm:px-4">
                   <img
-                    className="h-full object-cover"
+                    className="h-full object-cover w-full"
                     src="/solutions/restaurant.svg"
                     alt="restaurant"
                   />

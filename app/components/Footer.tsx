@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function FooterWithSocialMediaIcons() {
   return (
     <>
-      <div className="w-full max-w-screen-2xl mx-auto bg-neutral-n-90 py-10 md:px-24 px-4 text-neutral-n-10">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+      <div className="w-full bg-neutral-n-90 py-10 md:px-24 px-4 text-neutral-n-10">
+        <div className="grid max-w-screen-2xl mx-auto w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="flex flex-col justify-between mb-6">
             <img
               className="max-h-16 w-fit"
