@@ -16,7 +16,7 @@ const TalkToUs = () => {
             viewport={{ once: true }}
           >
             <div className="bg-[#0F2057] h-[588px] relative rounded-xl text-white py-10 px-12">
-              <h2 className="font-bold sm:text-[32px] text-xl text-neutral-n-10 mb-5">
+              <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-neutral-n-10 mb-5">
                 Talk to us and see how One Retail work for your business
               </h2>
               <p className="max-sm:text-sm">
