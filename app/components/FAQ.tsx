@@ -41,7 +41,7 @@ const FAQ = () => {
       >
         <div className="grid grid-cols-3 pt-20 pb-[104px] md:px-[188px] px-4 gap-y-5 gap-x-[120px] mb-20">
           <div className="md:col-span-1 col-span-3">
-            <h2 className="font-bold sm:text-[32px] text-xl mb-5">
+            <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-xl mb-5">
               Frequently Asked Questions
             </h2>
             <p className="text-neutral-n-90 max-sm:text-sm">
