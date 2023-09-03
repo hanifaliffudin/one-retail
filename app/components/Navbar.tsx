@@ -11,6 +11,19 @@ export default function NavbarWithCTAButton() {
   const [dropdownProduct, setDropdownProduct] = useState(false);
   const [showProduct, setShowProduct] = useState(1);
   const [menuMobile, setMenuMobile] = useState(false);
+  const [subActive, setSubActive] = useState("overview");
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    setSubActive(targetId);
+  };
 
   return (
     <>
@@ -194,13 +207,19 @@ export default function NavbarWithCTAButton() {
                                     <h2 className="font-medium text-base">
                                       Order Management System
                                     </h2>
-                                    <button className="btn-border-primary flex items-center text-xs py-1.5 px-4">
+                                    <Link
+                                      href={"#"}
+                                      onClick={() =>
+                                        setDropdownProduct(!dropdownProduct)
+                                      }
+                                      className="btn-border-primary flex items-center text-xs py-1.5 px-4"
+                                    >
                                       Learn more
                                       <Icon
                                         className="ml-1"
                                         icon="ri:arrow-right-line"
                                       />
-                                    </button>
+                                    </Link>
                                   </div>
                                   <p className="text-neutral-n-70 text-sm font-normal mt-2">
                                     An Order Management System (OMS) automates
@@ -265,13 +284,19 @@ export default function NavbarWithCTAButton() {
                                     <h2 className="font-medium text-base">
                                       Customer Relationship Management
                                     </h2>
-                                    <button className="btn-border-primary flex items-center text-xs py-1.5 px-4">
+                                    <Link
+                                      href={"/products/crm"}
+                                      onClick={() =>
+                                        setDropdownProduct(!dropdownProduct)
+                                      }
+                                      className="btn-border-primary flex items-center text-xs py-1.5 px-4"
+                                    >
                                       Learn more
                                       <Icon
                                         className="ml-1"
                                         icon="ri:arrow-right-line"
                                       />
-                                    </button>
+                                    </Link>
                                   </div>
                                   <p className="text-neutral-n-70 text-sm font-normal mt-2">
                                     Customer Relationship Management (CRM)
@@ -367,6 +392,9 @@ export default function NavbarWithCTAButton() {
                                     </h2>
                                     <Link
                                       href={"/products/office-automation"}
+                                      onClick={() =>
+                                        setDropdownProduct(!dropdownProduct)
+                                      }
                                       className="btn-border-primary flex items-center text-xs py-1.5 px-4"
                                     >
                                       Learn more
@@ -435,13 +463,19 @@ export default function NavbarWithCTAButton() {
                                     <h2 className="font-medium text-base">
                                       Supplier Management
                                     </h2>
-                                    <button className="btn-border-primary flex items-center text-xs py-1.5 px-4">
+                                    <Link
+                                      href={"#"}
+                                      onClick={() =>
+                                        setDropdownProduct(!dropdownProduct)
+                                      }
+                                      className="btn-border-primary flex items-center text-xs py-1.5 px-4"
+                                    >
                                       Learn more
                                       <Icon
                                         className="ml-1"
                                         icon="ri:arrow-right-line"
                                       />
-                                    </button>
+                                    </Link>
                                   </div>
                                   <p className="text-neutral-n-70 text-sm font-normal mt-2">
                                     Supplier Management enable seamless
@@ -524,7 +558,7 @@ export default function NavbarWithCTAButton() {
             </ul>
           </div>
         </div>
-        {pathname.includes("/products/") && (
+        {pathname.includes("/products/office-automation") && (
           <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
             <div className="flex items-center gap-x-5">
               <img src="/products/oa/icon-navbar-oa.svg" alt="icon oa" />
@@ -535,32 +569,126 @@ export default function NavbarWithCTAButton() {
 
             <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
               <Link
-                href={"#"}
-                className="text-primary pt-4 pb-[14px] border-b-[3px] border-b-[#1F40AE]"
+                onClick={handleScroll}
+                href="#overview"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "overview"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
               >
                 Overview
               </Link>
               <Link
-                href={"#"}
-                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+                onClick={handleScroll}
+                href="#benefits"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "benefits"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
               >
                 Benefits
               </Link>
               <Link
-                href={"#"}
-                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+                onClick={handleScroll}
+                href="#ees"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "ees"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
               >
                 Employee Self Service
               </Link>
               <Link
-                href={"#"}
-                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+                onClick={handleScroll}
+                href="#sdo"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "sdo"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
               >
                 Store Daily Operation
               </Link>
               <Link
-                href={"#"}
-                className="pt-4 pb-[14px] border-b-[3px] border-b-transparent"
+                onClick={handleScroll}
+                href="#rm"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "rm"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Repair & Maintenance
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {pathname.includes("/products/crm") && (
+          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="flex items-center gap-x-5">
+              <img src="/products/crm/icon-navbar-crm.svg" alt="icon crm" />
+              <h2 className="text-neutral-n-100 text-lg">CRM</h2>
+            </div>
+
+            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+
+            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <Link
+                onClick={handleScroll}
+                href="#overview"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "overview"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Overview
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#benefits"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "benefits"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Benefits
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#ees"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "ees"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Employee Self Service
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#sdo"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "sdo"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Store Daily Operation
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#rm"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "rm"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
               >
                 Repair & Maintenance
               </Link>

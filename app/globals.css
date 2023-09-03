@@ -20,6 +20,8 @@ html {
   --neutral-n-100: #101828;
   --neutral-n-700: #616161;
 
+  --base-02: #090914;
+
   --primary: #1f40ae;
   --primary-p-40: #6a80c9;
   --primary-p-50: #4460bb;
@@ -65,6 +67,9 @@ html {
   }
   .text-neutral-n-700 {
     color: var(--neutral-n-700);
+  }
+  .text-base-02 {
+    color: var(--base-02);
   }
 
   /* background color */
@@ -236,6 +241,11 @@ html {
   border-radius: 8px;
   transform: scale(1.04);
 }
+
+/* .clip {
+  display: inline-block;
+  clip-path: circle(120% at 50% 0%);
+} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
