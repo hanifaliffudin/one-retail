@@ -47,7 +47,7 @@ export default function NavbarWithCTAButton() {
             </button>
             <div className="xl:inline-block mx-4 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
             <Link
-              href={"/contact"}
+              href="/contact"
               className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 hidden xl:block"
             >
               Get Demo
@@ -130,7 +130,7 @@ export default function NavbarWithCTAButton() {
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
                     >
-                      <div className="grid grid-cols-3 gap-x-2 p-2 bg-neutral-n-30 rounded-xl w-[876px] min-h-[497px] mt-8">
+                      <div className="grid text-black grid-cols-3 gap-x-2 p-2 bg-neutral-n-30 rounded-xl w-[876px] min-h-[497px] mt-8">
                         <div className="col-span-1 flex flex-col gap-y-4">
                           <div
                             onMouseEnter={() => setShowProduct(1)}
@@ -208,10 +208,11 @@ export default function NavbarWithCTAButton() {
                                       Order Management System
                                     </h2>
                                     <Link
-                                      href={"#"}
-                                      onClick={() =>
-                                        setDropdownProduct(!dropdownProduct)
-                                      }
+                                      href="#"
+                                      onClick={() => {
+                                        setDropdownProduct(!dropdownProduct);
+                                        setSubActive("overview");
+                                      }}
                                       className="btn-border-primary flex items-center text-xs py-1.5 px-4"
                                     >
                                       Learn more
@@ -285,10 +286,11 @@ export default function NavbarWithCTAButton() {
                                       Customer Relationship Management
                                     </h2>
                                     <Link
-                                      href={"/products/crm"}
-                                      onClick={() =>
-                                        setDropdownProduct(!dropdownProduct)
-                                      }
+                                      href="/products/crm"
+                                      onClick={() => {
+                                        setDropdownProduct(!dropdownProduct);
+                                        setSubActive("overview");
+                                      }}
                                       className="btn-border-primary flex items-center text-xs py-1.5 px-4"
                                     >
                                       Learn more
@@ -391,10 +393,11 @@ export default function NavbarWithCTAButton() {
                                       Office Automation
                                     </h2>
                                     <Link
-                                      href={"/products/office-automation"}
-                                      onClick={() =>
-                                        setDropdownProduct(!dropdownProduct)
-                                      }
+                                      href="/products/office-automation"
+                                      onClick={() => {
+                                        setDropdownProduct(!dropdownProduct);
+                                        setSubActive("overview");
+                                      }}
                                       className="btn-border-primary flex items-center text-xs py-1.5 px-4"
                                     >
                                       Learn more
@@ -464,10 +467,11 @@ export default function NavbarWithCTAButton() {
                                       Supplier Management
                                     </h2>
                                     <Link
-                                      href={"#"}
-                                      onClick={() =>
-                                        setDropdownProduct(!dropdownProduct)
-                                      }
+                                      href="/products/supplier-management"
+                                      onClick={() => {
+                                        setDropdownProduct(!dropdownProduct);
+                                        setSubActive("overview");
+                                      }}
                                       className="btn-border-primary flex items-center text-xs py-1.5 px-4"
                                     >
                                       Learn more
@@ -661,36 +665,47 @@ export default function NavbarWithCTAButton() {
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#ees"
+                href="#el"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "ees"
+                  subActive == "el"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Employee Self Service
+                Engagement & Loyalty
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#sdo"
+                href="#gamification"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "sdo"
+                  subActive == "gamification"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Store Daily Operation
+                Gamification
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#rm"
+                href="#ec"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "rm"
+                  subActive == "ec"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Repair & Maintenance
+                E-Commerce
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#pim"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "pim"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                PIM
               </Link>
             </div>
           </div>
@@ -722,7 +737,10 @@ export default function NavbarWithCTAButton() {
                       Home
                     </Link>
                     <div
-                      onClick={() => setDropdownProduct(!dropdownProduct)}
+                      onClick={() => {
+                        setDropdownProduct(!dropdownProduct);
+                        setSubActive("overview");
+                      }}
                       className={`my-4 flex items-center justify-between ${
                         dropdownProduct
                           ? "font-bold text-neutral-n-100"
@@ -901,7 +919,7 @@ export default function NavbarWithCTAButton() {
                     </button>
                   </div>
                   <Link
-                    href={"/contact"}
+                    href="/contact"
                     onClick={() => setMenuMobile(!menuMobile)}
                     className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4"
                   >

@@ -64,7 +64,7 @@ const FAQ = () => {
               </>
             ))}
             <div className="text-primary max-sm:text-sm underline font-medium mt-10">
-              <Link href={"/contact"}>Any further question? contact us!</Link>
+              <Link href="/contact">Any further question? contact us!</Link>
             </div>
           </div>
         </div>

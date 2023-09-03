@@ -466,7 +466,7 @@ export default function Home() {
                     points.
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Point of Sale (POS)
@@ -501,7 +501,7 @@ export default function Home() {
                     them to view the menu then can quickly add it to cart.
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Self Mobile Ordering
@@ -536,7 +536,7 @@ export default function Home() {
                     performance in order to enhance customer satisfaction.
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Online Shopping Experience
@@ -570,7 +570,7 @@ export default function Home() {
                     key business partners through a digital interface.
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Supplier Portal
@@ -606,7 +606,7 @@ export default function Home() {
                     to save data through manual key in and paper.
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Store Daily Operation
@@ -672,7 +672,7 @@ export default function Home() {
                     to automation, Goodbye manual!
                   </p>
                   <Link
-                    href={"#"}
+                    href="#"
                     className="flex items-center gap-x-2 text-sm font-medium text-primary"
                   >
                     Explore Employee Self Service

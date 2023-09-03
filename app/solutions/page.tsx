@@ -343,7 +343,7 @@ const SolutionsPage = () => {
                       efficiency and customer satisfaction.
                     </p>
                     <Link
-                      href={"#"}
+                      href="#"
                       className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                     >
                       Explore product{" "}
@@ -365,7 +365,7 @@ const SolutionsPage = () => {
                       convenience.
                     </p>
                     <Link
-                      href={"#"}
+                      href="#"
                       className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                     >
                       Explore product{" "}
@@ -386,7 +386,7 @@ const SolutionsPage = () => {
                       wait times, and deliver a personalized experience.
                     </p>
                     <Link
-                      href={"#"}
+                      href="#"
                       className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                     >
                       Explore product{" "}
@@ -407,7 +407,7 @@ const SolutionsPage = () => {
                       performance and satisfaction.
                     </p>
                     <Link
-                      href={"#"}
+                      href="#"
                       className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                     >
                       Explore product{" "}
@@ -429,7 +429,7 @@ const SolutionsPage = () => {
                       team.
                     </p>
                     <Link
-                      href={"#"}
+                      href="#"
                       className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                     >
                       Explore product{" "}
@@ -461,7 +461,7 @@ const SolutionsPage = () => {
                         customer experience and increase revenue.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -483,7 +483,7 @@ const SolutionsPage = () => {
                         experience.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -505,7 +505,7 @@ const SolutionsPage = () => {
                         operation.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -539,7 +539,7 @@ const SolutionsPage = () => {
                         loyalty points.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -561,7 +561,7 @@ const SolutionsPage = () => {
                         smoother dining experience.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -582,7 +582,7 @@ const SolutionsPage = () => {
                         personalized and efficient ordering experience.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -603,7 +603,7 @@ const SolutionsPage = () => {
                         performance and ensuring customer satisfaction.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}
@@ -624,7 +624,7 @@ const SolutionsPage = () => {
                         for a smooth restaurant operation.
                       </p>
                       <Link
-                        href={"#"}
+                        href="#"
                         className="flex items-center text-primary font-medium text-sm max-sm:text-xs"
                       >
                         Explore product{" "}

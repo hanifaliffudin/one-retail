@@ -24,9 +24,10 @@ const CRMPage = () => {
             src="/products/crm/bg-hero-crm.svg"
             alt="hero"
           />
-          <div className="absolute grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
+          <div className="absolute grid w-full mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
             <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12 order-last md:order-first">
               <motion.div
+                className="max-w-[533px]"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
@@ -37,11 +38,11 @@ const CRMPage = () => {
                 <p className="font-medium text-neutral-n-80 text-lg mb-3">
                   Transforming relationships with One Retail CRM
                 </p>
-                <h1 className="sm:text-[40px] text-[22px]  sm:leading-[60px] leading-[33px] font-bold mb-5">
+                <h1 className="sm:text-[44px] text-[22px] sm:leading-[62px] leading-[33px] font-bold mb-5">
                   Build Stronger Connection with Your Customer
                 </h1>
 
-                <p className="max-sm:text-sm font-extralight mb-14  leading-[30px]">
+                <p className="max-sm:text-sm mb-14 text-lg text-gray-600">
                   Bring new experiences to your customers by enabling shopping
                   across different mediums,leading your business to competitive
                   advantage in the market.
@@ -113,8 +114,8 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-12 mt-20 px-24">
-          <div className="col-span-12 sm:col-span-7 relative">
+        <div className="grid grid-cols-12 mt-20 sm:px-24 gap-x-[107px]">
+          <div className="col-span-12 sm:col-span-6 relative">
             <img
               className="absolute"
               src="/products/crm/bg-nurturing.svg"
@@ -126,10 +127,11 @@ const CRMPage = () => {
               alt="nurturing"
             />
           </div>
-          <div className="col-span-12 sm:col-span-5 md:w-[507px] flex items-center">
-            <div className="">
+          <div className="col-span-12 sm:col-span-6  flex items-center">
+            <div className="md:w-[541px]">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
-                Nurturing Strong Relationship with Customers
+                Nurturing Strong <br className="max-sm:hidden" /> Relationship
+                with Customers
               </h2>
               <p className="text-gray-600 mb-8">
                 By utilize advanced technology to gather and analyze all
@@ -215,7 +217,7 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div className="relative h-[2300px]">
+        <div id="el" className="relative h-[2300px]">
           <img
             className="absolute -top-32"
             src="/products/crm/bg-engagement.svg"
@@ -244,7 +246,10 @@ const CRMPage = () => {
               </p>
             </div>
 
-            <div className="flex justify-center mt-[419px] mb-20">
+            <div
+              id="gamification"
+              className="flex justify-center mt-[419px] mb-20"
+            >
               <div className="w-[557px] text-center">
                 <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                   Level-Up Engagement with Gamification
@@ -306,7 +311,7 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div className="sm:px-24 mb-[100px]">
+        <div id="ec" className="sm:px-24 mb-[100px]">
           <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
             E-Commerce
           </h2>
@@ -375,7 +380,10 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-2 sm:px-24 gap-x-[90px] mb-[54px]">
+        <div
+          id="pim"
+          className="grid grid-cols-2 sm:px-24 gap-x-[90px] mb-[54px]"
+        >
           <div className="col-span-2 sm:col-span-1">
             <img className="h-full" src="/products/crm/pim.svg" alt="pim" />
           </div>
@@ -383,7 +391,7 @@ const CRMPage = () => {
             <h2 className="mb-3 font-bold sm:text-[36px] text-xl sm:leading-[54px]">
               Centralize Product Data with Product Information Management (PIM)
             </h2>
-            <p className="text-neutral-n-90 mb-12">
+            <p className="text-neutral-n-90 mb-10">
               Effortlessly centralize and update complex product data with One
               Retail PIM. Streamline your operations, improve collaboration, and
               deliver exceptional customer experiences with real-time, automated
@@ -398,13 +406,13 @@ const CRMPage = () => {
             <div className="flex items-center gap-x-3 mb-4">
               <img src="/products/crm/check-circle.svg" alt="check" />
               <p className="font-bold text-xl text-neutral-n-100">
-                Organize all your product in one place
+                Ensure data accuracy and consistency
               </p>
             </div>
             <div className="flex items-center gap-x-3">
               <img src="/products/crm/check-circle.svg" alt="check" />
               <p className="font-bold text-xl text-neutral-n-100">
-                Organize all your product in one place
+                Improve operational efficiency
               </p>
             </div>
           </div>
@@ -427,7 +435,7 @@ const CRMPage = () => {
                 </p>
                 <div className="flex">
                   <Link
-                    href={"/contact"}
+                    href="/contact"
                     className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
                   >
                     Contact Us

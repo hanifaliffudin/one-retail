@@ -375,7 +375,7 @@ const OfficeAutomationPage = () => {
                 </p>
                 <div className="flex">
                   <Link
-                    href={"/contact"}
+                    href="/contact"
                     className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
                   >
                     Contact Us
