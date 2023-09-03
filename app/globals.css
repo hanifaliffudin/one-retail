@@ -247,6 +247,10 @@ html {
   clip-path: circle(120% at 50% 0%);
 } */
 
+.cta-crm {
+  background: linear-gradient(90.31deg, #2649c0 24.55%, #152b74 99.77%);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .home.scroller__wrapper {
