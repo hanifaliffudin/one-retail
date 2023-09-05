@@ -71,6 +71,13 @@ html {
   .text-base-02 {
     color: var(--base-02);
   }
+  .text-ntp {
+    background: linear-gradient(
+      180deg,
+      rgba(237, 239, 247, 0.7) 30.38%,
+      rgba(237, 239, 247, 0) 88.33%
+    );
+  }
 
   /* background color */
   .bg-primary {
@@ -91,6 +98,19 @@ html {
   .bg-neutral-n-90 {
     background-color: var(--neutral-n-90);
   }
+  .bg-diamond-gradient {
+    background: radial-gradient(
+      100% 167.42% at 20.24% 0%,
+      #152b74 0%,
+      #06003a 100%
+    );
+  }
+  .bg-grad {
+    background: linear-gradient(180deg, #1f40ae 0%, #152b74 100%);
+  }
+  .bg-feature-sm {
+    background: linear-gradient(90deg, #d3daf0 0%, rgba(211, 218, 240, 0) 100%);
+  }
 
   /* buttons */
   .btn-primary {
@@ -100,6 +120,10 @@ html {
 
   .btn-primary-40 {
     background-color: var(--primary-p-40);
+  }
+
+  .btn-primary-50 {
+    background-color: var(--primary-p-50);
   }
 
   .btn-border-primary {
@@ -115,7 +139,6 @@ html {
 }
 
 /* image slider */
-
 .home.scroller {
   animation-duration: calc(
     var(--scrolling-gallery-item-duration, 1s) /
@@ -183,7 +206,6 @@ html {
 }
 
 /* scroll horizontal home */
-
 .scroll-horizontal {
   scroll-behavior: smooth;
 }
@@ -225,18 +247,16 @@ html {
 
 /* image zoom */
 .img-hover-zoom {
-  height: 320px; /* [1.1] Set it as per your need */
-  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  height: 320px;
+  overflow: hidden;
 }
 
-/* [2] Transition property for smooth transformation of images */
 .img-hover-zoom img {
   border-radius: 8px;
   transform-origin: 50% 51%;
   transition: transform 1s, filter 1s ease-in-out;
 }
 
-/* [3] Finally, transforming the image when container gets hovered */
 .img-hover-zoom:hover img {
   border-radius: 8px;
   transform: scale(1.04);

@@ -562,6 +562,7 @@ export default function NavbarWithCTAButton() {
             </ul>
           </div>
         </div>
+
         {pathname.includes("/products/office-automation") && (
           <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
             <div className="flex items-center gap-x-5">
@@ -706,6 +707,66 @@ export default function NavbarWithCTAButton() {
                 }`}
               >
                 PIM
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {pathname.includes("/products/supplier-management") && (
+          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="flex items-center gap-x-5">
+              <img src="/products/sm/icon-navbar-sm.svg" alt="icon sm" />
+              <h2 className="text-neutral-n-100 text-lg">
+                Supplier Management
+              </h2>
+            </div>
+
+            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+
+            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <Link
+                onClick={handleScroll}
+                href="#overview"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "overview"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Overview
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#benefits"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "benefits"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Benefits
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#pp"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "pp"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Partner Platform
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#ntp"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "ntp"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Non Trade Portal
               </Link>
             </div>
           </div>
