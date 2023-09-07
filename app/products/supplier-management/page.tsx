@@ -88,7 +88,7 @@ const SupplierManagementPage = () => {
 
               <div className="flex bg-[#F0F1F7] h-[148px] rounded-t-[20px] px-[30px] py-[50px] text-neutral-dark">
                 <h3 className="font-bold text-[32px] mr-4">50M+</h3>
-                <p className="font-medium w-[75px] text-[15px]">
+                <p id="benefits" className="font-medium w-[75px] text-[15px]">
                   Traffic Generated
                 </p>
               </div>
@@ -181,7 +181,7 @@ const SupplierManagementPage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="pp">
         <div className="bg-[#EDEFF7] sm:px-24 relative h-[791px]">
           <div className="absolute top-8 left-24 text-[100px] leading-[180px] font-bold text-[#F7F9FFB2]">
             PARTNER PLATFOR
@@ -223,7 +223,7 @@ const SupplierManagementPage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="ntp">
         <div className="sm:px-24 relative h-[796px] mb-[140px]">
           <div className="absolute w-full text-center top-8 left-1/2 transform -translate-x-1/2 text-[100px] leading-[180px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#EDEFF7B2] to-[#EDEFF700]">
             NON TRADE PORTAL

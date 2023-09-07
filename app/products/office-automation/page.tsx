@@ -391,7 +391,7 @@ const OfficeAutomationPage = () => {
                   alt="cta-1"
                 />
                 <img
-                  className="absolute left-0 bottom-0 z-20"
+                  className="absolute left-0 bottom-0 z-[11]"
                   src="/products/oa/cta-2.svg"
                   alt="cta-2"
                 />

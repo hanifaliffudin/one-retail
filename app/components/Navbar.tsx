@@ -208,7 +208,7 @@ export default function NavbarWithCTAButton() {
                                       Order Management System
                                     </h2>
                                     <Link
-                                      href="#"
+                                      href="/products/order-management-system"
                                       onClick={() => {
                                         setDropdownProduct(!dropdownProduct);
                                         setSubActive("overview");
@@ -563,11 +563,13 @@ export default function NavbarWithCTAButton() {
           </div>
         </div>
 
-        {pathname.includes("/products/office-automation") && (
+        {pathname.includes("/products/order-management-system") && (
           <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
             <div className="flex items-center gap-x-5">
-              <img src="/products/oa/icon-navbar-oa.svg" alt="icon oa" />
-              <h2 className="text-neutral-n-100 text-lg">Office Automation</h2>
+              <img src="/products/oms/icon-navbar-oms.svg" alt="icon oms" />
+              <h2 className="text-neutral-n-100 text-lg">
+                Order Management System
+              </h2>
             </div>
 
             <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
@@ -597,36 +599,36 @@ export default function NavbarWithCTAButton() {
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#ees"
+                href="#pos"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "ees"
+                  subActive == "pos"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Employee Self Service
+                Point of Sale
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#sdo"
+                href="#so"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "sdo"
+                  subActive == "so"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Store Daily Operation
+                Self Ordering
               </Link>
               <Link
                 onClick={handleScroll}
-                href="#rm"
+                href="#sco"
                 className={`pt-4 pb-[14px] border-b-[3px] ${
-                  subActive == "rm"
+                  subActive == "sco"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
                 }`}
               >
-                Repair & Maintenance
+                Self Check-Out
               </Link>
             </div>
           </div>
@@ -707,6 +709,75 @@ export default function NavbarWithCTAButton() {
                 }`}
               >
                 PIM
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {pathname.includes("/products/office-automation") && (
+          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="flex items-center gap-x-5">
+              <img src="/products/oa/icon-navbar-oa.svg" alt="icon oa" />
+              <h2 className="text-neutral-n-100 text-lg">Office Automation</h2>
+            </div>
+
+            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+
+            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <Link
+                onClick={handleScroll}
+                href="#overview"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "overview"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Overview
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#benefits"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "benefits"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Benefits
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#ees"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "ees"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Employee Self Service
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#sdo"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "sdo"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Store Daily Operation
+              </Link>
+              <Link
+                onClick={handleScroll}
+                href="#rm"
+                className={`pt-4 pb-[14px] border-b-[3px] ${
+                  subActive == "rm"
+                    ? "border-b-[#1F40AE] text-primary"
+                    : "border-b-transparent"
+                }`}
+              >
+                Repair & Maintenance
               </Link>
             </div>
           </div>
@@ -848,11 +919,16 @@ export default function NavbarWithCTAButton() {
                                 </p>
                               </div>
                               <div>
-                                <Icon
-                                  width={24}
-                                  className="text-[#CFD1D4]"
-                                  icon="carbon:chevron-right"
-                                />
+                                <Link
+                                  onClick={() => setMenuMobile(!menuMobile)}
+                                  href="/products/order-management-system"
+                                >
+                                  <Icon
+                                    width={24}
+                                    className="text-[#CFD1D4]"
+                                    icon="carbon:chevron-right"
+                                  />
+                                </Link>
                               </div>
                             </div>
 
@@ -876,11 +952,16 @@ export default function NavbarWithCTAButton() {
                                 </p>
                               </div>
                               <div>
-                                <Icon
-                                  width={24}
-                                  className="text-[#CFD1D4]"
-                                  icon="carbon:chevron-right"
-                                />
+                                <Link
+                                  onClick={() => setMenuMobile(!menuMobile)}
+                                  href="/products/crm"
+                                >
+                                  <Icon
+                                    width={24}
+                                    className="text-[#CFD1D4]"
+                                    icon="carbon:chevron-right"
+                                  />
+                                </Link>
                               </div>
                             </div>
 
@@ -904,11 +985,16 @@ export default function NavbarWithCTAButton() {
                                 </p>
                               </div>
                               <div>
-                                <Icon
-                                  width={24}
-                                  className="text-[#CFD1D4]"
-                                  icon="carbon:chevron-right"
-                                />
+                                <Link
+                                  onClick={() => setMenuMobile(!menuMobile)}
+                                  href="/products/office-automation"
+                                >
+                                  <Icon
+                                    width={24}
+                                    className="text-[#CFD1D4]"
+                                    icon="carbon:chevron-right"
+                                  />
+                                </Link>
                               </div>
                             </div>
 
@@ -932,11 +1018,16 @@ export default function NavbarWithCTAButton() {
                                 </p>
                               </div>
                               <div>
-                                <Icon
-                                  width={24}
-                                  className="text-[#CFD1D4]"
-                                  icon="carbon:chevron-right"
-                                />
+                                <Link
+                                  onClick={() => setMenuMobile(!menuMobile)}
+                                  href="/products/supplier-management"
+                                >
+                                  <Icon
+                                    width={24}
+                                    className="text-[#CFD1D4]"
+                                    icon="carbon:chevron-right"
+                                  />
+                                </Link>
                               </div>
                             </div>
                           </div>
