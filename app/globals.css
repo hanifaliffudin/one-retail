@@ -25,6 +25,7 @@ html {
   --primary: #1f40ae;
   --primary-p-40: #6a80c9;
   --primary-p-50: #4460bb;
+  --primary-p-80: #152b74;
 }
 
 @layer utilities {
@@ -37,6 +38,9 @@ html {
   }
   .text-primary-p-50 {
     color: var(--primary-p-50);
+  }
+  .text-primary-p-80 {
+    color: var(--primary-p-80);
   }
   .text-neutral-dark {
     color: var(--neutral-dark);
@@ -265,10 +269,20 @@ html {
   transform: scale(1.04);
 }
 
-/* .clip {
-  display: inline-block;
-  clip-path: circle(120% at 50% 0%);
-} */
+.clip {
+  clip-path: url("/public/products/crm/bg-engagement.svg");
+  /* clip-path: polygon(
+    626px 463px,
+    765px 236px,
+    687px 31px,
+    271px 100px,
+    70px 10px,
+    49px 250px,
+    133px 406px,
+    374px 462px,
+    529px 393px
+  ); */
+}
 
 .cta-crm {
   background: linear-gradient(90.31deg, #2649c0 24.55%, #152b74 99.77%);

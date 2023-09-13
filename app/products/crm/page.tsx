@@ -18,14 +18,14 @@ const CRMPage = () => {
   return (
     <main id="overview" className="max-w-screen-2xl mx-auto">
       <section>
-        <div className="relative h-[867px] mt-[135px]">
+        <div className="relative sm:h-[867px] h-[767px] mt-[135px]">
           <img
             className="absolute w-full -top-[133px] opacity-60"
             src="/products/crm/bg-hero-crm.svg"
             alt="hero"
           />
           <div className="absolute grid w-full mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-            <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12 order-last md:order-first">
+            <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
               <motion.div
                 className="max-w-[533px]"
                 initial={{ opacity: 0 }}
@@ -72,12 +72,12 @@ const CRMPage = () => {
                 </Link>
               </motion.div>
 
-              <div className="mt-[78px]">
+              <div className="mt-[78px] max-sm:hidden">
                 <h2 className="mb-2.5 font-bold text-neutral-n-80 ">
                   Been Trusted By
                 </h2>
 
-                <div className="flex ">
+                <div className="flex overflow-x-auto">
                   <img src="/home/aeon.svg" alt="aeon" />
                   <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
                   <img src="/home/pahtama.svg" alt="pahtama" />
@@ -89,7 +89,7 @@ const CRMPage = () => {
                 </div> */}
               </div>
             </div>
-            <div className="lg:col-span-6 col-span-12 mt-[92px] relative">
+            <div className="lg:col-span-6 col-span-12 sm:mt-[92px] relative">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -98,37 +98,56 @@ const CRMPage = () => {
                 }}
               >
                 <img
-                  className="absolute right-0 top-0"
+                  className="absolute right-0 top-0 max-sm:hidden"
                   src="/products/crm/hero-1.svg"
                   alt="hero-1"
                 />
                 <img
-                  className="absolute top-36 -left-24"
+                  className="absolute top-36 -left-24 max-sm:hidden"
                   src="/products/crm/hero-2.svg"
                   alt="hero-2"
+                />
+                <img
+                  className=""
+                  src="/products/crm/hero-mobile.svg"
+                  alt="hero-mobile"
                 />
               </motion.div>
             </div>
           </div>
         </div>
+        <div className="sm:hidden">
+          <h2 className="mb-2.5 font-bold text-center text-neutral-n-80 ">
+            Been Trusted By
+          </h2>
+
+          <div className="flex overflow-x-auto">
+            <img src="/home/aeon.svg" alt="aeon" />
+            <img src="/home/cmhl.svg" alt="cmhl" />
+            <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
+            <img src="/home/city.svg" alt="city" />
+            <img src="/home/pahtama.svg" alt="pahtama" />
+            <img src="/home/kids.svg" alt="kids" />
+          </div>
+        </div>
       </section>
 
       <section>
-        <div className="grid grid-cols-12 mt-20 sm:px-24 gap-x-[107px]">
-          <div className="col-span-12 sm:col-span-6 relative">
+        <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 gap-x-[107px] gap-y-6">
+          {/* <div className="col-span-12 sm:col-span-6 relative h-[456px] order-last sm:order-first">
             <img
-              className="absolute"
+              className="absolute max-sm:w-[340px]"
               src="/products/crm/bg-nurturing.svg"
               alt="bg-nurturing"
             />
             <img
-              className="absolute"
+              className="absolute max-sm:w-[340px]"
               src="/products/crm/nurturing.svg"
               alt="nurturing"
             />
-          </div>
-          <div className="col-span-12 sm:col-span-6  flex items-center">
-            <div className="md:w-[541px]">
+          </div> */}
+          <div className="col-span-12 sm:col-span-6 ">
+            {/* <div className="">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                 Nurturing Strong <br className="max-sm:hidden" /> Relationship
                 with Customers
@@ -139,7 +158,7 @@ const CRMPage = () => {
                 enhance customer satisfaction. Let's get to know your customer
                 together with One Retail!
               </p>
-              <div id="benefits" className="flex mb-[72px]">
+              <div id="benefits" className="flex sm:mb-[72px] mb-6">
                 <Link
                   href="/contact"
                   className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
@@ -167,16 +186,16 @@ const CRMPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       <section>
-        <div className="flex justify-center my-20">
+        <div className="flex justify-center my-20 px-4">
           <div className="w-[541px] text-center">
             <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
-              Unlock Powerful Benefits of Our CRM
+              Unlock Powerful Benefits <br className="sm:hidden" /> of Our CRM
             </h2>
             <p className="text-[#52525B]">
               Supercharge your business with our CRM Solution.
@@ -184,7 +203,7 @@ const CRMPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px]">
+        <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px] px-4">
           <div className="col-span-3 sm:col-span-1">
             <h3 className="font-bold text-2xl mb-4">
               Streamline customer data
@@ -219,22 +238,43 @@ const CRMPage = () => {
       <section>
         <div id="el" className="relative h-[2300px]">
           <img
-            className="absolute -top-32"
+            className="absolute sm:-top-[630px] max-sm:hidden"
             src="/products/crm/bg-engagement.svg"
             alt=""
           />
           <img
-            className="absolute z-10 right-0"
+            className="absolute -top-[280px] sm:hidden min-h-[2390px] object-cover"
+            src="/products/crm/bg-engagement-mobile.svg"
+            alt=""
+          />
+          <img
+            className="absolute right-0 sm:top-32 max-sm:hidden"
+            src="/products/crm/bg-engagement-2.svg"
+            alt=""
+          />
+          <img
+            className="absolute right-0 sm:top-32 top-20 sm:hidden"
+            src="/products/crm/bg-engagement-2-mobile.svg"
+            alt=""
+          />
+          <img
+            className="absolute left-0 sm:bottom-24 bottom-48"
+            src="/products/crm/bg-engagement-3.svg"
+            alt=""
+          />
+          <img
+            className="absolute z-10 right-0 max-sm:hidden"
             src="/products/crm/mockup-1.svg"
             alt=""
           />
           <img
-            className="absolute z-10 top-48 right-1/4"
+            className="absolute z-10 top-48 right-1/4 max-sm:hidden"
             src="/products/crm/mockup-2.svg"
             alt=""
           />
-          <div className="absolute z-10 top-40 px-24 w-full">
-            <div className="w-[436px] mt-48">
+
+          <div className="absolute z-10 sm:top-40 sm:px-24 px-4 w-full">
+            <div className="sm:w-[436px] sm:mt-48 mt-32">
               <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                 Customer Engagement & Loyalty
               </h2>
@@ -246,15 +286,28 @@ const CRMPage = () => {
               </p>
             </div>
 
+            <div className="mt-[34px] sm:hidden relative">
+              <img
+                className="absolute -left-4 top-[38px]"
+                src="/products/crm/mockup-1-mobile.svg"
+                alt=""
+              />
+              <img
+                className="absolute -right-4"
+                src="/products/crm/mockup-2-mobile.svg"
+                alt=""
+              />
+            </div>
+
             <div
               id="gamification"
-              className="flex justify-center mt-[419px] mb-20"
+              className="flex justify-center sm:mt-[419px] max-sm:mt-[480px] sm:mb-20 mb-6"
             >
               <div className="w-[557px] text-center">
                 <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                   Level-Up Engagement with Gamification
                 </h2>
-                <p className="text-neutral-n-50">
+                <p className="text-neutral-n-50 max-sm:text-sm">
                   Gamification creates an interactive and rewarding experience
                   that keeps customers engaged, motivated, and loyal to your
                   brand.
@@ -262,13 +315,17 @@ const CRMPage = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-x-[59px] mb-[65px]">
-              <img src="/products/crm/levelup-1.svg" alt="level up" />
-              <div className="w-[383px]">
-                <h3 className="font-bold text-neutral-n-10 mb-4 text-2xl">
+            <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
+              <img
+                className="order-last sm:order-first"
+                src="/products/crm/levelup-1.svg"
+                alt="level up"
+              />
+              <div className="sm:w-[383px] max-sm:text-center">
+                <h3 className="font-bold text-neutral-n-10 mb-4 sm:text-2xl ">
                   Engaging Game-Like Elements
                 </h3>
-                <p className="text-neutral-n-50">
+                <p className="text-neutral-n-50 max-sm:text-sm">
                   Integrate exciting features like Gacha, Spin the Wheel, Lucky
                   Draw, and Duck Hunt into your loyalty app. Create a
                   captivating experience that keeps users entertained and
@@ -277,12 +334,12 @@ const CRMPage = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-x-[59px] mb-[65px]">
-              <div className="w-[383px]">
-                <h3 className="font-bold text-neutral-n-10 mb-4 text-2xl">
+            <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
+              <div className="sm:w-[383px] max-sm:text-center">
+                <h3 className="font-bold text-neutral-n-10 mb-4 sm:text-2xl">
                   Customized Games
                 </h3>
-                <p className="text-neutral-n-50">
+                <p className="text-neutral-n-50 max-sm:text-sm">
                   Design and develop unique games tailored to your brand and
                   target audience. Enhance user engagement by offering
                   interactive and enjoyable gaming experiences within your
@@ -292,13 +349,17 @@ const CRMPage = () => {
               <img src="/products/crm/levelup-2.svg" alt="level up" />
             </div>
 
-            <div className="flex items-center justify-center gap-x-[59px] mb-[65px]">
-              <img src="/products/crm/levelup-3.svg" alt="level up" />
-              <div className="w-[383px]">
-                <h3 className="font-bold text-neutral-n-10 mb-4 text-2xl">
+            <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
+              <img
+                className="order-last sm:order-first"
+                src="/products/crm/levelup-3.svg"
+                alt="level up"
+              />
+              <div className="sm:w-[383px] max-sm:text-center">
+                <h3 className="font-bold text-neutral-n-10 mb-4 sm:text-2xl">
                   Boost Customer Participation
                 </h3>
-                <p className="text-neutral-n-50">
+                <p className="text-neutral-n-50 max-sm:text-sm">
                   Encourage active participation and repeated usage of your
                   loyalty app through gamification. Increase customer
                   engagement, loyalty, and satisfaction by making your loyalty
@@ -311,7 +372,10 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div id="ec" className="sm:px-24 mb-[100px]">
+        <div
+          id="ec"
+          className="sm:px-24 px-4 sm:mb-[100px] max-sm:mb-10 max-sm:-mt-32"
+        >
           <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
             E-Commerce
           </h2>
@@ -321,14 +385,14 @@ const CRMPage = () => {
             sales.
           </p>
 
-          <div className="grid grid-cols-2 gap-x-10">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-6">
             <div className="col-span-2 sm:col-span-1">
-              <div className="h-[593px] relative bg-[#152B74] py-10 px-[49px] rounded-3xl">
-                <div className="w-[455px]">
-                  <h3 className="text-white mb-4 font-bold text-2xl">
+              <div className="sm:h-[593px] h-[512px] relative bg-[#152B74] sm:py-10 sm:px-[49px] p-6 rounded-3xl">
+                <div className="sm:w-[455px]">
+                  <h3 className="text-white mb-4 font-bold sm:text-2xl">
                     Business 2 Business
                   </h3>
-                  <p className="text-neutral-n-50">
+                  <p className="text-neutral-n-50 max-sm:text-sm">
                     Business to Business (B2B) E-commerce support selling
                     process between businesses. B2B provide order and payment
                     report for business to track the overall sales data and
@@ -342,25 +406,30 @@ const CRMPage = () => {
                   alt="ecommerce 1"
                 />
                 <img
-                  className="absolute right-0 bottom-0 rounded-br-3xl"
+                  className="absolute right-0 bottom-0 rounded-br-3xl max-sm:hidden"
                   src="/products/crm/ecommerce-1.svg"
+                  alt="ecommerce 1"
+                />
+                <img
+                  className="absolute right-0 bottom-4 rounded-br-3xl sm:hidden"
+                  src="/products/crm/ecommerce-1-mobile.svg"
                   alt="ecommerce 1"
                 />
               </div>
             </div>
 
             <div className="col-span-2 sm:col-span-1">
-              <div className="h-[593px] relative bg-[#0A153A] py-10 px-[49px] rounded-3xl">
-                <div className="absolute left-[42px] bottom-[27px] w-[469px]">
-                  <h3 className="text-white mb-4 font-bold text-2xl">
-                    Business 2 Business
+              <div className="sm:h-[593px] h-[545px] relative bg-[#0A153A] sm:py-10 sm:px-[49px] rounded-3xl">
+                <div className="absolute sm:left-[42px] sm:bottom-[27px] bottom-0 sm:w-[469px] p-6">
+                  <h3 className="text-white mb-4 font-bold sm:text-2xl">
+                    Business 2 Customer
                   </h3>
-                  <p className="text-neutral-n-50">
-                    Business to Business (B2B) E-commerce support selling
-                    process between businesses. B2B provide order and payment
-                    report for business to track the overall sales data and
-                    activity, these all features can lead your business to get
-                    customer long term relation and repeat bulk purchases
+                  <p className="text-neutral-n-50 max-sm:text-sm">
+                    With One Retail's B2C E-commerce solution, businesses can
+                    effortlessly sell to end-customers around the clock,
+                    eliminating the need for physical store visits. Integrated
+                    with loyalty programs, customers can enjoy rewards and stay
+                    updated on the latest promotions and discounts.
                   </p>
                 </div>
                 <img
@@ -369,8 +438,13 @@ const CRMPage = () => {
                   alt="ecommerce 2"
                 />
                 <img
-                  className="absolute right-0 top-0 rounded-tr-3xl"
+                  className="absolute right-0 sm:top-0 top-[57px] rounded-tr-3xl max-sm:hidden"
                   src="/products/crm/ecommerce-2.svg"
+                  alt="ecommerce 2"
+                />
+                <img
+                  className="absolute right-0 sm:top-0 top-[57px] rounded-tr-3xl sm:hidden"
+                  src="/products/crm/ecommerce-2-mobile.svg"
                   alt="ecommerce 2"
                 />
               </div>
@@ -382,13 +456,20 @@ const CRMPage = () => {
       <section>
         <div
           id="pim"
-          className="grid grid-cols-2 sm:px-24 gap-x-[90px] mb-[54px]"
+          className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] mb-[54px]"
         >
-          <div className="col-span-2 sm:col-span-1">
-            <img className="h-full" src="/products/crm/pim.svg" alt="pim" />
+          <div className="col-span-2 sm:col-span-1 max-sm:h-[400px]">
+            <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] sm:hidden">
+              Centralize Product Data with Product Information Management (PIM)
+            </h2>
+            <img
+              className="h-full max-sm:-mt-12"
+              src="/products/crm/pim.svg"
+              alt="pim"
+            />
           </div>
           <div className="col-span-2 sm:col-span-1 max-w-[488px]">
-            <h2 className="mb-3 font-bold sm:text-[36px] text-xl sm:leading-[54px]">
+            <h2 className="mb-3 font-bold sm:text-[36px] text-xl sm:leading-[54px] max-sm:hidden">
               Centralize Product Data with Product Information Management (PIM)
             </h2>
             <p className="text-neutral-n-90 mb-10">
@@ -399,19 +480,19 @@ const CRMPage = () => {
             </p>
             <div className="flex items-center gap-x-3 mb-4">
               <img src="/products/crm/check-circle.svg" alt="check" />
-              <p className="font-bold text-xl text-neutral-n-100">
+              <p className="font-bold sm:text-xl text-sm text-neutral-n-100">
                 Organize all your product in one place
               </p>
             </div>
             <div className="flex items-center gap-x-3 mb-4">
               <img src="/products/crm/check-circle.svg" alt="check" />
-              <p className="font-bold text-xl text-neutral-n-100">
+              <p className="font-bold sm:text-xl text-sm text-neutral-n-100">
                 Ensure data accuracy and consistency
               </p>
             </div>
             <div className="flex items-center gap-x-3">
               <img src="/products/crm/check-circle.svg" alt="check" />
-              <p className="font-bold text-xl text-neutral-n-100">
+              <p className="font-bold sm:text-xl text-sm text-neutral-n-100">
                 Improve operational efficiency
               </p>
             </div>
@@ -425,7 +506,7 @@ const CRMPage = () => {
         <div className="relative cta-crm mb-20">
           <div className="grid grid-cols-12 sm:px-[160px]">
             <div className="col-span-12 sm:col-span-6 text-white sm:max-w-[503px] flex items-center">
-              <div className="max-w-[370px]">
+              <div className="max-w-[370px] max-sm:text-center max-sm:pt-8">
                 <h3 className="font-bold sm:text-[32px] text-xl sm:leading-[48px] mb-2">
                   Get in Touch Today!
                 </h3>
@@ -433,7 +514,7 @@ const CRMPage = () => {
                   Reach Out and Experience Our Stellar Customer Support: We're
                   Here to Serve You!
                 </p>
-                <div className="flex">
+                <div className="flex max-sm:justify-center">
                   <Link
                     href="/contact"
                     className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
@@ -446,19 +527,24 @@ const CRMPage = () => {
             <div className="col-span-12 sm:col-span-6">
               <div className="relative h-[369px] w-full">
                 <img
-                  className="absolute right-20 -top-[45px] rounded-[20px]"
+                  className="absolute sm:right-20 sm:-top-[45px] rounded-[20px] max-sm:px-6"
                   src="/products/crm/circle-white.svg"
                   alt="circle-white"
                 />
                 <img
-                  className="absolute right-[58px] top-[25px] z-10"
+                  className="absolute right-[58px] top-[25px] z-10 max-sm:hidden"
                   src="/products/crm/cta-1.svg"
                   alt="cta-1"
                 />
                 <img
-                  className="absolute -right-7 bottom-[20px] z-20"
+                  className="absolute -right-7 bottom-[20px] z-20 max-sm:hidden"
                   src="/products/crm/cta-2.svg"
                   alt="cta-2"
+                />
+                <img
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 sm:hidden"
+                  src="/products/crm/cta-mobile.svg"
+                  alt="cta-mobile"
                 />
               </div>
             </div>

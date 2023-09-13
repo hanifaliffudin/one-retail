@@ -18,19 +18,19 @@ const OfficeAutomationPage = () => {
   return (
     <main id="overview" className="max-w-screen-2xl mx-auto">
       <section>
-        <div className="relative h-[692px] mt-[135px]">
+        <div className="relative sm:h-[692px] h-[520px] mt-[135px]">
           <img
-            className="absolute w-full"
+            className="absolute object-cover w-full max-sm:h-[552px] top-0 left-0"
             src="/products/oa/bg-hero-oa.svg"
             alt="hero"
           />
           <img
-            className="absolute top-[276px] right-[197px] w-full"
+            className="absolute bottom-0 object-cover sm:top-[276px] sm:right-[197px] w-full max-sm:hidden"
             src="/products/oa/bg-hero-oa-2.svg"
             alt="hero"
           />
-          <div className="absolute grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-            <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12 order-last md:order-first">
+          <div className="absolute top-0 left-0 grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
+            <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -43,7 +43,7 @@ const OfficeAutomationPage = () => {
                   Simplify Your Collaboration Team with Office Automation
                 </h1>
 
-                <p className="max-sm:text-sm font-extralight mb-14 text-neutral-n-30 leading-[30px]">
+                <p className="max-sm:text-sm font-extralight sm:mb-14 mb-3 text-neutral-n-30 leading-[30px]">
                   Leveraging your business routines can improve your team
                   productivity and achieve greater operational effectiveness.
                   Say goodbye to manual tasks and embrace a new era of
@@ -73,8 +73,8 @@ const OfficeAutomationPage = () => {
                 </Link>
               </motion.div>
             </div>
-            <div className="lg:col-span-6 col-span-12 mt-[92px]">
-              <div className="relative w-screen sm:w-full">
+            <div className="lg:col-span-6 col-span-12 sm:mt-[92px]">
+              <div className="relative w-screen sm:w-full max-sm:h-[298px]">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -83,8 +83,13 @@ const OfficeAutomationPage = () => {
                   }}
                 >
                   <img
-                    className="absolute right-0"
+                    className="absolute sm:right-0 max-sm:hidden"
                     src="/products/oa/Mac-Studio.svg"
+                    alt="hero-1"
+                  />
+                  <img
+                    className="absolute left-1/2 transform -translate-x-1/2 sm:hidden bottom-0"
+                    src="/products/oa/Mac-Studio-Mobile.svg"
                     alt="hero-1"
                   />
                 </motion.div>
@@ -95,8 +100,8 @@ const OfficeAutomationPage = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-12 mt-20 px-24">
-          <div className="col-span-12 sm:col-span-7">
+        <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 gap-y-6">
+          <div className="col-span-12 sm:col-span-7 order-last sm:order-first">
             <img src="/products/oa/why-us.svg" alt="dashboard" />
           </div>
           <div className="col-span-12 sm:col-span-5 md:w-[507px] flex items-center">
@@ -132,7 +137,7 @@ const OfficeAutomationPage = () => {
             src="/products/oa/bg-benefits.svg"
             alt="bg benefits"
           />
-          <div className="grid grid-cols-12 mt-20 px-24 mb-[60px]">
+          <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 mb-[60px]">
             <div className="col-span-12 sm:col-span-7 sm:max-w-[574px] flex items-center">
               <div className="">
                 <p className="text-primary-p-40 font-bold mb-3">Benefits</p>
@@ -153,8 +158,8 @@ const OfficeAutomationPage = () => {
           </div>
 
           <div className="mb-20">
-            <div className="flex sm:px-24 gap-x-11 mb-6">
-              <div className="w-[349px] bg-white shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)] py-6 px-5 rounded-lg border">
+            <div className="flex flex-wrap sm:px-24 px-4 gap-y-5 gap-x-11 mb-6">
+              <div className="sm:w-[349px] bg-white shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)] py-6 px-5 rounded-lg border">
                 <div className="flex justify-between mb-3">
                   <h3 className="font-bold text-xl text-neutral-n-90 mr-5">
                     Improve Efficient Workflow
@@ -167,7 +172,7 @@ const OfficeAutomationPage = () => {
                 </p>
               </div>
 
-              <div className="w-[349px] bg-white shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)] py-6 px-5 rounded-lg border">
+              <div className="sm:w-[349px] bg-white shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)] py-6 px-5 rounded-lg border">
                 <div className="flex justify-between mb-3">
                   <h3 className="font-bold text-xl text-neutral-n-90 mr-5">
                     Improve Better Documentation
@@ -180,8 +185,8 @@ const OfficeAutomationPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex sm:px-24 gap-x-11">
-              <div className="flex w-[349px] h-[192px] justify-center items-center">
+            <div className="flex max-sm:flex-wrap gap-y-5 sm:px-24 px-4 gap-x-11">
+              <div className="flex max-sm:hidden sm:w-[349px] h-[192px] justify-center items-center">
                 <img src="/products/oa/OneRetailLogo.svg" alt="OneRetailLogo" />
               </div>
               <div className="w-[406px] bg-white shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)] py-6 px-5 rounded-lg border">
@@ -214,14 +219,14 @@ const OfficeAutomationPage = () => {
         </div>
       </section>
 
-      <section className="mb-[100px]">
+      <section className="sm:mb-[100px] mb-10">
         <div className="mx-auto max-w-screen-xl px-4">
           <h2 className="mb-2.5 font-bold text-center text-neutral-n-80 ">
             Been Trusted By
           </h2>
         </div>
 
-        <div className="flex gap-x-6 justify-center">
+        <div className="grid sm:grid-flow-col sm:auto-cols-max max-sm:grid-cols-2 gap-x-6 gap-y-5 justify-center max-sm:px-4">
           <img src="/home/aeon.svg" alt="aeon" />
           <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
           <img src="/home/pahtama.svg" alt="pahtama" />
@@ -248,8 +253,8 @@ const OfficeAutomationPage = () => {
           </p>
         </div>
 
-        <div className="sm:pl-24">
-          <div className="grid grid-cols-12 mb-10">
+        <div className="sm:pl-24 px-4">
+          <div className="grid grid-cols-12 mb-10 gap-y-5">
             <div className="col-span-12 sm:col-span-6 flex items-center">
               <div className="sm:max-w-[591px]">
                 <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative">
@@ -279,7 +284,7 @@ const OfficeAutomationPage = () => {
             </div>
           </div>
           <div className="grid grid-cols-12 mb-10">
-            <div className="col-span-12 sm:col-span-7">
+            <div className="col-span-12 sm:col-span-7 order-last sm:order-first">
               <img src="/products/oa/sdo.svg" alt="sdo" />
             </div>
             <div className="col-span-12 sm:col-span-5 flex items-center">
@@ -336,19 +341,27 @@ const OfficeAutomationPage = () => {
       </section>
 
       <section>
-        <div className="bg-[#EDEFF7] flex gap-x-[100px] items-center sm:px-24 py-10">
+        <div className="bg-[#EDEFF7] flex justify-center max-sm:flex-wrap gap-x-[100px] items-center sm:px-24 py-10">
           <img src="/products/oa/testimonial.svg" alt="testimonial" />
-          <div className="">
-            <img src="/products/oa/quote.svg" alt="quote" />
-            <p className="font-bold text-2xl text-base-02 my-9">
+          <div className="px-4">
+            <img
+              className="max-sm:w-10"
+              src="/products/oa/quote.svg"
+              alt="quote"
+            />
+            <p className="font-bold sm:text-2xl text-base-02 sm:my-9 my-3 text-sm">
               Lorem ipsum dolor sit amet consectetur. Venenatis dictum in
               bibendum in nisi lectus nullam sit tincidunt. Massa bibendum nunc
               arcu eget nam.
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center max-sm:text-sm">
               <p className="mr-3 font-bold text-base-02">Jenny Wilson</p>
               <p className="mr-4 text-gray-600">Co-Founder of</p>
-              <img src="/products/oa/waverio.svg" alt="waverio" />
+              <img
+                className="max-sm:h-9"
+                src="/products/oa/waverio.svg"
+                alt="waverio"
+              />
             </div>
           </div>
         </div>
@@ -357,14 +370,19 @@ const OfficeAutomationPage = () => {
       <FAQ />
 
       <section>
-        <div className="rounded-[20px] relative bg-[#1A3591] sm:mx-24 p-10 mb-[152px]">
+        <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 mb-[152px] relative">
           <img
-            className="absolute right-0 top-0 rounded-[20px]"
+            className="absolute max-sm:hidden right-0 top-0 rounded-[20px]"
             src="/products/oa/Hole.svg"
             alt="Hole"
           />
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 sm:col-span-6 text-white sm:max-w-[503px] flex items-center">
+          <img
+            className="absolute w-[215px] right-0 bottom-0 sm:hidden"
+            src="/products/oa/Hole-Mobile.svg"
+            alt="Hole-Mobile"
+          />
+          <div className="grid grid-cols-12 gap-y-6 max-sm:px-4 max-sm:pt-8">
+            <div className="col-span-12 sm:col-span-6 max-sm:text-center text-white sm:max-w-[503px] flex items-center">
               <div className="">
                 <h3 className="font-bold sm:text-[32px] text-xl sm:leading-[48px]">
                   Experience Exceptional Support: Get in Touch Today!
@@ -373,7 +391,7 @@ const OfficeAutomationPage = () => {
                   Reach Out and Experience Our Stellar Customer Support: We're
                   Here to Serve You!
                 </p>
-                <div className="flex">
+                <div className="flex max-sm:justify-center">
                   <Link
                     href="/contact"
                     className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
@@ -383,15 +401,15 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-12 sm:col-span-6">
-              <div className="relative w-[565px] h-[329px]">
+            <div className="col-span-12 sm:col-span-6 max-sm:pb-8">
+              <div className="relative sm:w-[565px] sm:h-[329px] h-[199px]">
                 <img
-                  className="absolute right-0 top-0 z-10"
+                  className="absolute max-sm:w-[289.09px] right-0 top-0 z-10"
                   src="/products/oa/cta-1.svg"
                   alt="cta-1"
                 />
                 <img
-                  className="absolute left-0 bottom-0 z-[11]"
+                  className="absolute max-sm:w-[172px] left-0 bottom-0 z-[11]"
                   src="/products/oa/cta-2.svg"
                   alt="cta-2"
                 />

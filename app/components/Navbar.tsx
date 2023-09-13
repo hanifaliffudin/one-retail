@@ -29,7 +29,9 @@ export default function NavbarWithCTAButton() {
     <>
       <nav
         onMouseLeave={() => setDropdownProduct(false)}
-        className="bg-white fixed w-full z-20 top-0 left-0 border-b border-[#EDEDED]"
+        className={`bg-white fixed w-full z-20 top-0 left-0 ${
+          pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
+        }`}
       >
         <div className="max-w-screen-xl relative flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
@@ -635,19 +637,25 @@ export default function NavbarWithCTAButton() {
         )}
 
         {pathname.includes("/products/crm") && (
-          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
             <div className="flex items-center gap-x-5">
-              <img src="/products/crm/icon-navbar-crm.svg" alt="icon crm" />
-              <h2 className="text-neutral-n-100 text-lg">CRM</h2>
+              <img
+                className="min-w-[24px]"
+                src="/products/crm/icon-navbar-crm.svg"
+                alt="icon crm"
+              />
+              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                CRM
+              </h2>
             </div>
 
-            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
             <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
               <Link
                 onClick={handleScroll}
                 href="#overview"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "overview"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -658,7 +666,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#benefits"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "benefits"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -669,7 +677,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#el"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
                   subActive == "el"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -680,7 +688,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#gamification"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "gamification"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -691,7 +699,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#ec"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "ec"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -702,7 +710,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#pim"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "pim"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -715,19 +723,25 @@ export default function NavbarWithCTAButton() {
         )}
 
         {pathname.includes("/products/office-automation") && (
-          <div className="bg-[#F5F5F5] flex items-center px-24 w-full h-[55px] border-t border-t-[#EDEDED]">
+          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
             <div className="flex items-center gap-x-5">
-              <img src="/products/oa/icon-navbar-oa.svg" alt="icon oa" />
-              <h2 className="text-neutral-n-100 text-lg">Office Automation</h2>
+              <img
+                className="min-w-[24px]"
+                src="/products/oa/icon-navbar-oa.svg"
+                alt="icon oa"
+              />
+              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                Office Automation
+              </h2>
             </div>
 
-            <div className="xl:inline-block mx-8 my-2 w-[1px] self-stretch bg-neutral-n-50 hidden"></div>
+            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
             <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
               <Link
                 onClick={handleScroll}
                 href="#overview"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "overview"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -738,7 +752,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#benefits"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "benefits"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -749,7 +763,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#ees"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
                   subActive == "ees"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -760,7 +774,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#sdo"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
                   subActive == "sdo"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
@@ -771,7 +785,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#rm"
-                className={`pt-4 pb-[14px] border-b-[3px] ${
+                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
                   subActive == "rm"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"
