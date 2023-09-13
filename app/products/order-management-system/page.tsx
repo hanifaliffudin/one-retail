@@ -18,7 +18,7 @@ const OrderManagementSystemPage = () => {
 
   return (
     <main className="max-w-screen-2xl mx-auto">
-      <section>
+      <section id="overview">
         <div className="mt-[135px] mb-[83px] sm:h-[640px] h-[375px] relative">
           <img
             className="absolute object-cover h-full left-0"

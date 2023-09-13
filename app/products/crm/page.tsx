@@ -133,8 +133,8 @@ const CRMPage = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 gap-x-[107px] gap-y-6">
-          {/* <div className="col-span-12 sm:col-span-6 relative h-[456px] order-last sm:order-first">
+        <div className="grid grid-cols-2 mt-20 sm:px-24 px-4 gap-x-[107px] gap-y-6">
+          <div className="col-span-2 sm:col-span-1 relative sm:h-[456px] h-64 order-last sm:order-first">
             <img
               className="absolute max-sm:w-[340px]"
               src="/products/crm/bg-nurturing.svg"
@@ -145,9 +145,9 @@ const CRMPage = () => {
               src="/products/crm/nurturing.svg"
               alt="nurturing"
             />
-          </div> */}
-          <div className="col-span-12 sm:col-span-6 ">
-            {/* <div className="">
+          </div>
+          <div className="col-span-2 sm:col-span-1 ">
+            <div className="">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                 Nurturing Strong <br className="max-sm:hidden" /> Relationship
                 with Customers
@@ -158,7 +158,7 @@ const CRMPage = () => {
                 enhance customer satisfaction. Let's get to know your customer
                 together with One Retail!
               </p>
-              <div id="benefits" className="flex sm:mb-[72px] mb-6">
+              <div className="flex sm:mb-[72px] mb-6">
                 <Link
                   href="/contact"
                   className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
@@ -169,46 +169,46 @@ const CRMPage = () => {
               <hr />
               <div className="flex gap-x-10 mt-6 items-center">
                 <div className="w-[187px]">
-                  <h2 className="font-bold text-[28px] leading-[38px] text-[#0F172A] mb-2.5">
+                  <h2 className="font-bold sm:text-[28px] text-[22px] leading-[38px] text-[#0F172A] sm:mb-2.5 mb-1">
                     16+
                   </h2>
-                  <p className="text-[#4B5262]">
+                  <p className="text-[#4B5262] max-sm:text-sm">
                     Businesses are using & it’s growing everyday
                   </p>
                 </div>
                 <div className="inline-block my-6 w-[1px] self-stretch bg-[#E5EAF1]"></div>
                 <div className="w-[187px]">
-                  <h2 className="font-bold text-[28px] leading-[38px] text-[#0F172A] mb-2.5">
+                  <h2 className="font-bold sm:text-[28px] text-[22px] leading-[38px] text-[#0F172A] sm:mb-2.5 mb-1">
                     24+
                   </h2>
-                  <p className="text-[#4B5262]">
+                  <p className="text-[#4B5262] max-sm:text-sm">
                     Features that helps your business gain customers
                   </p>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="flex justify-center my-20 px-4">
+      <section id="benefits">
+        <div className="flex justify-center mt-20 sm:mb-20 mb-6 px-4">
           <div className="w-[541px] text-center">
             <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
               Unlock Powerful Benefits <br className="sm:hidden" /> of Our CRM
             </h2>
-            <p className="text-[#52525B]">
+            <p className="text-[#52525B] max-sm:text-sm">
               Supercharge your business with our CRM Solution.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px] px-4">
+        <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px] gap-y-6 px-4">
           <div className="col-span-3 sm:col-span-1">
-            <h3 className="font-bold text-2xl mb-4">
+            <h3 className="font-bold sm:text-2xl mb-4">
               Streamline customer data
             </h3>
-            <p className="text-neutral-n-80 mb-7">
+            <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
               Organize and access customer information in one place, gaining a
               comprehensive view for personalized engagement
             </p>
@@ -216,8 +216,8 @@ const CRMPage = () => {
           </div>
 
           <div className="col-span-3 sm:col-span-1">
-            <h3 className="font-bold text-2xl mb-4">Enhance relationship</h3>
-            <p className="text-neutral-n-80 mb-7">
+            <h3 className="font-bold sm:text-2xl mb-4">Enhance relationship</h3>
+            <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
               Nurture customer connections through timely follow-ups and deep
               understanding of preferences
             </p>
@@ -225,8 +225,8 @@ const CRMPage = () => {
           </div>
 
           <div className="col-span-3 sm:col-span-1">
-            <h3 className="font-bold text-2xl mb-4">Gain insights</h3>
-            <p className="text-neutral-n-80 mb-7">
+            <h3 className="font-bold sm:text-2xl mb-4">Gain insights</h3>
+            <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
               Utilize reporting and analytics to make data-driven decisions,
               uncovering customer behavior and sales trends
             </p>
