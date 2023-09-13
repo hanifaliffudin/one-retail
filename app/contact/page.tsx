@@ -8,14 +8,14 @@ const ContactPage = () => {
     <main className="max-w-screen-2xl mx-auto">
       <div className="sm:w-[540px] sm:h-[540px] -z-10 rounded-full blur-xl bg-[#A9B3D626] absolute -top-[187px] -left-[105px]"></div>
       <section>
-        <div className="mt-44 grid grid-cols-2 md:px-24">
+        <div className="sm:mt-44 mt-32 grid grid-cols-2 gap-y-9 md:px-24 px-4">
           <div className="col-span-2 sm:col-span-1 text-neutral-dark sm:w-[338px]">
-            <h1 className="text-[32px] leading-[48px] mb-7 font-bold">
+            <h1 className="sm:text-[32px] text-[22px] leading-[33px] sm:leading-[48px] sm:mb-7 mb-2 font-bold">
               Talk to Us and See How One Retail Work for Your Business
             </h1>
             <p>Give us a call if you need help picking a One Retail product.</p>
 
-            <div className="sm:mt-[205px] flex gap-x-[50px]">
+            <div className="sm:mt-[205px] mt-8 flex gap-x-[50px]">
               <Link
                 href="https://instagram.com"
                 className="flex gap-x-4 items-center"
@@ -46,12 +46,12 @@ const ContactPage = () => {
         </div>
       </section>
       <section>
-        <div className="grid grid-cols-2 md:px-24 pb-32 mb-8 bg-[#F5F5F5] relative">
-          <div className="absolute -z-10 -mt-24 top-0 right-0 w-2/3 h-[100px]">
+        <div className="grid grid-cols-2 md:px-24 sm:pb-32 pb-8 mb-8 bg-[#F5F5F5] relative">
+          <div className="absolute max-sm:hidden -z-10 -mt-24 top-0 right-0 w-2/3 h-[100px]">
             <img src="/contact/trapesium.svg" alt="trapesium" />
           </div>
 
-          <div className="col-span-2 sm:col-span-1 text-neutral-dark sm:w-[338px] pt-[108px]">
+          <div className="max-sm:px-4 col-span-2 sm:col-span-1 max-sm:order-last text-neutral-dark sm:w-[338px] pt-10 sm:pt-[108px]">
             <h3 className="text-neutral-dark font-semibold text-[22px] mb-8">
               Contact
             </h3>
@@ -84,8 +84,8 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 sm:col-span-1 ">
-            <div className="-mt-40 w-full bg-white rounded-xl shadow-[0px_20px_40px_0px_rgba(31,64,174,0.1)] px-12 py-14">
+          <div className="col-span-2 sm:col-span-1 max-sm:px-4">
+            <div className="sm:-mt-40 -mt-20 w-full bg-white rounded-xl shadow-[0px_20px_40px_0px_rgba(31,64,174,0.1)] sm:px-12 px-3 sm:py-14 py-4">
               <form action="">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="col-span-2 md:col-span-1">
@@ -185,7 +185,7 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="col-span-2 btn-primary mt-14 w-full text-neutral-n-10 py-2.5 px-4 font-semibold md:mr-5"
+                    className="col-span-2 btn-primary sm:mt-14 mt-8 w-full text-neutral-n-10 py-2.5 px-4 font-semibold md:mr-5"
                   >
                     Submit
                   </button>
