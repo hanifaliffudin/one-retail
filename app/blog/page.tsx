@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import BlogCard from "../components/BlogCard";
+import Link from "next/link";
 
 const BlogPage = () => {
   return (
@@ -26,7 +27,7 @@ const BlogPage = () => {
       </section>
 
       <section>
-        <div className="sm:px-24 mb-20">
+        <div className="sm:px-24 mb-20 mt-10">
           <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
             Popular
           </h2>
@@ -52,10 +53,13 @@ const BlogPage = () => {
                     particular,...
                   </p>
                   <hr className="mb-6 bg-[#FFFFFF4D]" />
-                  <div className="flex font-semibold items-center gap-x-1">
-                    Read more{" "}
+                  <Link
+                    href={`/blog/anjay`}
+                    className="flex font-semibold items-center gap-x-1"
+                  >
+                    Read more
                     <Icon className="cursor-pointer" icon="bxs:chevron-right" />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

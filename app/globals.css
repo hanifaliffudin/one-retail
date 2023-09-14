@@ -288,6 +288,14 @@ html {
   background: linear-gradient(90.31deg, #2649c0 24.55%, #152b74 99.77%);
 }
 
+.overlay-blog {
+  background: radial-gradient(
+    65.14% 452.39% at -4.61% 50%,
+    rgba(21, 43, 116, 0.6) 0%,
+    rgba(6, 0, 58, 0.138) 100%
+  );
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .home.scroller__wrapper {
