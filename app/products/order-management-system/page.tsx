@@ -119,7 +119,7 @@ const OrderManagementSystemPage = () => {
           <h2 className="max-sm:text-center font-bold sm:text-[36px] text-xl text-neutral-n-90 mb-10">
             Selling the way it should be
           </h2>
-          <div className="flex flex-wrap gap-x-[130px] gap-y-6 items-center">
+          <div className="flex max-sm:flex-wrap gap-x-[130px] gap-y-6 items-center">
             <img src="/products/oms/pos.svg" alt="pos" />
             <div className="flex flex-col sm:gap-y-10 gap-y-5">
               <div className="border-l-[#E0E0E0] border-l-4 pl-5">
