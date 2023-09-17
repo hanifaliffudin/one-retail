@@ -296,6 +296,127 @@ html {
   );
 }
 
+.deform {
+  width: 203px;
+  height: 270px;
+  -webkit-transform: scaleX(3);
+  /* background-color: lightblue; */
+  left: 210px;
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+}
+.rotate {
+  /* background: yellow; */
+  margin-top: -20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 120%;
+  padding-top: 1px;
+  -webkit-animation: circle 20s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+}
+.counterrotate {
+  /* background: blue; */
+  width: 90px;
+  height: 90px;
+  -webkit-animation: ccircle 20s infinite linear;
+}
+.inner {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  -webkit-transform: scaleX(0.33);
+}
+
+.deform-2 {
+  width: 203px;
+  height: 270px;
+  -webkit-transform: scaleX(3);
+  /* background-color: lightblue; */
+  left: 210px;
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+}
+.rotate-2 {
+  /* background: yellow; */
+  margin-top: -20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 120%;
+  padding-top: 1px;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation: circle 20s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+}
+.counterrotate-2 {
+  /* background: blue; */
+  width: 90px;
+  height: 90px;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation: ccircle 20s infinite linear;
+}
+.inner-2 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  -webkit-transform: scaleX(0.33);
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  20% {
+    padding-top: 20px;
+  }
+  45% {
+    height: 120%;
+  }
+  60% {
+    height: 120%;
+  }
+  76% {
+    padding-top: 20px;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+@keyframes ccircle {
+  from {
+    -webkit-transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+@-webkit-keyframes ccircle {
+  from {
+    -webkit-transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .home.scroller__wrapper {
