@@ -67,7 +67,7 @@ const OrderManagementSystemPage = () => {
               <span className="text-primary">standard</span>
             </h2>
           </div>
-          <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px] border-top-animation">
+          <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
             <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
               Packed with built-in amazing features
             </h3>
