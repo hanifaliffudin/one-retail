@@ -38,15 +38,8 @@ const OrderManagementSystemPage = () => {
               transactions for your business, to ensure smooth and accurate
               processing at the moment of purchase
             </p>
-            <motion.div
-              className="flex"
-              id="whyus"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: { duration: 0.5, delay: 1 },
-              }}
-            >
+
+            <div className="flex">
               <Link
                 href="/contact"
                 className="max-sm:w-full btn-primary-40 rounded-md text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-4"
@@ -61,7 +54,7 @@ const OrderManagementSystemPage = () => {
               >
                 Learn More
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -74,7 +67,7 @@ const OrderManagementSystemPage = () => {
               <span className="text-primary">standard</span>
             </h2>
           </div>
-          <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
+          <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px] border-top-animation">
             <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
               Packed with built-in amazing features
             </h3>
@@ -155,17 +148,36 @@ const OrderManagementSystemPage = () => {
 
       <section>
         <div className="mt-20 bg-any-business pb-20 max-sm:px-4">
-          <h2 className="font-bold mb-3 sm:text-[32px] text-xl sm:leading-[48px] text-center text-neutral-n-90">
-            Any Business. Any Size. All in{" "}
-            <span className="text-primary">One</span> Platform
-          </h2>
-          <p className="text-neutral-n-90 text-center sm:mb-[46px] mb-10 max-sm:text-sm">
-            It’s the power to sell in person backed by the power to sell online,
-            all by the world’s best commerce platform.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: [100, 0],
+              transition: { duration: 0.3 },
+            }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-bold mb-3 sm:text-[32px] text-xl sm:leading-[48px] text-center text-neutral-n-90">
+              Any Business. Any Size. All in{" "}
+              <span className="text-primary">One</span> Platform
+            </h2>
+            <p className="text-neutral-n-90 text-center sm:mb-[46px] mb-10 max-sm:text-sm">
+              It’s the power to sell in person backed by the power to sell
+              online, all by the world’s best commerce platform.
+            </p>
+          </motion.div>
 
           <div className="flex flex-wrap sm:px-24 gap-y-10">
-            <div className="z-10 sm:mt-[113px]">
+            <motion.div
+              className="z-10 sm:mt-[113px]"
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: [100, 0],
+                transition: { duration: 0.3, delay: 2 },
+              }}
+              viewport={{ once: true }}
+            >
               <img className="mb-5" src="/products/oms/pos-2.svg" alt="pos-2" />
               <div className="w-[294px]">
                 <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
@@ -176,8 +188,18 @@ const OrderManagementSystemPage = () => {
                   sale solution and take your store to new heights
                 </p>
               </div>
-            </div>
-            <div className="sm:-ml-[82px]">
+            </motion.div>
+
+            <motion.div
+              className="sm:-ml-[82px]"
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: [100, 0],
+                transition: { duration: 0.3, delay: 1 },
+              }}
+              viewport={{ once: true }}
+            >
               <img className="mb-5" src="/products/oms/pos-3.svg" alt="pos-3" />
               <div className="sm:w-[506px]">
                 <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
@@ -190,8 +212,18 @@ const OrderManagementSystemPage = () => {
                   your restaurant locations
                 </p>
               </div>
-            </div>
-            <div className="sm:ml-6">
+            </motion.div>
+
+            <motion.div
+              className="sm:ml-6"
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: [100, 0],
+                transition: { duration: 0.3, delay: 2 },
+              }}
+              viewport={{ once: true }}
+            >
               <img
                 className="max-sm:w-full mb-5"
                 src="/products/oms/pos-4.svg"
@@ -207,7 +239,7 @@ const OrderManagementSystemPage = () => {
                   environments
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -262,34 +294,54 @@ const OrderManagementSystemPage = () => {
             alt="sc 1"
           />
           <div className="flex flex-wrap gap-x-[106px] gap-y-[72px]">
-            <div className="mt-10 max-w-[506px]">
-              <div className="flex gap-x-3 mb-3">
-                <img src="/products/oms/visa.svg" alt="visa" />
-                <img src="/products/oms/mastercard.svg" alt="mastercard" />
-                <img src="/products/oms/apple-pay.svg" alt="apple-pay" />
-                <img src="/products/oms/gpay.svg" alt="gpay" />
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                x: [-100, 0],
+                transition: { duration: 0.3 },
+              }}
+              viewport={{ once: true }}
+            >
+              <div className="mt-10 max-w-[506px]">
+                <div className="flex gap-x-3 mb-3">
+                  <img src="/products/oms/visa.svg" alt="visa" />
+                  <img src="/products/oms/mastercard.svg" alt="mastercard" />
+                  <img src="/products/oms/apple-pay.svg" alt="apple-pay" />
+                  <img src="/products/oms/gpay.svg" alt="gpay" />
+                </div>
+                <div className="flex max-sm:justify-center gap-x-3 mb-[60px]">
+                  <img src="/products/oms/alipay.svg" alt="alipay" />
+                  <img
+                    src="/products/oms/american-express.svg"
+                    alt="american-express"
+                  />
+                  <img src="/products/oms/paypal.svg" alt="paypal" />
+                </div>
+                <h2 className="font-bold mb-5 sm:text-[32px] text-xl sm:leading-[48px] max-sm:text-center text-neutral-n-90">
+                  Accept <span className="text-primary">various</span> payment
+                  for faster checkout.
+                </h2>
+                <p className="max-sm:text-center">
+                  Optimized customer entire check-out process with One Retail
+                  SCO Platform to support adding or scanning item to payment.
+                  Personalized customer self-service that almost same as POS and
+                  also can integrated with payment system so customer can pay at
+                  once with their desired payment method.
+                </p>
               </div>
-              <div className="flex max-sm:justify-center gap-x-3 mb-[60px]">
-                <img src="/products/oms/alipay.svg" alt="alipay" />
-                <img
-                  src="/products/oms/american-express.svg"
-                  alt="american-express"
-                />
-                <img src="/products/oms/paypal.svg" alt="paypal" />
-              </div>
-              <h2 className="font-bold mb-5 sm:text-[32px] text-xl sm:leading-[48px] max-sm:text-center text-neutral-n-90">
-                Accept <span className="text-primary">various</span> payment for
-                faster checkout.
-              </h2>
-              <p className="max-sm:text-center">
-                Optimized customer entire check-out process with One Retail SCO
-                Platform to support adding or scanning item to payment.
-                Personalized customer self-service that almost same as POS and
-                also can integrated with payment system so customer can pay at
-                once with their desired payment method.
-              </p>
-            </div>
-            <img src="/products/oms/sc-2.svg" alt="sc-2" />
+            </motion.div>
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: [100, 0],
+                transition: { duration: 0.3, delay: 0.3 },
+              }}
+              viewport={{ once: true }}
+              src="/products/oms/sc-2.svg"
+              alt="sc-2"
+            ></motion.img>
           </div>
         </div>
       </section>

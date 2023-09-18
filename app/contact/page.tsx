@@ -13,7 +13,9 @@ const ContactPage = () => {
             <h1 className="sm:text-[32px] text-[22px] leading-[33px] sm:leading-[48px] sm:mb-7 mb-2 font-bold">
               Talk to Us and See How One Retail Work for Your Business
             </h1>
-            <p>Give us a call if you need help picking a One Retail product.</p>
+            <p className="max-w-[220px]">
+              Give us a call if you need help picking a One Retail product.
+            </p>
 
             <div className="sm:mt-[205px] mt-8 flex gap-x-[50px]">
               <Link

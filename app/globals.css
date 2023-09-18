@@ -252,6 +252,19 @@ html {
   width: 100%;
 }
 
+.border-top-animation::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: var(--primary);
+  transition: width 5s;
+}
+
+.border-top-animation:hover::before {
+  width: 100%;
+}
+
 /* image zoom */
 .img-hover-zoom {
   height: 320px;
