@@ -282,19 +282,45 @@ html {
   transform: scale(1.04);
 }
 
-.clip {
-  clip-path: url("/public/products/crm/bg-engagement.svg");
-  /* clip-path: polygon(
-    626px 463px,
-    765px 236px,
-    687px 31px,
-    271px 100px,
-    70px 10px,
-    49px 250px,
-    133px 406px,
-    374px 462px,
-    529px 393px
-  ); */
+/* image zoom blog popular big */
+.img-hover-zoom-blog-popular-big {
+  overflow: hidden;
+}
+
+.img-hover-zoom-blog-popular-big img {
+  border-radius: 12px;
+  transform-origin: 50% 51%;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+}
+
+.img-hover-zoom-blog-popular-big-container:hover img {
+  filter: brightness(77%);
+  border-radius: 12px;
+  transform: scale(1.15);
+}
+
+/* image zoom blog popular big */
+.img-hover-zoom-blog-popular-small {
+  min-height: 110px;
+  min-width: 110px;
+  overflow: hidden;
+}
+
+.img-hover-zoom-blog-popular-small img {
+  min-height: 110px;
+  min-width: 110px;
+  border-radius: 4px;
+  transform-origin: 50% 51%;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+}
+
+.img-hover-zoom-blog-popular-small-container:hover img {
+  border-radius: 4px;
+  transform: scale(1.12);
+}
+
+.img-hover-zoom-blog-popular-small-container:hover .title {
+  color: var(--primary);
 }
 
 .cta-crm {

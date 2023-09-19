@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
@@ -41,27 +42,29 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
       <section>
         <div className="grid grid-cols-4 gap-x-16 sm:px-40 px-4 gap-y-6 sm:mb-[100px] mb-10">
           <div className="sm:col-span-1 col-span-4 relative h-full">
-            <div
-              onClick={() => router.back()}
-              className="sticky top-0 cursor-pointer flex items-center gap-x-2 font-semibold text-neutral-dark"
-            >
-              <img src="/blog/SwapLeft.svg" alt="SwapLeft" />
-              Back
-            </div>
-            <hr className="my-8" />
-            <p className="mb-4 text-neutral-n-80 font-medium">Tag</p>
-            <div className="flex flex-wrap gap-1">
-              <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                #Customer
+            <div className="sticky top-24 ">
+              <div
+                onClick={() => router.back()}
+                className="sticky top-0 cursor-pointer flex items-center gap-x-2 font-semibold text-neutral-dark"
+              >
+                <img src="/blog/SwapLeft.svg" alt="SwapLeft" />
+                Back
               </div>
-              <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                #Management
-              </div>
-              <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                #Product
-              </div>
-              <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                #Analytics
+              <hr className="my-8" />
+              <p className="mb-4 text-neutral-n-80 font-medium">Tag</p>
+              <div className="flex flex-wrap gap-1">
+                <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                  #Customer
+                </div>
+                <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                  #Management
+                </div>
+                <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                  #Product
+                </div>
+                <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                  #Analytics
+                </div>
               </div>
             </div>
           </div>
@@ -126,7 +129,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
             More from One Retail
           </h2>
           <div className="grid grid-cols-4 gap-5">
-            <div className="col-span-4 sm:col-span-1">
+            <Link href="/blog/slug" className="col-span-4 sm:col-span-1">
               <div className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] rounded-b-lg">
                 <img
                   className="rounded-t-lg w-full object-cover"
@@ -145,8 +148,8 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-span-4 sm:col-span-1">
+            </Link>
+            <Link href="/blog/slug" className="col-span-4 sm:col-span-1">
               <div className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] rounded-b-lg">
                 <img
                   className="rounded-t-lg w-full object-cover"
@@ -154,7 +157,9 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   alt="oms 1"
                 />
                 <div className="px-3 pt-3 pb-[22px]">
-                  <p className="font-semibold text-primary mb-2.5">CRM</p>
+                  <p className="font-semibold text-primary mb-2.5">
+                    Office Automation
+                  </p>
                   <h3 className="font-semibold text-xl text-neutral-n-90 mb-2">
                     How to optimize and expand your business with product
                     analytics
@@ -165,8 +170,8 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-span-4 sm:col-span-1">
+            </Link>
+            <Link href="/blog/slug" className="col-span-4 sm:col-span-1">
               <div className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] rounded-b-lg">
                 <img
                   className="rounded-t-lg w-full object-cover"
@@ -174,7 +179,9 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   alt="oms 1"
                 />
                 <div className="px-3 pt-3 pb-[22px]">
-                  <p className="font-semibold text-primary mb-2.5">CRM</p>
+                  <p className="font-semibold text-primary mb-2.5">
+                    Supplier Management
+                  </p>
                   <h3 className="font-semibold text-xl text-neutral-n-90 mb-2">
                     How to optimize and expand your business with product
                     analytics
@@ -185,8 +192,8 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-span-4 sm:col-span-1">
+            </Link>
+            <Link href="/blog/slug" className="col-span-4 sm:col-span-1">
               <div className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] rounded-b-lg">
                 <img
                   className="rounded-t-lg w-full object-cover"
@@ -194,7 +201,9 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   alt="oms 1"
                 />
                 <div className="px-3 pt-3 pb-[22px]">
-                  <p className="font-semibold text-primary mb-2.5">CRM</p>
+                  <p className="font-semibold text-primary mb-2.5">
+                    Order Management System
+                  </p>
                   <h3 className="font-semibold text-xl text-neutral-n-90 mb-2">
                     How to optimize and expand your business with product
                     analytics
@@ -205,7 +214,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

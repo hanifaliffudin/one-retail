@@ -555,7 +555,9 @@ export default function NavbarWithCTAButton() {
                 <Link
                   href="/blog"
                   className={
-                    pathname == "/blog" ? "text-neutral-n-90 font-semibold" : ""
+                    pathname.includes("/blog")
+                      ? "text-neutral-n-90 font-semibold"
+                      : ""
                   }
                 >
                   Blog
