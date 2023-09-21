@@ -12,18 +12,18 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
   return (
     <main>
       <section>
-        <div className="mt-[112px] sm:mx-24 mx-4 relative mb-16">
+        <div className="mt-[112px] sm:mx-24 mx-4 relative sm:mb-16 mb-8">
           <img
-            className="rounded-[20px] max-sm:min-h-[300px] object-cover"
+            className="rounded-[20px] max-sm:min-h-[284px] object-cover"
             src="/blog/hero-blog-1.svg"
             alt="hero"
           />
-          <div className="absolute left-0 top-0 rounded-[20px] overlay-blog w-full h-full max-sm:min-h-[300px]"></div>
-          <div className="grid grid-cols-4 gap-x-16 max-sm:top-0 px-4 max-sm:pt-4 max-sm:gap-y-2  absolute sm:bottom-[46px] sm:px-16 text-white">
+          <div className="absolute left-0 top-0 rounded-[20px] overlay-blog w-full h-full max-sm:min-h-[284px]"></div>
+          <div className="grid grid-cols-4 gap-x-16 max-sm:top-0 px-6 max-sm:pt-4 max-sm:gap-y-[43px]  absolute sm:bottom-[46px] sm:px-16 text-white">
             <div className="sm:col-span-1 col-span-4">
               <div className="flex flex-col gap-y-3">
                 <img
-                  className="w-12"
+                  className="sm:w-12 w-8"
                   src="/icons/crm-icon-blue.svg"
                   alt="Customer Relationship Management"
                 />
@@ -31,7 +31,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
               </div>
             </div>
             <div className="sm:col-span-3 col-span-4">
-              <h1 className="font-bold sm:text-[36px] text-xl sm:leading-[54px]">
+              <h1 className="font-bold sm:text-[36px] text-[22px] sm:leading-[54px] line-clamp-4">
                 How to optimize and expand your business with product analytics
               </h1>
             </div>
@@ -41,16 +41,16 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
 
       <section>
         <div className="grid grid-cols-4 gap-x-16 sm:px-40 px-4 gap-y-6 sm:mb-[100px] mb-10">
-          <div className="sm:col-span-1 col-span-4 relative h-full">
-            <div className="sticky top-24 ">
+          <div className="sm:col-span-1 col-span-4 relative h-full order-last sm:order-first">
+            <div className="sm:sticky sm:top-24 ">
               <div
                 onClick={() => router.back()}
-                className="sticky top-0 cursor-pointer flex items-center gap-x-2 font-semibold text-neutral-dark"
+                className="sticky top-0 cursor-pointer max-sm:hidden flex items-center gap-x-2 font-semibold text-neutral-dark"
               >
                 <img src="/blog/SwapLeft.svg" alt="SwapLeft" />
                 Back
               </div>
-              <hr className="my-8" />
+              <hr className="my-8 max-sm:hidden" />
               <p className="mb-4 text-neutral-n-80 font-medium">Tag</p>
               <div className="flex flex-wrap gap-1">
                 <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
