@@ -191,12 +191,12 @@ const DashboardPage = () => {
               className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
               placeholder="Search all columns..."
             />
-            <Link
-              href="/cms/add"
+            <button
+              // href="/cms/add"
               className="text-white bg-blue-700 hover:bg-blue-800font-medium rounded-lg text-sm px-5 py-2.5"
             >
               Add New Blog
-            </Link>
+            </button>
           </div>
           <div className="relative overflow-x-auto">
             {isLoading ? (
