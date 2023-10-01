@@ -1,12 +1,55 @@
 "use client";
 
-import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import { useEffect, useState } from "react";
+import "../../../node_modules/react-quill/dist/quill.snow.css";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
 import SideBar from "../components/SideBar";
 import NavBarCMS from "../components/NavBar";
+import dynamic from "next/dynamic";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+const registerQuill = async () => {
+  const { Quill } = await (await import("react-quill")).default;
+
+  const Link = Quill.import("formats/link");
+  // Override the existing property on the Quill global object and add custom protocols
+  Link.PROTOCOL_WHITELIST = [
+    "http",
+    "https",
+    "mailto",
+    "tel",
+    "radar",
+    "rdar",
+    "smb",
+    "sms",
+  ];
+
+  class CustomLinkSanitizer extends Link {
+    static sanitize(url: string) {
+      // Run default sanitize method from Quill
+      const sanitizedUrl = super.sanitize(url);
+
+      // Not whitelisted URL based on protocol so, let's return `blank`
+      if (!sanitizedUrl || sanitizedUrl === "about:blank") return sanitizedUrl;
+
+      // Verify if the URL already have a whitelisted protocol
+      const hasWhitelistedProtocol = this.PROTOCOL_WHITELIST.some(
+        (protocol: string) => {
+          return sanitizedUrl.startsWith(protocol);
+        }
+      );
+
+      if (hasWhitelistedProtocol) return sanitizedUrl;
+
+      // if not, then append only 'http' to not to be a relative URL
+      return `https://${sanitizedUrl}`;
+    }
+  }
+
+  Quill.register(CustomLinkSanitizer, true);
+};
 
 const AddPage = () => {
   const router = useRouter();
@@ -14,7 +57,7 @@ const AddPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [imagePreview, setImagePreview] = useState("");
   const [file, setFile] = useState();
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("OMS");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tags, setTags] = useState<string[]>([]);
@@ -130,6 +173,10 @@ const AddPage = () => {
     }
   };
 
+  useEffect(() => {
+    registerQuill();
+  }, []);
+
   return (
     <>
       <SideBar />
@@ -186,9 +233,6 @@ const AddPage = () => {
                     onChange={(e) => setCategory(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                   >
-                    <option selected disabled>
-                      Select category
-                    </option>
                     <option value="OMS">Order Management System</option>
                     <option value="CRM">
                       Customer Relationship Management
