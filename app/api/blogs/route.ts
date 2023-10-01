@@ -3,7 +3,8 @@ import connectMongoDB from "@/libs/mongodb";
 import Blog from "@/models/blog";
 import { writeFile } from "fs/promises";
 const fs = require("fs");
-const dir = "./public/blog";
+// const dir = "./public/blog";
+// const path = require("path");
 
 export async function GET() {
   try {
@@ -26,6 +27,7 @@ export async function POST(
   try {
     await connectMongoDB();
 
+    var dir = require("path").join(require("os").homedir(), `blog`);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
