@@ -40,8 +40,11 @@ const columns = [
     header: "Image",
     cell: (info) => (
       <img
-        className="w-full w-[156px] h-[64px] object-cover"
-        src={"http://localhost:3000/blog/" + info.getValue()}
+        className="w-full h-full object-cover"
+        src={
+          "https://preeminent-crostata-f5e2a5.netlify.app/blog/" +
+          info.getValue()
+        }
         alt=""
       />
     ),
@@ -50,9 +53,7 @@ const columns = [
     cell: (info) => <div className="">{info.getValue()}</div>,
   }),
   columnHelper.accessor("title", {
-    cell: (info) => (
-      <div className="font-semibold min-w-[150px]">{info.getValue()}</div>
-    ),
+    cell: (info) => <div className="font-semibold">{info.getValue()}</div>,
   }),
   columnHelper.accessor("content", {
     cell: (info) => <div className="line-clamp-6">{info.renderValue()}</div>,
@@ -119,13 +120,16 @@ const DashboardPage = () => {
   };
 
   const confirmDelete = async () => {
-    const response = await fetch("http://localhost:3000/api/blogs", {
-      method: "DELETE",
-      headers: { "Content-type": "application/json; charset=UTF-8" },
-      body: JSON.stringify({
-        id: idDelete,
-      }),
-    });
+    const response = await fetch(
+      "https://preeminent-crostata-f5e2a5.netlify.app/api/blogs",
+      {
+        method: "DELETE",
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({
+          id: idDelete,
+        }),
+      }
+    );
 
     if (!response.ok) {
       alert(response.statusText);
@@ -164,7 +168,7 @@ const DashboardPage = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/blogs")
+    fetch("https://preeminent-crostata-f5e2a5.netlify.app/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         setData(data.blogs);
