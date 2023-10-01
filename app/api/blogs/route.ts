@@ -27,7 +27,7 @@ export async function POST(
     await connectMongoDB();
 
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+      fs.mkdirSync(dir, { recursive: true });
     }
 
     const data = await request.formData();
