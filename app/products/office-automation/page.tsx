@@ -392,8 +392,8 @@ const OfficeAutomationPage = () => {
             <div className="flex flex-col items-center px-4">
               <h2 className="font-bold text-center text-[#0A0A0A] sm:text-[32px] text-xl sm:leading-[48px] mb-4 md:w-[986px]">
                 All-In-One Retail{" "}
-                <span className="text-primary">Solutions</span> to Gain a
-                Competitive Edge in Today's Customer-centric Market
+                <span className="text-primary">Solutions</span> for
+                Customer-centric Market
               </h2>
               <p
                 id="ees"
@@ -407,7 +407,22 @@ const OfficeAutomationPage = () => {
           </motion.div>
 
           <div className="sm:pl-24 px-4">
-            <div className="grid grid-cols-12 mb-10 gap-y-5">
+            <div className="grid grid-cols-12 mb-[100px] gap-x-3 gap-y-5">
+              <div className="col-span-12 sm:col-span-6">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    x: [100, 0],
+                    transition: { duration: 0.5 },
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex justify-left items-center">
+                    <img src="/products/oa/ess.svg" alt="ess" />
+                  </div>
+                </motion.div>
+              </div>
               <div className="col-span-12 sm:col-span-6 flex items-center">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -431,15 +446,237 @@ const OfficeAutomationPage = () => {
                     <h2 className="my-4 font-bold text-neutral-n-100 sm:text-[32px] text-xl sm:leading-[48px]">
                       Employee Self Service
                     </h2>
-                    <p id="sdo" className="text-neutral-n-90">
+                    <p className="text-neutral-n-90 mb-6">
                       Empower employees with One Retail ESS: Real-time access to
                       credentials data, online attendance, bookings, and
                       additional features like employee feedback, live chat,
                       e-learning, and more.
                     </p>
+                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 sm:max-w-[399px]">
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Empowerment
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Transparency
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Time Savings
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Payroll Information
+                      </div>
+                      <div
+                        className="flex items-center font-medium text-neutral-dark gap-x-3"
+                        id="sdo"
+                      >
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Convenience
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </div>
+            </div>
+            <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative mb-4">
+              <div className="flex justify-center items-center rounded-full h-[60px] w-[60px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <img className="w-[33px]" src="/icons/sdo-icon.svg" alt="sdo" />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-x-3 items-center mb-[60px]">
+              <div className="max-sm:col-span-2">
+                <h2 className="font-bold mb-4 text-neutral-n-100 sm:text-[32px] text-xl sm:leading-[48px]">
+                  Store Daily Operation
+                </h2>
+                <p className="text-neutral-n-90">
+                  Optimize store operations with One Retail Daily Operations:
+                  Streamline audits, monitor temperatures, and receive alerts
+                  for efficient management.
+                </p>
+              </div>
+              <div className="max-sm:col-span-2">
+                <div className="min-h-[1px] w-full self-stretch bg-[#CFD1D4]"></div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-x-10 mb-10">
+              <div className="sm:col-span-1 col-span-2">
+                <div className="bg-[#152B74] h-[547px] sm:w-[604px] rounded-2xl relative">
+                  <img
+                    className="absolute right-0 top-0 rounded-tr-2xl"
+                    src="/products/oa/sdo-bg-1.svg"
+                    alt="sdo-bg-1"
+                  />
+                  <img
+                    className="absolute left-[39px] bottom-0 rounded-tr-2xl"
+                    src="/products/oa/sdo-hp-1.svg"
+                    alt="sdo-hp-1"
+                  />
+                  <div className="absolute py-8 px-6">
+                    <h3 className="text-white font-bold text-xl mb-3">
+                      Handheld Terminal
+                    </h3>
+                    <p className="text-neutral-n-30 mb-6">
+                      The HHT (Handheld Terminal) combine computing power and
+                      data capture capabilities to enable efficient and mobile
+                      data management and communication. It’s also has many{" "}
+                      <span className="font-bold text-white">benefits</span> of
+                      Handheld Terminal:
+                    </p>
+                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 sm:max-w-[499px] text-neutral-n-30">
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Cost Savings
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Increased Mobility
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Enhanced Productivity
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Real-time Data Access
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="sm:col-span-1 col-span-2">
+                <div className="bg-[#0A153A] h-[547px] sm:w-[604px] rounded-2xl relative">
+                  <img
+                    className="absolute right-0 top-4"
+                    src="/products/oa/sdo-2-dashboard.svg"
+                    alt="sdo-2-dashboard"
+                  />
+                  <img
+                    className="absolute left-0 bottom-0 rounded-bl-2xl"
+                    src="/products/oa/bg-sdo-2.svg"
+                    alt="bg-sdo-2"
+                  />
+                  <div className="absolute bottom-[47px] px-6">
+                    <h3 className="text-white font-bold text-xl mb-3">
+                      Store Closing Opening
+                    </h3>
+                    <p className="text-neutral-n-30 mb-6">
+                      Store closing and opening procedures are critical
+                      components of a retail store's daily operations. Store
+                      Closing Opening also has many{" "}
+                      <span className="font-bold text-white">benefits</span>:
+                    </p>
+                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 sm:max-w-[499px] text-neutral-n-30">
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Preparation for the Day
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Inventory Management
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Data Security
+                      </div>
+                      <div className="flex items-center font-medium gap-x-3">
+                        <img
+                          src="/products/oa/check-circle-sdo.svg"
+                          alt="check-circle-sdo"
+                        />
+                        Employee Accountability
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#EDEFF7] rounded-xl py-10 px-20 mb-[100px]">
+              <h3 className="text-neutral-n-100 font-bold text-xl mb-6">
+                Other features for Daily Operations
+              </h3>
+              <div className="grid grid-cols-3 gap-y-6">
+                <div className="sm:col-span-1 col-span-3">
+                  <div className="flex items-center gap-x-3">
+                    <img src="/products/oa/sr.svg" alt="sr" />
+                    <p className="font-medium text-neutral-n-80">
+                      Supplier Receiving
+                    </p>
+                  </div>
+                </div>
+                <div className="sm:col-span-1 col-span-3">
+                  <div className="flex items-center gap-x-3">
+                    <img src="/products/oa/pmm.svg" alt="pmm" />
+                    <p className="font-medium text-neutral-n-80">
+                      Product Master Management
+                    </p>
+                  </div>
+                </div>
+                <div className="sm:col-span-1 col-span-3">
+                  <div className="flex items-center gap-x-3">
+                    <img src="/products/oa/sst.svg" alt="sst" />
+                    <p className="font-medium text-neutral-n-80">
+                      Store Stock Transfer
+                    </p>
+                  </div>
+                </div>
+                <div className="sm:col-span-1 col-span-3">
+                  <div className="flex items-center gap-x-3">
+                    <img src="/products/oa/pim.svg" alt="pim" />
+                    <p className="font-medium text-neutral-n-80">
+                      Product Information Management
+                    </p>
+                  </div>
+                </div>
+                <div className="sm:col-span-1 col-span-3">
+                  <div className="flex items-center gap-x-3">
+                    <img src="/products/oa/grm.svg" alt="grm" />
+                    <p className="font-medium text-neutral-n-80" id="rm">
+                      Goods Receiving Management
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-12 mb-[100px] gap-x-3 gap-y-5">
               <div className="col-span-12 sm:col-span-6">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -450,59 +687,11 @@ const OfficeAutomationPage = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex justify-center items-center">
-                    <img src="/products/oa/ess.svg" alt="ess" />
+                  <div className="flex justify-left items-center">
+                    <img src="/products/oa/rm.svg" alt="rm" />
                   </div>
                 </motion.div>
               </div>
-            </div>
-            <div className="grid grid-cols-12 mb-10">
-              <div className="col-span-12 sm:col-span-7 order-last sm:order-first">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: [-100, 0],
-                    transition: { duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <img src="/products/oa/sdo.svg" alt="sdo" />
-                </motion.div>
-              </div>
-              <div className="col-span-12 sm:col-span-5 flex items-center">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: [100, 0],
-                    transition: { duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <div className="sm:max-w-[463px]">
-                    <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative">
-                      <div className="flex justify-center items-center rounded-full h-[60px] w-[60px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <img
-                          className="w-[33px]"
-                          src="/icons/sdo-icon.svg"
-                          alt="sdo"
-                        />
-                      </div>
-                    </div>
-                    <h2 className="my-4 font-bold text-neutral-n-100 sm:text-[32px] text-xl sm:leading-[48px]">
-                      Store Daily Operation
-                    </h2>
-                    <p id="rm" className="text-neutral-n-90">
-                      Optimize store operations with One Retail Daily
-                      Operations: Streamline audits, monitor temperatures, and
-                      receive alerts for efficient management.
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-            <div className="grid grid-cols-12 mb-10">
               <div className="col-span-12 sm:col-span-6 flex items-center">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -526,26 +715,48 @@ const OfficeAutomationPage = () => {
                     <h2 className="my-4 font-bold text-neutral-n-100 sm:text-[32px] text-xl sm:leading-[48px]">
                       Repair and Maintenance
                     </h2>
-                    <p className="text-neutral-n-90">
+                    <p className="text-neutral-n-90 mb-6">
                       Efficiently manage maintenance with One Retail: Set
                       recurring schedules, submit help requests, track issue
                       status, and ensure prompt resolution for technical issues.
                     </p>
-                  </div>
-                </motion.div>
-              </div>
-              <div className="col-span-12 sm:col-span-6">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: [100, 0],
-                    transition: { duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex justify-center items-center">
-                    <img src="/products/oa/rm.svg" alt="rm" />
+                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 sm:max-w-[399px]">
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Asset Longevity
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Cost Savings
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Reliability
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Reduced Unplanned Downtime
+                      </div>
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                        <img
+                          src="/products/oa/check-circle.svg"
+                          alt="check-circle"
+                        />
+                        Energy Efficiency
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </div>
