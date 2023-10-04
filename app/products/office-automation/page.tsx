@@ -36,7 +36,7 @@ const OfficeAutomationPage = () => {
                 transition: { duration: 0.5 },
               }}
               className="absolute bottom-0 object-cover sm:top-[276px] sm:right-[197px] w-full max-sm:hidden"
-              src="/products/oa/bg-hero-oa-2.svg"
+              src="/products/oa/bg-hero-oa-2.png"
               alt="hero"
             ></motion.img>
             <div className="absolute top-0 left-0 grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
@@ -113,7 +113,7 @@ const OfficeAutomationPage = () => {
           <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 gap-y-6">
             <div className="col-span-12 sm:col-span-7 order-last sm:order-first ">
               <motion.div
-                className="relative h-full w-full"
+                className="relative h-full w-full max-sm:hidden"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -206,14 +206,14 @@ const OfficeAutomationPage = () => {
               viewport={{ once: true }}
             >
               <img
-                className="absolute top-12 -z-10"
+                className="absolute top-12 -z-10 max-sm:hidden"
                 src="/products/oa/bg-benefits.svg"
                 alt="bg benefits"
               />
             </motion.div>
 
-            <div className="grid grid-cols-12 mt-20 sm:px-24 px-4 mb-[60px]">
-              <div className="col-span-12 sm:col-span-7 sm:max-w-[574px] flex items-center">
+            <div className="grid grid-cols-12 mt-20 sm:pl-24 mb-[60px]">
+              <div className="col-span-12 sm:col-span-6 sm:max-w-[574px] flex max-sm:px-4 items-center">
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -236,8 +236,9 @@ const OfficeAutomationPage = () => {
                   </p>
                 </motion.div>
               </div>
-              <div className="col-span-12 sm:col-span-5">
+              <div className="col-span-12 sm:col-span-6">
                 <motion.img
+                  className="w-full"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
@@ -407,7 +408,7 @@ const OfficeAutomationPage = () => {
           </motion.div>
 
           <div className="sm:pl-24 px-4">
-            <div className="grid grid-cols-12 mb-[100px] gap-x-3 gap-y-5">
+            <div className="grid grid-cols-12 sm:mb-[100px] mb-10 gap-x-3 gap-y-5">
               <div className="col-span-12 sm:col-span-6">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -501,7 +502,7 @@ const OfficeAutomationPage = () => {
                 <img className="w-[33px]" src="/icons/sdo-icon.svg" alt="sdo" />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-3 items-center mb-[60px]">
+            <div className="grid grid-cols-2 gap-x-3 items-center sm:mb-[60px] mb-10">
               <div className="max-sm:col-span-2">
                 <h2 className="font-bold mb-4 text-neutral-n-100 sm:text-[32px] text-xl sm:leading-[48px]">
                   Store Daily Operation
@@ -516,16 +517,16 @@ const OfficeAutomationPage = () => {
                 <div className="min-h-[1px] w-full self-stretch bg-[#CFD1D4]"></div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 mb-10">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-4 mb-10">
               <div className="sm:col-span-1 col-span-2">
-                <div className="bg-[#152B74] h-[547px] sm:w-[604px] rounded-2xl relative">
+                <div className="bg-[#152B74] sm:h-[547px] max-sm:h-[575px] sm:w-[604px] rounded-2xl relative">
                   <img
                     className="absolute right-0 top-0 rounded-tr-2xl"
                     src="/products/oa/sdo-bg-1.svg"
                     alt="sdo-bg-1"
                   />
                   <img
-                    className="absolute left-[39px] bottom-0 rounded-tr-2xl"
+                    className="absolute sm:left-[39px] left-3 bottom-0 rounded-tr-2xl"
                     src="/products/oa/sdo-hp-1.svg"
                     alt="sdo-hp-1"
                   />
@@ -574,7 +575,7 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
               <div className="sm:col-span-1 col-span-2">
-                <div className="bg-[#0A153A] h-[547px] sm:w-[604px] rounded-2xl relative">
+                <div className="bg-[#0A153A] sm:h-[547px] max-sm:h-[555px] sm:w-[604px] rounded-2xl relative">
                   <img
                     className="absolute right-0 top-4"
                     src="/products/oa/sdo-2-dashboard.svg"
@@ -585,7 +586,7 @@ const OfficeAutomationPage = () => {
                     src="/products/oa/bg-sdo-2.svg"
                     alt="bg-sdo-2"
                   />
-                  <div className="absolute bottom-[47px] px-6">
+                  <div className="absolute sm:bottom-[47px] bottom-6 px-6">
                     <h3 className="text-white font-bold text-xl mb-3">
                       Store Closing Opening
                     </h3>
@@ -629,7 +630,7 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#EDEFF7] rounded-xl py-10 px-20 mb-[100px]">
+            <div className="bg-[#EDEFF7] rounded-xl sm:py-10 py-6 sm:px-20 px-4 mb-[100px]">
               <h3 className="text-neutral-n-100 font-bold text-xl mb-6">
                 Other features for Daily Operations
               </h3>
@@ -676,7 +677,7 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-12 mb-[100px] gap-x-3 gap-y-5">
+            <div className="grid grid-cols-12 sm:mb-[100px] mb-10 gap-x-3 gap-y-5">
               <div className="col-span-12 sm:col-span-6">
                 <motion.div
                   initial={{ opacity: 0 }}

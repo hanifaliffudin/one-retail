@@ -24,7 +24,7 @@ const CRMPage = () => {
         <section>
           <div className="relative sm:h-[867px] h-[767px] mt-[135px]">
             <img
-              className="absolute w-full -top-[133px] opacity-60"
+              className="absolute w-full sm:-top-[133px] -top-10 opacity-60"
               src="/products/crm/bg-hero-crm.svg"
               alt="hero"
             />
@@ -39,7 +39,7 @@ const CRMPage = () => {
                   }}
                 >
                   <div className="max-w-[533px]">
-                    <p className="font-medium text-neutral-n-80 text-lg mb-3">
+                    <p className="sm:font-medium text-neutral-n-80 sm:text-lg max-sm:text-sm mb-3">
                       Transforming relationships with One Retail CRM
                     </p>
                     <h1 className="sm:text-[44px] text-[22px] sm:leading-[62px] leading-[33px] font-bold mb-5">
@@ -52,7 +52,7 @@ const CRMPage = () => {
                       competitive advantage in the market.
                     </p>
                   </div>
-                  <div className="flex" id="whyus">
+                  <div className="flex">
                     <Link
                       href="/contact"
                       className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
@@ -60,7 +60,7 @@ const CRMPage = () => {
                       Let’s Get Demo!
                     </Link>
                     <Link
-                      href="#discover"
+                      href="#nurturing"
                       onClick={handleScroll}
                       className="btn-border-primary py-2.5 px-4 max-sm:text-xs font-semibold"
                     >
@@ -69,7 +69,10 @@ const CRMPage = () => {
                   </div>
 
                   <div className="mt-[78px] max-sm:hidden">
-                    <h2 className="mb-2.5 font-bold text-neutral-n-80 ">
+                    <h2
+                      className="mb-2.5 font-bold text-neutral-n-80 "
+                      id="nurturing"
+                    >
                       Been Trusted By
                     </h2>
 
@@ -239,7 +242,7 @@ const CRMPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="w-[541px] text-center">
+              <div className="sm:w-[541px] text-center">
                 <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                   Unlock Powerful Benefits <br className="sm:hidden" /> of Our
                   CRM
@@ -253,6 +256,7 @@ const CRMPage = () => {
 
           <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px] gap-y-6 px-4">
             <motion.div
+              className="col-span-3 sm:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -261,19 +265,18 @@ const CRMPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="col-span-3 sm:col-span-1">
-                <h3 className="font-bold sm:text-2xl mb-4">
-                  Streamline customer data
-                </h3>
-                <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
-                  Organize and access customer information in one place, gaining
-                  a comprehensive view for personalized engagement
-                </p>
-                <img src="/products/crm/benefit-1.svg" alt="benefit 1" />
-              </div>
+              <h3 className="font-bold sm:text-2xl mb-4">
+                Streamline customer data
+              </h3>
+              <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
+                Organize and access customer information in one place, gaining a
+                comprehensive view for personalized engagement
+              </p>
+              <img src="/products/crm/benefit-1.svg" alt="benefit 1" />
             </motion.div>
 
             <motion.div
+              className="col-span-3 sm:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -282,19 +285,18 @@ const CRMPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="col-span-3 sm:col-span-1">
-                <h3 className="font-bold sm:text-2xl mb-4">
-                  Enhance relationship
-                </h3>
-                <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
-                  Nurture customer connections through timely follow-ups and
-                  deep understanding of preferences
-                </p>
-                <img src="/products/crm/benefit-2.svg" alt="benefit 2" />
-              </div>
+              <h3 className="font-bold sm:text-2xl mb-4">
+                Enhance relationship
+              </h3>
+              <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
+                Nurture customer connections through timely follow-ups and deep
+                understanding of preferences
+              </p>
+              <img src="/products/crm/benefit-2.svg" alt="benefit 2" />
             </motion.div>
 
             <motion.div
+              className="col-span-3 sm:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -303,14 +305,12 @@ const CRMPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="col-span-3 sm:col-span-1">
-                <h3 className="font-bold sm:text-2xl mb-4">Gain insights</h3>
-                <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
-                  Utilize reporting and analytics to make data-driven decisions,
-                  uncovering customer behavior and sales trends
-                </p>
-                <img src="/products/crm/benefit-3.svg" alt="benefit 3" />
-              </div>
+              <h3 className="font-bold sm:text-2xl mb-4">Gain insights</h3>
+              <p className="text-neutral-n-80 mb-7 max-sm:text-sm">
+                Utilize reporting and analytics to make data-driven decisions,
+                uncovering customer behavior and sales trends
+              </p>
+              <img src="/products/crm/benefit-3.svg" alt="benefit 3" />
             </motion.div>
           </div>
         </section>
@@ -318,42 +318,17 @@ const CRMPage = () => {
         <section>
           <div id="el" className="relative h-[2300px]">
             <img
-              className="absolute sm:-top-[630px] max-sm:hidden"
-              src="/products/crm/bg-engagement.svg"
-              alt=""
+              className="absolute top-0 left-0 max-sm:hidden"
+              src="/products/crm/bg-crm.png"
+              alt="bg-crm"
             />
             <img
-              className="absolute -top-[280px] sm:hidden min-h-[2390px] object-cover"
-              src="/products/crm/bg-engagement-mobile.svg"
-              alt=""
-            />
-            <img
-              className="absolute right-0 sm:top-32 max-sm:hidden"
-              src="/products/crm/bg-engagement-2.svg"
-              alt=""
-            />
-            <img
-              className="absolute right-0 sm:top-32 top-20 sm:hidden"
-              src="/products/crm/bg-engagement-2-mobile.svg"
-              alt=""
-            />
-            <img
-              className="absolute left-0 sm:bottom-24 bottom-48"
-              src="/products/crm/bg-engagement-3.svg"
-              alt=""
-            />
-            <img
-              className="absolute z-10 right-0 max-sm:hidden"
-              src="/products/crm/mockup-1.svg"
-              alt=""
-            />
-            <img
-              className="absolute z-10 top-48 right-1/4 max-sm:hidden"
-              src="/products/crm/mockup-2.svg"
-              alt=""
+              className="absolute top-0 left-0 sm:hidden"
+              src="/products/crm/bg-crm-mobile.png"
+              alt="bg-crm-mobile"
             />
 
-            <div className="absolute z-10 sm:top-40 sm:px-24 px-4 w-full">
+            <div className="absolute z-10 sm:top-10 sm:px-24 px-4 w-full">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -363,7 +338,7 @@ const CRMPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="sm:w-[436px] sm:mt-48 mt-32">
+                <div className="sm:w-[436px] sm:mt-48 mt-24 max-sm:px-4">
                   <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                     Customer Engagement & Loyalty
                   </h2>
@@ -399,7 +374,7 @@ const CRMPage = () => {
               >
                 <div
                   id="gamification"
-                  className="flex justify-center sm:mt-[419px] max-sm:mt-[480px] sm:mb-20 mb-6"
+                  className="flex justify-center sm:mt-[419px] max-sm:mt-[500px] sm:mb-20 mb-6"
                 >
                   <div className="w-[557px] text-center">
                     <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
@@ -479,6 +454,7 @@ const CRMPage = () => {
 
               <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
                 <motion.div
+                  className="order-last sm:order-first max-sm:mt-4"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
@@ -487,11 +463,7 @@ const CRMPage = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  <img
-                    className="order-last sm:order-first"
-                    src="/products/crm/levelup-3.svg"
-                    alt="level up"
-                  />
+                  <img src="/products/crm/levelup-3.svg" alt="level up" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -536,7 +508,7 @@ const CRMPage = () => {
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                 E-Commerce
               </h2>
-              <p className="text-gray-600 mb-[58px] max-w-[555px]">
+              <p className="text-gray-600 sm:mb-[58px] mb-8 max-w-[555px]">
                 Empower your online business with our powerful One Retail
                 e-commerce platform for seamless selling, attracting customers,
                 and increasing sales.
@@ -628,7 +600,7 @@ const CRMPage = () => {
             id="pim"
             className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] mb-[54px]"
           >
-            <div className="col-span-2 sm:col-span-1 max-sm:h-[400px]">
+            <div className="col-span-2 sm:col-span-1">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] sm:hidden">
                 Centralize Product Data with Product Information Management
                 (PIM)
@@ -643,7 +615,7 @@ const CRMPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="h-full max-sm:-mt-12"
+                  className="h-full max-sm:mt-4"
                   src="/products/crm/pim.svg"
                   alt="pim"
                 />
@@ -663,7 +635,7 @@ const CRMPage = () => {
                   Centralize Product Data with Product Information Management
                   (PIM)
                 </h2>
-                <p className="text-neutral-n-90 mb-10">
+                <p className="text-neutral-n-90 mb-10 max-sm:mt-4">
                   Effortlessly centralize and update complex product data with
                   One Retail PIM. Streamline your operations, improve
                   collaboration, and deliver exceptional customer experiences
@@ -800,7 +772,7 @@ const CRMPage = () => {
                       alt="cta-1"
                     />
                     <img
-                      className="absolute -right-7 bottom-[20px] z-20 max-sm:hidden"
+                      className="absolute -right-7 bottom-[20px] z-[20] max-sm:hidden"
                       src="/products/crm/cta-2.svg"
                       alt="cta-2"
                     />

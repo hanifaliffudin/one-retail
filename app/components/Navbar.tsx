@@ -29,7 +29,7 @@ export default function NavbarWithCTAButton() {
     <>
       <nav
         onMouseLeave={() => setDropdownProduct(false)}
-        className={`bg-white fixed w-full z-20 top-0 left-0 ${
+        className={`bg-white fixed w-full z-30 top-0 left-0 ${
           pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
         }`}
       >
@@ -705,7 +705,7 @@ export default function NavbarWithCTAButton() {
               <Link
                 onClick={handleScroll}
                 href="#ec"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
+                className={`whitespace-nowrap pt-4 pb-[12px] border-b-[3px] ${
                   subActive == "ec"
                     ? "border-b-[#1F40AE] text-primary"
                     : "border-b-transparent"

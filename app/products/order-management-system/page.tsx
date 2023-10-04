@@ -22,7 +22,7 @@ const OrderManagementSystemPage = () => {
       <NavbarWithCTAButton />
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
-          <div className="mt-[135px] mb-[83px] sm:h-[640px] h-[375px] relative">
+          <div className="mt-[135px] sm:mb-[83px] mb-10 sm:h-[640px] h-[375px] relative">
             <img
               className="absolute object-cover h-full left-0"
               src="/products/oms/hero.svg"
@@ -52,7 +52,7 @@ const OrderManagementSystemPage = () => {
                 </Link>
                 <Link
                   id="benefits"
-                  href="#whyus"
+                  href="#benefits"
                   onClick={handleScroll}
                   className="max-sm:w-full border border-[#D2D9EF] rounded-md text-neutral-n-30 py-2.5 px-4 max-sm:text-xs font-semibold"
                 >
