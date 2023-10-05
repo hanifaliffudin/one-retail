@@ -74,6 +74,7 @@ const OfficeAutomationPage = () => {
                     Let’s Get Demo!
                   </Link>
                   <Link
+                    id="whyus"
                     href="#whyus"
                     onClick={handleScroll}
                     className="border border-[#F5F5F5] rounded-md text-neutral-n-30 py-2.5 px-4 max-sm:text-xs font-semibold"
@@ -414,7 +415,7 @@ const OfficeAutomationPage = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    x: [100, 0],
+                    x: [-100, 0],
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
@@ -429,7 +430,7 @@ const OfficeAutomationPage = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    x: [-100, 0],
+                    x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
@@ -683,7 +684,7 @@ const OfficeAutomationPage = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    x: [100, 0],
+                    x: [-100, 0],
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
@@ -698,7 +699,7 @@ const OfficeAutomationPage = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    x: [-100, 0],
+                    x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
