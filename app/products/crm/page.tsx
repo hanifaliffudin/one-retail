@@ -5,6 +5,10 @@ import Link from "next/link";
 import FAQ from "@/app/components/FAQ";
 import NavbarWithCTAButton from "@/app/components/Navbar";
 import FooterWithSocialMediaIcons from "@/app/components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+import { Autoplay } from "swiper/modules";
 
 const CRMPage = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -76,16 +80,39 @@ const CRMPage = () => {
                       Been Trusted By
                     </h2>
 
-                    <div className="flex overflow-x-auto">
-                      <img src="/home/aeon.svg" alt="aeon" />
-                      <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
-                      <img src="/home/pahtama.svg" alt="pahtama" />
+                    <div className="h-[100px]">
+                      <Swiper
+                        className="max-h-[100px]"
+                        slidesPerView={1}
+                        direction={"vertical"}
+                        autoplay={{
+                          delay: 7000,
+                          disableOnInteraction: false,
+                        }}
+                        speed={1000}
+                        modules={[Autoplay]}
+                        loop
+                      >
+                        <SwiperSlide>
+                          {" "}
+                          <div className="flex overflow-x-auto">
+                            <img src="/home/aeon.svg" alt="aeon" />
+                            <img
+                              src="/home/aeon-wellness.svg"
+                              alt="aeon-wellness"
+                            />
+                            <img src="/home/pahtama.svg" alt="pahtama" />
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div className="flex">
+                            <img src="/home/cmhl.svg" alt="cmhl" />
+                            <img src="/home/city.svg" alt="city" />
+                            <img src="/home/kids.svg" alt="kids" />
+                          </div>
+                        </SwiperSlide>
+                      </Swiper>
                     </div>
-                    {/* <div className="flex gap-x-6 justify-center">
-                  <img src="/home/cmhl.svg" alt="cmhl" />
-                  <img src="/home/city.svg" alt="city" />
-                  <img src="/home/kids.svg" alt="kids" />
-                </div> */}
                   </div>
                 </motion.div>
               </div>
@@ -316,7 +343,7 @@ const CRMPage = () => {
         </section>
 
         <section>
-          <div id="el" className="relative h-[2300px]">
+          <div id="el" className="relative h-[2100px]">
             <img
               className="absolute top-0 left-0 max-sm:hidden"
               src="/products/crm/bg-crm.png"
