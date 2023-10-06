@@ -26,14 +26,14 @@ const CRMPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative sm:h-[867px] h-[767px] mt-[135px]">
+          <div className="relative lg:h-[867px] max-sm:h-[767px] max-lg:h-[1400px] mt-[135px]">
             <img
               className="absolute w-full sm:-top-[133px] -top-10 opacity-60"
               src="/products/crm/bg-hero-crm.svg"
               alt="hero"
             />
             <div className="absolute grid w-full mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-              <div className="md:ml-24 px-4 md:px-0 md:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
+              <div className="xl:ml-24 ml-10 px-4 lg:px-0 max-lg:px-8 lg:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -42,7 +42,7 @@ const CRMPage = () => {
                     transition: { duration: 0.5 },
                   }}
                 >
-                  <div className="max-w-[533px]">
+                  <div className="lg:max-w-[533px] ">
                     <p className="sm:font-medium text-neutral-n-80 sm:text-lg max-sm:text-sm mb-3">
                       Transforming relationships with One Retail CRM
                     </p>
@@ -105,7 +105,7 @@ const CRMPage = () => {
                           </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                          <div className="flex">
+                          <div className="flex overflow-x-auto">
                             <img src="/home/cmhl.svg" alt="cmhl" />
                             <img src="/home/city.svg" alt="city" />
                             <img src="/home/kids.svg" alt="kids" />
@@ -116,7 +116,7 @@ const CRMPage = () => {
                   </div>
                 </motion.div>
               </div>
-              <div className="lg:col-span-6 col-span-12 sm:mt-[92px] relative">
+              <div className="lg:col-span-6 col-span-12 lg:mt-[92px] relative">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -173,6 +173,7 @@ const CRMPage = () => {
         <section>
           <div className="grid grid-cols-2 mt-20 sm:px-24 px-4 gap-x-[107px] gap-y-6">
             <motion.div
+              className="col-span-2 lg:col-span-1 relative lg:h-[456px] max-md:h-[340px] md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -180,21 +181,19 @@ const CRMPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="col-span-2 sm:col-span-1 relative sm:h-[456px] h-64 order-last sm:order-first">
-                <img
-                  className="absolute max-sm:w-[340px]"
-                  src="/products/crm/bg-nurturing.svg"
-                  alt="bg-nurturing"
-                />
-                <img
-                  className="absolute max-sm:w-[340px]"
-                  src="/products/crm/nurturing.svg"
-                  alt="nurturing"
-                />
-              </div>
+              <img
+                className="absolute w-full"
+                src="/products/crm/bg-nurturing.svg"
+                alt="bg-nurturing"
+              />
+              <img
+                className="absolute w-full"
+                src="/products/crm/nurturing.svg"
+                alt="nurturing"
+              />
             </motion.div>
 
-            <div className="col-span-2 sm:col-span-1 ">
+            <div className="col-span-2 lg:col-span-1 ">
               <div className="">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -206,7 +205,7 @@ const CRMPage = () => {
                   viewport={{ once: true }}
                 >
                   <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
-                    Nurturing Strong <br className="max-sm:hidden" />{" "}
+                    Nurturing Strong <br className="max-xl:hidden" />{" "}
                     Relationship with Customers
                   </h2>
                   <p className="text-gray-600 mb-8">
@@ -283,7 +282,7 @@ const CRMPage = () => {
 
           <div className="grid grid-cols-3 sm:px-24 text-center gap-x-[90px] gap-y-6 px-4">
             <motion.div
-              className="col-span-3 sm:col-span-1"
+              className="col-span-3 lg:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -299,11 +298,15 @@ const CRMPage = () => {
                 Organize and access customer information in one place, gaining a
                 comprehensive view for personalized engagement
               </p>
-              <img src="/products/crm/benefit-1.svg" alt="benefit 1" />
+              <img
+                className="w-full"
+                src="/products/crm/benefit-1.svg"
+                alt="benefit 1"
+              />
             </motion.div>
 
             <motion.div
-              className="col-span-3 sm:col-span-1"
+              className="col-span-3 lg:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -319,11 +322,15 @@ const CRMPage = () => {
                 Nurture customer connections through timely follow-ups and deep
                 understanding of preferences
               </p>
-              <img src="/products/crm/benefit-2.svg" alt="benefit 2" />
+              <img
+                className="w-full"
+                src="/products/crm/benefit-2.svg"
+                alt="benefit 2"
+              />
             </motion.div>
 
             <motion.div
-              className="col-span-3 sm:col-span-1"
+              className="col-span-3 lg:col-span-1"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -337,25 +344,32 @@ const CRMPage = () => {
                 Utilize reporting and analytics to make data-driven decisions,
                 uncovering customer behavior and sales trends
               </p>
-              <img src="/products/crm/benefit-3.svg" alt="benefit 3" />
+              <img
+                className="w-full"
+                src="/products/crm/benefit-3.svg"
+                alt="benefit 3"
+              />
             </motion.div>
           </div>
         </section>
 
         <section>
-          <div id="el" className="relative h-[2100px]">
+          <div
+            id="el"
+            className="relative max-sm:h-[2300px] max-xl:h-[2450px] h-[2100px]"
+          >
             <img
-              className="absolute top-0 left-0 max-sm:hidden"
+              className="absolute top-0 left-0 max-xl:hidden"
               src="/products/crm/bg-crm.png"
               alt="bg-crm"
             />
             <img
-              className="absolute top-0 left-0 sm:hidden"
+              className="absolute top-0 left-0 xl:hidden w-full h-[2100px] sm:h-[2400px]"
               src="/products/crm/bg-crm-mobile.png"
               alt="bg-crm-mobile"
             />
 
-            <div className="absolute z-10 sm:top-10 sm:px-24 px-4 w-full">
+            <div className="absolute z-10 sm:top-10 lg:px-24 px-4 w-full">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -365,7 +379,7 @@ const CRMPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="sm:w-[436px] sm:mt-48 mt-24 max-sm:px-4">
+                <div className="xl:w-[436px] xl:mt-48 mt-24 max-sm:px-4">
                   <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
                     Customer Engagement & Loyalty
                   </h2>
@@ -378,7 +392,7 @@ const CRMPage = () => {
                 </div>
               </motion.div>
 
-              <div className="mt-[34px] sm:hidden relative">
+              <div className="mt-[34px] xl:hidden relative">
                 <img
                   className="absolute -left-4 top-[38px]"
                   src="/products/crm/mockup-1-mobile.svg"
@@ -401,7 +415,7 @@ const CRMPage = () => {
               >
                 <div
                   id="gamification"
-                  className="flex justify-center sm:mt-[419px] max-sm:mt-[500px] sm:mb-20 mb-6"
+                  className="flex justify-center sm:mt-[479px] max-sm:mt-[500px] lg:mb-20 mb-6"
                 >
                   <div className="w-[557px] text-center">
                     <h2 className="text-white font-bold sm:text-[36px] text-xl sm:leading-[54px] mb-3">
@@ -424,9 +438,9 @@ const CRMPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
+                <div className="flex flex-wrap items-center justify-center gap-x-[59px] gap-y-5 sm:mb-[65px] mb-6 px-4">
                   <img
-                    className="order-last sm:order-first"
+                    className="order-last xl:order-first"
                     src="/products/crm/levelup-1.svg"
                     alt="level up"
                   />
@@ -481,7 +495,7 @@ const CRMPage = () => {
 
               <div className="flex flex-wrap items-center justify-center gap-x-[59px] sm:mb-[65px] mb-6 px-4">
                 <motion.div
-                  className="order-last sm:order-first max-sm:mt-4"
+                  className="order-last xl:order-first max-sm:mt-4"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
@@ -552,9 +566,9 @@ const CRMPage = () => {
               viewport={{ once: true }}
             >
               <div className="grid grid-cols-2 gap-x-10 gap-y-6">
-                <div className="col-span-2 sm:col-span-1">
+                <div className="col-span-2 xl:col-span-1">
                   <div className="sm:h-[593px] h-[512px] relative bg-[#152B74] sm:py-10 sm:px-[49px] p-6 rounded-3xl">
-                    <div className="sm:w-[455px]">
+                    <div className="xl:w-[455px]">
                       <h3 className="text-white mb-4 font-bold sm:text-2xl">
                         Business 2 Business
                       </h3>
@@ -585,9 +599,9 @@ const CRMPage = () => {
                   </div>
                 </div>
 
-                <div className="col-span-2 sm:col-span-1">
+                <div className="col-span-2 xl:col-span-1">
                   <div className="sm:h-[593px] h-[545px] relative bg-[#0A153A] sm:py-10 sm:px-[49px] rounded-3xl">
-                    <div className="absolute sm:left-[42px] sm:bottom-[27px] bottom-0 sm:w-[469px] p-6">
+                    <div className="absolute sm:left-[42px] sm:bottom-[27px] bottom-0 xl:w-[469px] p-6">
                       <h3 className="text-white mb-4 font-bold sm:text-2xl">
                         Business 2 Customer
                       </h3>
@@ -625,14 +639,15 @@ const CRMPage = () => {
         <section>
           <div
             id="pim"
-            className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] mb-[54px]"
+            className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] gap-y-8 mb-[54px]"
           >
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-2 xl:col-span-1">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] sm:hidden">
                 Centralize Product Data with Product Information Management
                 (PIM)
               </h2>
               <motion.div
+                className="h-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -642,13 +657,13 @@ const CRMPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="h-full max-sm:mt-4"
+                  className="h-full object-cover max-sm:mt-4 w-full rounded-2xl"
                   src="/products/crm/pim.svg"
                   alt="pim"
                 />
               </motion.div>
             </div>
-            <div className="col-span-2 sm:col-span-1 max-w-[488px]">
+            <div className="col-span-2 xl:col-span-1 xl:max-w-[488px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -728,9 +743,9 @@ const CRMPage = () => {
 
         <section>
           <div className="relative cta-crm">
-            <div className="grid grid-cols-12 sm:px-[160px]">
-              <div className="col-span-12 sm:col-span-6 text-white sm:max-w-[503px] flex items-center">
-                <div className="max-w-[370px] max-sm:text-center max-sm:pt-8">
+            <div className="grid grid-cols-12 xl:px-[160px] max-xl:pt-4 px-8">
+              <div className="col-span-12 xl:col-span-6 text-white xl:max-w-[503px] flex max-xl:justify-center items-center">
+                <div className="xl:max-w-[370px] max-sm:text-center max-sm:pt-8">
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{
@@ -757,7 +772,7 @@ const CRMPage = () => {
                     }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex max-sm:justify-center">
+                    <div className="flex max-xl:justify-center">
                       <Link
                         href="/contact"
                         className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
@@ -768,9 +783,10 @@ const CRMPage = () => {
                   </motion.div>
                 </div>
               </div>
-              <div className="col-span-12 sm:col-span-6">
-                <div className="relative h-[369px] w-full">
+              <div className="col-span-12 xl:col-span-6">
+                <div className="relative h-[369px] max-sm:h-[300px] max-md:h-[330px] w-full">
                   <motion.div
+                    className="w-full h-full"
                     initial={{ opacity: 0 }}
                     whileInView={{
                       opacity: 1,
@@ -778,10 +794,15 @@ const CRMPage = () => {
                     }}
                     viewport={{ once: true }}
                   >
-                    <img
-                      className="absolute sm:right-20 sm:-top-[45px] rounded-[20px] max-sm:px-6"
+                    {/* <img
+                      className="absolute xl:right-20 xl:-top-[45px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[20px] max-xl:px-6"
                       src="/products/crm/circle-white.svg"
                       alt="circle-white"
+                    /> */}
+                    <img
+                      className="absolute h-full bottom-0 left-1/2 transform -translate-x-1/2 rounded-[20px] max-xl:px-6"
+                      src="/products/crm/circle-mobile.png"
+                      alt="circle-mobile"
                     />
                   </motion.div>
 
@@ -794,17 +815,17 @@ const CRMPage = () => {
                     viewport={{ once: true }}
                   >
                     <img
-                      className="absolute right-[58px] top-[25px] z-10 max-sm:hidden"
+                      className="absolute xl:right-[58px] xl:top-[25px] max-xl:top-1/2 max-xl:left-1/2 max-xl:transform max-xl:-translate-x-1/2 max-xl:-translate-y-1/2 z-10 max-md:hidden"
                       src="/products/crm/cta-1.svg"
                       alt="cta-1"
                     />
                     <img
-                      className="absolute -right-7 bottom-[20px] z-[20] max-sm:hidden"
+                      className="absolute md:-right-7 md:bottom-[20px] top-2/3 left-2/3 transform -translate-x-1/2 -translate-y-1/2 z-[20] max-md:hidden"
                       src="/products/crm/cta-2.svg"
                       alt="cta-2"
                     />
                     <img
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 sm:hidden"
+                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 md:hidden"
                       src="/products/crm/cta-mobile.svg"
                       alt="cta-mobile"
                     />

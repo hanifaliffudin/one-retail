@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function FooterWithSocialMediaIcons() {
   return (
     <>
-      <button className="fixed z-20 sm:right-4 sm:bottom-4 right-2 bottom-2 w-[80px] h-[80px]">
+      <button className="fixed z-20 md:right-4 md:bottom-4 right-2 bottom-2 w-[80px] h-[80px]">
         <img src="/WhatsApp.svg" alt="wa" />
       </button>
-      <div className="w-full bg-neutral-n-90 py-10 md:px-24 px-4 text-neutral-n-10">
-        <div className="grid max-w-screen-xl mx-auto w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+      <div className="w-full bg-neutral-n-90 py-10 lg:px-24 px-4 text-neutral-n-10">
+        <div className="grid max-w-screen-xl mx-auto w-full justify-between md:flex md:justify-between md:grid-cols-1 max-lg:gap-x-4">
           <div className="flex flex-col justify-between mb-6">
             <img
               className="max-h-16 w-fit"

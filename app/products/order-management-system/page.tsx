@@ -65,13 +65,13 @@ const OrderManagementSystemPage = () => {
 
         <section>
           <div className="sm:mx-24 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 pb-20 border-b border-b-[#E0E0E0] mb-14">
-            <div className="col-span-4 sm:col-span-1 max-sm:mb-1">
-              <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] text-neutral-n-90 max-sm:text-center">
+            <div className="col-span-4 lg:col-span-1 max-sm:mb-1">
+              <h2 className="font-bold xl:text-[36px] text-xl md:text-3xl xl:leading-[54px] text-neutral-n-90 max-sm:text-center">
                 Each products meets a high{" "}
                 <span className="text-primary">standard</span>
               </h2>
             </div>
-            <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
+            <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
               <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
                 Packed with built-in amazing features
               </h3>
@@ -82,7 +82,7 @@ const OrderManagementSystemPage = () => {
                 diverse needs
               </p>
             </div>
-            <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
+            <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
               <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
                 Optimized for online selling & business
               </h3>
@@ -93,7 +93,7 @@ const OrderManagementSystemPage = () => {
                 empowers you to thrive in the online space
               </p>
             </div>
-            <div className="col-span-4 sm:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
+            <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
               <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
                 Covered with long term support
               </h3>
@@ -115,9 +115,9 @@ const OrderManagementSystemPage = () => {
             <h2 className="max-sm:text-center font-bold sm:text-[36px] text-xl text-neutral-n-90 mb-10">
               Selling the way it should be
             </h2>
-            <div className="flex max-sm:flex-wrap gap-x-[130px] gap-y-6 items-center">
+            <div className="flex flex-wrap gap-x-[130px] gap-y-6 items-center justify-center">
               <img src="/products/oms/pos.svg" alt="pos" />
-              <div className="flex flex-col sm:gap-y-10 gap-y-5">
+              <div className="flex flex-col sm:gap-y-10 gap-y-5 xl:max-w-[400px]">
                 <div className="border-l-[#E0E0E0] border-l-4 pl-5">
                   <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
                     Fast Checkout
@@ -171,9 +171,9 @@ const OrderManagementSystemPage = () => {
               </p>
             </motion.div>
 
-            <div className="flex flex-wrap sm:px-24 gap-y-10">
+            <div className="flex max-lg:flex-wrap sm:px-24 gap-y-10 max-xl:gap-x-4">
               <motion.div
-                className="z-10 sm:mt-[113px]"
+                className="z-10 xl:mt-[113px] max-xl:w-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -183,11 +183,11 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="mb-5"
+                  className="mb-5 max-xl:w-full"
                   src="/products/oms/pos-2.svg"
                   alt="pos-2"
                 />
-                <div className="w-[294px]">
+                <div className="xl:w-[294px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Single store
                   </h4>
@@ -199,7 +199,7 @@ const OrderManagementSystemPage = () => {
               </motion.div>
 
               <motion.div
-                className="sm:-ml-[82px]"
+                className="xl:-ml-[82px]"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -209,11 +209,11 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="mb-5"
+                  className="mb-5 max-xl:w-full"
                   src="/products/oms/pos-3.svg"
                   alt="pos-3"
                 />
-                <div className="sm:w-[506px]">
+                <div className="xl:w-[506px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Multi store
                   </h4>
@@ -227,7 +227,7 @@ const OrderManagementSystemPage = () => {
               </motion.div>
 
               <motion.div
-                className="sm:ml-6"
+                className="xl:ml-6 max-xl:w-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -237,11 +237,11 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="max-sm:w-full mb-5"
+                  className="max-xl:w-full mb-5"
                   src="/products/oms/pos-4.svg"
                   alt="pos-4"
                 />
-                <div className="sm:w-[294px]">
+                <div className="xl:w-[294px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Events
                   </h4>
@@ -258,8 +258,8 @@ const OrderManagementSystemPage = () => {
 
         <section id="so">
           <div className="sm:mx-24 mx-4 py-20 sm:border-b sm:border-b-[#E0E0E0] sm:mb-20">
-            <div className="flex flex-wrap items-center">
-              <div className="sm:max-w-[400px] sm:mr-[130px]">
+            <div className="flex flex-wrap items-center gap-y-4 justify-center">
+              <div className="xl:max-w-[400px] xl:mr-[130px]">
                 <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
                   Self Ordering
                 </div>
@@ -297,7 +297,7 @@ const OrderManagementSystemPage = () => {
             <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
               Self Checkout
             </div>
-            <h2 className="max-sm:text-center font-bold sm:text-[36px] text-xl text-neutral-n-90 mb-10">
+            <h2 className="max-sm:text-center font-bold md:text-3xl xl:text-[36px] text-xl text-neutral-n-90 mb-10">
               Fast, Convenient, and Contactless
             </h2>
             <img
@@ -315,7 +315,7 @@ const OrderManagementSystemPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="mt-10 max-w-[506px]">
+                <div className="mt-10 xl:max-w-[506px]">
                   <div className="flex gap-x-3 mb-3">
                     <img src="/products/oms/visa.svg" alt="visa" />
                     <img src="/products/oms/mastercard.svg" alt="mastercard" />
@@ -344,6 +344,7 @@ const OrderManagementSystemPage = () => {
                 </div>
               </motion.div>
               <motion.img
+                className="max-xl:w-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,

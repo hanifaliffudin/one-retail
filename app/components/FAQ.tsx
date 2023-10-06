@@ -39,9 +39,9 @@ const FAQ = () => {
         }}
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-3 pt-20 pb-[104px] md:px-[188px] px-4 gap-y-5 gap-x-[120px] mb-20">
-          <div className="md:col-span-1 col-span-3">
-            <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-xl mb-5">
+        <div className="grid grid-cols-3 xl:pt-20 pt-10 pb-[104px] xl:px-[188px] sm:px-24 px-4 gap-y-5 gap-x-8 xl:gap-x-[120px] mb-20">
+          <div className="lg:col-span-1 col-span-3">
+            <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl mb-5">
               Frequently Asked Questions
             </h2>
             <p className="text-neutral-n-90 max-sm:text-sm">
@@ -50,7 +50,7 @@ const FAQ = () => {
               operations and business growth.
             </p>
           </div>
-          <div className="md:col-span-2 col-span-3">
+          <div className="lg:col-span-2 col-span-3">
             {accordionData.map(({ title, content }, index) => (
               <>
                 <FAQAccordionItem

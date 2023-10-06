@@ -567,305 +567,307 @@ export default function NavbarWithCTAButton() {
           </div>
         </div>
 
-        {pathname.includes("/products/order-management-system") && (
-          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
-            <div className="flex items-center gap-x-5">
-              <img
-                className="min-w-[24px]"
-                src="/products/oms/icon-navbar-oms.svg"
-                alt="icon oms"
-              />
-              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
-                Order Management System
-              </h2>
+        <div className="bg-[#F5F5F5]">
+          {pathname.includes("/products/order-management-system") && (
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+              <div className="flex items-center gap-x-5">
+                <img
+                  className="min-w-[24px]"
+                  src="/products/oms/icon-navbar-oms.svg"
+                  alt="icon oms"
+                />
+                <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                  Order Management System
+                </h2>
+              </div>
+
+              <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+                <Link
+                  onClick={handleScroll}
+                  href="#overview"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "overview"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Overview
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#benefits"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "benefits"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Benefits
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#pos"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "pos"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Point of Sale
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#so"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "so"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Self Ordering
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#sco"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "sco"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Self Check-Out
+                </Link>
+              </div>
             </div>
+          )}
 
-            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+          {pathname.includes("/products/crm") && (
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+              <div className="flex items-center gap-x-5">
+                <img
+                  className="min-w-[24px]"
+                  src="/products/crm/icon-navbar-crm.svg"
+                  alt="icon crm"
+                />
+                <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                  CRM
+                </h2>
+              </div>
 
-            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
-              <Link
-                onClick={handleScroll}
-                href="#overview"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "overview"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Overview
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#benefits"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "benefits"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Benefits
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#pos"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "pos"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Point of Sale
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#so"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "so"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Self Ordering
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#sco"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "sco"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Self Check-Out
-              </Link>
+              <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+                <Link
+                  onClick={handleScroll}
+                  href="#overview"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "overview"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Overview
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#benefits"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "benefits"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Benefits
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#el"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "el"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Engagement & Loyalty
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#gamification"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "gamification"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Gamification
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#ec"
+                  className={`whitespace-nowrap pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "ec"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  E-Commerce
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#pim"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "pim"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  PIM
+                </Link>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {pathname.includes("/products/crm") && (
-          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
-            <div className="flex items-center gap-x-5">
-              <img
-                className="min-w-[24px]"
-                src="/products/crm/icon-navbar-crm.svg"
-                alt="icon crm"
-              />
-              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
-                CRM
-              </h2>
+          {pathname.includes("/products/office-automation") && (
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+              <div className="flex items-center gap-x-5">
+                <img
+                  className="min-w-[24px]"
+                  src="/products/oa/icon-navbar-oa.svg"
+                  alt="icon oa"
+                />
+                <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                  Office Automation
+                </h2>
+              </div>
+
+              <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+                <Link
+                  onClick={handleScroll}
+                  href="#overview"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "overview"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Overview
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#benefits"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "benefits"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Benefits
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#ees"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "ees"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Employee Self Service
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#sdo"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "sdo"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Store Daily Operation
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#rm"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "rm"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Repair & Maintenance
+                </Link>
+              </div>
             </div>
+          )}
 
-            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+          {pathname.includes("/products/supplier-management") && (
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+              <div className="flex items-center gap-x-5">
+                <img
+                  className="min-w-[24px]"
+                  src="/products/sm/icon-navbar-sm.svg"
+                  alt="icon sm"
+                />
+                <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
+                  Supplier Management
+                </h2>
+              </div>
 
-            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
-              <Link
-                onClick={handleScroll}
-                href="#overview"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "overview"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Overview
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#benefits"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "benefits"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Benefits
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#el"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "el"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Engagement & Loyalty
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#gamification"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "gamification"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Gamification
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#ec"
-                className={`whitespace-nowrap pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "ec"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                E-Commerce
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#pim"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "pim"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                PIM
-              </Link>
+              <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
+
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+                <Link
+                  onClick={handleScroll}
+                  href="#overview"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "overview"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Overview
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#benefits"
+                  className={`pt-4 pb-[12px] border-b-[3px] ${
+                    subActive == "benefits"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Benefits
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#pp"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "pp"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Partner Platform
+                </Link>
+                <Link
+                  onClick={handleScroll}
+                  href="#ntp"
+                  className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
+                    subActive == "ntp"
+                      ? "border-b-[#1F40AE] text-primary"
+                      : "border-b-transparent"
+                  }`}
+                >
+                  Non Trade Portal
+                </Link>
+              </div>
             </div>
-          </div>
-        )}
-
-        {pathname.includes("/products/office-automation") && (
-          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
-            <div className="flex items-center gap-x-5">
-              <img
-                className="min-w-[24px]"
-                src="/products/oa/icon-navbar-oa.svg"
-                alt="icon oa"
-              />
-              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
-                Office Automation
-              </h2>
-            </div>
-
-            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
-
-            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
-              <Link
-                onClick={handleScroll}
-                href="#overview"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "overview"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Overview
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#benefits"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "benefits"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Benefits
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#ees"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "ees"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Employee Self Service
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#sdo"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "sdo"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Store Daily Operation
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#rm"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "rm"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Repair & Maintenance
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {pathname.includes("/products/supplier-management") && (
-          <div className="bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center sm:px-24 px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
-            <div className="flex items-center gap-x-5">
-              <img
-                className="min-w-[24px]"
-                src="/products/sm/icon-navbar-sm.svg"
-                alt="icon sm"
-              />
-              <h2 className="text-neutral-n-100 text-lg max-sm:hidden whitespace-nowrap">
-                Supplier Management
-              </h2>
-            </div>
-
-            <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
-
-            <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
-              <Link
-                onClick={handleScroll}
-                href="#overview"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "overview"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Overview
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#benefits"
-                className={`pt-4 pb-[12px] border-b-[3px] ${
-                  subActive == "benefits"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Benefits
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#pp"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "pp"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Partner Platform
-              </Link>
-              <Link
-                onClick={handleScroll}
-                href="#ntp"
-                className={`pt-4 pb-[12px] border-b-[3px] whitespace-nowrap ${
-                  subActive == "ntp"
-                    ? "border-b-[#1F40AE] text-primary"
-                    : "border-b-transparent"
-                }`}
-              >
-                Non Trade Portal
-              </Link>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Menu Mobile */}
         <AnimatePresence initial={false}>
@@ -878,7 +880,7 @@ export default function NavbarWithCTAButton() {
               }}
               exit={{ opacity: 0 }}
             >
-              <div className="sm:hidden h-screen overflow-y-auto bg-white w-full z-[1000] fixed border-t border-[#EDEDED] px-4">
+              <div className="h-screen overflow-y-auto bg-white w-full z-[1000] fixed border-t border-[#EDEDED] px-4">
                 <div className="w-full h-[calc(100%-80px)] flex text-white flex-col">
                   <div className="flex flex-col">
                     <Link

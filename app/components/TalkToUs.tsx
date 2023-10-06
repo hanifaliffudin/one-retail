@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const TalkToUs = () => {
   return (
     <section>
-      <div className="grid grid-cols-5 py-20 md:px-[120px] px-4 mb-16">
-        <div className="md:col-span-2 col-span-5">
+      <div className="grid grid-cols-5 py-20 md:px-[120px] gap-y-4 px-4 mb-16">
+        <div className="lg:col-span-2 col-span-5">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -15,7 +15,7 @@ const TalkToUs = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#0F2057] h-[588px] relative rounded-xl text-white py-10 px-12">
+            <div className="bg-[#0F2057] md:h-[588px] h-[350px] relative rounded-xl text-white py-10 px-12">
               <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-neutral-n-10 mb-5">
                 Talk to us and see how One Retail work for your business
               </h2>
@@ -42,7 +42,7 @@ const TalkToUs = () => {
           </motion.div>
         </div>
 
-        <div className="md:col-span-3 col-span-5 md:ml-20 md:p-8 pt-8 md:pt-0">
+        <div className="lg:col-span-3 col-span-5 xl:ml-20 lg:ml-10 lg:p-8 pt-8 lg:pt-0">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
