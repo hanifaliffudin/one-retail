@@ -9,14 +9,47 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { A11y, Navigation, Pagination } from "swiper/modules";
 import BlogCard from "../components/BlogCard";
 import Link from "next/link";
-import { useState } from "react";
 import NavbarWithCTAButton from "../components/Navbar";
 import FooterWithSocialMediaIcons from "../components/Footer";
+import { useEffect, useState } from "react";
+
+type Blog = {
+  _id: string;
+  imageBlog: string;
+  category: string;
+  title: string;
+  content: string;
+  tags: string[];
+  slug: string;
+};
 
 const BlogPage = () => {
+  const [isLoading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [omsBlog, setOmsBlog] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/blogs")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.blogs);
+        setLoading(false);
+
+        let omsBlogs = data.blogs
+          .filter(function (blog: Blog) {
+            return blog.category === "OMS";
+          })
+          .map(function (blog: Blog) {
+            return blog;
+          });
+
+        console.log(omsBlogs);
+      });
+  }, []);
+
   return (
     <>
       <NavbarWithCTAButton />
@@ -35,14 +68,14 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <div className="sm:px-24 px-4 mb-20 mt-10">
+          <div className="xl:px-24 px-4 mb-20 mt-10">
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               Popular
             </h2>
             <div className="grid grid-cols-2 gap-x-7 gap-y-6">
-              <div className="col-span-2 sm:col-span-1">
+              <div className="col-span-2 lg:col-span-1">
                 <div className="relative sm:h-[430px] img-hover-zoom-blog-popular-big-container">
-                  <div className="img-hover-zoom-blog-popular-big sm:w-[620px] sm:h-[430px] h-[346px] rounded-xl">
+                  <div className="img-hover-zoom-blog-popular-big sm:h-[430px] h-[346px] rounded-xl">
                     <img
                       className="object-cover h-full w-full"
                       src="/blog/popular-1.svg"
@@ -77,7 +110,7 @@ const BlogPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-2 sm:col-span-1">
+              <div className="col-span-2 lg:col-span-1">
                 <div className="bg-[#F5F5F5] rounded-md sm:px-6 px-4 sm:py-[26px] py-5 flex flex-col gap-y-6">
                   <Link
                     href="/blog/slug"
@@ -156,15 +189,15 @@ const BlogPage = () => {
         <section>
           <div className="my-20">
             <div className="grid grid-cols-4">
-              <div className="sm:col-span-2 col-span-4">
-                <h2 className="sm:mb-7 sm:px-24 px-4 max-sm:mb-6 max-sm:col-span-2 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
+              <div className="xl:col-span-2 col-span-4">
+                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
                   <span className="font-medium">Blog</span> Order Management
                   System
                 </h2>
               </div>
 
-              <div className="sm:col-span-2 col-span-4 max-sm:order-last">
-                <div className="flex sm:justify-end max-sm:justify-center sm:px-24 px-4 items-center gap-x-5">
+              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
+                <div className="flex xl:justify-end max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div !w-fit flex " />
                   <div className="flex items-center">
                     <img
@@ -187,7 +220,15 @@ const BlogPage = () => {
                     100: {
                       slidesPerView: 1.4,
                     },
+                    640: {
+                      slidesPerView: 2,
+                      slidesOffsetAfter: 160,
+                    },
                     1000: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 160,
+                    },
+                    1400: {
                       slidesPerView: 4.4,
                       slidesOffsetAfter: 160,
                     },
@@ -252,6 +293,19 @@ const BlogPage = () => {
                   business, we knew..."
                     />
                   </SwiperSlide>
+                  {/* {data.map((blog: Blog, index) => {
+                    return (
+                      <SwiperSlide className="sm:ml-24">
+                        <BlogCard
+                          key={index}
+                          imageThumbnail={`http://localhost:3000/blog/${blog.imageBlog}`}
+                          category={blog.category}
+                          title={blog.title}
+                          paragraph={blog.content}
+                        />
+                      </SwiperSlide>
+                    );
+                  })} */}
                 </Swiper>
               </div>
             </div>
@@ -261,15 +315,15 @@ const BlogPage = () => {
         <section>
           <div className="my-20">
             <div className="grid grid-cols-4">
-              <div className="sm:col-span-2 col-span-4">
-                <h2 className="sm:mb-7 sm:px-24 px-4 max-sm:mb-6 max-sm:col-span-2 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
+              <div className="xl:col-span-2 col-span-4">
+                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
                   <span className="font-medium">Blog</span> Customer
                   Relationship Management
                 </h2>
               </div>
 
-              <div className="sm:col-span-2 col-span-4 max-sm:order-last">
-                <div className="flex sm:justify-end max-sm:justify-center sm:px-24 px-4 items-center gap-x-5">
+              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
+                <div className="flex xl:justify-end max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div-crm !w-fit flex " />
                   <div className="flex items-center">
                     <img
@@ -292,7 +346,15 @@ const BlogPage = () => {
                     100: {
                       slidesPerView: 1.4,
                     },
+                    640: {
+                      slidesPerView: 2,
+                      slidesOffsetAfter: 160,
+                    },
                     1000: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 160,
+                    },
+                    1400: {
                       slidesPerView: 4.4,
                       slidesOffsetAfter: 160,
                     },
@@ -366,14 +428,14 @@ const BlogPage = () => {
         <section>
           <div className="my-20">
             <div className="grid grid-cols-4">
-              <div className="sm:col-span-2 col-span-4">
-                <h2 className="sm:mb-7 sm:px-24 px-4 max-sm:mb-6 max-sm:col-span-2 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
+              <div className="xl:col-span-2 col-span-4">
+                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
                   <span className="font-medium">Blog</span> Office Automation
                 </h2>
               </div>
 
-              <div className="sm:col-span-2 col-span-4 max-sm:order-last">
-                <div className="flex sm:justify-end max-sm:justify-center sm:px-24 px-4 items-center gap-x-5">
+              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
+                <div className="flex xl:justify-end max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div-oa !w-fit flex " />
                   <div className="flex items-center">
                     <img
@@ -396,7 +458,15 @@ const BlogPage = () => {
                     100: {
                       slidesPerView: 1.4,
                     },
+                    640: {
+                      slidesPerView: 2,
+                      slidesOffsetAfter: 160,
+                    },
                     1000: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 160,
+                    },
+                    1400: {
                       slidesPerView: 4.4,
                       slidesOffsetAfter: 160,
                     },
@@ -470,14 +540,14 @@ const BlogPage = () => {
         <section>
           <div className="my-20">
             <div className="grid grid-cols-4">
-              <div className="sm:col-span-2 col-span-4">
-                <h2 className="sm:mb-7 sm:px-24 px-4 max-sm:mb-6 max-sm:col-span-2 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
+              <div className="xl:col-span-2 col-span-4">
+                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
                   <span className="font-medium">Blog</span> Supplier Management
                 </h2>
               </div>
 
-              <div className="sm:col-span-2 col-span-4 max-sm:order-last">
-                <div className="flex sm:justify-end max-sm:justify-center sm:px-24 px-4 items-center gap-x-5">
+              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
+                <div className="flex xl:justify-end max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div-sm !w-fit flex " />
                   <div className="flex items-center">
                     <img
@@ -500,7 +570,15 @@ const BlogPage = () => {
                     100: {
                       slidesPerView: 1.4,
                     },
+                    640: {
+                      slidesPerView: 2,
+                      slidesOffsetAfter: 160,
+                    },
                     1000: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 160,
+                    },
+                    1400: {
                       slidesPerView: 4.4,
                       slidesOffsetAfter: 160,
                     },

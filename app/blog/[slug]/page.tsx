@@ -16,7 +16,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
       <NavbarWithCTAButton />
       <main>
         <section>
-          <div className="mt-[112px] sm:mx-24 mx-4 relative sm:mb-16 mb-8">
+          <div className="mt-[112px] xl:mx-24 mx-4 relative sm:mb-16 mb-8">
             <img
               className="rounded-[20px] max-sm:min-h-[284px] object-cover"
               src="/blog/hero-blog-1.svg"
@@ -47,7 +47,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
         </section>
 
         <section>
-          <div className="grid grid-cols-4 gap-x-16 sm:px-40 px-4 gap-y-6 sm:mb-[100px] mb-10">
+          <div className="grid grid-cols-4 xl:gap-x-16 gap-x-8 xl:px-40 px-4 gap-y-6 sm:mb-[100px] mb-10">
             <div className="sm:col-span-1 col-span-4 relative h-full order-last sm:order-first">
               <div className="sm:sticky sm:top-24 ">
                 <div
@@ -136,7 +136,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               More from One Retail
             </h2>
-            <div className="grid grid-cols-4 gap-5">
+            <div className="flex flex-wrap justify-center gap-5">
               <Link href="/blog/slug" className="col-span-4 sm:col-span-1">
                 <div className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] rounded-b-lg">
                   <img
