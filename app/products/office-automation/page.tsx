@@ -22,9 +22,9 @@ const OfficeAutomationPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative lg:h-[692px] h-[520px] mt-[135px]">
+          <div className="relative md:h-[692px] h-[600px] mt-[135px]">
             <img
-              className="absolute object-cover w-full max-lg:h-[582px] top-0 left-0"
+              className="absolute w-full h-[682px] object-cover top-0 left-0"
               src="/products/oa/bg-hero-oa.svg"
               alt="hero"
             />
@@ -40,7 +40,7 @@ const OfficeAutomationPage = () => {
               alt="hero"
             ></motion.img>
             <div className="absolute top-0 left-0 grid mx-auto gap-8 xl:gap-0 grid-cols-12">
-              <div className="lg:ml-24 ml-10 px-4 md:px-0 lg:mt-[167px] md:mt-10 mt-6 mb-7 place-self-center md:col-span-6 col-span-12">
+              <div className="lg:ml-24 ml-10 px-4 md:px-0 xl:mt-[0px] md:mt-10 mt-6 mb-7 place-self-center md:col-span-6 col-span-12">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -84,7 +84,7 @@ const OfficeAutomationPage = () => {
                 </motion.div>
               </div>
               <div className="md:col-span-6 col-span-12 lg:mt-[92px] mt-4">
-                <div className="relative w-screen sm:w-full max-md:h-[208px]">
+                <div className="relative w-screen sm:w-full max-md:h-[450px] h-[577px]">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{
@@ -94,15 +94,15 @@ const OfficeAutomationPage = () => {
                     }}
                   >
                     <img
-                      className="absolute xl:right-0 max-xl:hidden"
+                      className="absolute xl:right-0 bottom-0 max-lg:h-[582px] "
                       src="/products/oa/Mac-Studio.svg"
                       alt="hero-1"
                     />
-                    <img
-                      className="absolute left-1/2 transform -translate-x-1/2 xl:hidden bottom-0"
+                    {/* <img
+                      className="absolute left-1/2 transform -translate-x-1/2 md:hidden bottom-0"
                       src="/products/oa/Mac-Studio-Mobile.svg"
                       alt="hero-1"
-                    />
+                    /> */}
                   </motion.div>
                 </div>
               </div>
