@@ -23,7 +23,7 @@ const SupplierManagementPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
           <motion.div
-            className="mt-[183px] mb-[54px] lg:h-[510px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
+            className="mt-[183px] mb-[54px] xl:max-h-[510px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -79,10 +79,10 @@ const SupplierManagementPage = () => {
                 Learn More
               </Link>
             </motion.div> */}
-            <div className="grid grid-cols-2">
-              <div className="col-span-2 md:col-span-1 max-sm:px-4 sm:py-12 sm:pl-24">
+            <div className="grid grid-cols-2 xl:max-h-[510px] gap-x-8">
+              <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl::pl-24 sm:pl-10">
                 <motion.div
-                  className="sm:max-w-[430px]"
+                  className="xl:max-w-[430px]"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: 1,
@@ -115,7 +115,7 @@ const SupplierManagementPage = () => {
                   </Link>
                 </motion.div>
               </div>
-              <div className="col-span-2 md:col-span-1">
+              <div className="col-span-2 lg:col-span-1 lg:max-h-[510px]">
                 <motion.img
                   initial={{ opacity: 0 }}
                   animate={{
@@ -123,8 +123,8 @@ const SupplierManagementPage = () => {
                     x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
-                  className="max-sm:-mb-14"
-                  src="/products/sm/hero-2.svg"
+                  className="-mb-10 rounded-[20px] w-full"
+                  src="/products/sm/hero-2.png"
                   alt="hero-2"
                 ></motion.img>
               </div>
@@ -133,6 +133,7 @@ const SupplierManagementPage = () => {
 
           <div className="sm:px-24 px-4 sm:mb-[100px] mb-10">
             <motion.div
+              className="flex max-xl:justify-center"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -148,7 +149,7 @@ const SupplierManagementPage = () => {
                 <img src="/home/cmhl.svg" alt="cmhl" />
               </div>
             </motion.div>
-            <div className="flex flex-wrap gap-y-6 justify-between border-b-[#F0F0F0] border-b">
+            <div className="flex flex-wrap gap-y-6 justify-between max-xl:justify-center border-b-[#F0F0F0] border-b">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -342,7 +343,7 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="sm:w-[624px] sm:pr-10 pr-5 text-neutral-dark flex">
+                <div className="xl:w-[624px] xl:pr-10 pr-5 text-neutral-dark flex">
                   <div className="max-sm:w-[20px] sm:w-[16px] sm:mr-10 mr-6 rounded-xl bg-grad"></div>
                   <div className="sm:my-10 my-5">
                     <h2 className="font-bold sm:text-[28px] sm:leading-[42px] sm:mb-4 mb-3">
@@ -367,7 +368,7 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:px-10 px-4 sm:py-16 py-6 sm:w-[548px] rounded-[20px]">
+                <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:px-10 px-4 sm:py-16 py-6 xl:w-[548px] rounded-[20px]">
                   <div className="flex items-center gap-x-4 mb-4">
                     <img src="/products/sm/myspace-1.svg" alt="myspace-1" />
                     <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
@@ -394,7 +395,7 @@ const SupplierManagementPage = () => {
               viewport={{ once: true }}
             >
               <div className="grid grid-cols-3 gap-x-10 gap-y-5">
-                <div className="col-span-3 sm:col-span-1">
+                <div className="col-span-3 xl:col-span-1">
                   <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 sm:mb-4 mb-3">
                       <img src="/products/sm/myspace-2.svg" alt="myspace-2" />
@@ -409,7 +410,7 @@ const SupplierManagementPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-span-3 sm:col-span-1">
+                <div className="col-span-3 xl:col-span-1">
                   <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-3.svg" alt="myspace-3" />
@@ -424,7 +425,7 @@ const SupplierManagementPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-span-3 sm:col-span-1">
+                <div className="col-span-3 xl:col-span-1">
                   <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-4.svg" alt="myspace-4" />
@@ -445,7 +446,7 @@ const SupplierManagementPage = () => {
         </section>
 
         <section id="pp">
-          <div className="bg-[#EDEFF7] sm:px-24 relative h-[791px]">
+          <div className="bg-[#EDEFF7] relative xl:h-[791px] max-xl:h-[700px]">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -454,7 +455,7 @@ const SupplierManagementPage = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="absolute max-sm:pl-4 whitespace-nowrap sm:top-8 top-5 sm:left-24 sm:text-[100px] text-[34px] sm:leading-[180px] font-bold text-[#F7F9FFB2]">
+              <div className="absolute max-sm:pl-4 whitespace-nowrap sm:top-8 top-5 sm:left-24 xl:text-[100px] md:text-[50px] text-[34px] sm:leading-[180px] font-bold text-[#F7F9FFB2]">
                 PARTNER PLATFOR
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7F9FFB2] to-[#F2F5FF00]">
                   M
@@ -462,7 +463,7 @@ const SupplierManagementPage = () => {
               </div>
             </motion.div>
 
-            <div className="absolute z-10 sm:top-[130px] top-10 sm:left-24">
+            <div className="absolute z-10 sm:top-[130px] top-10">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -472,7 +473,7 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="font-medium max-sm:px-4 sm:text-xl text-sm sm:leading-9 leading-[25px] text-justify max-w-[948px]">
+                <p className="font-medium max-md:px-4 px-24 sm:text-xl text-sm sm:leading-9 leading-[25px] text-justify xl:max-w-[948px]">
                   One Retail <span className="font-bold">Partner Platform</span>{" "}
                   system is designed to support suppliers in managing their data
                   and purchases at real time. This also allow company to manages
@@ -481,8 +482,9 @@ const SupplierManagementPage = () => {
                 </p>
               </motion.div>
 
-              <div className="flex flex-wrap gap-x-[27px] max-sm:px-4">
+              <div className="grid grid-cols-4 gap-x-[27px] max-md:px-4 px-24">
                 <motion.div
+                  className="xl:col-span-1 col-span-2"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
@@ -495,16 +497,16 @@ const SupplierManagementPage = () => {
                     <p className="mb-6 font-semibold">
                       Some of other feature are:
                     </p>
-                    <p className="bg-feature-sm w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
+                    <p className="bg-feature-sm xl:w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
                       1. Purchase Order to Invoice (Payment)
                     </p>
-                    <p className="bg-feature-sm w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
+                    <p className="bg-feature-sm xl:w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
                       2. Price Change (Internal/Oversea)
                     </p>
-                    <p className="bg-feature-sm w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
+                    <p className="bg-feature-sm xl:w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
                       3. Repair & Return
                     </p>
-                    <p className="bg-feature-sm w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
+                    <p className="bg-feature-sm xl:w-[336px] py-2.5 px-3 rounded-l-lg mb-4">
                       4. Supplier Live Chat
                     </p>
                   </div>
@@ -517,7 +519,7 @@ const SupplierManagementPage = () => {
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
-                  className="mt-[3px]"
+                  className="xl:col-span-3 flex items-center max-xl:h-full col-span-2 max-xl:w-full mt-[3px]"
                   src="/products/sm/pp.svg"
                   alt="dashboard"
                 ></motion.img>
@@ -528,7 +530,7 @@ const SupplierManagementPage = () => {
 
         <section id="ntp">
           <motion.div
-            className="sm:px-24 relative sm:h-[796px] h-[450px] mb-[140px]"
+            className="sm:px-24 relative xl:h-[796px] md:h-[600px] sm:h-[500px] h-[450px] mb-[140px]"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,

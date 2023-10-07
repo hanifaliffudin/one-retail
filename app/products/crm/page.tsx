@@ -94,7 +94,6 @@ const CRMPage = () => {
                         loop
                       >
                         <SwiperSlide>
-                          {" "}
                           <div className="flex overflow-x-auto">
                             <img src="/home/aeon.svg" alt="aeon" />
                             <img

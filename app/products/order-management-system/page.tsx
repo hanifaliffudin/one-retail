@@ -5,7 +5,10 @@ import Link from "next/link";
 import TalkToUs from "@/app/components/TalkToUs";
 import NavbarWithCTAButton from "@/app/components/Navbar";
 import FooterWithSocialMediaIcons from "@/app/components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
+import { Autoplay } from "swiper/modules";
 const OrderManagementSystemPage = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -275,12 +278,60 @@ const OrderManagementSystemPage = () => {
                 </p>
               </div>
 
-              <div className="bg-[#EDEFF7] px-[22px] pt-9 rounded-[20px] flex flex-col items-center sm:mr-6 max-sm:mb-5">
-                <img src="/products/oms/icon-so-1.svg" alt="check" />
-                <p className="font-medium text-xl mb-10 max-w-[236px]">
-                  Place order yourself just with 3 easy steps
-                </p>
-                <img src="/products/oms/phone-1.svg" alt="phone" />
+              <div className="bg-[#EDEFF7] px-[22px] pt-9 rounded-[20px] overflow-y-auto sm:mr-6 max-sm:mb-5">
+                <Swiper
+                  className="max-h-[605px]"
+                  slidesPerView={1}
+                  direction={"vertical"}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
+                  speed={500}
+                  modules={[Autoplay]}
+                  loop
+                >
+                  <SwiperSlide>
+                    <div className="flex flex-col bg-[#EDEFF7] items-center h-full">
+                      <img src="/products/oms/icon-so-1.svg" alt="check" />
+                      <p className="font-medium text-xl mb-10 max-w-[236px]">
+                        Place order yourself just with 3 easy steps
+                      </p>
+                      <img
+                        className=""
+                        src="/products/oms/phone-1.svg"
+                        alt="phone"
+                      />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="flex flex-col bg-[#EDEFF7] items-center">
+                      <img src="/products/oms/icon-so-2.svg" alt="qr" />
+                      <p className="font-medium text-xl mb-10 max-w-[236px]">
+                        First. Scan our QR with your smartphone
+                      </p>
+                      <img src="/products/oms/phone-2.svg" alt="phone" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="flex flex-col bg-[#EDEFF7] items-center">
+                      <img src="/products/oms/icon-so-3.svg" alt="menu" />
+                      <p className="font-medium text-xl mb-10 max-w-[236px]">
+                        After that, Select your favorite menu
+                      </p>
+                      <img src="/products/oms/phone-3.svg" alt="phone" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="flex flex-col bg-[#EDEFF7] items-center">
+                      <img src="/products/oms/icon-so-4.svg" alt="pay" />
+                      <p className="font-medium text-xl mb-10 max-w-[236px]">
+                        The latter. Arrange payment for your order
+                      </p>
+                      <img src="/products/oms/phone-4.svg" alt="phone" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
 
               <img
