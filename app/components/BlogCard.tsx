@@ -28,7 +28,11 @@ const BlogCard = ({
           <h3 className="group-hover:text-primary font-semibold text-xl text-neutral-n-90 mb-2 line-clamp-3">
             {title}
           </h3>
-          <p className="text-neutral-n-90 line-clamp-2">{paragraph}</p>
+          <div
+            className="content-blog text-neutral-n-90 line-clamp-2 max-h-[48px]"
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          ></div>
+          {/* <p className="text-neutral-n-90 line-clamp-2">{paragraph}</p> */}
         </div>
       </Link>
     </div>

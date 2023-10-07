@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Testimonial = () => {
   return (
     <section>
-      <div className="bg-[#EDEFF7] md:px-24 px-4 py-10 mb-20">
+      <div className="bg-[#EDEFF7] md:px-24 px-4 py-10 md:mb-20 mb-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -24,7 +24,7 @@ const Testimonial = () => {
             next.
           </p>
           <p className="text-neutral-n-80 mb-2 sm:text-xl text-sm font-semibold">
-            Jenny Wilson
+            Naila Agung Sarasati
           </p>
           <p className="text-neutral-n-70 mb-6 max-sm:text-xs">
             CEO & Co-Founder of Jolla.

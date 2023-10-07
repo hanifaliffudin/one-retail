@@ -35,10 +35,8 @@ const OrderManagementSystemPage = () => {
 
             <div className="sm:max-w-[612px] absolute top-1/2 sm:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
               <h1 className="sm:text-[40px] text-[22px] text-neutral-n-10 sm:leading-[62px] leading-[33px] font-bold mb-5">
-                Expand Your Sales in Our Cutting-Edge{" "}
-                <span className="text-primary-p-40">
-                  Point of Sale Technology
-                </span>
+                Expand Your Possibiities{" "}
+                <span className="text-primary-p-40">Intensively</span>
               </h1>
               <p className="sm:text-lg mb-6 text-neutral-n-10">
                 serves you a central hub for managing sales and customer
@@ -67,7 +65,7 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section>
-          <div className="sm:mx-24 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 pb-20 border-b border-b-[#E0E0E0] mb-14">
+          <div className="sm:mx-24 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 md:pb-20 pb-10 border-b border-b-[#E0E0E0] md:mb-14 mb-10">
             <div className="col-span-4 lg:col-span-1 max-sm:mb-1">
               <h2 className="font-bold xl:text-[36px] text-xl md:text-3xl xl:leading-[54px] text-neutral-n-90 max-sm:text-center">
                 Each products meets a high{" "}
@@ -260,13 +258,13 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section id="so">
-          <div className="sm:mx-24 mx-4 py-20 sm:border-b sm:border-b-[#E0E0E0] sm:mb-20">
-            <div className="flex flex-wrap items-center gap-y-4 justify-center">
+          <div className="sm:mx-24 mx-4 md:py-20 py-10 sm:border-b sm:border-b-[#E0E0E0] sm:mb-20">
+            <div className="flex flex-wrap items-center justify-center">
               <div className="xl:max-w-[400px] xl:mr-[130px]">
                 <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
                   Self Ordering
                 </div>
-                <h2 className="max-sm:text-center font-bold sm:text-[36px] sm:leading-[45px] text-xl text-neutral-n-90 mb-10">
+                <h2 className="max-sm:text-center font-bold sm:text-[36px] sm:leading-[45px] text-xl text-neutral-n-90 md:mb-10 mb-6">
                   Let your customers choose their way
                 </h2>
                 <p className="text-neutral-n-90 max-sm:hidden">
@@ -348,7 +346,7 @@ const OrderManagementSystemPage = () => {
             <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
               Self Checkout
             </div>
-            <h2 className="max-sm:text-center font-bold md:text-3xl xl:text-[36px] text-xl text-neutral-n-90 mb-10">
+            <h2 className="max-sm:text-center font-bold md:text-3xl xl:text-[36px] text-xl text-neutral-n-90 md:mb-10 mb-6">
               Fast, Convenient, and Contactless
             </h2>
             <img

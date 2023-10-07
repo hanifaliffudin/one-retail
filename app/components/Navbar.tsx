@@ -1083,6 +1083,17 @@ export default function NavbarWithCTAButton() {
                     >
                       Hardware
                     </Link>
+                    <Link
+                      onClick={() => setMenuMobile(!menuMobile)}
+                      className={`my-4 ${
+                        pathname == "/blog"
+                          ? "font-bold text-neutral-n-100"
+                          : "font-medium text-neutral-n-70"
+                      }`}
+                      href="/blog"
+                    >
+                      Blog
+                    </Link>
                   </div>
                   <div className="flex-1"></div>
                   <div className="flex justify-between items-center">

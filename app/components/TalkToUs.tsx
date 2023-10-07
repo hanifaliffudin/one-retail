@@ -15,14 +15,14 @@ const TalkToUs = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#0F2057] md:h-[588px] h-[350px] relative rounded-xl text-white py-10 px-12">
+            <div className="bg-[#0F2057] md:h-[588px] h-[366px] relative rounded-xl text-white md:py-10 py-6 md:px-12 px-6">
               <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-neutral-n-10 mb-5">
                 Talk to us and see how One Retail work for your business
               </h2>
               <p className="max-sm:text-sm">
                 Give us a call if you need help picking a One Retail product.
               </p>
-              <div className="absolute bottom-10 z-10">
+              <div className="absolute md:bottom-10 bottom-6 z-10">
                 <p className="mb-5 font-semibold sm:text-xl">Contact</p>
                 <div className="flex gap-x-3 items-center mb-3 max-sm:text-sm">
                   <Icon icon="ant-design:phone-filled" />

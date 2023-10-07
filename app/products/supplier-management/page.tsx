@@ -625,7 +625,7 @@ const SupplierManagementPage = () => {
                   />
                   <div className="">
                     <p className="font-semibold max-sm:text-[12px] text-neutral-n-80 mb-1">
-                      Jenny Wilson
+                      Naila Agung Sarasati
                     </p>
                     <p className="text-neutral-n-70 sm:text-sm text-[11px]">
                       CEO & Co-Founder of Jolla.

@@ -820,9 +820,8 @@ const OfficeAutomationPage = () => {
                 viewport={{ once: true }}
               >
                 <p className="font-bold sm:text-2xl text-base-02 sm:my-9 my-3 text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Venenatis dictum in
-                  bibendum in nisi lectus nullam sit tincidunt. Massa bibendum
-                  nunc arcu eget nam.
+                  Experience the Transformational Power of One Retail POS and
+                  Keep Your Business Moving Forward with Confidence!
                 </p>
               </motion.div>
 
@@ -836,7 +835,9 @@ const OfficeAutomationPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center max-sm:text-sm">
-                  <p className="mr-3 font-bold text-base-02">Jenny Wilson</p>
+                  <p className="mr-3 font-bold text-base-02">
+                    Naila Agung Sarasati{" "}
+                  </p>
                   <p className="mr-4 text-gray-600">Co-Founder of</p>
                   <img
                     className="max-sm:h-9"
