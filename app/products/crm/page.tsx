@@ -50,7 +50,7 @@ const CRMPage = () => {
                       Build Stronger Connection with Your Customer
                     </h1>
 
-                    <p className="max-sm:text-sm mb-14 text-lg text-gray-600">
+                    <p className="max-sm:text-sm md:mb-14 mb-4 text-lg text-gray-600">
                       Bring new experiences to your customers by enabling
                       shopping across different mediums,leading your business to
                       competitive advantage in the market.
@@ -59,7 +59,7 @@ const CRMPage = () => {
                   <div className="flex">
                     <Link
                       href="/contact"
-                      className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
+                      className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold md:mr-5 mr-3"
                     >
                       Let’s Get Demo!
                     </Link>
@@ -170,9 +170,9 @@ const CRMPage = () => {
         </section>
 
         <section>
-          <div className="grid grid-cols-2 mt-20 sm:px-24 px-4 gap-x-[107px] gap-y-6">
+          <div className="grid grid-cols-2 md:mt-20 mt-10 sm:px-24 px-4 gap-x-[107px] gap-y-6">
             <motion.div
-              className="col-span-2 lg:col-span-1 relative lg:h-[456px] max-md:h-[340px] md:h-[500px]"
+              className="col-span-2 lg:col-span-1 relative lg:h-[456px] max-md:h-[340px] md:h-[500px] order-last md:order-first"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -207,7 +207,7 @@ const CRMPage = () => {
                     Nurturing Strong <br className="max-xl:hidden" />{" "}
                     Relationship with Customers
                   </h2>
-                  <p className="text-gray-600 mb-8">
+                  <p className="text-gray-600 md:mb-8 mb-4">
                     By utilize advanced technology to gather and analyze all
                     customer data to leverage your business performance in order
                     to enhance customer satisfaction. Let's get to know your
@@ -232,7 +232,7 @@ const CRMPage = () => {
                   viewport={{ once: true }}
                 >
                   <hr />
-                  <div className="flex gap-x-10 mt-6 items-center">
+                  <div className="flex gap-x-10 md:mt-6 mt-4 items-center">
                     <div className="w-[187px]">
                       <h2 className="font-bold sm:text-[28px] text-[22px] leading-[38px] text-[#0F172A] sm:mb-2.5 mb-1">
                         16+
@@ -258,7 +258,7 @@ const CRMPage = () => {
         </section>
 
         <section id="benefits">
-          <div className="flex justify-center mt-20 sm:mb-20 mb-6 px-4">
+          <div className="flex justify-center md:mt-20 sm:mb-20 mb-6 px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -638,9 +638,9 @@ const CRMPage = () => {
         <section>
           <div
             id="pim"
-            className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] gap-y-8 mb-[54px]"
+            className="grid grid-cols-2 sm:px-24 px-4 gap-x-[90px] gap-y-4 md:mb-[54px] mb-10"
           >
-            <div className="col-span-2 xl:col-span-1">
+            <div className="col-span-2 xl:col-span-1 h-fit">
               <h2 className="font-bold sm:text-[36px] text-xl sm:leading-[54px] sm:hidden">
                 Centralize Product Data with Product Information Management
                 (PIM)
@@ -676,7 +676,7 @@ const CRMPage = () => {
                   Centralize Product Data with Product Information Management
                   (PIM)
                 </h2>
-                <p className="text-neutral-n-90 mb-10 max-sm:mt-4">
+                <p className="text-neutral-n-90 md:mb-10 mb-4">
                   Effortlessly centralize and update complex product data with
                   One Retail PIM. Streamline your operations, improve
                   collaboration, and deliver exceptional customer experiences
@@ -741,8 +741,8 @@ const CRMPage = () => {
         <FAQ />
 
         <section>
-          <div className="relative cta-crm">
-            <div className="grid grid-cols-12 xl:px-[160px] max-xl:pt-4 px-8">
+          <div className="relative cta-crm max-md:mt-10">
+            <div className="grid grid-cols-12 xl:px-[160px] max-xl:pt-4 md:px-8">
               <div className="col-span-12 xl:col-span-6 text-white xl:max-w-[503px] flex max-xl:justify-center items-center">
                 <div className="xl:max-w-[370px] max-sm:text-center max-sm:pt-8">
                   <motion.div
@@ -757,7 +757,7 @@ const CRMPage = () => {
                     <h3 className="font-bold sm:text-[32px] text-xl sm:leading-[48px] mb-2">
                       Get in Touch Today!
                     </h3>
-                    <p className="text-[#EDEDED] mb-8">
+                    <p className="text-[#EDEDED] mb-8 max-md:px-4">
                       Reach Out and Experience Our Stellar Customer Support:
                       We're Here to Serve You!
                     </p>
@@ -793,13 +793,8 @@ const CRMPage = () => {
                     }}
                     viewport={{ once: true }}
                   >
-                    {/* <img
-                      className="absolute xl:right-20 xl:-top-[45px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[20px] max-xl:px-6"
-                      src="/products/crm/circle-white.svg"
-                      alt="circle-white"
-                    /> */}
                     <img
-                      className="absolute h-full bottom-0 left-1/2 transform -translate-x-1/2 rounded-[20px] max-xl:px-6"
+                      className="absolute h-full bottom-0 left-1/2 max-md:object-cover transform -translate-x-1/2 rounded-[20px] max-md:px-0 max-xl:px-6"
                       src="/products/crm/circle-mobile.png"
                       alt="circle-mobile"
                     />

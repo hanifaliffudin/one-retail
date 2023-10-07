@@ -98,11 +98,6 @@ const OfficeAutomationPage = () => {
                       src="/products/oa/Mac-Studio.svg"
                       alt="hero-1"
                     />
-                    {/* <img
-                      className="absolute left-1/2 transform -translate-x-1/2 md:hidden bottom-0"
-                      src="/products/oa/Mac-Studio-Mobile.svg"
-                      alt="hero-1"
-                    /> */}
                   </motion.div>
                 </div>
               </div>
@@ -253,7 +248,7 @@ const OfficeAutomationPage = () => {
               </div>
             </div>
 
-            <div className="mb-20">
+            <div className="md:mb-20 mb-10">
               <motion.div
                 className="flex flex-wrap sm:px-24 px-4 gap-y-5 gap-x-11 mb-6"
                 initial={{ opacity: 0 }}
@@ -417,8 +412,8 @@ const OfficeAutomationPage = () => {
           </motion.div>
 
           <div className="xl:px-24 px-4">
-            <div className="grid grid-cols-2 sm:mb-[100px] mb-10 gap-x-20 gap-y-5">
-              <div className="col-span-2 xl:col-span-1 ">
+            <div className="grid grid-cols-2 sm:mb-[100px] md:mb-10 mb-6 gap-x-20 gap-y-5">
+              <div className="col-span-2 xl:col-span-1 order-last md:order-first">
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -448,10 +443,10 @@ const OfficeAutomationPage = () => {
                   viewport={{ once: true }}
                 >
                   <div className="xl:max-w-[591px]">
-                    <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative">
-                      <div className="flex justify-center items-center rounded-full h-[60px] w-[60px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="rounded-full md:h-[70px] md:w-[70px] w-12 h-12 bg-[#FAFAFA] relative">
+                      <div className="flex justify-center items-center rounded-full md:h-[60px] md:w-[60px] h-10 w-10 bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <img
-                          className="w-[33px]"
+                          className="md:w-[33px] w-8"
                           src="/icons/ess-icon.svg"
                           alt="ess"
                         />
@@ -466,7 +461,7 @@ const OfficeAutomationPage = () => {
                       additional features like employee feedback, live chat,
                       e-learning, and more.
                     </p>
-                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 sm:max-w-[399px]">
+                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-6 gap-y-3 sm:max-w-[399px]">
                       <div className="flex items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
@@ -510,9 +505,13 @@ const OfficeAutomationPage = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative mb-4">
-              <div className="flex justify-center items-center rounded-full h-[60px] w-[60px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <img className="w-[33px]" src="/icons/sdo-icon.svg" alt="sdo" />
+            <div className="rounded-full md:h-[70px] md:w-[70px] w-12 h-12 bg-[#FAFAFA] relative mb-4">
+              <div className="flex justify-center items-center rounded-full md:h-[60px] md:w-[60px] h-10 w-10 bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <img
+                  className="md:w-[33px] w-8"
+                  src="/icons/sdo-icon.svg"
+                  alt="sdo"
+                />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-x-3 items-center sm:mb-[60px] mb-10">
@@ -526,11 +525,11 @@ const OfficeAutomationPage = () => {
                   for efficient management.
                 </p>
               </div>
-              <div className="max-sm:col-span-2">
+              <div className="max-sm:col-span-2 max-md:hidden">
                 <div className="min-h-[1px] w-full self-stretch bg-[#CFD1D4]"></div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-4 mb-10">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-10 mb-10">
               <div className="lg:col-span-1 col-span-2">
                 <div className="bg-[#152B74] sm:h-[547px] max-sm:h-[575px]  rounded-2xl relative">
                   <img
@@ -643,7 +642,7 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#EDEFF7] rounded-xl sm:py-10 py-6 xl:px-20 px-4 mb-[100px]">
+            <div className="bg-[#EDEFF7] rounded-xl sm:py-10 py-6 xl:px-20 px-4 md:mb-[100px] mb-6">
               <h3 className="text-neutral-n-100 font-bold text-xl mb-6">
                 Other features for Daily Operations
               </h3>
@@ -691,7 +690,7 @@ const OfficeAutomationPage = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 sm:mb-[100px] mb-10 gap-x-20 gap-y-5">
-              <div className="col-span-2 xl:col-span-1">
+              <div className="col-span-2 xl:col-span-1 order-last md:order-first">
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -721,10 +720,10 @@ const OfficeAutomationPage = () => {
                   viewport={{ once: true }}
                 >
                   <div className="xl:max-w-[591px]">
-                    <div className="rounded-full h-[70px] w-[70px] bg-[#FAFAFA] relative">
-                      <div className="flex justify-center items-center rounded-full h-[60px] w-[60px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="rounded-full md:h-[70px] md:w-[70px] w-12 h-12 bg-[#FAFAFA] relative">
+                      <div className="flex justify-center items-center rounded-full md:h-[60px] md:w-[60px] h-10 w-10 bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <img
-                          className="w-[33px]"
+                          className="md:w-[33px] w-8"
                           src="/icons/rm-icon.svg"
                           alt="rm"
                         />
@@ -738,8 +737,8 @@ const OfficeAutomationPage = () => {
                       recurring schedules, submit help requests, track issue
                       status, and ensure prompt resolution for technical issues.
                     </p>
-                    <div className="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-3 xl:max-w-[399px]">
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-6 gap-y-3 xl:max-w-[399px]">
+                      <div className="flex items-center font-medium text-neutral-dark gap-x-3 ">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
@@ -783,7 +782,7 @@ const OfficeAutomationPage = () => {
         </section>
 
         <section>
-          <div className="bg-[#EDEFF7] flex justify-center max-lg:flex-wrap xl:gap-x-[100px] gap-x-10 items-center xl:px-24 px-10 py-10">
+          <div className="bg-[#EDEFF7] flex justify-center max-lg:flex-wrap xl:gap-x-[100px] gap-x-10 items-center xl:px-24 px-4 py-10 max-md:mb-10">
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{
@@ -853,7 +852,7 @@ const OfficeAutomationPage = () => {
         <FAQ />
 
         <section>
-          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative mb-36">
+          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative mb-36 max-md:mt-10">
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{
