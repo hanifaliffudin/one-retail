@@ -72,8 +72,8 @@ const SolutionsPage = () => {
                 <div className="scroller__container">
                   <div className="scroller">
                     <div className="scroller__item">
-                      <div className="ml-4 mr-2 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
-                        <p className="font-medium mb-7 ">
+                      <div className="ml-4 mr-2 mb-[44px] max-md:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                        <p className="font-medium mb-7">
                           “One of the best retail service for me. Loved the
                           community too. Very helpful.”
                         </p>
@@ -89,6 +89,11 @@ const SolutionsPage = () => {
                           </div>
                         </div>
                       </div>
+                      <img
+                        className="md:hidden"
+                        src="/solutions/johndoe.png"
+                        alt="image"
+                      />
                     </div>
                     <div className="scroller__item">
                       <img src="/solutions/slider-1.svg" alt="image" />
@@ -100,7 +105,7 @@ const SolutionsPage = () => {
                       <img src="/solutions/slider-3.svg" alt="image" />
                     </div>
                     <div className="scroller__item">
-                      <div className="bg-[#0A153A] mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
+                      <div className="bg-[#0A153A] md:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
                         <p className="font-bold text-[40px] mb-2.5">24</p>
                         <p className="mb-2 font-semibold">
                           happy <br /> customers
@@ -109,8 +114,8 @@ const SolutionsPage = () => {
                     </div>
 
                     <div className="scroller__item">
-                      <div className="ml-4 mr-2 mb-[44PX] text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
-                        <p className="font-medium mb-7 ">
+                      <div className="ml-4 mr-2 mb-[44px] max-md:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                        <p className="font-medium mb-7">
                           “One of the best retail service for me. Loved the
                           community too. Very helpful.”
                         </p>
@@ -126,6 +131,11 @@ const SolutionsPage = () => {
                           </div>
                         </div>
                       </div>
+                      <img
+                        className="md:hidden"
+                        src="/solutions/johndoe.png"
+                        alt="image"
+                      />
                     </div>
                     <div className="scroller__item">
                       <img src="/solutions/slider-1.svg" alt="image" />
@@ -137,7 +147,7 @@ const SolutionsPage = () => {
                       <img src="/solutions/slider-3.svg" alt="image" />
                     </div>
                     <div className="scroller__item">
-                      <div className="bg-[#0A153A] mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
+                      <div className="bg-[#0A153A] md:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
                         <p className="font-bold text-[40px] mb-2.5">24</p>
                         <p className="mb-2 font-semibold">
                           happy <br /> customers
