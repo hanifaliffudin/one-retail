@@ -57,7 +57,7 @@ const BlogPage = () => {
         <section>
           <div className="relative max-sm:h-[86px] h-[158px] mt-[80px]">
             <img
-              className="absolute object-cover max-sm:min-h-[86px] h-[158px] left-0"
+              className="absolute object-cover w-full max-sm:h-[86px] h-[158px] left-0"
               src="/blog/bg-header-blog.svg"
               alt="bg-header-blog"
             />
@@ -68,7 +68,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <div className="xl:px-24 px-4 mb-20 mt-10">
+          <div className="xl:px-24 px-4 md:mb-20 mb-6 md:mt-10 mt-8">
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               Popular
             </h2>
@@ -184,10 +184,10 @@ const BlogPage = () => {
           </div>
         </section>
 
-        <hr />
+        <hr className="max-sm:hidden" />
 
         <section>
-          <div className="my-20">
+          <div className="md:my-20 my-10">
             <div className="grid grid-cols-4">
               <div className="xl:col-span-2 col-span-4">
                 <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
@@ -313,7 +313,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <div className="my-20">
+          <div className="md:my-20 my-10">
             <div className="grid grid-cols-4">
               <div className="xl:col-span-2 col-span-4">
                 <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
@@ -426,7 +426,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <div className="my-20">
+          <div className="md:my-20 my-10">
             <div className="grid grid-cols-4">
               <div className="xl:col-span-2 col-span-4">
                 <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
@@ -538,7 +538,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <div className="my-20">
+          <div className="md:my-20 my-10">
             <div className="grid grid-cols-4">
               <div className="xl:col-span-2 col-span-4">
                 <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">

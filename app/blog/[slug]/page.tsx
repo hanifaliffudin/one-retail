@@ -4,6 +4,16 @@ import FooterWithSocialMediaIcons from "@/app/components/Footer";
 import NavbarWithCTAButton from "@/app/components/Navbar";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import { A11y, Navigation, Pagination } from "swiper/modules";
+import BlogCard from "@/app/components/BlogCard";
 
 const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
   let url =
@@ -131,7 +141,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
           </div>
         </section>
 
-        <section>
+        <section className="max-lg:hidden">
           <div className="bg-[#F5F5F5] sm:px-24 px-4 sm:py-16 py-4 mb-8">
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               More from One Retail
@@ -223,6 +233,106 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   </div>
                 </div>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="lg:hidden">
+          <div className="md:my-20 max-md:mt-10 max-md:py-7 md:py-16 bg-[#F5F5F5] ">
+            <div className="grid grid-cols-4">
+              <div className="xl:col-span-2 col-span-4">
+                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-semibold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
+                  More from One Retail
+                </h2>
+              </div>
+
+              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
+                <div className="flex xl:hidden max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
+                  <div className="my-custom-pagination-div-crm !w-fit flex " />
+                  <div className="flex items-center">
+                    <img
+                      className="mr-4 swiper-button image-swiper-button-prev-crm cursor-pointer"
+                      src="/blog/LeftCircle.svg"
+                      alt="LeftCircle"
+                    />
+                    <img
+                      className="swiper-button image-swiper-button-next-crm cursor-pointer"
+                      src="/blog/RightCircle.svg"
+                      alt="RightCircle"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="sm:col-span-4 col-span-4 more-blog">
+                <Swiper
+                  breakpoints={{
+                    100: {
+                      slidesPerView: 1.4,
+                    },
+                    640: {
+                      slidesPerView: 2,
+                    },
+                    1000: {
+                      slidesPerView: 3,
+                    },
+                    1400: {
+                      slidesPerView: 4,
+                    },
+                  }}
+                  modules={[Navigation, Pagination, A11y]}
+                  navigation={{
+                    nextEl: ".image-swiper-button-next-crm",
+                    prevEl: ".image-swiper-button-prev-crm",
+                    disabledClass: "swiper-button-disabled",
+                  }}
+                  pagination={{
+                    el: ".my-custom-pagination-div-crm",
+                    clickable: true,
+                    renderBullet: (index, className) => {
+                      className == "";
+                      return '<span class="' + className + '">' + "</span>";
+                    },
+                  }}
+                >
+                  <SwiperSlide className="ml-4">
+                    <BlogCard
+                      imageThumbnail="/blog/oms-1.svg"
+                      category="Order Management System"
+                      title="Customer Journey : Definitions, analysis and best practices"
+                      paragraph="When we set out to bring product analytics to our
+                  business, we knew..."
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <BlogCard
+                      imageThumbnail="/blog/oms-1.svg"
+                      category="Order Management System"
+                      title="How to optimize and expand your business with product analytics"
+                      paragraph="When we set out to bring product analytics to our
+                  business, we knew..."
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <BlogCard
+                      imageThumbnail="/blog/oms-1.svg"
+                      category="Order Management System"
+                      title="How to optimize and expand your business with product analytics"
+                      paragraph="When we set out to bring product analytics to our
+                  business, we knew..."
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <BlogCard
+                      imageThumbnail="/blog/oms-1.svg"
+                      category="Order Management System"
+                      title="How to optimize and expand your business with product analytics"
+                      paragraph="When we set out to bring product analytics to our
+                  business, we knew..."
+                    />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
             </div>
           </div>
         </section>

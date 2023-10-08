@@ -1110,7 +1110,7 @@ export default function NavbarWithCTAButton() {
                   <Link
                     href="/contact"
                     onClick={() => setMenuMobile(!menuMobile)}
-                    className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4 mb-12"
+                    className="btn-primary text-center font-semibold px-7 py-2.5 text-neutral-n-10 my-4 mb-12"
                   >
                     Get Demo
                   </Link>
