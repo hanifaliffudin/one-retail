@@ -23,62 +23,13 @@ const SupplierManagementPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
           <motion.div
-            className="mt-[183px] mb-[54px] xl:max-h-[510px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
+            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: { duration: 0.5 },
             }}
           >
-            {/* <img
-              className="absolute bottom-0 max-sm:hidden"
-              src="/products/sm/hero-1.svg"
-              alt="hero-1"
-            /> */}
-            {/* <motion.img
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                x: [100, 0],
-                transition: { duration: 0.5 },
-              }}
-              className="absolute max-sm:-bottom-14 right-0"
-              src="/products/sm/hero-2.svg"
-              alt="hero-2"
-            ></motion.img> */}
-            {/* <motion.div
-              className="max-w-[430px] absolute sm:top-12 sm:left-24"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                x: [-100, 0],
-                transition: { duration: 0.5 },
-              }}
-            >
-              <h1 className="sm:text-[40px] text-[22px] text-neutral-n-10 sm:leading-[62px] leading-[33px] font-bold mb-5">
-                Optimize Your Stock by Enhance Your Procurement Process
-              </h1>
-              <p className="sm:text-lg sm:mb-16 mb-4 text-neutral-n-10">
-                Automate your manual stocking with Supplier Portal that can
-                optimize your procurement process, strengthens supplier
-                relationships, promotes collaboration and efficiency to your
-                business
-              </p>
-
-              <Link
-                href="/contact"
-                className="btn-primary-50 rounded-md text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-4"
-              >
-                Let’s Get Demo!
-              </Link>
-              <Link
-                href="#whyus"
-                onClick={handleScroll}
-                className="border border-[#4460BB] rounded-md text-neutral-n-30 py-2.5 px-4 max-sm:text-xs font-semibold"
-              >
-                Learn More
-              </Link>
-            </motion.div> */}
             <div className="grid grid-cols-2 xl:max-h-[510px] gap-x-8">
               <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl::pl-24 sm:pl-10">
                 <motion.div
@@ -133,7 +84,6 @@ const SupplierManagementPage = () => {
 
           <div className="sm:px-24 px-4 sm:mb-[100px] mb-10">
             <motion.div
-              className="flex max-xl:justify-center"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -143,7 +93,7 @@ const SupplierManagementPage = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-bold text-neutral-n-60 ">TRUSTED BY</h2>
-              <div className="grid sm:grid-flow-col sm:auto-cols-max max-sm:grid-cols-3">
+              <div className="grid sm:grid-flow-col max-xl:justify-center sm:auto-cols-max max-sm:grid-cols-3">
                 <img src="/home/aeon.svg" alt="aeon" />
                 <img src="/home/pahtama.svg" alt="pahtama" />
                 <img src="/home/cmhl.svg" alt="cmhl" />
@@ -368,7 +318,7 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:px-10 px-4 sm:py-16 py-6 xl:w-[548px] rounded-[20px]">
+                <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:px-10 px-4 sm:py-16 py-6 xl:w-[548px] rounded-[20px]">
                   <div className="flex items-center gap-x-4 mb-4">
                     <img src="/products/sm/myspace-1.svg" alt="myspace-1" />
                     <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
@@ -396,7 +346,7 @@ const SupplierManagementPage = () => {
             >
               <div className="grid grid-cols-3 gap-x-10 gap-y-5">
                 <div className="col-span-3 xl:col-span-1">
-                  <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
+                  <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 sm:mb-4 mb-3">
                       <img src="/products/sm/myspace-2.svg" alt="myspace-2" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
@@ -411,7 +361,7 @@ const SupplierManagementPage = () => {
                   </div>
                 </div>
                 <div className="col-span-3 xl:col-span-1">
-                  <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
+                  <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-3.svg" alt="myspace-3" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
@@ -426,7 +376,7 @@ const SupplierManagementPage = () => {
                   </div>
                 </div>
                 <div className="col-span-3 xl:col-span-1">
-                  <div className="shadow-[0px_2px_40px_0px_rgba(8,4,64,0.08)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
+                  <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
                     <div className="flex items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-4.svg" alt="myspace-4" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
@@ -530,7 +480,7 @@ const SupplierManagementPage = () => {
 
         <section id="ntp">
           <motion.div
-            className="sm:px-24 relative xl:h-[796px] md:h-[600px] sm:h-[500px] h-[450px] mb-[140px]"
+            className="sm:px-24 relative xl:h-[796px] md:h-[600px] max-sm:mt-10 h-[570px] md:mb-[140px] mb-24 bg-[#F7F9FF]"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -539,7 +489,7 @@ const SupplierManagementPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="absolute w-full text-center top-8 left-1/2 transform -translate-x-1/2 sm:text-[100px] text-[34px] leading-[180px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#EDEFF7B2] to-[#EDEFF700]">
+            <div className="absolute w-full text-center md:top-8 left-1/2 transform -translate-x-1/2 sm:text-[100px] text-[34px] leading-[180px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#EDEFF7B2] to-[#EDEFF700]">
               NON TRADE PORTAL
             </div>
             <div className="absolute z-10 top-[140px] w-full sm:px-24 left-1/2 transform -translate-x-1/2">
@@ -568,7 +518,7 @@ const SupplierManagementPage = () => {
                     alt="dashboard"
                   />
                   <img
-                    className="absolute object-cover top-0 left-0 sm:hidden"
+                    className="absolute w-full object-cover top-0 left-0 sm:hidden"
                     src="/products/sm/ntp-mobile.svg"
                     alt="dashboard"
                   />
@@ -594,7 +544,7 @@ const SupplierManagementPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="relative sm:h-[576px] h-[416px] mb-[136px] max-sm:-mt-32">
+            <div className="relative sm:h-[576px] h-[416px] md:mb-[136px] mb-[60px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{

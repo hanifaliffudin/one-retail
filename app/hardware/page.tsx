@@ -24,7 +24,7 @@ const SolutionsPage = () => {
       <NavbarWithCTAButton />
       <main className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="mt-44 flex-col items-center">
+          <div className="md:mt-44 mt-[112px] flex-col items-center">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
@@ -42,7 +42,7 @@ const SolutionsPage = () => {
                   operations with high-performance
                 </h1>
               </div>
-              <div className="flex justify-center mb-20">
+              <div className="flex justify-center md:mb-20 mb-8">
                 <Link
                   onClick={handleScroll}
                   href="#oneretail"
@@ -127,9 +127,9 @@ const SolutionsPage = () => {
         </section>
 
         <section id="oneretail">
-          <div className="py-20 sm:px-24 px-4">
+          <div className="md:py-20 py-10 sm:px-24 px-4">
             <div className="grid grid-cols-2 mb-11 text-neutral-n-90">
-              <h2 className="col-span-2 sm:col-span-1 sm:text-[32px] text-xl sm:leading-[40px] font-semibold">
+              <h2 className="col-span-2 sm:col-span-1 sm:text-[32px] text-xl sm:leading-[40px] max-sm:mb-3 font-semibold">
                 One Retail is open with <br className="hidden sm:block" />{" "}
                 variety of ways
               </h2>
@@ -149,9 +149,9 @@ const SolutionsPage = () => {
               }}
             >
               <div className="grid grid-cols-3 divide-y sm:divide-y-0 sm:divide-x">
-                <div className="col-span-3 sm:col-span-1 sm:pr-10 sm:py-0 py-2.5">
+                <div className="col-span-3 sm:col-span-1 sm:pr-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
-                    className="mb-5"
+                    className="mb-5 max-sm:w-7"
                     src="/hardware/point-of-sale.svg"
                     alt="pos"
                   />
@@ -164,8 +164,12 @@ const SolutionsPage = () => {
                     We can work together with your preferences hardware.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 sm:px-10 sm:py-0 py-2.5">
-                  <img className="mb-5" src="/hardware/store.svg" alt="store" />
+                <div className="col-span-3 sm:col-span-1 sm:px-10 sm:py-0 md:py-2.5 py-[26px]">
+                  <img
+                    className="mb-5 max-sm:w-7"
+                    src="/hardware/store.svg"
+                    alt="store"
+                  />
                   <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
                     Buy on your local store?
                   </h3>
@@ -174,9 +178,9 @@ const SolutionsPage = () => {
                     preferences hardware that you choose.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 sm:pl-10 sm:py-0 py-2.5">
+                <div className="col-span-3 sm:col-span-1 sm:pl-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
-                    className="mb-5"
+                    className="mb-5 max-sm:w-7"
                     src="/hardware/customer-service.svg"
                     alt="customer service"
                   />

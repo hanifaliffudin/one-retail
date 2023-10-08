@@ -29,7 +29,7 @@ export default function NavbarWithCTAButton() {
     <>
       <nav
         onMouseLeave={() => setDropdownProduct(false)}
-        className={`bg-white fixed w-full z-30 top-0 left-0 ${
+        className={`bg-white sm:fixed absolute w-full z-30 top-0 left-0 ${
           pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
         }`}
       >
@@ -880,7 +880,7 @@ export default function NavbarWithCTAButton() {
               }}
               exit={{ opacity: 0 }}
             >
-              <div className="h-screen overflow-y-auto bg-white w-full z-[1000] fixed border-t border-[#EDEDED] px-4">
+              <div className="h-full overflow-y-auto bg-white w-full z-[1000] md:fixed border-t border-[#EDEDED] px-4">
                 <div className="w-full h-[calc(100%-80px)] flex text-white flex-col">
                   <div className="flex flex-col">
                     <Link
@@ -1110,7 +1110,7 @@ export default function NavbarWithCTAButton() {
                   <Link
                     href="/contact"
                     onClick={() => setMenuMobile(!menuMobile)}
-                    className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4"
+                    className="btn-primary font-semibold px-7 py-2.5 text-neutral-n-10 my-4 mb-12"
                   >
                     Get Demo
                   </Link>

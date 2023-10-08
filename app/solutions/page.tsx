@@ -32,7 +32,7 @@ const SolutionsPage = () => {
       <NavbarWithCTAButton />
       <main className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="mt-44 flex-col items-center">
+          <div className="md:mt-44 mt-[112px] flex-col items-center">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
@@ -50,7 +50,7 @@ const SolutionsPage = () => {
                   Operations to Scale Up Your Business
                 </h1>
               </div>
-              <div className="flex justify-center mb-20">
+              <div className="flex justify-center md:mb-20 mb-8">
                 <Link
                   onClick={handleScroll}
                   href="#revolutionize"
@@ -152,7 +152,7 @@ const SolutionsPage = () => {
         </section>
 
         <section id="revolutionize">
-          <div className="py-20 px-4">
+          <div className="md:py-20 py-10 px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{

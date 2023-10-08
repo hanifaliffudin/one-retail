@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const TalkToUs = () => {
   return (
     <section>
-      <div className="grid grid-cols-5 py-20 md:px-[120px] gap-y-4 px-4 mb-16">
+      <div className="grid grid-cols-5 md:py-20 py-10 md:px-[120px] gap-y-4 px-4 mb-16">
         <div className="lg:col-span-2 col-span-5">
           <motion.div
             initial={{ opacity: 0 }}
