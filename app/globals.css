@@ -28,6 +28,18 @@ html {
   --primary-p-80: #152b74;
 }
 
+.content-blog p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--neutral-n-90);
+}
+
+.content-blog h2 {
+  font-size: 1.5em;
+}
+
 @layer utilities {
   /* text color */
   .text-primary {
@@ -220,12 +232,6 @@ html {
 .scroll-horizontal ::-webkit-scrollbar {
   height: 10px;
   background: white;
-}
-
-.scroll-horizontal ::-webkit-scrollbar-track {
-  margin: 0 700px;
-  width: 10px;
-  height: 50px;
 }
 
 .scroll-horizontal ::-webkit-scrollbar-track-piece {
@@ -451,7 +457,7 @@ html {
 @media only screen and (max-width: 600px) {
   .home.scroller__wrapper {
     --scrolling-gallery-item-duration: 11s;
-    --scrolling-gallery-items-visible: 3;
+    --scrolling-gallery-items-visible: 2.8;
     --scrolling-gallery-items-total: 10;
     margin-top: 2.25em;
     overflow: hidden;
@@ -459,7 +465,7 @@ html {
   }
   .solutions.scroller__wrapper {
     --scrolling-gallery-item-duration: 7s;
-    --scrolling-gallery-items-visible: 1.3;
+    --scrolling-gallery-items-visible: 3;
     --scrolling-gallery-items-total: 5;
     margin-top: 2.25em;
     overflow: hidden;
@@ -472,6 +478,11 @@ html {
     margin-top: 2.25em;
     overflow: hidden;
     will-change: transform;
+  }
+  .scroll-horizontal ::-webkit-scrollbar-track {
+    margin: 0 165px;
+    width: 10px;
+    height: 50px;
   }
 }
 
@@ -500,5 +511,35 @@ html {
     margin-top: 2.25em;
     overflow: hidden;
     will-change: transform;
+  }
+
+  .scroll-horizontal ::-webkit-scrollbar-track {
+    margin: 0 285px;
+    width: 10px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .scroll-horizontal ::-webkit-scrollbar-track {
+    margin: 0 355px;
+    width: 10px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .scroll-horizontal ::-webkit-scrollbar-track {
+    margin: 0 485px;
+    width: 10px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .scroll-horizontal ::-webkit-scrollbar-track {
+    margin: 0 700px;
+    width: 10px;
+    height: 50px;
   }
 }

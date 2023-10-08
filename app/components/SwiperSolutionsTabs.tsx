@@ -5,7 +5,7 @@ const SwiperSolutionsTabs = () => {
   const swiper = useSwiper();
   const [solution, setSolution] = useState(0);
   return (
-    <div className="flex justify-center uppercase mb-10 px-4 order-first">
+    <div className="flex justify-center uppercase md:mb-10 mb-6 px-4 order-first">
       <p
         onClick={() => {
           swiper.slideTo(0);

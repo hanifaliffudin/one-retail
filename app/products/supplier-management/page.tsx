@@ -396,7 +396,7 @@ const SupplierManagementPage = () => {
         </section>
 
         <section id="pp">
-          <div className="bg-[#EDEFF7] relative xl:h-[791px] max-xl:h-[700px]">
+          <div className="bg-[#EDEFF7] relative xl:h-[791px] h-[600px] lg::h-[700px]">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{

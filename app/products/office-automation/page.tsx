@@ -402,7 +402,7 @@ const OfficeAutomationPage = () => {
               </h2>
               <p
                 id="ees"
-                className="text-center max-sm:text-sm text-[#667085] mb-16 px-4 xl:w-[824px]"
+                className="text-center max-sm:text-sm text-[#667085] md:mb-16 mb-6 px-4 xl:w-[824px]"
               >
                 Unlock powerful customer relationships with harness the
                 potential of our Customer Relationship Management for
@@ -587,7 +587,7 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
               <div className="lg:col-span-1 col-span-2">
-                <div className="bg-[#0A153A] sm:h-[547px] max-sm:h-[555px] rounded-2xl relative">
+                <div className="bg-[#0A153A] sm:h-[547px] max-sm:h-[560px] rounded-2xl relative">
                   <img
                     className="absolute right-0 top-4"
                     src="/products/oa/sdo-2-dashboard.svg"
@@ -852,7 +852,7 @@ const OfficeAutomationPage = () => {
         <FAQ />
 
         <section>
-          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative mb-36 max-md:mt-10">
+          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative md:mb-36 mb-[68px] max-md:mt-10">
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{

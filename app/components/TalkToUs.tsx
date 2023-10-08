@@ -42,7 +42,7 @@ const TalkToUs = () => {
           </motion.div>
         </div>
 
-        <div className="lg:col-span-3 col-span-5 xl:ml-20 lg:ml-10 lg:p-8 pt-8 lg:pt-0">
+        <div className="lg:col-span-3 col-span-5 xl:ml-20 lg:ml-10 lg:p-8 md:pt-8 pt-2 lg:pt-0">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{

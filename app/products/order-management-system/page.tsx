@@ -38,7 +38,7 @@ const OrderManagementSystemPage = () => {
                 Expand Your Possibiities{" "}
                 <span className="text-primary-p-40">Intensively</span>
               </h1>
-              <p className="sm:text-lg mb-6 text-neutral-n-10">
+              <p className="sm:text-lg md:mb-6 mb-10 text-neutral-n-10">
                 serves you a central hub for managing sales and customer
                 transactions for your business, to ensure smooth and accurate
                 processing at the moment of purchase
@@ -152,7 +152,7 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section>
-          <div className="mt-20 bg-any-business pb-20 max-sm:px-4">
+          <div className="mt-20 bg-any-business md:pb-20 pb-10 max-sm:px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -371,7 +371,7 @@ const OrderManagementSystemPage = () => {
                     <img src="/products/oms/apple-pay.svg" alt="apple-pay" />
                     <img src="/products/oms/gpay.svg" alt="gpay" />
                   </div>
-                  <div className="flex max-sm:justify-center gap-x-3 mb-[60px]">
+                  <div className="flex max-sm:justify-center gap-x-3 md:mb-[60px] mb-10">
                     <img src="/products/oms/alipay.svg" alt="alipay" />
                     <img
                       src="/products/oms/american-express.svg"

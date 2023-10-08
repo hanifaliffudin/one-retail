@@ -54,7 +54,7 @@ export default function Home() {
       <main className="max-w-screen-2xl mx-auto">
         <section className="bg-white">
           <div className="grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-            <div className="md:ml-24 px-4 md:px-0 md:mt-[180px] mt-6 mb-7 place-self-center lg:col-span-5 col-span-12 order-last md:order-first">
+            <div className="md:ml-24 px-4 md:px-0 md:mt-[180px] mt-6 md:mb-7 place-self-center lg:col-span-5 col-span-12 order-last md:order-first">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -63,11 +63,11 @@ export default function Home() {
                   transition: { duration: 0.5 },
                 }}
               >
-                <h1 className="sm:text-[40px] text-[22px] text-neutral-n-90 sm:leading-[60px] leading-[33px] font-bold mb-5">
+                <h1 className="sm:text-[40px] text-[22px] text-neutral-n-90 sm:leading-[60px] leading-[33px] font-bold md:mb-5 mb-3">
                   Transform Your Business with Advanced Retail Technology
                 </h1>
 
-                <p className="sm:text-xl text-sm font-extralight mb-14 text-neutral-n-80 leading-[30px]">
+                <p className="sm:text-xl text-sm font-extralight md:mb-14 mb-6 text-neutral-n-80 leading-[30px]">
                   Designed to optimize your business operations with tools that
                   help you enhance operational efficiency, improve customer
                   experiences, and drive business growth with competitive
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white my-12">
+        <section className="bg-white md:my-12 my-10">
           <div className="mx-auto max-w-screen-xl px-4">
             <motion.div
               initial={{ opacity: 0 }}
@@ -242,7 +242,7 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section className="mb-20 relative">
+        <section className="md:mb-20 mb-10 relative">
           <div className="absolute bg-[#EDEFF7] w-full -z-10 h-[422px]">
             <motion.div
               className="relative w-full h-full"
@@ -444,8 +444,8 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-12 mb-40">
-              <div className="md:col-span-7 col-span-12 bg-[#EDEFF7] py-10 md:pr-10 md:pl-24 px-4 rounded-r-[20px] order-last md:order-first">
+            <div className="grid grid-cols-12 md:mb-40 mb-10">
+              <div className="md:col-span-7 col-span-12 bg-[#EDEFF7] md:py-10 max-md:pb-5 max-md:pt-3 md:pr-10 md:pl-24 px-4 rounded-r-[20px] order-last md:order-first">
                 {integrated == 0 && (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -874,7 +874,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="md:px-24 mb-20 px-4">
+          <div className="md:px-24 md:mb-20 mb-10 px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -1061,9 +1061,12 @@ export default function Home() {
                       {imageSlideIndex == 3 &&
                         "One Retail Self-order providing deep personalized customer experience by quick scanning the product barcode and allow them to view the menu then can quickly add it to cart. This also reduce business cost because customer no longer need server assistance"}
                     </p>
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <Link
+                      href="/products/order-management-system"
+                      className="btn-border-primary w-fit flex font-semibold items-center py-2.5 px-4"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
 
                   <div className={exploreIndex == 2 ? "" : "hidden"}>
@@ -1177,9 +1180,12 @@ export default function Home() {
                       {imageSlideIndex == 5 &&
                         "Effortlessly centralize and update complex product data with One Retail PIM. Streamline your operations, improve collaboration, and deliver exceptional customer experiences with real-time, automated communication."}
                     </p>
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <Link
+                      href="/products/crm"
+                      className="btn-border-primary w-fit flex font-semibold items-center py-2.5 px-4"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
 
                   <div className={exploreIndex == 3 ? "" : "hidden"}>
@@ -1260,9 +1266,12 @@ export default function Home() {
                       {imageSlideIndex == 3 &&
                         "Efficiently manage maintenance with One Retail: Set recurring schedules, submit help requests, track issue status, and ensure prompt resolution for technical issues."}
                     </p>
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <Link
+                      href="/products/office-automation"
+                      className="btn-border-primary w-fit flex font-semibold items-center py-2.5 px-4"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
 
                   <div className={exploreIndex == 4 ? "" : "hidden"}>
@@ -1329,9 +1338,12 @@ export default function Home() {
                       {imageSlideIndex == 2 &&
                         "One Retail Non Trade Portal supplier support  registration form with level of approval, allow Non Trade Supplier to access their Purchase Order process to end (Invoice). Non Trade Portal integration can track of approvals, rejections, and pending requests along with rejection reasons."}
                     </p>
-                    <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4">
+                    <Link
+                      href="/products/supplier-management"
+                      className="btn-border-primary w-fit flex font-semibold items-center py-2.5 px-4"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1366,7 +1378,7 @@ export default function Home() {
                         </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className="flex justify-between mt-4 mb-3 items-center">
+                    <div className="flex justify-between md:mt-4 mb-3 mt-2 items-center">
                       <div className="flex gap-x-3 items-center">
                         <div className="rounded-full h-[54px] w-[54px] bg-[#FAFAFA] relative">
                           <div className="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -1397,9 +1409,12 @@ export default function Home() {
                         "One Retail Self-order providing deep personalized customer experience by quick scanning the product barcode and allow them to view the menu then can quickly add it to cart. This also reduce business cost because customer no longer need server assistance"}
                     </p>
                     <div className="flex items-center justify-between">
-                      <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
+                      <Link
+                        href="/products/order-management-system"
+                        className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs"
+                      >
                         Learn more
-                      </button>
+                      </Link>
                       <div className="flex items-center gap-x-2">
                         {imageSlideIndex == 1 ? (
                           <img src="/icons/dot-active.svg" alt="active" />
@@ -1465,7 +1480,7 @@ export default function Home() {
                         </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className="flex justify-between mt-4 mb-3 items-center">
+                    <div className="flex justify-between md:mt-4 mb-3 mt-2 items-center">
                       <div className="flex gap-x-3 items-center">
                         <div className="rounded-full h-[54px] w-[54px] bg-[#FAFAFA] relative">
                           <div className="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -1513,9 +1528,12 @@ export default function Home() {
                         "Effortlessly centralize and update complex product data with One Retail PIM. Streamline your operations, improve collaboration, and deliver exceptional customer experiences with real-time, automated communication."}
                     </p>
                     <div className="flex items-center justify-between">
-                      <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
+                      <Link
+                        href="/products/crm"
+                        className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs"
+                      >
                         Learn more
-                      </button>
+                      </Link>
                       <div className="flex items-center gap-x-2">
                         {imageSlideIndex == 1 ? (
                           <img src="/icons/dot-active.svg" alt="active" />
@@ -1591,7 +1609,7 @@ export default function Home() {
                         </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className="flex justify-between mt-4 mb-3 items-center">
+                    <div className="flex justify-between md:mt-4 mb-3 mt-2 items-center">
                       <div className="flex gap-x-3 items-center">
                         <div className="rounded-full h-[54px] w-[54px] bg-[#FAFAFA] relative">
                           <div className="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -1622,9 +1640,12 @@ export default function Home() {
                         "Efficiently manage maintenance with One Retail: Set recurring schedules, submit help requests, track issue status, and ensure prompt resolution for technical issues."}
                     </p>
                     <div className="flex items-center justify-between">
-                      <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
+                      <Link
+                        href="/products/office-automation"
+                        className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs"
+                      >
                         Learn more
-                      </button>
+                      </Link>
                       <div className="flex items-center gap-x-2">
                         {imageSlideIndex == 1 ? (
                           <img src="/icons/dot-active.svg" alt="active" />
@@ -1681,7 +1702,7 @@ export default function Home() {
                         </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className="flex justify-between mt-4 mb-3 items-center">
+                    <div className="flex justify-between md:mt-4 mb-3 mt-2 items-center">
                       <div className="flex gap-x-3 items-center">
                         <div className="rounded-full h-[54px] w-[54px] bg-[#FAFAFA] relative">
                           <div className="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -1706,9 +1727,12 @@ export default function Home() {
                         "One Retail Non Trade Portal supplier support  registration form with level of approval, allow Non Trade Supplier to access their Purchase Order process to end (Invoice). Non Trade Portal integration can track of approvals, rejections, and pending requests along with rejection reasons."}
                     </p>
                     <div className="flex items-center justify-between">
-                      <button className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs">
+                      <Link
+                        href="/products/supplier-management"
+                        className="btn-border-primary flex font-semibold items-center py-2.5 px-4 max-sm:text-xs"
+                      >
                         Learn more
-                      </button>
+                      </Link>
                       <div className="flex items-center gap-x-2">
                         {imageSlideIndex == 1 ? (
                           <img src="/icons/dot-active.svg" alt="active" />

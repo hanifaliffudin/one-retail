@@ -128,7 +128,7 @@ const SolutionsPage = () => {
 
         <section id="oneretail">
           <div className="md:py-20 py-10 sm:px-24 px-4">
-            <div className="grid grid-cols-2 mb-11 text-neutral-n-90">
+            <div className="grid grid-cols-2 md:mb-11 mb-6 text-neutral-n-90">
               <h2 className="col-span-2 sm:col-span-1 sm:text-[32px] text-xl sm:leading-[40px] max-sm:mb-3 font-semibold">
                 One Retail is open with <br className="hidden sm:block" />{" "}
                 variety of ways

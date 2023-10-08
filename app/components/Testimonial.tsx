@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Testimonial = () => {
   return (
     <section>
-      <div className="bg-[#EDEFF7] md:px-24 px-4 py-10 md:mb-20 mb-10">
+      <div className="bg-[#EDEFF7] md:px-24 px-4 md:py-10 py-5 md:mb-20 mb-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{

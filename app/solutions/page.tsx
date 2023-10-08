@@ -172,12 +172,12 @@ const SolutionsPage = () => {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center">
-                <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:w-[824px]">
+                <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] md:mb-5 mb-3 md:w-[824px]">
                   Revolutionize your business operations with{" "}
                   <span className="text-primary">All-in-One</span> Retail
                   Solutions Platform
                 </h2>
-                <p className="text-center max-sm:text-sm text-neutral-n-90 mb-16 md:w-[824px]">
+                <p className="text-center max-sm:text-sm text-neutral-n-90 md:mb-16 mb-6 md:w-[824px]">
                   Advanced technological solutions that integrate various
                   digital tools and data-driven systems to enhance your overall
                   retail productivity and customer experience
@@ -282,7 +282,7 @@ const SolutionsPage = () => {
                   <span className="text-primary">world-class</span> customer
                   experiences
                 </h2>
-                <p className="text-center max-sm:text-sm text-neutral-n-90 mb-16 px-4 md:w-[824px]">
+                <p className="text-center max-sm:text-sm text-neutral-n-90 md:mb-16 mb-5 px-4 md:w-[824px]">
                   Unleash the power of our One Retail solutions to create
                   exceptional customer experiences. Elevate your business with
                   our powerful tools and drive growth in the competitive retail
@@ -339,7 +339,7 @@ const SolutionsPage = () => {
 
                 {indexTabs == 0 && (
                   <motion.div
-                    className="grid grid-cols-3 gap-6 mt-10 mb-20 px-4 sm:px-0"
+                    className="grid grid-cols-3 gap-6 md:mt-10 mt-6 md:mb-20 mb-10 px-4 sm:px-0"
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
@@ -464,7 +464,7 @@ const SolutionsPage = () => {
                       transition: { duration: 0.3 },
                     }}
                   >
-                    <div className="grid grid-cols-3 gap-6 mt-10 mb-20 px-4 sm:px-0">
+                    <div className="grid grid-cols-3 gap-6 md:mt-10 mt-6 md:mb-20 mb-10 px-4 sm:px-0">
                       <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                         <div className="flex gap-x-4 items-center">
                           <img src="/icons/pos-icon.svg" alt="pos" />
@@ -541,7 +541,7 @@ const SolutionsPage = () => {
                       transition: { duration: 0.3 },
                     }}
                   >
-                    <div className="grid grid-cols-3 gap-6 mt-10 mb-20 px-4 sm:px-0">
+                    <div className="grid grid-cols-3 gap-6 md:mt-10 mt-6 md:mb-20 mb-10 px-4 sm:px-0">
                       <div className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1">
                         <div className="flex gap-x-4 items-center">
                           <img src="/icons/pos-icon.svg" alt="pos" />

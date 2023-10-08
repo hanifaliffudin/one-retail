@@ -26,7 +26,7 @@ const CRMPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative lg:h-[867px] max-sm:h-[767px] max-lg:h-[1400px] mt-[135px]">
+          <div className="relative lg:h-[867px] max-sm:h-[707px] max-lg:h-[1400px] mt-[135px]">
             <img
               className="absolute w-full sm:-top-[133px] -top-10 opacity-60"
               src="/products/crm/bg-hero-crm.svg"
