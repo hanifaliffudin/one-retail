@@ -765,7 +765,7 @@ const OfficeAutomationPage = () => {
                       recurring schedules, submit help requests, track issue
                       status, and ensure prompt resolution for technical issues.
                     </p>
-                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-6 gap-y-3 xl:max-w-[399px]">
+                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-0 gap-y-3 sm:max-w-[399px] whitespace-nowrap">
                       <div className="flex items-center font-medium text-neutral-dark gap-x-3 ">
                         <img
                           src="/products/oa/check-circle.svg"
@@ -780,21 +780,23 @@ const OfficeAutomationPage = () => {
                         />
                         Cost Savings
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex sm:items-center font-medium text-neutral-dark gap-x-3">
                         <img
+                          className="h-fit"
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
                         />
                         Reliability
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex sm:items-center font-medium text-neutral-dark gap-x-3">
                         <img
+                          className="h-fit"
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
                         />
-                        Reduced Unplanned Downtime
+                        Reduced Unplanned <br className="sm:hidden" /> Downtime
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex max-sm:-mt-8 items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
@@ -878,7 +880,7 @@ const OfficeAutomationPage = () => {
         <FAQ />
 
         <section>
-          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative md:mb-36 mb-[68px] max-md:mt-10">
+          <div className="sm:rounded-[20px] bg-[#1A3591] sm:mx-24 sm:p-10 relative md:mb-36 max-md:mt-10">
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{
