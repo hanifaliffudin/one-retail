@@ -23,14 +23,14 @@ const SupplierManagementPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
           <motion.div
-            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
+            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] h-[620px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: { duration: 0.5 },
             }}
           >
-            <div className="grid grid-cols-2 xl:max-h-[510px] gap-x-8">
+            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8">
               <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl::pl-24 sm:pl-10">
                 <motion.div
                   className="xl:max-w-[430px]"
@@ -74,8 +74,19 @@ const SupplierManagementPage = () => {
                     x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
-                  className="-mb-10 rounded-[20px] w-full"
+                  className="md:-mb-10 -mb-16 md:rounded-tr-[20px] w-full max-sm:hidden"
                   src="/products/sm/hero-2.png"
+                  alt="hero-2"
+                ></motion.img>
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    x: [100, 0],
+                    transition: { duration: 0.5 },
+                  }}
+                  className="pl-4 -mb-28 md:rounded-tr-[20px] w-full sm:hidden"
+                  src="/products/sm/dashboard.svg"
                   alt="hero-2"
                 ></motion.img>
               </div>
@@ -151,136 +162,6 @@ const SupplierManagementPage = () => {
             </div>
           </div>
         </section>
-
-        {/* <section id="overview">
-          <motion.div
-            className="mt-[183px] mb-[54px] sm:h-[510px] h-[600px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:px-4 max-sm:pt-5 relative"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: { duration: 0.5 },
-            }}
-          >
-            <img
-              className="absolute bottom-0 max-sm:hidden"
-              src="/products/sm/hero-1.svg"
-              alt="hero-1"
-            />
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                x: [100, 0],
-                transition: { duration: 0.5 },
-              }}
-              className="absolute max-sm:-bottom-14 right-0"
-              src="/products/sm/hero-2.svg"
-              alt="hero-2"
-            ></motion.img>
-            <motion.div
-              className="max-w-[430px] absolute sm:top-12 sm:left-24"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                x: [-100, 0],
-                transition: { duration: 0.5 },
-              }}
-            >
-              <h1 className="sm:text-[40px] text-[22px] text-neutral-n-10 sm:leading-[62px] leading-[33px] font-bold mb-5">
-                Optimize Your Stock by Enhance Your Procurement Process
-              </h1>
-              <p className="sm:text-lg sm:mb-16 mb-4 text-neutral-n-10">
-                Automate your manual stocking with Supplier Portal that can
-                optimize your procurement process, strengthens supplier
-                relationships, promotes collaboration and efficiency to your
-                business
-              </p>
-
-              <Link
-                href="/contact"
-                className="btn-primary-50 rounded-md text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-4"
-              >
-                Let’s Get Demo!
-              </Link>
-              <Link
-                href="#whyus"
-                onClick={handleScroll}
-                className="border border-[#4460BB] rounded-md text-neutral-n-30 py-2.5 px-4 max-sm:text-xs font-semibold"
-              >
-                Learn More
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          <div className="sm:px-24 px-4 sm:mb-[100px] mb-10">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                x: [-100, 0],
-                transition: { duration: 0.5 },
-              }}
-              viewport={{ once: true }}
-            >
-              <h2 className="font-bold text-neutral-n-60 ">TRUSTED BY</h2>
-              <div className="grid sm:grid-flow-col sm:auto-cols-max max-sm:grid-cols-3">
-                <img src="/home/aeon.svg" alt="aeon" />
-                <img src="/home/pahtama.svg" alt="pahtama" />
-                <img src="/home/cmhl.svg" alt="cmhl" />
-              </div>
-            </motion.div>
-            <div className="flex flex-wrap gap-y-6 justify-between border-b-[#F0F0F0] border-b">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: [-100, 0],
-                  transition: { duration: 0.5 },
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="grid sm:grid-flow-col sm:auto-cols-max max-sm:grid-cols-3">
-                  <img src="/home/city.svg" alt="city" />
-                  <img src="/home/daiso.svg" alt="daiso" />
-                  <img src="/home/aeon-big.svg" alt="aeon-big" />
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  y: [100, 0],
-                  transition: { duration: 0.5 },
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-end sm:gap-x-1 gap-x-[1px] max-sm:ml-6">
-                  <div className="flex items-center bg-[#F0F1F7] sm:h-[128px] rounded-t-[20px] sm:px-[30px] sm:pt-[30px] max-sm:pb-[30px] px-4 pt-3 text-neutral-dark">
-                    <h3 className="font-bold sm:text-[32px] text-[22px] mr-4">
-                      93%
-                    </h3>
-                    <p className="font-medium sm:w-[129px] sm:text-[15px] text-[12px]">
-                      Average Conversation Rate
-                    </p>
-                  </div>
-
-                  <div className="flex items-center bg-[#F0F1F7] sm:h-[148px] rounded-t-[20px] sm:px-[30px] sm:py-[50px] px-4 pt-10 pb-[34px] text-neutral-dark">
-                    <h3 className="font-bold sm:text-[32px] text-[22px] mr-4">
-                      50M+
-                    </h3>
-                    <p
-                      id="benefits"
-                      className="font-medium sm:w-[75px] sm:text-[15px] text-[12px]"
-                    >
-                      Traffic Generated
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section> */}
 
         <section>
           <div className="sm:px-24 px-4 sm:mb-[100px] mb-10">

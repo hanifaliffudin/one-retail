@@ -28,11 +28,6 @@ const OfficeAutomationPage = () => {
               src="/products/oa/bg-hero-oa.svg"
               alt="hero"
             />
-            {/* <img
-              className="absolute w-full  object-cover top-0 left-0 sm:hidden"
-              src="/products/oa/bg-hero-mobile.svg"
-              alt="hero"
-            /> */}
             <img
               className="absolute w-full object-cover top-0 left-0 sm:hidden"
               src="/products/oa/bg-mac.svg"
@@ -108,13 +103,6 @@ const OfficeAutomationPage = () => {
                     src="/products/oa/Mac-Studio.svg"
                     alt="hero-1"
                   />
-                  {/* <div className="flex sm:hidden justify-center">
-                      <img
-                        className=""
-                        src="/products/oa/mac-mobile.png"
-                        alt="hero-1"
-                      />
-                    </div> */}
                 </motion.div>
               </div>
             </div>
