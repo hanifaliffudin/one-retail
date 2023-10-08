@@ -29,7 +29,7 @@ export default function NavbarWithCTAButton() {
     <>
       <nav
         onMouseLeave={() => setDropdownProduct(false)}
-        className={`bg-white sm:fixed absolute w-full z-30 top-0 left-0 ${
+        className={`bg-white fixed w-full z-30 top-0 left-0 ${
           pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
         }`}
       >
@@ -569,7 +569,7 @@ export default function NavbarWithCTAButton() {
 
         <div className="bg-[#F5F5F5]">
           {pathname.includes("/products/order-management-system") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -583,7 +583,7 @@ export default function NavbarWithCTAButton() {
 
               <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
-              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70 overflow-x-auto">
                 <Link
                   onClick={handleScroll}
                   href="#overview"
@@ -644,7 +644,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/crm") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -658,7 +658,7 @@ export default function NavbarWithCTAButton() {
 
               <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
-              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70 overflow-x-auto">
                 <Link
                   onClick={handleScroll}
                   href="#overview"
@@ -730,7 +730,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/office-automation") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -744,7 +744,7 @@ export default function NavbarWithCTAButton() {
 
               <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
-              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70 overflow-x-auto">
                 <Link
                   onClick={handleScroll}
                   href="#overview"
@@ -805,7 +805,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/supplier-management") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex overflow-x-auto max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -819,7 +819,7 @@ export default function NavbarWithCTAButton() {
 
               <div className="inline-block sm:mx-8 max-sm:my-4 my-2 min-w-[1px] self-stretch bg-neutral-n-50"></div>
 
-              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70">
+              <div className="flex items-center gap-x-6 text-[15px] text-neutral-n-70 overflow-x-auto">
                 <Link
                   onClick={handleScroll}
                   href="#overview"
@@ -880,8 +880,8 @@ export default function NavbarWithCTAButton() {
               }}
               exit={{ opacity: 0 }}
             >
-              <div className="h-full overflow-y-auto bg-white w-full z-[1000] md:fixed border-t border-[#EDEDED] px-4">
-                <div className="w-full h-[calc(100%-80px)] flex text-white flex-col">
+              <div className="h-full bg-white w-full z-[1000] fixed border-t border-[#EDEDED] px-4">
+                <div className="w-full h-[calc(100%-80px)] overflow-y-auto pb-6 flex text-white flex-col">
                   <div className="flex flex-col">
                     <Link
                       onClick={() => setMenuMobile(!menuMobile)}

@@ -40,7 +40,7 @@ const OfficeAutomationPage = () => {
               alt="hero"
             ></motion.img>
             <div className="absolute top-0 left-0 grid mx-auto gap-8 xl:gap-0 grid-cols-12">
-              <div className="lg:ml-24 ml-10 px-4 md:px-0 xl:mt-[0px] md:mt-10 mt-6 mb-7 place-self-center md:col-span-6 col-span-12">
+              <div className="lg:ml-24 md:ml-10 px-4 md:px-0 xl:mt-[0px] md:mt-10 mt-6 mb-7 place-self-center md:col-span-6 col-span-12">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -461,29 +461,29 @@ const OfficeAutomationPage = () => {
                       additional features like employee feedback, live chat,
                       e-learning, and more.
                     </p>
-                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-6 gap-y-3 sm:max-w-[399px]">
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                    <div className="grid grid-cols-2 md:gap-x-8 gap-x-0 gap-y-3 sm:max-w-[399px] whitespace-nowrap">
+                      <div className="flex w-fit items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
                         />
                         Empowerment
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex w-fit items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
                         />
                         Transparency
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex w-fit items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
                         />
                         Time Savings
                       </div>
-                      <div className="flex items-center font-medium text-neutral-dark gap-x-3">
+                      <div className="flex w-fit items-center font-medium text-neutral-dark gap-x-3">
                         <img
                           src="/products/oa/check-circle.svg"
                           alt="check-circle"
@@ -491,7 +491,7 @@ const OfficeAutomationPage = () => {
                         Payroll Information
                       </div>
                       <div
-                        className="flex items-center font-medium text-neutral-dark gap-x-3"
+                        className="flex w-fit items-center font-medium text-neutral-dark gap-x-3"
                         id="sdo"
                       >
                         <img
@@ -538,11 +538,11 @@ const OfficeAutomationPage = () => {
                     alt="sdo-bg-1"
                   />
                   <img
-                    className="absolute sm:left-[39px] left-3 bottom-0 rounded-br-2xl"
+                    className="absolute sm:left-[39px] left-5 w-full bottom-0 rounded-br-2xl"
                     src="/products/oa/sdo-hp-1.svg"
                     alt="sdo-hp-1"
                   />
-                  <div className="absolute py-8 px-6">
+                  <div className="absolute py-8 md:px-6 px-5">
                     <h3 className="text-white font-bold text-xl mb-3">
                       Handheld Terminal
                     </h3>
@@ -587,11 +587,16 @@ const OfficeAutomationPage = () => {
                 </div>
               </div>
               <div className="lg:col-span-1 col-span-2">
-                <div className="bg-[#0A153A] sm:h-[547px] max-sm:h-[560px] rounded-2xl relative">
+                <div className="bg-[#0A153A] sm:h-[547px] max-sm:h-[580px] rounded-2xl relative">
                   <img
-                    className="absolute right-0 top-4"
+                    className="absolute right-0 top-4 max-sm:hidden"
                     src="/products/oa/sdo-2-dashboard.svg"
                     alt="sdo-2-dashboard"
+                  />
+                  <img
+                    className="absolute right-0 top-4 sm:hidden"
+                    src="/products/oa/sdo-2-dashboard-mobile.svg"
+                    alt="sdo-2-dashboard-mobile"
                   />
                   <img
                     className="absolute left-0 bottom-0 rounded-bl-2xl"
@@ -643,46 +648,69 @@ const OfficeAutomationPage = () => {
               </div>
             </div>
             <div className="bg-[#EDEFF7] rounded-xl sm:py-10 py-6 xl:px-20 px-4 md:mb-[100px] mb-6">
-              <h3 className="text-neutral-n-100 font-bold text-xl mb-6">
+              <h3 className="text-neutral-n-100 font-bold md:text-xl mb-6">
                 Other features for Daily Operations
               </h3>
               <div className="grid grid-cols-3 gap-y-6 gap-x-4">
                 <div className="sm:col-span-1 col-span-3">
                   <div className="flex items-center gap-x-3">
-                    <img src="/products/oa/sr.svg" alt="sr" />
-                    <p className="font-medium text-neutral-n-80">
+                    <img
+                      className="max-sm:w-8"
+                      src="/products/oa/sr.svg"
+                      alt="sr"
+                    />
+                    <p className="font-medium text-neutral-n-80 max-sm:text-sm">
                       Supplier Receiving
                     </p>
                   </div>
                 </div>
                 <div className="sm:col-span-1 col-span-3">
                   <div className="flex items-center gap-x-3">
-                    <img src="/products/oa/pmm.svg" alt="pmm" />
-                    <p className="font-medium text-neutral-n-80">
+                    <img
+                      className="max-sm:w-8"
+                      src="/products/oa/pmm.svg"
+                      alt="pmm"
+                    />
+                    <p className="font-medium text-neutral-n-80 max-sm:text-sm">
                       Product Master Management
                     </p>
                   </div>
                 </div>
                 <div className="sm:col-span-1 col-span-3">
                   <div className="flex items-center gap-x-3">
-                    <img src="/products/oa/sst.svg" alt="sst" />
-                    <p className="font-medium text-neutral-n-80">
+                    <img
+                      className="max-sm:w-8"
+                      src="/products/oa/sst.svg"
+                      alt="sst"
+                    />
+                    <p className="font-medium text-neutral-n-80 max-sm:text-sm">
                       Store Stock Transfer
                     </p>
                   </div>
                 </div>
                 <div className="sm:col-span-1 col-span-3">
                   <div className="flex items-center gap-x-3">
-                    <img src="/products/oa/pim.svg" alt="pim" />
-                    <p className="font-medium text-neutral-n-80">
+                    <img
+                      className="max-sm:w-8"
+                      src="/products/oa/pim.svg"
+                      alt="pim"
+                    />
+                    <p className="font-medium text-neutral-n-80 max-sm:text-sm">
                       Product Information Management
                     </p>
                   </div>
                 </div>
                 <div className="sm:col-span-1 col-span-3">
                   <div className="flex items-center gap-x-3">
-                    <img src="/products/oa/grm.svg" alt="grm" />
-                    <p className="font-medium text-neutral-n-80" id="rm">
+                    <img
+                      className="max-sm:w-8"
+                      src="/products/oa/grm.svg"
+                      alt="grm"
+                    />
+                    <p
+                      className="font-medium text-neutral-n-80 max-sm:text-sm"
+                      id="rm"
+                    >
                       Goods Receiving Management
                     </p>
                   </div>
@@ -834,9 +862,7 @@ const OfficeAutomationPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center max-sm:text-sm">
-                  <p className="mr-3 font-bold text-base-02">
-                    Naila Agung Sarasati{" "}
-                  </p>
+                  <p className="mr-3 font-bold text-base-02">Jenny Wilson</p>
                   <p className="mr-4 text-gray-600">Co-Founder of</p>
                   <img
                     className="max-sm:h-9"

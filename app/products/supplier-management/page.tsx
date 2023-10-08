@@ -396,7 +396,7 @@ const SupplierManagementPage = () => {
         </section>
 
         <section id="pp">
-          <div className="bg-[#EDEFF7] relative xl:h-[791px] h-[600px] lg::h-[700px]">
+          <div className="bg-[#EDEFF7] relative xl:h-[791px] h-[780px] sm:h-[1100px] md:h-[1200px] ">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -434,7 +434,7 @@ const SupplierManagementPage = () => {
 
               <div className="grid grid-cols-4 gap-x-[27px] max-md:px-4 px-24">
                 <motion.div
-                  className="xl:col-span-1 col-span-2"
+                  className="xl:col-span-1 col-span-4"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
@@ -469,7 +469,7 @@ const SupplierManagementPage = () => {
                     transition: { duration: 0.5 },
                   }}
                   viewport={{ once: true }}
-                  className="xl:col-span-3 flex items-center max-xl:h-full col-span-2 max-xl:w-full mt-[3px]"
+                  className="xl:col-span-3 flex items-center max-xl:h-full col-span-4 max-xl:w-full mt-[3px]"
                   src="/products/sm/pp.svg"
                   alt="dashboard"
                 ></motion.img>

@@ -33,7 +33,7 @@ const CRMPage = () => {
               alt="hero"
             />
             <div className="absolute grid w-full mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-              <div className="xl:ml-24 ml-10 px-4 lg:px-0 max-lg:px-8 lg:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
+              <div className="xl:ml-24 md:ml-10 px-4 lg:px-0 lg:mt-[167px] mt-6 mb-7 place-self-center lg:col-span-6 col-span-12">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{
@@ -43,10 +43,10 @@ const CRMPage = () => {
                   }}
                 >
                   <div className="lg:max-w-[533px] ">
-                    <p className="sm:font-medium text-neutral-n-80 sm:text-lg max-sm:text-sm mb-3">
+                    <p className="sm:font-medium text-neutral-n-80 sm:text-lg max-sm:text-sm md:mb-3 mb-2">
                       Transforming relationships with One Retail CRM
                     </p>
-                    <h1 className="sm:text-[44px] text-[22px] sm:leading-[62px] leading-[33px] font-bold mb-5">
+                    <h1 className="sm:text-[44px] text-[22px] sm:leading-[62px] leading-[33px] font-bold md:mb-5 mb-2">
                       Build Stronger Connection with Your Customer
                     </h1>
 
@@ -146,7 +146,7 @@ const CRMPage = () => {
                 </motion.div>
 
                 <img
-                  className="sm:hidden"
+                  className="sm:hidden w-full"
                   src="/products/crm/hero-mobile.svg"
                   alt="hero-mobile"
                 />
