@@ -22,10 +22,20 @@ const OfficeAutomationPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative md:h-[692px] h-[600px] mt-[135px]">
+          <div className="relative md:h-[692px] h-[560px] mt-[135px]">
             <img
-              className="absolute w-full h-[682px] object-cover top-0 left-0"
+              className="absolute w-full h-[682px] object-cover top-0 left-0 max-sm:hidden"
               src="/products/oa/bg-hero-oa.svg"
+              alt="hero"
+            />
+            {/* <img
+              className="absolute w-full  object-cover top-0 left-0 sm:hidden"
+              src="/products/oa/bg-hero-mobile.svg"
+              alt="hero"
+            /> */}
+            <img
+              className="absolute w-full object-cover top-0 left-0 sm:hidden"
+              src="/products/oa/bg-mac.svg"
               alt="hero"
             />
             <motion.img
@@ -39,7 +49,7 @@ const OfficeAutomationPage = () => {
               src="/products/oa/bg-hero-oa-2.png"
               alt="hero"
             ></motion.img>
-            <div className="absolute top-0 left-0 grid mx-auto gap-8 xl:gap-0 grid-cols-12">
+            <div className="absolute top-0 top-0 left-0 grid mx-auto md:gap-8 xl:gap-0 grid-cols-12 h-full">
               <div className="lg:ml-24 md:ml-10 px-4 md:px-0 xl:mt-[0px] md:mt-10 mt-6 mb-7 place-self-center md:col-span-6 col-span-12">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -83,30 +93,36 @@ const OfficeAutomationPage = () => {
                   </Link>
                 </motion.div>
               </div>
-              <div className="md:col-span-6 col-span-12 lg:mt-[92px] mt-4">
-                <div className="relative w-screen sm:w-full max-md:h-[450px] h-[577px]">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{
-                      opacity: 1,
-                      x: [200, 0],
-                      transition: { duration: 0.5, delay: 1 },
-                    }}
-                  >
-                    <img
-                      className="absolute xl:right-0 bottom-0 max-lg:h-[582px] "
-                      src="/products/oa/Mac-Studio.svg"
-                      alt="hero-1"
-                    />
-                  </motion.div>
-                </div>
+              <div className="md:col-span-6 col-span-12 ">
+                <motion.div
+                  className="relative w-screen sm:w-full max-md:h-[320px] h-full"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    x: [200, 0],
+                    transition: { duration: 0.5, delay: 1 },
+                  }}
+                >
+                  <img
+                    className="absolute xl:right-0 bottom-5 max-lg:h-[582px] max-sm:hidden"
+                    src="/products/oa/Mac-Studio.svg"
+                    alt="hero-1"
+                  />
+                  {/* <div className="flex sm:hidden justify-center">
+                      <img
+                        className=""
+                        src="/products/oa/mac-mobile.png"
+                        alt="hero-1"
+                      />
+                    </div> */}
+                </motion.div>
               </div>
             </div>
           </div>
         </section>
 
         <section>
-          <div className="grid grid-cols-12 mt-20 xl:px-24 px-4 gap-y-6">
+          <div className="grid grid-cols-12 mt-10 md:mt-20 xl:px-24 px-4 gap-y-6">
             <div className="col-span-12 xl:col-span-7 ">
               {/* <motion.div
                 className="relative h-full w-full max-sm:hidden"
