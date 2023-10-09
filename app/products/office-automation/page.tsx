@@ -22,7 +22,7 @@ const OfficeAutomationPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative md:h-[692px] h-[560px] mt-[135px]">
+          <div className="relative md:h-[692px] h-[620px] mt-[135px]">
             <img
               className="absolute w-full h-[682px] object-cover top-0 left-0 max-sm:hidden"
               src="/products/oa/bg-hero-oa.svg"
@@ -101,7 +101,7 @@ const OfficeAutomationPage = () => {
                   <img
                     className="absolute xl:right-0 bottom-5 max-lg:h-[582px] max-sm:hidden"
                     src="/products/oa/Mac-Studio.svg"
-                    alt="hero-1"
+                    alt="mac"
                   />
                 </motion.div>
               </div>
@@ -110,8 +110,8 @@ const OfficeAutomationPage = () => {
         </section>
 
         <section>
-          <div className="grid grid-cols-12 mt-10 md:mt-20 xl:px-24 px-4 gap-y-6">
-            <div className="col-span-12 xl:col-span-7 ">
+          <div className="grid grid-cols-12 mt-10 md:mt-20 md:gap-x-[60px] xl:px-24 px-4 gap-y-6">
+            <div className="col-span-12 xl:col-span-7 order-last md:order-first">
               {/* <motion.div
                 className="relative h-full w-full max-sm:hidden"
                 initial={{ opacity: 0 }}
@@ -148,6 +148,11 @@ const OfficeAutomationPage = () => {
                   </div>
                 </div>
               </motion.div> */}
+              <img
+                className="w-full"
+                src="/products/oa/whyus-temp.svg"
+                alt=""
+              />
             </div>
             <div className="col-span-12 xl:col-span-5 md:w-[507px] flex items-center">
               <div className="">
@@ -212,7 +217,7 @@ const OfficeAutomationPage = () => {
               />
             </motion.div>
 
-            <div className="grid grid-cols-12 mt-20 sm:pl-24 mb-[60px] gap-y-4">
+            <div className="grid grid-cols-12 md:mt-20 mt-10 sm:pl-24 mb-[60px] gap-y-4">
               <div className="col-span-12 xl:col-span-6 xl:max-w-[574px] flex max-sm:px-4 items-center">
                 <motion.div
                   initial={{ opacity: 0 }}
