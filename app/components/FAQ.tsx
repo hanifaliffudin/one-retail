@@ -39,7 +39,7 @@ const FAQ = () => {
         }}
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-3 xl:pt-20 md:pt-10 pt-0 md:pb-[104px] xl:px-[188px] lg:px-12 px-4 gap-y-5 gap-x-8 xl:gap-x-[120px] md:mb-20">
+        <div className="grid grid-cols-3 xl:pt-20 xl:pt-10 pt-0 xl:pb-[104px] xl:px-[188px] lg:px-12 px-4 gap-y-5 gap-x-8 xl:gap-x-[120px] xl:mb-20">
           <div className="lg:col-span-1 col-span-3">
             <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl mb-5">
               Frequently Asked Questions

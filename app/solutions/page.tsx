@@ -72,7 +72,7 @@ const SolutionsPage = () => {
                 <div className="scroller__container">
                   <div className="scroller">
                     <div className="scroller__item">
-                      <div className="ml-4 mr-2 mb-[44px] max-md:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                      {/* <div className="ml-4 mr-2 mb-[44px] max-lg:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
                         <p className="font-medium mb-7">
                           “One of the best retail service for me. Loved the
                           community too. Very helpful.”
@@ -88,10 +88,10 @@ const SolutionsPage = () => {
                             <p className="text-neutral-n-70">CEO of P&G</p>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                       <img
-                        className="md:hidden"
-                        src="/solutions/johndoe.png"
+                        className=""
+                        src="/solutions/johndoe-lg.svg"
                         alt="image"
                       />
                     </div>
@@ -105,7 +105,7 @@ const SolutionsPage = () => {
                       <img src="/solutions/slider-3.svg" alt="image" />
                     </div>
                     <div className="scroller__item">
-                      <div className="bg-[#0A153A] md:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
+                      <div className="bg-[#0A153A] xl:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
                         <p className="font-bold text-[40px] mb-2.5">24</p>
                         <p className="mb-2 font-semibold">
                           happy <br /> customers
@@ -114,7 +114,7 @@ const SolutionsPage = () => {
                     </div>
 
                     <div className="scroller__item">
-                      <div className="ml-4 mr-2 mb-[44px] max-md:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
+                      {/* <div className="ml-4 mr-2 mb-[44px] max-lg:hidden text-sm rounded-xl px-4 py-5 shadow-[0_2px_12px_0px_rgba(164,164,164,0.25)]">
                         <p className="font-medium mb-7">
                           “One of the best retail service for me. Loved the
                           community too. Very helpful.”
@@ -130,10 +130,10 @@ const SolutionsPage = () => {
                             <p className="text-neutral-n-70">CEO of P&G</p>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                       <img
-                        className="md:hidden"
-                        src="/solutions/johndoe.png"
+                        className=""
+                        src="/solutions/johndoe-lg.svg"
                         alt="image"
                       />
                     </div>
@@ -147,7 +147,7 @@ const SolutionsPage = () => {
                       <img src="/solutions/slider-3.svg" alt="image" />
                     </div>
                     <div className="scroller__item">
-                      <div className="bg-[#0A153A] md:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
+                      <div className="bg-[#0A153A] xl:mb-[51px] text-left text-white py-2 px-6 rounded-xl h-[139px]">
                         <p className="font-bold text-[40px] mb-2.5">24</p>
                         <p className="mb-2 font-semibold">
                           happy <br /> customers
@@ -172,12 +172,12 @@ const SolutionsPage = () => {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center">
-                <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] md:mb-5 mb-3 md:w-[824px]">
+                <h2 className="font-bold text-center text-neutral-n-90 xl:text-[32px] lg:text-[28px] text-xl sm:leading-[48px] md:mb-5 mb-3 lg:max-w-[928px] xl:max-w-[824px]">
                   Revolutionize your business operations with{" "}
                   <span className="text-primary">All-in-One</span> Retail
                   Solutions Platform
                 </h2>
-                <p className="text-center max-sm:text-sm text-neutral-n-90 md:mb-16 mb-6 md:w-[824px]">
+                <p className="text-center max-sm:text-sm text-neutral-n-90 xl:mb-16 lg:mb-11 mb-6 lg:max-w-[928px] xl:max-w-[824px]">
                   Advanced technological solutions that integrate various
                   digital tools and data-driven systems to enhance your overall
                   retail productivity and customer experience
@@ -185,7 +185,7 @@ const SolutionsPage = () => {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-3 gap-6 sm:px-[155px]">
+            <div className="grid grid-cols-3 gap-6 lg:px-12 px-4 xl:px-[155px]">
               <motion.div
                 className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1"
                 initial={{ opacity: 0 }}
@@ -264,7 +264,7 @@ const SolutionsPage = () => {
         </section>
 
         <section>
-          <div className="md:px-24">
+          <div className="xl:px-24 lg:px-12">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -278,7 +278,7 @@ const SolutionsPage = () => {
               </p>
               <div className="flex flex-col items-center px-4">
                 <h2 className="font-bold text-center text-neutral-n-90 sm:text-[32px] text-xl sm:leading-[48px] mb-5 md:w-[824px]">
-                  Powerful tools to deliver{" "}
+                  Powerful tools to deliver <br />
                   <span className="text-primary">world-class</span> customer
                   experiences
                 </h2>
@@ -339,7 +339,7 @@ const SolutionsPage = () => {
 
                 {indexTabs == 0 && (
                   <motion.div
-                    className="grid grid-cols-3 gap-6 md:mt-10 mt-6 md:mb-20 mb-10 px-4 sm:px-0"
+                    className="grid xl:grid-cols-3 grid-cols-2 gap-6 md:mt-10 mt-6 md:mb-20 mb-10 px-4 sm:px-0"
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
