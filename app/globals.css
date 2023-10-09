@@ -490,7 +490,7 @@ html {
 @media only screen and (min-width: 600px) {
   .home.scroller__wrapper {
     --scrolling-gallery-item-duration: 14s;
-    --scrolling-gallery-items-visible: 6;
+    --scrolling-gallery-items-visible: 5;
     --scrolling-gallery-items-total: 10;
     margin-top: 2.25em;
     overflow: hidden;
@@ -511,6 +511,17 @@ html {
     margin-top: 2.25em;
     overflow: hidden;
     will-change: transform;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .home.scroller__wrapper {
+      --scrolling-gallery-item-duration: 14s;
+      --scrolling-gallery-items-visible: 6;
+      --scrolling-gallery-items-total: 10;
+      margin-top: 2.25em;
+      overflow: hidden;
+      will-change: transform;
+    }
   }
 
   .scroll-horizontal ::-webkit-scrollbar-track {

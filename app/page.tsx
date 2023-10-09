@@ -54,7 +54,7 @@ export default function Home() {
       <main className="max-w-screen-2xl mx-auto">
         <section className="bg-white">
           <div className="grid mx-auto lg:gap-8 xl:gap-0 grid-cols-12">
-            <div className="md:ml-24 px-4 md:px-0 md:mt-[180px] mt-6 md:mb-7 place-self-center lg:col-span-5 col-span-12 order-last md:order-first">
+            <div className="lg:ml-12 xl:ml-24 px-4 md:px-0 lg:mt-[112px] xl:mt-[180px] mt-6 md:mb-7 place-self-center lg:col-span-6 xl:col-span-5 col-span-12 order-last md:order-first">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -63,11 +63,11 @@ export default function Home() {
                   transition: { duration: 0.5 },
                 }}
               >
-                <h1 className="sm:text-[40px] text-[22px] text-neutral-n-90 sm:leading-[60px] leading-[33px] font-bold md:mb-5 mb-3">
+                <h1 className="xl:text-[40px] text-[22px] lg:text-[32px] text-neutral-n-90 sm:leading-[60px] leading-[33px] font-bold md:mb-5 mb-3">
                   Transform Your Business with Advanced Retail Technology
                 </h1>
 
-                <p className="sm:text-xl text-sm font-extralight md:mb-14 mb-6 text-neutral-n-80 leading-[30px]">
+                <p className="xl:text-xl max-sm:text-sm font-extralight md:mb-14 mb-6 text-neutral-n-80 leading-[30px]">
                   Designed to optimize your business operations with tools that
                   help you enhance operational efficiency, improve customer
                   experiences, and drive business growth with competitive
@@ -106,7 +106,7 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
-            <div className="mt-20 lg:col-span-7 col-span-12 flex">
+            <div className="xl:mt-20 lg:mt-32 xl:col-span-7 lg:col-span-6 col-span-12 flex lg:mr-12 xl:mr-0">
               <div className="relative w-screen sm:w-full">
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -116,7 +116,7 @@ export default function Home() {
                   }}
                 >
                   <img
-                    className="xl:absolute mx-auto xl:mx-0 h-[400px] xl:h-full xl:top-1/2 xl:right-36 xl:transform xl:-translate-y-1/2"
+                    className="xl:absolute mx-auto xl:mx-0 h-[400px] lg:h-1/2 xl:h-full xl:top-1/2 xl:right-36 xl:transform xl:-translate-y-1/2"
                     src="/home/hero-1.svg"
                     alt="hero-1"
                   />
@@ -319,8 +319,8 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <div className="pb-8 flex flex-nowrap overflow-x-auto gap-12 px-4 md:px-0">
-              <div className="bg-white p-5 rounded-lg min-w-[340px] md:ml-[100px] shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)]">
+            <div className="pb-8 flex flex-nowrap overflow-x-auto xl:gap-12 lg:gap-8 px-4 md:px-0">
+              <div className="bg-white p-5 rounded-lg min-w-[340px] lg:ml-[43px] xl:ml-[100px] shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)]">
                 <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 ">
                   <img src="/icons/ShoppingCart.svg" alt="ShoppingCart" />
                 </div>
@@ -399,7 +399,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="grid grid-cols-2 gap-x-20 md:px-24 px-4 md:mb-16 mb-8">
+          <div className="grid grid-cols-2 xl:gap-x-20 lg:gap-x-[72px] items-center xl:px-24 lg:px-12 px-4 md:mb-16 mb-8">
             <motion.div
               className="col-span-2 md:col-span-1"
               initial={{ opacity: 0 }}
@@ -445,7 +445,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <div className="grid grid-cols-12 md:mb-40 mb-10">
-              <div className="md:col-span-7 col-span-12 bg-[#EDEFF7] md:py-10 max-md:pb-5 max-md:pt-3 md:pr-10 md:pl-24 px-4 rounded-r-[20px] order-last md:order-first">
+              <div className="xl:col-span-7 lg:col-span-6 col-span-12 bg-[#EDEFF7] md:py-10 max-md:pb-5 max-md:pt-3 md:pr-10 xl:pl-24 lg:pl-10 px-4 rounded-r-[20px] order-last md:order-first">
                 {integrated == 0 && (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -708,7 +708,7 @@ export default function Home() {
                 )}
               </div>
               <div className="md:col-span-5 col-span-12 flex justify-center sm:block">
-                <div className="relative max-w-[400px] max-h-[400px] h-[490px] md:ml-24">
+                <div className="relative max-w-[400px] max-h-[400px] h-[490px] lg:ml-12 xl:ml-24">
                   <img
                     className="absolute w-10 sm:w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     src="/home/logo-integrated.svg"
@@ -874,7 +874,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="md:px-24 md:mb-20 mb-10 px-4">
+          <div className="xl:px-24 lg:px-12 md:mb-20 mb-10 px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -991,7 +991,7 @@ export default function Home() {
                         alt=""
                       />
                     </div>
-                    <div className="flex justify-between mt-10 mb-3 items-center">
+                    <div className="flex justify-between xl:mt-10 mt-6 mb-3 items-center">
                       <div className="flex gap-x-3 items-center">
                         <div className="rounded-full h-[54px] w-[54px] bg-[#FAFAFA] relative">
                           <div className="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#EDEFF7] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -1762,8 +1762,8 @@ export default function Home() {
         <Testimonial />
 
         <section className="hidden md:block">
-          <div className="py-24 mb-20">
-            <div className="flex justify-between items-center px-24 mb-[38px]">
+          <div className="py-24 xl:mb-20">
+            <div className="flex justify-between items-center xl:px-24 lg:px-12 px-4 mb-[38px]">
               <div>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -1803,7 +1803,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center">
-              <div className="grid grid-cols-3 pl-24 gap-x-20">
+              <div className="grid grid-cols-3 xl:pl-24 lg:px-12 xl:pr-0 max-xl:pr-24 xl:gap-x-20 lg:gap-x-10 gap-x-4">
                 <Link className="cool-link pb-4" href="#">
                   <img
                     className="w-full h-[236px] rounded-lg mb-5 object-cover"
@@ -1864,7 +1864,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mx-[24px]">
+              <div className="mx-[24px] max-xl:hidden">
                 <div className="flex justify-center items-center rounded-full h-[49px] w-[49px] border border-[#1F40AE]">
                   <Icon
                     width={24}
@@ -1873,6 +1873,11 @@ export default function Home() {
                   />
                 </div>
               </div>
+            </div>
+
+            <div className="flex justify-center items-center gap-x-4 xl:hidden">
+              <img src="/home/arrow-left.svg" alt="arrow-left.svg" />
+              <img src="/home/arrow-right.svg" alt="arrow-right.svg" />
             </div>
           </div>
         </section>

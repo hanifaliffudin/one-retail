@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const TalkToUs = () => {
   return (
     <section>
-      <div className="grid grid-cols-5 md:py-20 py-10 md:px-[120px] gap-y-4 px-4 mb-16">
+      <div className="grid grid-cols-5 md:py-20 py-10 xl:px-[120px] lg:px-12 gap-y-4 px-4 mb-16">
         <div className="lg:col-span-2 col-span-5">
           <motion.div
             initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const TalkToUs = () => {
           </motion.div>
         </div>
 
-        <div className="lg:col-span-3 col-span-5 xl:ml-20 lg:ml-10 lg:p-8 md:pt-8 pt-2 lg:pt-0">
+        <div className="lg:col-span-3 col-span-5 xl:ml-20 lg:ml-3 lg:p-8 md:pt-8 pt-2 lg:pt-0">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
