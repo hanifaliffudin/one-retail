@@ -33,7 +33,7 @@ const OrderManagementSystemPage = () => {
             />
             <div className="absolute left-0 bg-[#20202099] w-full sm:h-[640px] h-[375px]"></div>
 
-            <div className="sm:max-w-[612px] absolute top-1/2 sm:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
+            <div className="sm:max-w-[612px] absolute top-1/2 left-12 xl:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
               <h1 className="sm:text-[40px] text-[22px] text-neutral-n-10 sm:leading-[62px] leading-[33px] font-bold mb-5">
                 Expand Your Possibiities{" "}
                 <span className="text-primary-p-40">Intensively</span>
@@ -65,15 +65,15 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section>
-          <div className="sm:mx-24 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 md:pb-20 pb-10 border-b border-b-[#E0E0E0] md:mb-14 mb-10">
+          <div className="xl:mx-24 lg:mx-12 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 md:pb-20 pb-10 border-b border-b-[#E0E0E0] md:mb-14 mb-10">
             <div className="col-span-4 lg:col-span-1 max-sm:mb-1">
-              <h2 className="font-bold xl:text-[36px] text-xl md:text-3xl xl:leading-[54px] text-neutral-n-90 max-sm:text-center">
+              <h2 className="font-bold xl:text-[36px] lg:text-[28px] lg:leading-[42px] text-xl md:text-3xl xl:leading-[54px] text-neutral-n-90 max-sm:text-center">
                 Each products meets a high{" "}
                 <span className="text-primary">standard</span>
               </h2>
             </div>
             <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
-              <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
+              <h3 className="font-semibold xl:text-xl mb-3 text-neutral-n-90">
                 Packed with built-in amazing features
               </h3>
               <p className="text-neutral-n-80 max-sm:text-sm">
@@ -84,7 +84,7 @@ const OrderManagementSystemPage = () => {
               </p>
             </div>
             <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
-              <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
+              <h3 className="font-semibold xl:text-xl mb-3 text-neutral-n-90">
                 Optimized for online selling & business
               </h3>
               <p className="text-neutral-n-80 max-sm:text-sm">
@@ -95,7 +95,7 @@ const OrderManagementSystemPage = () => {
               </p>
             </div>
             <div className="col-span-4 lg:col-span-1 pt-5 border-t-[#E0E0E0] border-t-[4px]">
-              <h3 className="font-semibold sm:text-xl mb-3 text-neutral-n-90">
+              <h3 className="font-semibold xl:text-xl mb-3 text-neutral-n-90">
                 Covered with long term support
               </h3>
               <p id="pos" className="text-neutral-n-80 max-sm:text-sm">
@@ -109,42 +109,46 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section>
-          <div className="sm:px-24 px-4">
+          <div className="lg:px-12 xl:px-24 px-4">
             <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
               Point of Sale (POS)
             </div>
             <h2 className="max-sm:text-center font-bold sm:text-[36px] text-xl text-neutral-n-90 mb-10">
               Selling the way it should be
             </h2>
-            <div className="flex flex-wrap gap-x-[130px] gap-y-6 items-center justify-center">
-              <img src="/products/oms/pos.svg" alt="pos" />
-              <div className="flex flex-col sm:gap-y-10 gap-y-5 xl:max-w-[400px]">
-                <div className="border-l-[#E0E0E0] border-l-4 pl-5">
-                  <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
-                    Fast Checkout
-                  </h3>
-                  <p className="text-neutral-n-80 max-sm:text-sm">
-                    Enjoy a seamless and expedited checkout experience that gets
-                    your queue way in no time.
-                  </p>
-                </div>
-                <div className="border-l-[#E0E0E0] border-l-4 pl-5">
-                  <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
-                    Easily Manage Inventories
-                  </h3>
-                  <p className="text-neutral-n-80 max-sm:text-sm">
-                    Seamlessly track stock levels, streamline replenishment, and
-                    optimize inventory turnover.
-                  </p>
-                </div>
-                <div className="border-l-[#E0E0E0] border-l-4 pl-5">
-                  <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
-                    Less Work
-                  </h3>
-                  <p className="text-neutral-n-80 max-sm:text-sm">
-                    Say goodbye to repetitive and time-consuming tasks, as our
-                    solution takes care of them for you.
-                  </p>
+            <div className="max-lg:flex lg:grid lg:grid-cols-5 max-lg:flex-wrap lg:gap-x-11 xl:gap-x-[130px] gap-y-6 items-center justify-center">
+              <div className="col-span-5 lg:col-span-3">
+                <img className="w-full" src="/products/oms/pos.svg" alt="pos" />
+              </div>
+              <div className="col-span-5 lg:col-span-2">
+                <div className="flex flex-col sm:gap-y-10 gap-y-5 xl:max-w-[400px]">
+                  <div className="border-l-[#E0E0E0] border-l-4 pl-5">
+                    <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
+                      Fast Checkout
+                    </h3>
+                    <p className="text-neutral-n-80 max-sm:text-sm">
+                      Enjoy a seamless and expedited checkout experience that
+                      gets your queue way in no time.
+                    </p>
+                  </div>
+                  <div className="border-l-[#E0E0E0] border-l-4 pl-5">
+                    <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
+                      Easily Manage Inventories
+                    </h3>
+                    <p className="text-neutral-n-80 max-sm:text-sm">
+                      Seamlessly track stock levels, streamline replenishment,
+                      and optimize inventory turnover.
+                    </p>
+                  </div>
+                  <div className="border-l-[#E0E0E0] border-l-4 pl-5">
+                    <h3 className="font-semibold sm:text-xl text-neutral-n-90 mb-3">
+                      Less Work
+                    </h3>
+                    <p className="text-neutral-n-80 max-sm:text-sm">
+                      Say goodbye to repetitive and time-consuming tasks, as our
+                      solution takes care of them for you.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,9 +176,9 @@ const OrderManagementSystemPage = () => {
               </p>
             </motion.div>
 
-            <div className="flex max-lg:flex-wrap sm:px-24 gap-y-10 max-xl:gap-x-4">
+            <div className="flex max-lg:flex-wrap lg:px-12 xl:px-24 gap-y-10 max-xl:gap-x-4">
               <motion.div
-                className="z-10 xl:mt-[113px] max-xl:w-full"
+                className="z-10 lg:mt-10 xl:mt-[113px] max-lg:w-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -184,15 +188,15 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="mb-5 max-xl:w-full"
+                  className="mb-5 max-lg:w-full"
                   src="/products/oms/pos-2.svg"
                   alt="pos-2"
                 />
-                <div className="xl:w-[294px]">
+                <div className="lg:w-[307px] xl:w-[294px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Single store
                   </h4>
-                  <p className="text-neutral-n-80 max-sm:text-sm">
+                  <p className="text-neutral-n-80 max-sm:text-sm lg:max-w-[208px] xl:w-full">
                     Experience the convenience and reliability of our point of
                     sale solution and take your store to new heights
                   </p>
@@ -200,7 +204,7 @@ const OrderManagementSystemPage = () => {
               </motion.div>
 
               <motion.div
-                className="xl:-ml-[82px]"
+                className="lg:-ml-[82px]"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -210,11 +214,11 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="mb-5 max-xl:w-full"
+                  className="mb-5 max-lg:w-full"
                   src="/products/oms/pos-3.svg"
                   alt="pos-3"
                 />
-                <div className="xl:w-[506px]">
+                <div className="lg:w-[450px] xl:w-[506px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Multi store
                   </h4>
@@ -228,7 +232,7 @@ const OrderManagementSystemPage = () => {
               </motion.div>
 
               <motion.div
-                className="xl:ml-6 max-xl:w-full"
+                className="lg:ml-1 xl:ml-6 max-lg:w-full"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -238,11 +242,11 @@ const OrderManagementSystemPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  className="max-xl:w-full mb-5"
+                  className="max-lg:w-full mb-5"
                   src="/products/oms/pos-4.svg"
                   alt="pos-4"
                 />
-                <div className="xl:w-[294px]">
+                <div className="lg:w-[228px] xl:w-[294px]">
                   <h4 className="mb-2 font-semibold sm:text-xl text-neutral-n-90">
                     Events
                   </h4>
@@ -258,13 +262,13 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section id="so">
-          <div className="sm:mx-24 mx-4 md:py-20 py-10 sm:border-b sm:border-b-[#E0E0E0] sm:mb-20">
-            <div className="flex flex-wrap items-center justify-center">
-              <div className="xl:max-w-[400px] xl:mr-[130px]">
+          <div className="lg:mx-12 xl:mx-24 mx-4 md:py-20 py-10 sm:border-b sm:border-b-[#E0E0E0] sm:mb-20">
+            <div className="flex max-lg:flex-wrap items-center justify-center">
+              <div className="lg:max-w-[332px] xl:max-w-[400px] xl:mr-[130px] lg:mr-[52px]">
                 <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
                   Self Ordering
                 </div>
-                <h2 className="max-sm:text-center font-bold sm:text-[36px] sm:leading-[45px] text-xl text-neutral-n-90 md:mb-10 mb-6">
+                <h2 className="max-sm:text-center font-bold lg:text-[28px] xl:text-[36px] lg:leading-[35px] xl:leading-[45px] text-xl text-neutral-n-90 lg:mb-8 xl:mb-10 mb-6">
                   Let your customers choose their way
                 </h2>
                 <p className="text-neutral-n-90 max-sm:hidden">
@@ -276,9 +280,9 @@ const OrderManagementSystemPage = () => {
                 </p>
               </div>
 
-              <div className="bg-[#EDEFF7] px-[22px] pt-9 rounded-[20px] overflow-y-auto sm:mr-6 max-sm:mb-5">
+              <div className="bg-[#EDEFF7] px-[22px] pt-6 xl:pt-9 rounded-[20px] overflow-y-auto sm:mr-6 max-sm:mb-5">
                 <Swiper
-                  className="max-h-[605px]"
+                  className="xl:max-h-[605px] lg:max-h-[433px]"
                   slidesPerView={1}
                   direction={"vertical"}
                   autoplay={{
@@ -333,7 +337,7 @@ const OrderManagementSystemPage = () => {
               </div>
 
               <img
-                className="max-sm:w-full"
+                className="max-lg:w-full lg:w-[225px] xl:w-auto"
                 src="/products/oms/so-woman.svg"
                 alt="woman"
               />
@@ -342,7 +346,7 @@ const OrderManagementSystemPage = () => {
         </section>
 
         <section id="sco">
-          <div className="sm:px-24 px-4 bg-any-business sm:mb-20">
+          <div className="lg:px-12 xl:px-24 px-4 bg-any-business sm:mb-20">
             <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
               Self Checkout
             </div>
@@ -354,7 +358,7 @@ const OrderManagementSystemPage = () => {
               src="/products/oms/sc-1.svg"
               alt="sc 1"
             />
-            <div className="flex flex-wrap gap-x-[106px] gap-y-[72px]">
+            <div className="flex max-lg:flex-wrap lg:gap-x-7 xl:gap-x-[106px] gap-y-[72px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -393,7 +397,7 @@ const OrderManagementSystemPage = () => {
                 </div>
               </motion.div>
               <motion.img
-                className="max-xl:w-full"
+                className="max-xl:hidden"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -402,6 +406,18 @@ const OrderManagementSystemPage = () => {
                 }}
                 viewport={{ once: true }}
                 src="/products/oms/sc-2.svg"
+                alt="sc-2"
+              ></motion.img>
+              <motion.img
+                className="xl:hidden"
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  y: [100, 0],
+                  transition: { duration: 0.3, delay: 0.3 },
+                }}
+                viewport={{ once: true }}
+                src="/products/oms/sc-2-lg.svg"
                 alt="sc-2"
               ></motion.img>
             </div>
