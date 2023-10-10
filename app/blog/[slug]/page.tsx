@@ -26,14 +26,14 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
       <NavbarWithCTAButton />
       <main>
         <section>
-          <div className="mt-[112px] xl:mx-24 mx-4 relative sm:mb-16 mb-8">
+          <div className="mt-[112px] lg:mx-12 xl:mx-24 mx-4 relative sm:mb-16 mb-8">
             <img
               className="rounded-[20px] max-sm:min-h-[284px] object-cover"
               src="/blog/hero-blog-1.svg"
               alt="hero"
             />
             <div className="absolute left-0 top-0 rounded-[20px] overlay-blog w-full h-full max-sm:min-h-[284px]"></div>
-            <div className="grid grid-cols-4 gap-x-16 max-sm:top-0 px-6 max-sm:pt-4 max-sm:gap-y-[43px]  absolute sm:bottom-[46px] sm:px-16 text-white">
+            <div className="grid grid-cols-4 lg:gap-x-4 xl:gap-x-16 max-sm:top-0 px-6 max-sm:pt-4 max-sm:gap-y-[43px]  absolute sm:bottom-[46px] sm:px-16 text-white">
               <div className="sm:col-span-1 col-span-4">
                 <div className="flex flex-col gap-y-3">
                   <img
@@ -57,9 +57,9 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
         </section>
 
         <section>
-          <div className="grid grid-cols-4 xl:gap-x-16 gap-x-8 xl:px-40 px-4 gap-y-6 sm:mb-[100px] mb-10">
-            <div className="sm:col-span-1 col-span-4 relative h-full order-last sm:order-first">
-              <div className="sm:sticky sm:top-24 ">
+          <div className="grid grid-cols-4 xl:gap-x-16 gap-x-8 xl:px-40 lg:px-12 px-4 gap-y-6 sm:mb-[100px] mb-10">
+            <div className="xl:col-span-1 col-span-4 relative h-full order-last sm:order-first">
+              <div className="xl:sticky xl:top-24 lg:flex xl:block lg:items-center lg:justify-between">
                 <div
                   onClick={() => router.back()}
                   className="sticky top-0 cursor-pointer max-sm:hidden flex items-center gap-x-2 font-semibold text-neutral-dark"
@@ -67,26 +67,29 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   <img src="/blog/SwapLeft.svg" alt="SwapLeft" />
                   Back
                 </div>
-                <hr className="my-8 max-sm:hidden" />
-                <p className="mb-4 text-neutral-n-80 font-medium">Tag</p>
-                <div className="flex flex-wrap gap-1">
-                  <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                    #Customer
-                  </div>
-                  <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                    #Management
-                  </div>
-                  <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                    #Product
-                  </div>
-                  <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                    #Analytics
+                <hr className="my-8 max-xl:hidden" />
+                <div className="lg:flex xl:flex-col lg:items-center xl:items-start gap-x-2">
+                  <p className="xl:mb-4 text-neutral-n-80 font-medium">Tag</p>
+                  <div className="flex flex-wrap gap-1">
+                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                      #Customer
+                    </div>
+                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                      #Management
+                    </div>
+                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                      #Product
+                    </div>
+                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
+                      #Analytics
+                    </div>
                   </div>
                 </div>
               </div>
+              <hr className="mt-4 xl:hidden" />
             </div>
-            <div className="sm:col-span-3 col-span-4 ">
-              <div className="sm:mb-24 mb-10">
+            <div className="xl:col-span-3 col-span-4 ">
+              <div className="xl:mb-24 mb-8">
                 <p>
                   Gadgets have been a part of our lives for centuries. From the
                   first mechanical clock to the latest smartphone, gadgets have
@@ -141,8 +144,8 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
           </div>
         </section>
 
-        <section className="max-lg:hidden">
-          <div className="bg-[#F5F5F5] sm:px-24 px-4 sm:py-16 py-4 mb-8">
+        <section className="max-xl:hidden">
+          <div className="bg-[#F5F5F5] lg:px-12 xl:px-24 px-4 lg:py-10 xl:py-16 py-4 mb-8">
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               More from One Retail
             </h2>
@@ -237,17 +240,17 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
           </div>
         </section>
 
-        <section className="lg:hidden">
+        <section className="xl:hidden">
           <div className="md:my-20 max-md:mt-10 max-md:py-7 md:py-16 bg-[#F5F5F5] ">
             <div className="grid grid-cols-4">
-              <div className="xl:col-span-2 col-span-4">
-                <h2 className="xl:mb-7 xl:px-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-semibold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
+              <div className="lg:col-span-3 col-span-4">
+                <h2 className="xl:mb-7 lg:pl-12 xl:pl-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">
                   More from One Retail
                 </h2>
               </div>
 
-              <div className="xl:col-span-2 col-span-4 max-xl:order-last">
-                <div className="flex xl:hidden max-xl:justify-center xl:px-24 px-4 items-center gap-x-5">
+              <div className="lg:col-span-1 col-span-4 max-lg:order-last">
+                <div className="flex lg:justify-end max-lg:justify-center lg:pr-12 xl:pr-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div-crm !w-fit flex " />
                   <div className="flex items-center">
                     <img
@@ -274,7 +277,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                       slidesPerView: 2,
                     },
                     1000: {
-                      slidesPerView: 3,
+                      slidesPerView: 3.1,
                     },
                     1400: {
                       slidesPerView: 4,
@@ -295,7 +298,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                     },
                   }}
                 >
-                  <SwiperSlide className="ml-4">
+                  <SwiperSlide className="xl:ml-24 lg:ml-12 ml-4">
                     <BlogCard
                       imageThumbnail="/blog/oms-1.svg"
                       category="Order Management System"
