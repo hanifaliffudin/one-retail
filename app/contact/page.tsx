@@ -12,8 +12,8 @@ const ContactPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <div className="lg:w-[540px] lg:h-[540px] -z-10 rounded-full blur-xl bg-[#A9B3D626] absolute -top-[187px] -left-[105px]"></div>
         <section>
-          <div className="lg:mt-44 mt-32 grid grid-cols-2 gap-y-9 md:px-24 px-4">
-            <div className="col-span-2 lg:col-span-1 text-neutral-dark lg:w-[338px]">
+          <div className="xl:mt-44 mt-32 grid grid-cols-2 gap-y-9 lg:px-12 xl:px-24 px-4">
+            <div className="col-span-2 lg:col-span-1 text-neutral-dark lg:w-[338px] lg:mt-20 xl:mt-0">
               <h1 className="lg:text-[32px] text-[22px] leading-[33px] lg:leading-[48px] lg:mb-7 mb-2 font-bold">
                 Talk to Us and See How One Retail Work for Your Business
               </h1>
@@ -21,7 +21,7 @@ const ContactPage = () => {
                 Give us a call if you need help picking a One Retail product.
               </p>
 
-              <div className="xl:mt-[205px] lg:mt-10 mt-8 flex gap-x-[50px]">
+              <div className="xl:mt-[205px] lg:mt-[120px] lg:mb-5 xl:mb-0 mt-8 flex gap-x-[50px]">
                 <Link
                   href="https://instagram.com"
                   className="flex gap-x-4 items-center"
@@ -52,13 +52,17 @@ const ContactPage = () => {
           </div>
         </section>
         <section>
-          <div className="grid grid-cols-2 md:px-24 lg:pb-32 pb-8 bg-[#F5F5F5] relative">
-            <div className="absolute max-xl:hidden -z-10 -mt-20 top-0 right-0 w-2/3 h-[100px]">
-              <img src="/contact/trapesium.svg" alt="trapesium" />
+          <div className="grid grid-cols-2 lg:px-12 xl:px-24 lg:pb-24 xl:pb-32 pb-8 bg-[#F5F5F5] relative">
+            <div className="absolute max-lg:hidden -z-10 -mt-20 top-0 right-0 w-2/3 lg:pl-20 xl:pl-0 lg:h-[100px]">
+              <img
+                className="h-full w-full"
+                src="/contact/trapesium.svg"
+                alt="trapesium"
+              />
             </div>
 
             <div className="max-lg:px-4 col-span-2 lg:col-span-1 max-lg:order-last text-neutral-dark lg:w-[338px] pt-10 lg:pt-[108px]">
-              <h3 className="text-neutral-dark font-semibold text-[22px] mb-8">
+              <h3 className="text-neutral-dark font-semibold lg:text-xl xl:text-[22px] mb-8">
                 Contact
               </h3>
               <div className="flex items-center justify-between border border-[#E0E0E0] rounded-lg p-5 mb-8">
