@@ -145,7 +145,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
         </section>
 
         <section className="max-xl:hidden">
-          <div className="bg-[#F5F5F5] lg:px-12 xl:px-24 px-4 lg:py-10 xl:py-16 py-4 mb-8">
+          <div className="bg-[#F5F5F5] lg:px-12 xl:px-24 px-4 lg:py-10 xl:py-16 py-4">
             <h2 className="mb-7 font-bold text-neutral-dark sm:text-[32px] text-xl sm:leading-[48px]">
               More from One Retail
             </h2>
@@ -241,7 +241,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
         </section>
 
         <section className="xl:hidden">
-          <div className="md:my-20 max-md:mt-10 max-md:py-7 md:py-16 bg-[#F5F5F5] ">
+          <div className="md:mt-20 max-md:mt-10 max-md:py-7 md:py-16 bg-[#F5F5F5] ">
             <div className="grid grid-cols-4">
               <div className="lg:col-span-3 col-span-4">
                 <h2 className="xl:mb-7 lg:pl-12 xl:pl-24 px-4 max-xl:mb-6 max-xl:col-span-2 font-bold text-neutral-dark xl:text-[32px] text-xl md:text-3xl xl:leading-[48px]">

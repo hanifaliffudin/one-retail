@@ -33,9 +33,13 @@ export default function NavbarWithCTAButton() {
           pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
         }`}
       >
-        <div className="max-w-screen-xl relative flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl lg:px-12 xl:px-0 relative flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
-            <img src="/logo-navbar.svg" className="mr-3" alt="Logo" />
+            <img
+              src="/logo-navbar.svg"
+              className="lg:-ml-[2px] xl:ml-2 mr-3"
+              alt="Logo"
+            />
           </Link>
           <div className="flex xl:order-2">
             <div className="xl:flex items-center text-neutral-dark font-semibold mr-6 hidden">
@@ -569,7 +573,7 @@ export default function NavbarWithCTAButton() {
 
         <div className="bg-[#F5F5F5]">
           {pathname.includes("/products/order-management-system") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -644,7 +648,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/crm") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -730,7 +734,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/office-automation") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -805,7 +809,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/supplier-management") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"

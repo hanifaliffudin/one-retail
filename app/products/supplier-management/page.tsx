@@ -30,7 +30,7 @@ const SupplierManagementPage = () => {
               transition: { duration: 0.5 },
             }}
           >
-            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8">
+            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8 lg:gap-x-[55px]">
               <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl:pl-24 sm:pl-10">
                 <motion.div
                   className="xl:max-w-[430px]"
@@ -66,7 +66,7 @@ const SupplierManagementPage = () => {
                   </Link>
                 </motion.div>
               </div>
-              <div className="col-span-2 lg:col-span-1 lg:max-h-[510px]">
+              <div className="col-span-2 lg:col-span-1 ">
                 <motion.img
                   initial={{ opacity: 0 }}
                   animate={{
@@ -97,7 +97,7 @@ const SupplierManagementPage = () => {
                     transition: { duration: 0.5 },
                   }}
                   className="pl-4 -mb-28 md:rounded-tr-[20px] w-full max-lg:hidden xl:hidden"
-                  src="/products/sm/dashboard-lg.svg"
+                  src="/products/sm/dashboard-lg.png"
                   alt="hero-2"
                 ></motion.img>
               </div>
@@ -163,6 +163,7 @@ const SupplierManagementPage = () => {
               </motion.div>
 
               <motion.div
+                className="lg:-mt-5 xl:-mt-0"
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -172,7 +173,7 @@ const SupplierManagementPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="flex items-end sm:gap-x-1 gap-x-[1px] max-sm:ml-6">
-                  <div className="flex items-center bg-[#F0F1F7] sm:h-[128px] rounded-t-[20px] sm:px-[30px] sm:pt-[30px] max-sm:pb-[30px] px-4 pt-3 text-neutral-dark">
+                  <div className="flex items-center bg-[#F0F1F7] sm:h-[128px] rounded-t-[20px] sm:px-[30px] lg:pb-5 sm:pt-[30px] max-sm:pb-[30px] px-4 pt-3 text-neutral-dark">
                     <h3 className="font-bold xl:text-[32px] lg:text-[28px] text-[22px] mr-4">
                       93%
                     </h3>
@@ -181,7 +182,7 @@ const SupplierManagementPage = () => {
                     </p>
                   </div>
 
-                  <div className="flex items-center bg-[#F0F1F7] sm:h-[148px] rounded-t-[20px] sm:px-[30px] sm:py-[50px] px-4 pt-10 pb-[34px] text-neutral-dark">
+                  <div className="flex items-center bg-[#F0F1F7] sm:h-[148px] rounded-t-[20px] sm:px-[30px] xl:py-[50px] px-4 pt-10 pb-[34px] text-neutral-dark">
                     <h3 className="font-bold sm:text-[32px] lg:text-[28px] text-[22px] mr-4">
                       50M+
                     </h3>
@@ -200,7 +201,7 @@ const SupplierManagementPage = () => {
 
         <section>
           <div className="xl:px-24 lg:px-12 px-4 sm:mb-[100px] mb-10">
-            <div className="flex max-lg:flex-wrap sm:gap-x-[76px] gap-y-6 sm:mb-10 mb-5">
+            <div className="flex max-lg:flex-wrap lg:gap-x-12 xl:gap-x-[76px] gap-y-6 sm:mb-10 mb-5">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -209,7 +210,7 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="xl:w-[624px] xl:pr-10 pr-5 text-neutral-dark flex">
+                <div className="xl:w-[624px] lg:w-[440px] xl:pr-10 pr-5 text-neutral-dark flex">
                   <div className="max-sm:w-[20px] sm:w-[16px] sm:mr-10 mr-6 rounded-xl bg-grad"></div>
                   <div className="xl:my-10 my-5">
                     <h2 className="font-bold sm:text-[28px] sm:leading-[42px] sm:mb-4 mb-3">
@@ -234,14 +235,14 @@ const SupplierManagementPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] h-full lg:flex lg:flex-col lg:justify-center shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:px-10 px-4 sm:py-16 py-6 xl:w-[548px] rounded-[20px]">
+                <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] h-full lg:flex lg:flex-col shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:px-10 px-4 xl:py-16 lg:py-[71px] py-6 xl:w-[548px] rounded-[20px]">
                   <div className="flex items-center gap-x-4 mb-4">
                     <img src="/products/sm/myspace-1.svg" alt="myspace-1" />
-                    <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
+                    <h3 className="font-semibold sm:text-[22px] lg:leading-[33px] text-lg text-neutral-dark">
                       Fosters Collaboration and Transparency
                     </h3>
                   </div>
-                  <p className="text-neutral-n-70 max-sm:text-sm">
+                  <p className="text-neutral-n-70 max-sm:text-sm lg:leading-[24px]">
                     Efficient communication leads to quicker response times,
                     improved clarity, and reduced errors in order processing.
                     This will allows you to track all of responses that can
@@ -263,7 +264,7 @@ const SupplierManagementPage = () => {
               <div className="grid grid-cols-3 gap-x-10 gap-y-5">
                 <div className="col-span-3 lg:col-span-1">
                   <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
-                    <div className="flex lg:flex-col xl:flex-row gap-y-4 items-center gap-x-4 sm:mb-4 mb-3">
+                    <div className="flex lg:flex-col xl:flex-row lg:items-start xl:items-center gap-y-4 items-center gap-x-4 sm:mb-4 mb-3">
                       <img src="/products/sm/myspace-2.svg" alt="myspace-2" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
                         Streamline Your Stock Management
@@ -278,7 +279,7 @@ const SupplierManagementPage = () => {
                 </div>
                 <div className="col-span-3 lg:col-span-1">
                   <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
-                    <div className="flex lg:flex-col xl:flex-row lg:items-start gap-y-4 items-center gap-x-4 mb-4">
+                    <div className="flex lg:flex-col xl:flex-row lg:items-start xl:items-center gap-y-4 items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-3.svg" alt="myspace-3" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
                         Monitoring Partner Performance Indicators
@@ -293,7 +294,7 @@ const SupplierManagementPage = () => {
                 </div>
                 <div className="col-span-3 lg:col-span-1">
                   <div className="md:shadow-[0px_20px_40px_0px_rgba(8,4,64,0.08)] shadow-[0px_20px_40px_0px_rgba(8,4,64,0.06)] sm:p-10 px-4 py-6 rounded-[20px] h-full">
-                    <div className="flex lg:flex-col xl:flex-row gap-y-4 items-center gap-x-4 mb-4">
+                    <div className="flex lg:flex-col xl:flex-row lg:items-start xl:items-center gap-y-4 items-center gap-x-4 mb-4">
                       <img src="/products/sm/myspace-4.svg" alt="myspace-4" />
                       <h3 className="font-semibold sm:text-[22px] text-lg text-neutral-dark">
                         Optimize Your Payment Process
@@ -396,7 +397,7 @@ const SupplierManagementPage = () => {
 
         <section id="ntp">
           <motion.div
-            className="sm:px-24 relative xl:h-[796px] md:h-[600px] max-sm:mt-10 h-[570px] md:mb-[140px] mb-24 bg-[#F7F9FF]"
+            className="sm:px-24 relative xl:h-[796px] md:h-[600px] max-sm:mt-10 h-[570px] lg:mb-[240px] xl:mb-[140px] md:mb-[140px] mb-24 bg-[#F7F9FF]"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -428,13 +429,13 @@ const SupplierManagementPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="relative max-sm:mx-2">
-                  <img
+                  {/* <img
                     className="absolute object-cover top-0 left-0 max-sm:hidden"
                     src="/products/sm/ntp-1.svg"
                     alt="dashboard"
-                  />
+                  /> */}
                   <img
-                    className="absolute w-full object-cover top-0 left-0 sm:hidden"
+                    className="absolute w-full object-cover top-0 left-0"
                     src="/products/sm/ntp-mobile.svg"
                     alt="dashboard"
                   />
@@ -460,7 +461,7 @@ const SupplierManagementPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="relative sm:h-[576px] h-[416px] md:mb-[136px] mb-[60px]">
+            <div className="relative sm:h-[576px] h-[416px] md:mb-[136px] lg:mt-20 xl:mt-0 lg:mb-[136px] xl:mb-[60px] mb-[60px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{

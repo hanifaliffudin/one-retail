@@ -25,20 +25,25 @@ const OrderManagementSystemPage = () => {
       <NavbarWithCTAButton />
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
-          <div className="mt-[135px] sm:mb-[83px] mb-10 sm:h-[640px] h-[375px] relative">
+          <div className="mt-[135px] sm:mb-[83px] mb-10 sm:h-[620px] xl:h-[620px] lg:h-[536px] h-[375px] relative">
             <img
-              className="absolute object-cover h-full left-0"
+              className="absolute max-lg:object-cover lg:hidden max-lg:block xl:block xl:object-cover w-full h-full left-0"
               src="/products/oms/hero.svg"
               alt="hero-1"
             />
-            <div className="absolute left-0 bg-[#20202099] w-full sm:h-[640px] h-[375px]"></div>
+            <img
+              className="absolute max-lg:object-cover max-lg:hidden xl:hidden xl:object-cover w-full h-full left-0"
+              src="/products/oms/hero-lg.svg"
+              alt="hero-1"
+            />
+            <div className="absolute left-0 bg-[#20202099] w-full sm:h-[640px] xl:h-[620px] lg:h-[536px] h-[375px]"></div>
 
-            <div className="sm:max-w-[612px] absolute top-1/2 left-12 xl:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
-              <h1 className="sm:text-[40px] text-[22px] text-neutral-n-10 sm:leading-[62px] leading-[33px] font-bold mb-5">
+            <div className="xl:max-w-[612px lg:max-w-[475px] absolute top-1/2 left-12 xl:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
+              <h1 className="xl:text-[40px] lg:text-[32px] text-[22px] text-neutral-n-10 xl:leading-[62px] lg:leading-[48px] leading-[33px] font-bold mb-5">
                 Expand Your Possibiities{" "}
                 <span className="text-primary-p-40">Intensively</span>
               </h1>
-              <p className="sm:text-lg md:mb-6 mb-10 text-neutral-n-10">
+              <p className="xl:text-lg md:mb-6 mb-10 text-neutral-n-10">
                 serves you a central hub for managing sales and customer
                 transactions for your business, to ensure smooth and accurate
                 processing at the moment of purchase

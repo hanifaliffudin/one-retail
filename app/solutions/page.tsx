@@ -45,7 +45,7 @@ const SolutionsPage = () => {
                 business
               </p>
               <div className="flex justify-center px-4">
-                <h1 className="mb-10 text-center text-neutral-n-90 font-bold sm:text-[40px] text-[22px] sm:leading-[50px] leading-[33px] md:w-[683px]">
+                <h1 className="mb-10 text-center text-neutral-n-90 font-bold xl:text-[40px] lg:text-[32px] lg:leading-[40px] text-[22px] sm:leading-[50px] leading-[33px] lg:w-[576px] xl:w-[683px]">
                   <span className="text-primary">Simplify</span> Your Day-to-day
                   Operations to Scale Up Your Business
                 </h1>
@@ -185,7 +185,7 @@ const SolutionsPage = () => {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-3 gap-6 lg:px-12 px-4 xl:px-[155px]">
+            <div className="grid grid-cols-3 gap-6 lg:gap-x-4 lg:px-12 px-4 xl:px-[155px]">
               <motion.div
                 className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1"
                 initial={{ opacity: 0 }}
@@ -196,7 +196,7 @@ const SolutionsPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs">
+                <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs lg:whitespace-nowrap">
                   Satisfaction with Digital Shopping
                 </p>
                 <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
@@ -205,7 +205,7 @@ const SolutionsPage = () => {
                 <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
                   Customers satisfied with online digital shopping experience.
                 </p>
-                <p className="text-neutral-n-70 text-xs">
+                <p className="text-neutral-n-70 text-xs lg:whitespace-nowrap">
                   *data based on Statista and eMarketer in 2020
                 </p>
               </motion.div>
@@ -226,7 +226,7 @@ const SolutionsPage = () => {
                 <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
                   70%
                 </p>
-                <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
+                <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
                   Reporting high in digital transformation for business can
                   improve competitive insights
                 </p>
@@ -245,13 +245,13 @@ const SolutionsPage = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs">
+                <p className="text-primary-p-50 font-semibold mb-3 max-sm:text-xs lg:whitespace-nowrap">
                   Enhance efficiency, Reduce costs
                 </p>
                 <p className="text-primary-p-50 font-bold text-[32px] mb-5 max-sm:text-2xl">
                   69%
                 </p>
-                <p className="text-neutral-n-90 mb-11 max-sm:text-sm">
+                <p className="text-neutral-n-90 mb-5 max-sm:text-sm">
                   Digital transformation on retail can improve efficiency and
                   reducing cost at the same time
                 </p>

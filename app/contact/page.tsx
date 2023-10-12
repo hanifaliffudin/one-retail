@@ -103,7 +103,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="col-span-2 lg:col-span-1 max-lg:px-4">
-              <div className="lg:-mt-40 -mt-20 w-full bg-white rounded-xl shadow-[0px_20px_40px_0px_rgba(31,64,174,0.1)] lg:px-12 px-3 lg:py-14 py-4">
+              <div className="lg:-mt-40 -mt-20 w-full bg-white rounded-xl shadow-[0px_20px_40px_0px_rgba(31,64,174,0.1)] lg:px-8 xl:px-12 px-3 lg:py-10 xl:py-14 py-4">
                 <form action="">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="col-span-2 md:col-span-1">

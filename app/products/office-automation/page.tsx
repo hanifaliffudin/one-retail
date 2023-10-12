@@ -411,7 +411,7 @@ const OfficeAutomationPage = () => {
               </h2>
               <p
                 id="ees"
-                className="text-center max-sm:text-sm text-[#667085] md:mb-16 mb-6 px-4 lg:w-[824px]"
+                className="text-center max-sm:text-sm text-[#667085] lg:mb-[132px] xl:mb-[120px] md:mb-16 mb-6 px-4 lg:w-[824px]"
               >
                 Unlock powerful customer relationships with harness the
                 potential of our Customer Relationship Management for
@@ -421,7 +421,7 @@ const OfficeAutomationPage = () => {
           </motion.div>
 
           <div className="lg:px-12 xl:px-24 px-4">
-            <div className="grid grid-cols-2 sm:mb-[100px] md:mb-10 mb-6 lg:gap-x-12 xl:gap-x-20 gap-y-5">
+            <div className="grid grid-cols-2 sm:mb-[100px] lg:mb-[100px] md:mb-10 mb-6 lg:gap-x-12 xl:gap-x-20 gap-y-5">
               <div className="col-span-2 lg:col-span-1 order-last md:order-first">
                 <motion.div
                   className="h-full"

@@ -74,8 +74,8 @@ const BlogPage = () => {
             </h2>
             <div className="grid grid-cols-2 gap-x-7 gap-y-6">
               <div className="col-span-2 lg:col-span-1">
-                <div className="relative sm:h-[430px] img-hover-zoom-blog-popular-big-container">
-                  <div className="img-hover-zoom-blog-popular-big sm:h-[430px] h-[346px] rounded-xl">
+                <div className="relative xl:h-[430px] img-hover-zoom-blog-popular-big-container">
+                  <div className="img-hover-zoom-blog-popular-big lg:h-[381px] xl:h-[430px] h-[346px] rounded-xl">
                     <img
                       className="object-cover h-full w-full"
                       src="/blog/popular-1.svg"
@@ -116,9 +116,9 @@ const BlogPage = () => {
                     href="/blog/slug"
                     className="flex max-sm:flex-col gap-x-4 gap-y-4 img-hover-zoom-blog-popular-small-container"
                   >
-                    <div className="img-hover-zoom-blog-popular-small min-h-[110px] min-w-[110px] sm:max-h-[110px] sm:max-w-[110px] overflow-hidden rounded-md">
+                    <div className="img-hover-zoom-blog-popular-small lg:min-w-[110px] lg:max-w-[110px] xl:h-[110px] lg:h-[95px] overflow-hidden rounded-md">
                       <img
-                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full"
+                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full lg:w-[110px] lg:h-[95px]"
                         src="/blog/popular-2.svg"
                         alt="popular-2"
                       />
@@ -138,9 +138,9 @@ const BlogPage = () => {
                     href="/blog/slug"
                     className="flex max-sm:flex-col gap-x-4 gap-y-4 img-hover-zoom-blog-popular-small-container"
                   >
-                    <div className="img-hover-zoom-blog-popular-small min-h-[110px] min-w-[110px] sm:max-h-[110px] sm:max-w-[110px] overflow-hidden rounded-md">
+                    <div className="img-hover-zoom-blog-popular-small lg:min-w-[110px] lg:max-w-[110px] xl:h-[110px] lg:h-[95px] overflow-hidden rounded-md">
                       <img
-                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full"
+                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full lg:w-[110px] lg:h-[95px]"
                         src="/blog/popular-3.svg"
                         alt="popular-3"
                       />
@@ -160,9 +160,9 @@ const BlogPage = () => {
                     href="/blog/slug"
                     className="flex max-sm:flex-col gap-x-4 gap-y-4 img-hover-zoom-blog-popular-small-container"
                   >
-                    <div className="img-hover-zoom-blog-popular-small min-h-[110px] min-w-[110px] sm:max-h-[110px] sm:max-w-[110px] overflow-hidden rounded-md">
+                    <div className="img-hover-zoom-blog-popular-small lg:min-w-[110px] lg:max-w-[110px] xl:h-[110px] lg:h-[95px] overflow-hidden rounded-md">
                       <img
-                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full"
+                        className="object-cover min-h-[110px] min-w-[110px] max-h-[110px] sm:max-w-[110px] rounded max-sm:w-full lg:w-[110px] lg:h-[95px]"
                         src="/blog/popular-4.svg"
                         alt="popular-4"
                       />

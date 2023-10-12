@@ -128,8 +128,8 @@ const SolutionsPage = () => {
 
         <section id="oneretail">
           <div className="md:py-20 py-10 lg:px-12 xl:px-24 px-4">
-            <div className="grid grid-cols-2 md:mb-11 mb-6 text-neutral-n-90">
-              <h2 className="col-span-2 sm:col-span-1 sm:text-[32px] text-xl sm:leading-[40px] max-sm:mb-3 font-semibold">
+            <div className="grid grid-cols-2 md:mb-11 lg:gap-x-20 mb-6 text-neutral-n-90">
+              <h2 className="col-span-2 sm:col-span-1 xl:text-[32px] lg:text-[28px] lg:leading-[35px] text-xl xl:leading-[40px] max-sm:mb-3 font-semibold">
                 One Retail is open with <br className="hidden sm:block" />{" "}
                 variety of ways
               </h2>
@@ -149,7 +149,7 @@ const SolutionsPage = () => {
               }}
             >
               <div className="grid grid-cols-3 divide-y sm:divide-y-0 sm:divide-x">
-                <div className="col-span-3 sm:col-span-1 sm:pr-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:pr-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/point-of-sale.svg"
@@ -164,7 +164,7 @@ const SolutionsPage = () => {
                     We can work together with your preferences hardware.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 sm:px-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:px-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/store.svg"
@@ -178,7 +178,7 @@ const SolutionsPage = () => {
                     preferences hardware that you choose.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 sm:pl-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:pl-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/customer-service.svg"
