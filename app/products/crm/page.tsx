@@ -364,12 +364,17 @@ const CRMPage = () => {
         <section>
           <div
             id="el"
-            className="relative max-sm:h-[2300px] max-lg:h-[2450px] max-xl:h-[1800px] h-[2100px]"
+            className="relative max-sm:h-[2300px] max-lg:h-[2450px] max-xl:h-[1700px] h-[2100px]"
           >
             <img
-              className="absolute top-0 left-0 max-xl:h-[1800px] object-cover max-lg:hidden"
+              className="absolute top-0 left-0 max-xl:h-[1800px] object-cover max-xl:hidden"
               src="/products/crm/bg-crm.png"
               alt="bg-crm"
+            />
+            <img
+              className="absolute top-0 left-0 w-full object-cover max-lg:hidden xl:hidden"
+              src="/products/crm/bg-crm-lg.png"
+              alt="bg-crm-lg"
             />
             <img
               className="absolute top-0 left-0 lg:hidden w-full max-md:h-[2100px] md:h-[2300px] xl:h-[2400px]"
@@ -423,7 +428,7 @@ const CRMPage = () => {
               >
                 <div
                   id="gamification"
-                  className="flex justify-center max-lg:mt-[479px] lg:mt-[400px] xl:mt-[479px] max-sm:mt-[500px] lg:mb-12 xl:mb-20 mb-6"
+                  className="flex justify-center max-lg:mt-[479px] lg:mt-[300px] xl:mt-[479px] max-sm:mt-[500px] lg:mb-12 xl:mb-20 mb-6"
                 >
                   <div className="w-[557px] text-center">
                     <h2 className="text-white font-bold xl:text-[36px] lg:text-[28px] text-xl xl:leading-[54px] lg:leading-[42px] mb-3">
@@ -750,7 +755,7 @@ const CRMPage = () => {
         <FAQ />
 
         <section>
-          <div className="relative lg:h-[300px] xl:h-[369px] cta-crm max-xl:mt-20">
+          <div className="relative sm:h-[480px] lg:h-[300px] xl:h-[369px] cta-crm max-xl:mt-20">
             <div className="grid grid-cols-12 xl:px-[160px] lg:px-[81px] md:px-8">
               <div className="col-span-12 lg:col-span-6 text-white lg:max-w-[503px] flex max-lg:justify-center items-center">
                 <div className="lg:max-w-[370px] max-sm:text-center max-sm:pt-8">
@@ -792,7 +797,7 @@ const CRMPage = () => {
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-6">
-                <div className="relative lg:h-[308px] xl:h-[369px] max-sm:h-[300px] max-md:h-[330px] w-full">
+                <div className="relative sm:h-[320px] lg:h-[300px] xl:h-[369px] max-sm:h-[300px] max-md:h-[330px] w-full">
                   <motion.div
                     className="w-full h-full"
                     initial={{ opacity: 0 }}
@@ -803,9 +808,14 @@ const CRMPage = () => {
                     viewport={{ once: true }}
                   >
                     <img
-                      className="absolute h-full bottom-0 left-1/2 max-md:object-cover transform -translate-x-1/2 rounded-[20px] max-md:px-0 max-xl:px-6"
+                      className="absolute h-full bottom-0 max-lg:hidden left-1/2 max-md:object-cover transform -translate-x-1/2 rounded-[20px] max-md:px-0 max-xl:px-6"
                       src="/products/crm/circle-crop.png"
                       alt="circle-crop"
+                    />
+                    <img
+                      className="absolute h-full bottom-0 lg:hidden left-1/2 max-md:object-cover transform -translate-x-1/2 rounded-[20px] max-md:px-0 max-xl:px-6"
+                      src="/products/crm/circle-mobile.png"
+                      alt="circle-mobile"
                     />
                   </motion.div>
 

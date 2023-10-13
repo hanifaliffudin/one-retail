@@ -54,7 +54,7 @@ export default function Home() {
       <main className="max-w-screen-2xl mx-auto">
         <section className="bg-white">
           <div className="grid mx-auto lg:gap-12 xl:gap-0 grid-cols-12">
-            <div className="lg:ml-12 xl:ml-24 px-4 md:px-0 lg:mt-[112px] xl:mt-[180px] mt-6 md:mb-7 lg:col-span-6 xl:col-span-5 col-span-12 order-last md:order-first">
+            <div className="lg:ml-12 xl:ml-24 px-4 md:px-0 lg:mt-[112px]  xl:mt-[180px] mt-6 md:mb-7 lg:col-span-6 xl:col-span-5 col-span-12 order-last md:order-first">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -106,8 +106,8 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
-            <div className="xl:mt-20 lg:mt-28 xl:col-span-7 lg:col-span-6 col-span-12 flex lg:mr-12 xl:mr-0">
-              <div className="relative w-screen sm:w-full">
+            <div className="xl:mt-20 lg:mt-28 xl:col-span-7 lg:col-span-6 col-span-12 max-sm:mt-20 flex lg:mr-12 xl:mr-0">
+              <div className="relative w-screen sm:w-full max-sm:h-[346px]">
                 <motion.div
                   className="h-full"
                   initial={{ opacity: 0 }}
@@ -117,7 +117,7 @@ export default function Home() {
                   }}
                 >
                   <img
-                    className="xl:absolute max-xl:hidden mx-auto xl:mx-0 h-[400px] lg:h-1/2 xl:h-full xl:top-1/2 xl:right-36 xl:transform xl:-translate-y-1/2"
+                    className="xl:absolute max-lg:block max-xl:hidden mx-auto xl:mx-0 max-sm:h-[346px] h-[400px] lg:h-1/2 xl:h-full xl:top-1/2 xl:right-36 xl:transform xl:-translate-y-1/2"
                     src="/home/hero-1.svg"
                     alt="hero-1"
                   />
@@ -325,7 +325,7 @@ export default function Home() {
             }}
             viewport={{ once: true }}
           >
-            <div className="pb-8 flex flex-nowrap overflow-x-auto xl:gap-12 lg:gap-8 px-4 md:px-0">
+            <div className="pb-8 flex flex-nowrap overflow-x-auto xl:gap-12 gap-3 lg:gap-8 px-4 md:px-0">
               <div className="bg-white p-5 rounded-lg min-w-[340px] lg:ml-[43px] xl:ml-[100px] shadow-[0px_2px_12px_0px_rgba(164,164,164,0.25)]">
                 <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 ">
                   <img src="/icons/ShoppingCart.svg" alt="ShoppingCart" />

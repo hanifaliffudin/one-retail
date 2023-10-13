@@ -50,11 +50,11 @@ const SolutionsPage = () => {
                   Operations to Scale Up Your Business
                 </h1>
               </div>
-              <div className="flex justify-center md:mb-20 mb-8">
+              <div className="flex justify-center md:mb-20 mb-8 ">
                 <Link
                   onClick={handleScroll}
                   href="#revolutionize"
-                  className="btn-border-primary max-sm:text-xs py-2.5 px-4 font-semibold"
+                  className="btn-border-primary max-sm:text-xs py-2.5 px-4 w-fit font-semibold"
                 >
                   Learn More
                 </Link>
@@ -185,7 +185,7 @@ const SolutionsPage = () => {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-3 gap-6 lg:gap-x-4 lg:px-12 px-4 xl:px-[155px]">
+            <div className="grid grid-cols-3 gap-6 lg:gap-x-4 lg:px-12 xl:px-[155px]">
               <motion.div
                 className="border border-[#E0E0E0] rounded-lg p-5 col-span-3 sm:col-span-1"
                 initial={{ opacity: 0 }}

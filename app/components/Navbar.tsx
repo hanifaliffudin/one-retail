@@ -573,7 +573,7 @@ export default function NavbarWithCTAButton() {
 
         <div className="bg-[#F5F5F5]">
           {pathname.includes("/products/order-management-system") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -648,7 +648,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/crm") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -734,7 +734,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/office-automation") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"
@@ -809,7 +809,7 @@ export default function NavbarWithCTAButton() {
           )}
 
           {pathname.includes("/products/supplier-management") && (
-            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
+            <div className="max-w-screen-xl mx-auto bg-[#F5F5F5] flex max-sm:gap-x-3 items-center px-4 lg:px-12 xl:px-4 w-full h-[55px] border-t border-t-[#EDEDED]">
               <div className="flex items-center gap-x-5">
                 <img
                   className="min-w-[24px]"

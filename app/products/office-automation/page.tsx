@@ -832,7 +832,8 @@ const OfficeAutomationPage = () => {
                 transition: { duration: 0.5 },
               }}
               viewport={{ once: true }}
-              src="/products/oa/testimonial.svg"
+              className="lg:w-[298px] xl:w-auto max-sm:w-[254px]"
+              src="/products/oa/testimonial.png"
               alt="testimonial"
             ></motion.img>
 
@@ -845,7 +846,7 @@ const OfficeAutomationPage = () => {
                   transition: { duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="max-sm:w-10"
+                className="max-sm:w-10 lg:w-[52px] xl:w-auto"
                 src="/products/oa/quote.svg"
                 alt="quote"
               ></motion.img>

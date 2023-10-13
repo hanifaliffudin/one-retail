@@ -68,8 +68,10 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                   Back
                 </div>
                 <hr className="my-8 max-xl:hidden" />
-                <div className="lg:flex xl:flex-col lg:items-center xl:items-start gap-x-2">
-                  <p className="xl:mb-4 text-neutral-n-80 font-medium">Tag</p>
+                <div className="lg:flex xl:flex-col lg:items-center xl:items-start gap-2">
+                  <p className="xl:mb-4 max-sm:mb-4 text-neutral-n-80 font-medium">
+                    Tag
+                  </p>
                   <div className="flex flex-wrap gap-1">
                     <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
                       #Customer

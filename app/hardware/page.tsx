@@ -46,7 +46,7 @@ const SolutionsPage = () => {
                 <Link
                   onClick={handleScroll}
                   href="#oneretail"
-                  className="btn-border-primary max-sm:text-xs py-2.5 px-4 font-semibold"
+                  className="btn-border-primary max-sm:text-xs py-2.5 px-4 w-fit font-semibold"
                 >
                   Learn More
                 </Link>

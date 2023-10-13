@@ -13,7 +13,7 @@ const BlogCard = ({
   paragraph,
 }: BlogProps) => {
   return (
-    <div className="max-sm:px-4 sm:w-[297px] bg-white rounded-lg">
+    <div className="max-sm:mx-4 sm:w-[297px] bg-white rounded-lg">
       <Link
         href={`/blog/${title}`}
         className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] w-full group "

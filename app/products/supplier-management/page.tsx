@@ -23,7 +23,7 @@ const SupplierManagementPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
           <motion.div
-            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] lg:h-[550px] h-[620px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
+            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] lg:h-[550px] md:h-[820px] h-[590px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -397,7 +397,7 @@ const SupplierManagementPage = () => {
 
         <section id="ntp">
           <motion.div
-            className="sm:px-24 relative xl:h-[796px] md:h-[600px] max-sm:mt-10 h-[570px] lg:mb-[240px] xl:mb-[140px] md:mb-[140px] mb-24 bg-[#F7F9FF]"
+            className="sm:px-24 relative xl:h-[796px] md:h-[630px] max-sm:mt-10 h-[570px] lg:mb-[103px] xl:mb-[140px] md:mb-[140px] mb-210bg-[#F7F9FF]"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -406,11 +406,11 @@ const SupplierManagementPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="absolute w-full text-center md:top-8 left-1/2 transform -translate-x-1/2 xl:text-[100px] lg:text-[90px] text-[34px] leading-[180px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#EDEFF7B2] to-[#EDEFF700]">
+            <div className="absolute w-full text-center top-5 md:top-8 lg:top-0 xl:top-8 left-1/2 transform -translate-x-1/2 xl:text-[100px] lg:text-[90px] text-[34px] md:leading-[180px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#EDEFF7B2] to-[#EDEFF700]">
               NON TRADE PORTAL
             </div>
-            <div className="absolute z-10 top-[140px] w-full xl:px-24 lg:px-12 left-1/2 transform -translate-x-1/2">
-              <p className="font-medium max-sm:px-4 sm:text-xl text-sm leading-9 text-center xl:mb-12 mb-6">
+            <div className="absolute z-10 top-11 md:top-[140px] lg:top-[108px] xl:top-[140px] w-full xl:px-24 lg:px-12 left-1/2 transform -translate-x-1/2">
+              <p className="font-medium max-sm:px-4 sm:text-xl text-sm leading-9 text-center xl:mb-12 mb-6 lg:mb-[30px]">
                 One Retail <span className="font-bold">Non Trade Portal</span>{" "}
                 supplier support comprehensive registration form with level of
                 approval, allow Non Trade Supplier to access their Purchase
@@ -429,14 +429,14 @@ const SupplierManagementPage = () => {
                 viewport={{ once: true }}
               >
                 <div className="relative max-sm:mx-2">
-                  {/* <img
+                  <img
                     className="absolute object-cover top-0 left-0 max-sm:hidden"
                     src="/products/sm/ntp-1.svg"
                     alt="dashboard"
-                  /> */}
+                  />
                   <img
-                    className="absolute w-full object-cover top-0 left-0"
-                    src="/products/sm/ntp-mobile.svg"
+                    className="absolute w-full object-cover top-0 left-0 sm:hidden"
+                    src="/products/sm/ntp-lg.svg"
                     alt="dashboard"
                   />
                 </div>
@@ -461,7 +461,7 @@ const SupplierManagementPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="relative sm:h-[576px] h-[416px] md:mb-[136px] lg:mt-20 xl:mt-0 lg:mb-[136px] xl:mb-[60px] mb-[60px]">
+            <div className="relative sm:h-[576px] h-[416px] xl:mt-0 xl:mb-[60px] mb-[60px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{

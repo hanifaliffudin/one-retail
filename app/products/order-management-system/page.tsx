@@ -38,7 +38,7 @@ const OrderManagementSystemPage = () => {
             />
             <div className="absolute left-0 bg-[#20202099] w-full sm:h-[640px] xl:h-[620px] lg:h-[536px] h-[375px]"></div>
 
-            <div className="xl:max-w-[612px lg:max-w-[475px] absolute top-1/2 left-12 xl:left-24 transform -translate-y-1/2 max-sm:text-center max-sm:px-4">
+            <div className="xl:max-w-[612px lg:max-w-[475px] absolute top-1/2 lg:left-12 xl:left-24 transform -translate-y-1/2 max-sm:text-center max-lg:px-4">
               <h1 className="xl:text-[40px] lg:text-[32px] text-[22px] text-neutral-n-10 xl:leading-[62px] lg:leading-[48px] leading-[33px] font-bold mb-5">
                 Expand Your Possibiities{" "}
                 <span className="text-primary-p-40">Intensively</span>
@@ -285,9 +285,9 @@ const OrderManagementSystemPage = () => {
                 </p>
               </div>
 
-              <div className="bg-[#EDEFF7] px-[22px] pt-6 xl:pt-9 rounded-[20px] overflow-y-auto sm:mr-6 max-sm:mb-5">
+              <div className="bg-[#EDEFF7] px-[22px] pt-6 xl:pt-9 rounded-[20px] overflow-y-auto sm:mr-6 max-sm:mb-5 ">
                 <Swiper
-                  className="xl:max-h-[605px] lg:max-h-[433px]"
+                  className="xl:max-h-[605px] lg:max-h-[433px] h-[480px]"
                   slidesPerView={1}
                   direction={"vertical"}
                   autoplay={{
