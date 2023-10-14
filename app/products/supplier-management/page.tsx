@@ -30,8 +30,8 @@ const SupplierManagementPage = () => {
               transition: { duration: 0.5 },
             }}
           >
-            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8 lg:gap-x-[55px]">
-              <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl:pl-24 sm:pl-10">
+            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8 lg:gap-x-[40px] z-10 absolute top-0 left-0 w-full">
+              <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl:pl-24 lg:pl-14 sm:pl-10 max-sm:pt-5">
                 <motion.div
                   className="xl:max-w-[430px]"
                   initial={{ opacity: 0 }}
@@ -96,12 +96,17 @@ const SupplierManagementPage = () => {
                     x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
-                  className="pl-4 -mb-28 md:rounded-tr-[20px] w-full max-lg:hidden xl:hidden"
+                  className="pl-4 -mb-32 md:rounded-tr-[20px] w-full max-lg:hidden xl:hidden"
                   src="/products/sm/dashboard-lg.png"
                   alt="hero-2"
                 ></motion.img>
               </div>
             </div>
+            <img
+              className="absolute bottom-0 left-0"
+              src="/products/sm/hero-1.svg"
+              alt=""
+            />
           </motion.div>
 
           <div className="xl:px-24 lg:px-12 px-4 sm:mb-[100px] mb-10">
@@ -397,7 +402,7 @@ const SupplierManagementPage = () => {
 
         <section id="ntp">
           <motion.div
-            className="sm:px-24 relative xl:h-[796px] md:h-[630px] max-sm:mt-10 h-[570px] lg:mb-[103px] xl:mb-[140px] md:mb-[140px] mb-210bg-[#F7F9FF]"
+            className="sm:px-24 relative xl:h-[772px] lg:h-[610px] md:h-[630px] max-sm:mt-10 h-[495px] lg:mb-[103px] xl:mb-[140px] md:mb-[140px] mb-10 bg-[#F7F9FF]"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -430,12 +435,12 @@ const SupplierManagementPage = () => {
               >
                 <div className="relative max-sm:mx-2">
                   <img
-                    className="absolute object-cover top-0 left-0 max-sm:hidden"
+                    className="absolute object-cover top-0 left-0 max-xl:hidden"
                     src="/products/sm/ntp-1.svg"
                     alt="dashboard"
                   />
                   <img
-                    className="absolute w-full object-cover top-0 left-0 sm:hidden"
+                    className="absolute w-full object-cover top-0 lg:h-[433px] xl:h-auto left-0 xl:hidden"
                     src="/products/sm/ntp-lg.svg"
                     alt="dashboard"
                   />
