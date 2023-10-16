@@ -440,8 +440,8 @@ const OfficeAutomationPage = () => {
                 >
                   <div className="flex h-full justify-left max-lg:justify-center items-center">
                     <img
-                      className="w-full h-full object-cover rounded-xl"
-                      src="/products/oa/ess.svg"
+                      className="w-full h-full rounded-xl"
+                      src="/products/oa/ess-lg.svg"
                       alt="ess"
                     />
                   </div>
@@ -746,7 +746,7 @@ const OfficeAutomationPage = () => {
                 >
                   <div className="flex h-full justify-left items-center">
                     <img
-                      className="w-full h-full object-cover rounded-xl"
+                      className="w-full h-full rounded-xl"
                       src="/products/oa/rm.svg"
                       alt="rm"
                     />

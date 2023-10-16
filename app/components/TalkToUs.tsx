@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const TalkToUs = () => {
   return (
     <section>
-      <div className="grid grid-cols-5 md:py-20 py-10 xl:px-[120px] lg:px-12 gap-y-4 px-4 mb-16">
+      <div className="grid grid-cols-5 xl:py-20 py-10 xl:px-[120px] lg:px-12 gap-y-4 px-4 mb-16">
         <div className="lg:col-span-2 col-span-5">
           <motion.div
             initial={{ opacity: 0 }}
@@ -16,7 +16,7 @@ const TalkToUs = () => {
             viewport={{ once: true }}
           >
             <div className="bg-[#0F2057] md:h-[588px] h-[366px] relative rounded-xl text-white md:py-10 py-6 md:px-12 px-6">
-              <h2 className="font-bold sm:text-[32px] sm:leading-[48px] text-xl text-neutral-n-10 mb-5">
+              <h2 className="font-bold xl:text-[32px] lg:text-[28px] lg:leading-[42px] xl:leading-[48px] text-xl text-neutral-n-10 mb-5">
                 Talk to us and see how One Retail work for your business
               </h2>
               <p className="max-sm:text-sm">

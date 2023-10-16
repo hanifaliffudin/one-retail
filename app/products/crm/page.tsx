@@ -409,7 +409,7 @@ const CRMPage = () => {
         <section>
           <div
             id="el"
-            className="relative max-sm:h-[2300px] max-lg:h-[2450px] max-xl:h-[1700px] h-[2100px]"
+            className="relative max-sm:h-[2300px] max-lg:h-[2450px] max-xl:h-[1640px] h-[2100px]"
           >
             <img
               className="absolute top-0 left-0 max-xl:h-[1800px] object-cover max-xl:hidden"
@@ -417,7 +417,7 @@ const CRMPage = () => {
               alt="bg-crm"
             />
             <img
-              className="absolute top-0 left-0 w-full object-cover max-lg:hidden xl:hidden"
+              className="absolute top-0 left-0  max-lg:hidden xl:hidden"
               src="/products/crm/bg-crm-lg.png"
               alt="bg-crm-lg"
             />
@@ -498,12 +498,12 @@ const CRMPage = () => {
               >
                 <div className="flex flex-wrap items-center justify-center gap-x-[59px] gap-y-5 sm:mb-10 xl:mb-[65px] mb-6 px-4">
                   <img
-                    className="order-last lg:order-first max-sm:hidden"
+                    className="order-last lg:order-first max-xl:hidden"
                     src="/products/crm/levelup-1.svg"
                     alt="level up"
                   />
                   <img
-                    className="order-last lg:order-first sm:hidden"
+                    className="order-last lg:order-first xl:hidden"
                     src="/products/crm/levelup-1-mobile.svg"
                     alt="level up"
                   />
@@ -568,12 +568,12 @@ const CRMPage = () => {
                   viewport={{ once: true }}
                 >
                   <img
-                    className="max-sm:hidden"
+                    className="max-xl:hidden"
                     src="/products/crm/levelup-3.svg"
                     alt="level up"
                   />
                   <img
-                    className="sm:hidden"
+                    className="xl:hidden"
                     src="/products/crm/levelup-3-mobile.svg"
                     alt="level up"
                   />
@@ -607,7 +607,7 @@ const CRMPage = () => {
         <section>
           <div
             id="ec"
-            className="sm:px-24 px-4 sm:mb-[100px] max-sm:mb-10 max-sm:-mt-32 lg:mt-12"
+            className="xl:px-24 lg:px-12 px-4 sm:mb-[100px] max-sm:mb-10 max-sm:-mt-32 lg:mt-12"
           >
             <motion.div
               initial={{ opacity: 0 }}

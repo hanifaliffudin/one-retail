@@ -992,7 +992,7 @@ export default function Home() {
                   <div className={exploreIndex == 1 ? "" : "hidden"}>
                     <div className="flex justify-center">
                       <img
-                        className="h-[329px] object-cover"
+                        className="xl:h-[329px] lg:h-[298px]"
                         src={`/home/oms-${imageSlideIndex}.svg`}
                         alt=""
                       />
@@ -1078,7 +1078,7 @@ export default function Home() {
                   <div className={exploreIndex == 2 ? "" : "hidden"}>
                     <div className="flex justify-center">
                       <img
-                        className="h-[329px] object-cover"
+                        className="xl:h-[329px] lg:h-[298px]"
                         src={`/home/crm-${imageSlideIndex}.svg`}
                         alt=""
                       />
@@ -1197,7 +1197,7 @@ export default function Home() {
                   <div className={exploreIndex == 3 ? "" : "hidden"}>
                     <div className="flex justify-center">
                       <img
-                        className="h-[329px] object-cover"
+                        className="xl:h-[329px] lg:h-[298px]"
                         src={`/home/oa-new-${imageSlideIndex}.svg`}
                         alt=""
                       />
@@ -1283,7 +1283,7 @@ export default function Home() {
                   <div className={exploreIndex == 4 ? "" : "hidden"}>
                     <div className="flex justify-center">
                       <img
-                        className="h-[329px] object-cover"
+                        className="xl:h-[329px] lg:h-[298px]"
                         src={`/home/sm-${imageSlideIndex}.svg`}
                         alt=""
                       />

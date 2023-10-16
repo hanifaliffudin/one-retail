@@ -86,7 +86,7 @@ const SupplierManagementPage = () => {
                     transition: { duration: 0.5 },
                   }}
                   className="pl-4 -mb-28 md:rounded-tr-[20px] w-full sm:hidden"
-                  src="/products/sm/dashboard.svg"
+                  src="/products/sm/dashboard.png"
                   alt="hero-2"
                 ></motion.img>
                 <motion.img
@@ -441,7 +441,7 @@ const SupplierManagementPage = () => {
                   />
                   <img
                     className="absolute w-full object-cover top-0 lg:h-[433px] xl:h-auto left-0 xl:hidden"
-                    src="/products/sm/ntp-lg.svg"
+                    src="/products/sm/ntp-lg.png"
                     alt="dashboard"
                   />
                 </div>
