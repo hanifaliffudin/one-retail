@@ -1198,7 +1198,7 @@ export default function Home() {
                     <div className="flex justify-center">
                       <img
                         className="h-[329px] object-cover"
-                        src={`/home/oa-${imageSlideIndex}.svg`}
+                        src={`/home/oa-new-${imageSlideIndex}.svg`}
                         alt=""
                       />
                     </div>
@@ -1605,13 +1605,13 @@ export default function Home() {
                         loop={true}
                       >
                         <SwiperSlide>
-                          <img src="/home/oa-1.svg" alt="oa" />
+                          <img src="/home/oa-new-1.svg" alt="oa" />
                         </SwiperSlide>
                         <SwiperSlide>
-                          <img src="/home/oa-2.svg" alt="oa" />
+                          <img src="/home/oa-new-2.svg" alt="oa" />
                         </SwiperSlide>
                         <SwiperSlide>
-                          <img src="/home/oa-3.svg" alt="oa" />
+                          <img src="/home/oa-new-3.svg" alt="oa" />
                         </SwiperSlide>
                       </Swiper>
                     </div>

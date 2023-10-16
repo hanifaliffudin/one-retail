@@ -166,19 +166,64 @@ const CRMPage = () => {
               Been Trusted By
             </h2>
 
-            <div className="flex overflow-x-auto">
-              <img src="/home/aeon.svg" alt="aeon" />
-              <img src="/home/cmhl.svg" alt="cmhl" />
-              <img src="/home/aeon-wellness.svg" alt="aeon-wellness" />
-              <img src="/home/city.svg" alt="city" />
-              <img src="/home/pahtama.svg" alt="pahtama" />
-              <img src="/home/kids.svg" alt="kids" />
+            <div className="h-[100px]">
+              <Swiper
+                className="max-h-[100px]"
+                slidesPerView={1}
+                direction={"vertical"}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                speed={1000}
+                modules={[Autoplay]}
+                loop
+              >
+                <SwiperSlide>
+                  <div className="flex overflow-x-hidden">
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/aeon.svg"
+                      alt="aeon"
+                    />
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/cmhl.svg"
+                      alt="cmhl"
+                    />
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/aeon-wellness.svg"
+                      alt="aeon-wellness"
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex overflow-x-hidden">
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/aeon-big.svg"
+                      alt="aeon-big"
+                    />
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/pahtama.svg"
+                      alt="pahtama"
+                    />
+                    <img
+                      className="max-w-[150px]"
+                      src="/home/city.svg"
+                      alt="city"
+                    />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </section>
 
         <section>
-          <div className="grid grid-cols-2 md:mt-20 mt-10 sm:px-24 px-4 lg:gap-x-12 xl:gap-x-[107px] gap-y-6">
+          <div className="grid grid-cols-2 md:mt-20 mt-5 sm:px-24 px-4 lg:gap-x-12 xl:gap-x-[107px] gap-y-6">
             <motion.div
               className="col-span-2 lg:col-span-1 relative lg:h-[456px] max-md:h-[340px] md:h-[500px] order-last md:order-first"
               initial={{ opacity: 0 }}
@@ -377,7 +422,7 @@ const CRMPage = () => {
               alt="bg-crm-lg"
             />
             <img
-              className="absolute top-0 left-0 lg:hidden w-full max-md:h-[2100px] md:h-[2300px] xl:h-[2400px]"
+              className="absolute top-0 left-0 lg:hidden w-full max-sm:h-[2120px] md:h-[2300px] xl:h-[2400px]"
               src="/products/crm/bg-crm-mobile.png"
               alt="bg-crm-mobile"
             />
@@ -453,8 +498,13 @@ const CRMPage = () => {
               >
                 <div className="flex flex-wrap items-center justify-center gap-x-[59px] gap-y-5 sm:mb-10 xl:mb-[65px] mb-6 px-4">
                   <img
-                    className="order-last lg:order-first"
+                    className="order-last lg:order-first max-sm:hidden"
                     src="/products/crm/levelup-1.svg"
+                    alt="level up"
+                  />
+                  <img
+                    className="order-last lg:order-first sm:hidden"
+                    src="/products/crm/levelup-1-mobile.svg"
                     alt="level up"
                   />
                   <div className="sm:w-[383px] max-sm:text-center">
@@ -517,7 +567,16 @@ const CRMPage = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  <img src="/products/crm/levelup-3.svg" alt="level up" />
+                  <img
+                    className="max-sm:hidden"
+                    src="/products/crm/levelup-3.svg"
+                    alt="level up"
+                  />
+                  <img
+                    className="sm:hidden"
+                    src="/products/crm/levelup-3-mobile.svg"
+                    alt="level up"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -771,7 +830,7 @@ const CRMPage = () => {
                     <h3 className="font-bold sm:text-[32px] text-xl sm:leading-[48px] mb-2">
                       Get in Touch Today!
                     </h3>
-                    <p className="text-[#EDEDED] mb-8 max-md:px-4">
+                    <p className="text-[#EDEDED] mb-3 sm:mb-8 max-md:px-4">
                       Reach Out and Experience Our Stellar Customer Support:
                       We're Here to Serve You!
                     </p>
@@ -788,7 +847,7 @@ const CRMPage = () => {
                     <div className="flex max-lg:justify-center">
                       <Link
                         href="/contact"
-                        className="bg-white font-bold py-2.5 px-4 rounded-md text-primary"
+                        className="bg-white font-bold py-2.5 max-sm:px-[39px] max-sm:text-[12px] px-4 rounded-md text-primary"
                       >
                         Contact Us
                       </Link>
@@ -828,12 +887,12 @@ const CRMPage = () => {
                     viewport={{ once: true }}
                   >
                     <img
-                      className="absolute xl:right-[58px] xl:top-[25px] max-xl:top-1/2 max-xl:left-1/2 max-xl:transform max-xl:-translate-x-1/2 max-xl:-translate-y-1/2 z-10 max-md:hidden"
+                      className="absolute lg:w-10/12 xl:w-auto xl:right-[58px] xl:top-[25px] max-xl:top-1/2 max-xl:left-1/2 max-xl:transform max-xl:-translate-x-1/2 max-xl:-translate-y-1/2 z-10 max-md:hidden"
                       src="/products/crm/cta-1.svg"
                       alt="cta-1"
                     />
                     <img
-                      className="absolute md:-right-7 md:bottom-[20px] top-2/3 left-3/4 transform -translate-x-1/2 -translate-y-1/2 z-[20] max-md:hidden"
+                      className="absolute md:-right-7 md:bottom-[20px] lg:w-6/12 lg:top-3/4 xl:top-2/3 top-2/3 left-3/4 transform -translate-x-1/2 -translate-y-1/2 z-[20] max-md:hidden"
                       src="/products/crm/cta-2.svg"
                       alt="cta-2"
                     />

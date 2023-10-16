@@ -429,7 +429,7 @@ const OrderManagementSystemPage = () => {
           </div>
         </section>
 
-        <TalkToUs />
+        {/* <TalkToUs /> */}
       </main>
       <FooterWithSocialMediaIcons />
     </>

@@ -37,7 +37,7 @@ const SolutionsPage = () => {
                 Business
               </p>
               <div className="flex justify-center px-4">
-                <h1 className="mb-10 text-center text-neutral-n-90 font-bold sm:text-[40px] text-[22px] sm:leading-[50px] leading-[33px] md:w-[683px]">
+                <h1 className="md:mb-10 mb-6 text-center text-neutral-n-90 font-bold sm:text-[40px] text-[22px] sm:leading-[50px] leading-[33px] md:w-[683px]">
                   <span className="text-primary">Advanced</span> your business
                   operations with high-performance
                 </h1>
@@ -149,7 +149,7 @@ const SolutionsPage = () => {
               }}
             >
               <div className="grid grid-cols-3 divide-y sm:divide-y-0 sm:divide-x">
-                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:pr-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 max-sm:p-4 lg:p-5 xl:pr-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/point-of-sale.svg"
@@ -164,7 +164,7 @@ const SolutionsPage = () => {
                     We can work together with your preferences hardware.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:px-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 max-sm:p-4 lg:p-5 xl:px-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/store.svg"
@@ -178,7 +178,7 @@ const SolutionsPage = () => {
                     preferences hardware that you choose.
                   </p>
                 </div>
-                <div className="col-span-3 sm:col-span-1 lg:p-5 xl:pl-10 sm:py-0 md:py-2.5 py-[26px]">
+                <div className="col-span-3 sm:col-span-1 max-sm:p-4 lg:p-5 xl:pl-10 sm:py-0 md:py-2.5 py-[26px]">
                   <img
                     className="mb-5 max-sm:w-7"
                     src="/hardware/customer-service.svg"

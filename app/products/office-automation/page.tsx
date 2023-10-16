@@ -22,14 +22,14 @@ const OfficeAutomationPage = () => {
       <NavbarWithCTAButton />
       <main id="overview" className="max-w-screen-2xl mx-auto">
         <section>
-          <div className="relative md:h-[392px] xl:h-[692px] lg:h-[540px] h-[620px] mt-[135px]">
+          <div className="relative md:h-[392px] xl:h-[692px] lg:h-[540px] h-[550px] mt-[135px]">
             <img
               className="absolute w-full md:h-[396px] xl:h-[682px] lg:h-[540px] object-cover top-0 left-0 max-sm:hidden"
               src="/products/oa/bg-hero-oa.svg"
               alt="hero"
             />
             <img
-              className="absolute w-full object-cover top-0 left-0 sm:hidden"
+              className="absolute w-full max-sm:max-h-[600px] object-cover top-0 left-0 sm:hidden"
               src="/products/oa/bg-mac.svg"
               alt="hero"
             />
@@ -88,9 +88,9 @@ const OfficeAutomationPage = () => {
                   </Link>
                 </motion.div>
               </div>
-              <div className="md:col-span-1 col-span-2 ">
+              <div className="md:col-span-1 col-span-2">
                 <motion.div
-                  className="relative w-screen sm:w-full  h-full"
+                  className="relative w-screen sm:w-full h-full"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: 1,
@@ -214,6 +214,11 @@ const OfficeAutomationPage = () => {
                 className="absolute top-12 -z-10 max-sm:hidden"
                 src="/products/oa/bg-benefits.svg"
                 alt="bg benefits"
+              />
+              <img
+                className="absolute top-32 -z-10 sm:hidden"
+                src="/products/oa/bg-benefits-mobile.svg"
+                alt="bg benefits mobile"
               />
             </motion.div>
 

@@ -23,14 +23,14 @@ const SupplierManagementPage = () => {
       <main className="max-w-screen-2xl mx-auto">
         <section id="overview">
           <motion.div
-            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] lg:h-[550px] md:h-[820px] h-[590px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
+            className="md:mt-[183px] mt-[151px] md:mb-[54px] mb-[90px] xl:max-h-[510px] lg:h-[480px] md:h-[820px] h-[590px] rounded-[20px] bg-diamond-gradient sm:mx-12 max-sm:mx-4 max-sm:pt-5 relative"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: { duration: 0.5 },
             }}
           >
-            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8 lg:gap-x-[40px] z-10 absolute top-0 left-0 w-full">
+            <div className="grid grid-cols-2 h-full xl:max-h-[510px] gap-x-8 lg:gap-x-[84px] z-10 absolute top-0 left-0 w-full">
               <div className="col-span-2 lg:col-span-1 max-sm:px-4 sm:py-12 xl:pl-24 lg:pl-14 sm:pl-10 max-sm:pt-5">
                 <motion.div
                   className="xl:max-w-[430px]"
@@ -96,7 +96,7 @@ const SupplierManagementPage = () => {
                     x: [100, 0],
                     transition: { duration: 0.5 },
                   }}
-                  className="pl-4 -mb-32 md:rounded-tr-[20px] w-full max-lg:hidden xl:hidden"
+                  className="pl-4 md:rounded-tr-[20px] w-full max-lg:hidden xl:hidden"
                   src="/products/sm/dashboard-lg.png"
                   alt="hero-2"
                 ></motion.img>
