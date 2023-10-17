@@ -103,8 +103,13 @@ const SupplierManagementPage = () => {
               </div>
             </div>
             <img
-              className="absolute bottom-0 left-0"
+              className="absolute bottom-0 left-0 max-sm:hidden "
               src="/products/sm/hero-1.svg"
+              alt=""
+            />
+            <img
+              className="absolute w-full top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:hidden"
+              src="/products/sm/hero-1-mobile.svg"
               alt=""
             />
           </motion.div>

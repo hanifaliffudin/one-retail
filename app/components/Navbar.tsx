@@ -33,7 +33,7 @@ export default function NavbarWithCTAButton() {
           pathname.includes("/products") ? "" : "border-b border-[#EDEDED]"
         }`}
       >
-        <div className="max-w-screen-xl lg:px-12 xl:px-0 relative flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-2xl lg:px-12 xl:px-24 relative flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
             <img
               src="/logo-navbar.svg"
@@ -929,137 +929,137 @@ export default function NavbarWithCTAButton() {
                           }}
                         >
                           <div className="flex flex-col gap-y-4">
-                            <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div>
-                                <div className="flex items-center gap-x-4 mb-2.5">
-                                  <img
-                                    src="/icons/oms-icon-blue.svg"
-                                    alt="Order Management System"
-                                  />
-                                  <div className="font-semibold text-black">
-                                    Order Management System
+                            <Link
+                              onClick={() => setMenuMobile(!menuMobile)}
+                              href="/products/order-management-system"
+                            >
+                              <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
+                                <div>
+                                  <div className="flex items-center gap-x-4 mb-2.5">
+                                    <img
+                                      src="/icons/oms-icon-blue.svg"
+                                      alt="Order Management System"
+                                    />
+                                    <div className="font-semibold text-black">
+                                      Order Management System
+                                    </div>
                                   </div>
+                                  <p className="text-neutral-n-70 text-sm mb-3">
+                                    Automates order fulfillment from capture to
+                                    tracking.
+                                  </p>
+                                  <p className="text-primary font-semibold text-sm">
+                                    3 Products
+                                  </p>
                                 </div>
-                                <p className="text-neutral-n-70 text-sm mb-3">
-                                  Automates order fulfillment from capture to
-                                  tracking.
-                                </p>
-                                <p className="text-primary font-semibold text-sm">
-                                  3 Products
-                                </p>
-                              </div>
-                              <div>
-                                <Link
-                                  onClick={() => setMenuMobile(!menuMobile)}
-                                  href="/products/order-management-system"
-                                >
+                                <div>
                                   <Icon
                                     width={24}
                                     className="text-[#CFD1D4]"
                                     icon="carbon:chevron-right"
                                   />
-                                </Link>
+                                </div>
                               </div>
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div>
-                                <div className="flex items-center gap-x-4 mb-2.5">
-                                  <img
-                                    src="/icons/crm-icon-blue.svg"
-                                    alt="Customer Relationship Management"
-                                  />
-                                  <div className="font-semibold text-black">
-                                    Customer Relationship Management
+                            <Link
+                              onClick={() => setMenuMobile(!menuMobile)}
+                              href="/products/crm"
+                            >
+                              <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
+                                <div>
+                                  <div className="flex items-center gap-x-4 mb-2.5">
+                                    <img
+                                      src="/icons/crm-icon-blue.svg"
+                                      alt="Customer Relationship Management"
+                                    />
+                                    <div className="font-semibold text-black">
+                                      Customer Relationship Management
+                                    </div>
                                   </div>
+                                  <p className="text-neutral-n-70 text-sm mb-3">
+                                    Manage and optimize customer interactions by
+                                    storing and organizing customer data.
+                                  </p>
+                                  <p className="text-primary font-semibold text-sm">
+                                    5 Products
+                                  </p>
                                 </div>
-                                <p className="text-neutral-n-70 text-sm mb-3">
-                                  Manage and optimize customer interactions by
-                                  storing and organizing customer data.
-                                </p>
-                                <p className="text-primary font-semibold text-sm">
-                                  5 Products
-                                </p>
-                              </div>
-                              <div>
-                                <Link
-                                  onClick={() => setMenuMobile(!menuMobile)}
-                                  href="/products/crm"
-                                >
+                                <div>
                                   <Icon
                                     width={24}
                                     className="text-[#CFD1D4]"
                                     icon="carbon:chevron-right"
                                   />
-                                </Link>
+                                </div>
                               </div>
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div>
-                                <div className="flex items-center gap-x-4 mb-2.5">
-                                  <img
-                                    src="/icons/oa-icon-blue.svg"
-                                    alt="Office Automation"
-                                  />
-                                  <div className="font-semibold text-black">
-                                    Office Automation
+                            <Link
+                              onClick={() => setMenuMobile(!menuMobile)}
+                              href="/products/office-automation"
+                            >
+                              <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
+                                <div>
+                                  <div className="flex items-center gap-x-4 mb-2.5">
+                                    <img
+                                      src="/icons/oa-icon-blue.svg"
+                                      alt="Office Automation"
+                                    />
+                                    <div className="font-semibold text-black">
+                                      Office Automation
+                                    </div>
                                   </div>
+                                  <p className="text-neutral-n-70 text-sm mb-3">
+                                    Office automation streamlines tasks and
+                                    processes for improved productivity.
+                                  </p>
+                                  <p className="text-primary font-semibold text-sm">
+                                    3 Products
+                                  </p>
                                 </div>
-                                <p className="text-neutral-n-70 text-sm mb-3">
-                                  Office automation streamlines tasks and
-                                  processes for improved productivity.
-                                </p>
-                                <p className="text-primary font-semibold text-sm">
-                                  3 Products
-                                </p>
-                              </div>
-                              <div>
-                                <Link
-                                  onClick={() => setMenuMobile(!menuMobile)}
-                                  href="/products/office-automation"
-                                >
+                                <div>
                                   <Icon
                                     width={24}
                                     className="text-[#CFD1D4]"
                                     icon="carbon:chevron-right"
                                   />
-                                </Link>
+                                </div>
                               </div>
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
-                              <div>
-                                <div className="flex items-center gap-x-4 mb-2.5">
-                                  <img
-                                    src="/icons/sm-icon-blue.svg"
-                                    alt="Supplier Management"
-                                  />
-                                  <div className="font-semibold text-black">
-                                    Supplier Management
+                            <Link
+                              onClick={() => setMenuMobile(!menuMobile)}
+                              href="/products/supplier-management"
+                            >
+                              <div className="flex items-center justify-between gap-x-4 bg-neutral-n-30 p-3 rounded-lg">
+                                <div>
+                                  <div className="flex items-center gap-x-4 mb-2.5">
+                                    <img
+                                      src="/icons/sm-icon-blue.svg"
+                                      alt="Supplier Management"
+                                    />
+                                    <div className="font-semibold text-black">
+                                      Supplier Management
+                                    </div>
                                   </div>
+                                  <p className="text-neutral-n-70 text-sm mb-3">
+                                    Seamless collaboration and communication
+                                    between companies and their partners.
+                                  </p>
+                                  <p className="text-primary font-semibold text-sm">
+                                    2 Products
+                                  </p>
                                 </div>
-                                <p className="text-neutral-n-70 text-sm mb-3">
-                                  Seamless collaboration and communication
-                                  between companies and their partners.
-                                </p>
-                                <p className="text-primary font-semibold text-sm">
-                                  2 Products
-                                </p>
-                              </div>
-                              <div>
-                                <Link
-                                  onClick={() => setMenuMobile(!menuMobile)}
-                                  href="/products/supplier-management"
-                                >
+                                <div>
                                   <Icon
                                     width={24}
                                     className="text-[#CFD1D4]"
                                     icon="carbon:chevron-right"
                                   />
-                                </Link>
+                                </div>
                               </div>
-                            </div>
+                            </Link>
                           </div>
                         </motion.div>
                       )}
