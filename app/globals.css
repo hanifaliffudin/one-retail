@@ -40,6 +40,15 @@ html {
   font-size: 1.5em;
 }
 
+.overflow-x-auto-subnavbar::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto-subnavbar {
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @layer utilities {
   /* text color */
   .text-primary {

@@ -186,7 +186,7 @@ const OfficeAutomationPage = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  <div id="benefits" className="flex">
+                  <div className="flex">
                     <Link
                       href="/contact"
                       className="btn-primary text-neutral-n-10 py-2.5 px-4 max-sm:text-xs font-semibold mr-5"
@@ -200,7 +200,7 @@ const OfficeAutomationPage = () => {
           </div>
         </section>
 
-        <section>
+        <section id="benefits">
           <div className="relative">
             <motion.div
               initial={{ opacity: 0 }}

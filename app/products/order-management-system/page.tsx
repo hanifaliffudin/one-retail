@@ -57,7 +57,6 @@ const OrderManagementSystemPage = () => {
                   Let’s Get Demo!
                 </Link>
                 <Link
-                  id="benefits"
                   href="#benefits"
                   onClick={handleScroll}
                   className="max-sm:w-full border border-[#D2D9EF] rounded-md text-neutral-n-30 py-2.5 px-4 max-sm:text-xs font-semibold"
@@ -69,7 +68,7 @@ const OrderManagementSystemPage = () => {
           </div>
         </section>
 
-        <section>
+        <section id="benefits">
           <div className="xl:mx-24 lg:mx-12 max-sm:mx-4 mx-auto grid grid-cols-4 gap-x-6 gap-y-5 md:pb-20 pb-10 border-b border-b-[#E0E0E0] md:mb-14 mb-10">
             <div className="col-span-4 lg:col-span-1 max-sm:mb-1">
               <h2 className="font-bold xl:text-[36px] lg:text-[28px] lg:leading-[42px] text-xl md:text-3xl xl:leading-[54px] text-neutral-n-90 max-sm:text-center">
@@ -103,7 +102,7 @@ const OrderManagementSystemPage = () => {
               <h3 className="font-semibold xl:text-xl mb-3 text-neutral-n-90">
                 Covered with long term support
               </h3>
-              <p id="pos" className="text-neutral-n-80 max-sm:text-sm">
+              <p className="text-neutral-n-80 max-sm:text-sm">
                 Our commitment to your success goes beyond the initial
                 implementation. With our dedicated support team by your side,
                 you'll have access to ongoing assistance, updates, and
@@ -113,7 +112,7 @@ const OrderManagementSystemPage = () => {
           </div>
         </section>
 
-        <section>
+        <section id="pos">
           <div className="lg:px-12 xl:px-24 px-4">
             <div className="font-medium sm:text-xl text-sm text-primary mb-3 max-sm:text-center">
               Point of Sale (POS)

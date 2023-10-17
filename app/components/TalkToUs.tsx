@@ -25,11 +25,11 @@ const TalkToUs = () => {
               <div className="absolute md:bottom-10 bottom-6 z-10">
                 <p className="mb-5 font-semibold sm:text-xl">Contact</p>
                 <div className="flex gap-x-3 items-center mb-3 max-sm:text-sm">
-                  <Icon icon="ant-design:phone-filled" />
+                  <img src="/icons/phone.svg" alt="" />
                   0852 6654 1121
                 </div>
                 <div className="flex gap-x-3 items-center max-sm:text-sm">
-                  <Icon icon="ant-design:mail-filled" color="white" />
+                  <img src="/icons/mail.svg" alt="" />
                   hello@theoneretail.com
                 </div>
               </div>
@@ -57,8 +57,8 @@ const TalkToUs = () => {
             </h3>
 
             <form action="">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="col-span-2 md:col-span-1">
+              <div className="grid grid-cols-2 gap-5 xl:gap-6">
+                <div className="col-span-2 xl:col-span-1">
                   <label
                     htmlFor="firstName"
                     className="block mb-1.5 text-sm font-medium text-gray-900 "
@@ -73,7 +73,7 @@ const TalkToUs = () => {
                     required
                   />
                 </div>
-                <div className="col-span-2 md:col-span-1">
+                <div className="col-span-2 xl:col-span-1">
                   <label
                     htmlFor="lastName"
                     className="block mb-1.5 text-sm font-medium text-gray-900 "
@@ -88,7 +88,7 @@ const TalkToUs = () => {
                     required
                   />
                 </div>
-                <div className="col-span-2 md:col-span-1">
+                <div className="col-span-2 xl:col-span-1">
                   <label
                     htmlFor="email"
                     className="block mb-1.5 text-sm font-medium text-gray-900 "
@@ -103,7 +103,7 @@ const TalkToUs = () => {
                     required
                   />
                 </div>
-                <div className="col-span-2 md:col-span-1">
+                <div className="col-span-2 xl:col-span-1">
                   <label
                     htmlFor="companyName"
                     className="block mb-1.5 text-sm font-medium text-gray-900 "
@@ -133,13 +133,13 @@ const TalkToUs = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className="border placeholder:text-neutral-n-100 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-16 p-2.5"
-                      placeholder="+62 (555) 000-0000"
+                      className="border placeholder:text-neutral-n-60 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-16 p-2.5"
+                      placeholder="Enter your phone number"
                     />
                   </div>
                 </div>
 
-                <button className="col-span-2 md:col-span-1 btn-primary mt-5 md:mt-[124px] text-neutral-n-10 py-2.5 px-4 font-semibold md:mr-5">
+                <button className="col-span-2 md:col-span-1 btn-primary mt-5 xl:mt-[124px] text-neutral-n-10 py-2.5 px-4 font-semibold md:mr-5">
                   Get Demo
                 </button>
               </div>

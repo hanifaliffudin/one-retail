@@ -10,9 +10,16 @@ import Link from "next/link";
 import FAQ from "./components/FAQ";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import { A11y, Navigation, Pagination } from "swiper/modules";
+
 import NavbarWithCTAButton from "./components/Navbar";
 import FooterWithSocialMediaIcons from "./components/Footer";
+import BlogCard from "./components/BlogCard";
 
 export default function Home() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -480,7 +487,7 @@ export default function Home() {
                       vouchers, points.
                     </p>
                     <Link
-                      href="#"
+                      href="/products/order-management-system"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Point of Sale (POS)
@@ -518,7 +525,7 @@ export default function Home() {
                       them to view the menu then can quickly add it to cart.
                     </p>
                     <Link
-                      href="#"
+                      href="/products/order-management-system"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Self Mobile Ordering
@@ -556,7 +563,7 @@ export default function Home() {
                       performance in order to enhance customer satisfaction.
                     </p>
                     <Link
-                      href="#"
+                      href="/products/crm"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Online Shopping Experience
@@ -593,7 +600,7 @@ export default function Home() {
                       with key business partners through a digital interface.
                     </p>
                     <Link
-                      href="#"
+                      href="/products/supplier-management"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Supplier Portal
@@ -632,7 +639,7 @@ export default function Home() {
                       to save data through manual key in and paper.
                     </p>
                     <Link
-                      href="#"
+                      href="/products/office-automation"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Store Daily Operation
@@ -701,7 +708,7 @@ export default function Home() {
                       to automation, Goodbye manual!
                     </p>
                     <Link
-                      href="#"
+                      href="/products/office-automation"
                       className="flex items-center gap-x-2 text-sm font-medium text-primary"
                     >
                       Explore Employee Self Service
@@ -1799,18 +1806,22 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
               >
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="btn-border-primary py-2.5 px-4 font-semibold"
                 >
                   Load More
-                </a>
+                </Link>
               </motion.div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center max-xl:hidden">
               <div className="grid grid-cols-3 xl:pl-24 lg:px-12 xl:pr-0 max-xl:pr-24 xl:gap-x-20 lg:gap-x-10 gap-x-4">
-                <Link className="cool-link pb-4" href="#">
+                <Link
+                  className="cool-link pb-4"
+                  href="/blog/How to optimize and expand your business with product
+                    analytics"
+                >
                   <img
                     className="w-full h-[236px] rounded-lg mb-5 object-cover"
                     src="/home/article-1.svg"
@@ -1830,7 +1841,10 @@ export default function Home() {
                   </p>
                 </Link>
 
-                <Link className="cool-link pb-4" href="#">
+                <Link
+                  className="cool-link pb-4"
+                  href="/blog/Customer Journey : Definitions, analysis and best practices"
+                >
                   <img
                     className="w-full h-[236px] rounded-lg mb-5 object-cover"
                     src="/home/article-2.svg"
@@ -1849,7 +1863,11 @@ export default function Home() {
                   </p>
                 </Link>
 
-                <Link className="cool-link pb-4" href="#">
+                <Link
+                  className="cool-link pb-4"
+                  href="/blog/How to optimize and expand your business with product
+                    analytics"
+                >
                   <img
                     className="w-full h-[236px] rounded-lg mb-5 object-cover"
                     src="/home/article-1.svg"
@@ -1881,9 +1899,159 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-center items-center gap-x-4 xl:hidden">
-              <img src="/home/arrow-left.svg" alt="arrow-left.svg" />
-              <img src="/home/arrow-right.svg" alt="arrow-right.svg" />
+            <div className="grid grid-cols-4 max-lg:hidden xl:hidden">
+              <div className="xl:col-span-1 col-span-4 max-xl:order-last xl:hidden">
+                <div className="flex xl:justify-end max-xl:justify-center xl:pr-12  px-4 items-center gap-x-5">
+                  <div className="flex items-center">
+                    <img
+                      className="mr-4 swiper-button image-swiper-button-prev cursor-pointer"
+                      src="/home/arrow-left.svg"
+                      alt="arrow-left"
+                    />
+                    <img
+                      className="swiper-button image-swiper-button-next cursor-pointer"
+                      src="/home/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="sm:col-span-4 col-span-4">
+                <Swiper
+                  breakpoints={{
+                    100: {
+                      slidesPerView: 1.4,
+                    },
+                    640: {
+                      slidesPerView: 2,
+                      slidesOffsetAfter: 48,
+                    },
+                    1000: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 96,
+                    },
+                    1400: {
+                      slidesPerView: 3,
+                      slidesOffsetAfter: 96,
+                    },
+                  }}
+                  modules={[Navigation, A11y]}
+                  navigation={{
+                    nextEl: ".image-swiper-button-next",
+                    prevEl: ".image-swiper-button-prev",
+                    disabledClass: "swiper-button-disabled",
+                  }}
+                  pagination={{
+                    el: ".my-custom-pagination-div",
+                    clickable: true,
+                    renderBullet: (index, className) => {
+                      className == "";
+                      return '<span class="' + className + '">' + "</span>";
+                    },
+                  }}
+                  spaceBetween={32}
+                >
+                  <SwiperSlide className="xl:ml-24 lg:ml-12 ml-4">
+                    <Link
+                      className="cool-link pb-4"
+                      href="/blog/How to optimize and expand your business with product
+                    analytics"
+                    >
+                      <img
+                        className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                        src="/home/article-1.svg"
+                        alt="thumbnail"
+                      />
+                      <p className="text-primary font-semibold mb-2.5">
+                        Product Analytics
+                      </p>
+                      <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                        How to optimize and expand your business with product
+                        analytics
+                      </h3>
+                      <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                        When we set out to bring product analytics to our
+                        business, we knew that analytics for company revenue, in
+                        particular,...
+                      </p>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link
+                      className="cool-link pb-4"
+                      href="/blog/Customer Journey : Definitions, analysis and best practices"
+                    >
+                      <img
+                        className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                        src="/home/article-2.svg"
+                        alt="thumbnail"
+                      />
+                      <p className="text-primary font-semibold mb-2.5">
+                        Customer Experience
+                      </p>
+                      <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                        Customer Journey : Definitions, analysis and best
+                        practices
+                      </h3>
+                      <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                        Customer journey is one of the most powerful tools for
+                        building great experience. An when employed to
+                        thoughtfullness and...
+                      </p>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link
+                      className="cool-link pb-4"
+                      href="/blog/How to optimize and expand your business with product
+                    analytics"
+                    >
+                      <img
+                        className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                        src="/home/article-1.svg"
+                        alt="thumbnail"
+                      />
+                      <p className="text-primary font-semibold mb-2.5">
+                        Product Analytics
+                      </p>
+                      <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                        How to optimize and expand your business with product
+                        analytics
+                      </h3>
+                      <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                        When we set out to bring product analytics to our
+                        business, we knew that analytics for company revenue, in
+                        particular,...
+                      </p>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link
+                      className="cool-link pb-4"
+                      href="/blog/Customer Journey : Definitions, analysis and best practices"
+                    >
+                      <img
+                        className="w-full h-[236px] rounded-lg mb-5 object-cover"
+                        src="/home/article-2.svg"
+                        alt="thumbnail"
+                      />
+                      <p className="text-primary font-semibold mb-2.5">
+                        Customer Experience
+                      </p>
+                      <h3 className="text-neutral-n-90 font-semibold text-xl mb-2.5">
+                        Customer Journey : Definitions, analysis and best
+                        practices
+                      </h3>
+                      <p className="line-clamp-3 text-neutral-n-90 mb-8">
+                        Customer journey is one of the most powerful tools for
+                        building great experience. An when employed to
+                        thoughtfullness and...
+                      </p>
+                    </Link>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
             </div>
           </div>
         </section>
