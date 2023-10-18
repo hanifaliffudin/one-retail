@@ -171,7 +171,7 @@ export default function Home() {
                 transition: { duration: 0.5, delay: 3 },
               }}
             >
-              <h2 className="text-2xl mb-2.5 font-medium text-center text-neutral-n-90 ">
+              <h2 className="xl:text-2xl max-sm:text-sm mb-2.5 font-medium text-center text-neutral-n-90 ">
                 Been Trusted By
               </h2>
             </motion.div>
