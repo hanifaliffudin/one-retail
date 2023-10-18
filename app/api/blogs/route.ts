@@ -3,8 +3,7 @@ import connectMongoDB from "@/libs/mongodb";
 import Blog from "@/models/blog";
 import { writeFile } from "fs/promises";
 const fs = require("fs");
-// const dir = "./public/blog";
-// const path = require("path");
+const dir = "./public/blog";
 
 export async function GET() {
   try {
@@ -27,7 +26,6 @@ export async function POST(
   try {
     await connectMongoDB();
 
-    var dir = require("path").join(require("os").homedir(), `blog`);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
@@ -50,7 +48,7 @@ export async function POST(
     const fileName = getRandomFileName();
     const lastDot = file.name.lastIndexOf(".");
     const ext = file.name.substring(lastDot + 1);
-    const path = `./public/blog/${fileName}.${ext}`;
+    const path = `${dir}/${fileName}.${ext}`;
     await writeFile(path, buffer);
 
     const newBlog = new Blog({
@@ -76,6 +74,13 @@ export async function POST(
 export async function DELETE(request: Request) {
   try {
     const body = await request.json();
+
+    const blog = await Blog.findById(body.id);
+
+    if (!blog)
+      return NextResponse.json({ status: 404, message: "Blog not found" });
+
+    fs.unlinkSync(`${dir}/${blog.imageBlog}`);
 
     await Blog.findByIdAndDelete(body.id);
 

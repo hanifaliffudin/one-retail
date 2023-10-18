@@ -5,17 +5,19 @@ interface BlogProps {
   category: string;
   title: string;
   paragraph: string;
+  slug: string;
 }
 const BlogCard = ({
   imageThumbnail,
   category,
   title,
   paragraph,
+  slug,
 }: BlogProps) => {
   return (
     <div className="max-sm:mx-4 sm:w-[297px] bg-white rounded-lg">
       <Link
-        href={`/blog/${title}`}
+        href={`/blog/${slug}`}
         className="shadow-[0px_20px_40px_0px_rgba(160,160,160,0.1)] sm:w-[297px] w-full group "
       >
         <img
@@ -23,7 +25,7 @@ const BlogCard = ({
           src={imageThumbnail}
           alt={imageThumbnail}
         />
-        <div className="px-3 pt-3 pb-[22px] sm:w-[297px] w-full border border-transparent group-hover:border-[#EDEDED] rounded-b-lg">
+        <div className="px-3 pt-3 pb-[22px] sm:w-[297px] w-full border border-transparent group-hover:border-[#EDEDED] group-hover:border-t-0 rounded-b-lg">
           <p className="font-semibold text-primary-p-80 mb-2.5">{category}</p>
           <h3 className="group-hover:text-primary font-semibold text-xl text-neutral-n-90 mb-2 line-clamp-3">
             {title}

@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
-import slugify from "slugify";
+var slug = require("mongoose-slug-updater");
+mongoose.plugin(slug);
 
 export type BlogDocument = mongoose.Document & {
   imageBlog: string;
@@ -30,6 +31,8 @@ const BlogSchema = new Schema<BlogDocument>(
     },
     slug: {
       type: String,
+      slug: "title",
+      unique: true,
     },
     tags: [
       {
@@ -41,17 +44,6 @@ const BlogSchema = new Schema<BlogDocument>(
     timestamps: true,
   }
 );
-
-BlogSchema.pre("save", function save(next) {
-  const blog = this as BlogDocument;
-
-  blog.slug = slugify(this.title, {
-    replacement: "-",
-    lower: true,
-    strict: false,
-  });
-  next();
-});
 
 const Blog =
   mongoose.models.Blog || mongoose.model<BlogDocument>("Blog", BlogSchema);

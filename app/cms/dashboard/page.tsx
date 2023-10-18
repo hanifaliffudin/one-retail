@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import { InputHTMLAttributes, useEffect, useState } from "react";
+import { redirect } from "next/navigation";
 
 import {
   createColumnHelper,
@@ -40,23 +41,29 @@ const columns = [
     header: "Image",
     cell: (info) => (
       <img
-        className="w-full h-full object-cover"
-        src={
-          "https://preeminent-crostata-f5e2a5.netlify.app/blog/" +
-          info.getValue()
-        }
+        className="w-full min-h-[50px] min-w-[100px] max-h-[300px] object-cover"
+        src={"http://localhost:3000/blog/" + info.getValue()}
         alt=""
       />
     ),
+    enableColumnFilter: false,
   }),
   columnHelper.accessor("category", {
     cell: (info) => <div className="">{info.getValue()}</div>,
   }),
   columnHelper.accessor("title", {
-    cell: (info) => <div className="font-semibold">{info.getValue()}</div>,
+    cell: (info) => (
+      <div className="line-clamp-3 font-semibold min-w-[200px]">
+        {info.getValue()}
+      </div>
+    ),
   }),
   columnHelper.accessor("content", {
-    cell: (info) => <div className="line-clamp-6">{info.renderValue()}</div>,
+    cell: (info) => (
+      <div className="line-clamp-3 min-w-[250px] max-w-[400px]">
+        {info.renderValue()}
+      </div>
+    ),
   }),
   columnHelper.accessor("tags", {
     cell: (info) => (
@@ -88,6 +95,7 @@ const columns = [
         </div>
       </>
     ),
+    enableColumnFilter: false,
   }),
 ];
 
@@ -114,22 +122,27 @@ const DashboardPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [idDelete, setIdDelete] = useState("");
 
+  useEffect(() => {
+    // Get the value from local storage if it exists
+    let value = localStorage.getItem("token") || "";
+    if (!value) {
+      redirect("/cms/login");
+    }
+  }, []);
+
   deleteBlog = async (id: string) => {
     setShowModal(true);
     setIdDelete(id);
   };
 
   const confirmDelete = async () => {
-    const response = await fetch(
-      "https://preeminent-crostata-f5e2a5.netlify.app/api/blogs",
-      {
-        method: "DELETE",
-        headers: { "Content-type": "application/json; charset=UTF-8" },
-        body: JSON.stringify({
-          id: idDelete,
-        }),
-      }
-    );
+    const response = await fetch("http://localhost:3000/api/blogs", {
+      method: "DELETE",
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+      body: JSON.stringify({
+        id: idDelete,
+      }),
+    });
 
     if (!response.ok) {
       alert(response.statusText);
@@ -168,7 +181,8 @@ const DashboardPage = () => {
   });
 
   useEffect(() => {
-    fetch("https://preeminent-crostata-f5e2a5.netlify.app/api/blogs")
+    setLoading(true);
+    fetch("http://localhost:3000/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         setData(data.blogs);
@@ -304,6 +318,7 @@ const DashboardPage = () => {
                       />
                     </span>
                     <select
+                      className="rounded py-1"
                       value={table.getState().pagination.pageSize}
                       onChange={(e) => {
                         table.setPageSize(Number(e.target.value));

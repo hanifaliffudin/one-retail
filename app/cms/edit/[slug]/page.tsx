@@ -86,9 +86,7 @@ const EditPage = ({ params }: { params: { slug: string } }) => {
   ];
 
   useEffect(() => {
-    fetch(
-      "https://preeminent-crostata-f5e2a5.netlify.app/api/blogs/" + params.slug
-    )
+    fetch("http://localhost:3000/api/blogs/" + params.slug)
       .then((res) => res.json())
       .then((data) => {
         setImageBlog(data.blog.imageBlog);
@@ -122,8 +120,7 @@ const EditPage = ({ params }: { params: { slug: string } }) => {
       data.set("tags", JSON.stringify(tags));
 
       const response = await fetch(
-        "https://preeminent-crostata-f5e2a5.netlify.app/api/blogs/" +
-          params.slug,
+        "http://localhost:3000/api/blogs/" + params.slug,
         {
           method: "PUT",
           body: data,
@@ -183,7 +180,7 @@ const EditPage = ({ params }: { params: { slug: string } }) => {
                     <div>
                       <img
                         className="max-h-[510px] object-cover w-full mb-3 rounded-md"
-                        src={`https://preeminent-crostata-f5e2a5.netlify.app/blog/${imageBlog}`}
+                        src={`http://localhost:3000/blog/${imageBlog}`}
                         alt=""
                       />
                     </div>

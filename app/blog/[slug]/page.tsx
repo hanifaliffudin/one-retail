@@ -14,10 +14,47 @@ import "swiper/css/pagination";
 
 import { A11y, Navigation, Pagination } from "swiper/modules";
 import BlogCard from "@/app/components/BlogCard";
+import { useEffect, useState } from "react";
 
 const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
-  let url =
-    "https://caards.codesupply.co/firmware/2023/02/09/the-top-smart-home-devices-for-home-security/";
+  const [imageBlog, setImageBlog] = useState("");
+  const [category, setCategory] = useState("");
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [tags, setTags] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  let url = "http://localhost:3000/blog/" + params.slug;
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("http://localhost:3000/api/blogs/" + params.slug)
+      .then((res) => res.json())
+      .then((data) => {
+        setImageBlog(data.blog.imageBlog);
+        setCategory(data.blog.category);
+        switch (data.blog.category) {
+          case "OMS":
+            setCategory("Order Management System");
+            break;
+          case "CRM":
+            setCategory("Customer Relationship Management");
+            break;
+          case "OS":
+            setCategory("Office Automation");
+            break;
+          case "SM":
+            setCategory("Supplier Management");
+            break;
+          default:
+            break;
+        }
+        setTitle(data.blog.title);
+        setContent(data.blog.content);
+        setTags(data.blog.tags);
+      });
+    setIsLoading(false);
+  }, []);
 
   const router = useRouter();
 
@@ -28,9 +65,9 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
         <section>
           <div className="mt-[112px] lg:mx-12 xl:mx-24 mx-4 relative sm:mb-16 mb-8">
             <img
-              className="rounded-[20px] max-sm:min-h-[284px] object-cover"
-              src="/blog/hero-blog-1.svg"
-              alt="hero"
+              className="rounded-[20px] max-sm:h-[284px] xl:h-[510px] h-[502px] w-full object-cover"
+              src={imageBlog}
+              alt={imageBlog}
             />
             <div className="absolute left-0 top-0 rounded-[20px] overlay-blog w-full h-full max-sm:min-h-[284px]"></div>
             <div className="grid grid-cols-4 lg:gap-x-4 xl:gap-x-16 max-sm:top-0 px-6 max-sm:pt-4 max-sm:gap-y-[43px]  absolute sm:bottom-[46px] sm:px-16 text-white">
@@ -41,15 +78,12 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                     src="/icons/crm-icon-blue.svg"
                     alt="Customer Relationship Management"
                   />
-                  <p className="font-medium">
-                    Customer Relationship Management
-                  </p>
+                  <p className="font-medium">{category}</p>
                 </div>
               </div>
               <div className="sm:col-span-3 col-span-4">
                 <h1 className="font-bold sm:text-[36px] text-[22px] sm:leading-[54px] line-clamp-4">
-                  How to optimize and expand your business with product
-                  analytics
+                  {title}
                 </h1>
               </div>
             </div>
@@ -73,54 +107,26 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                     Tag
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                      #Customer
-                    </div>
-                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                      #Management
-                    </div>
-                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                      #Product
-                    </div>
-                    <div className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70">
-                      #Analytics
-                    </div>
+                    {tags?.map((tag, i) => {
+                      return (
+                        <div
+                          key={i}
+                          className="bg-[#F5F5F5] rounded border border-[#EDEDED] py-1 px-2 text-sm text-neutral-n-70"
+                        >
+                          #{tag}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
               <hr className="mt-4 xl:hidden" />
             </div>
             <div className="xl:col-span-3 col-span-4 ">
-              <div className="xl:mb-24 mb-8">
-                <p>
-                  Gadgets have been a part of our lives for centuries. From the
-                  first mechanical clock to the latest smartphone, gadgets have
-                  transformed the way we live, work, and play. As we continue to
-                  embrace new technologies and innovations, gadgets are becoming
-                  more sophisticated and powerful than ever before.
-                </p>
-                <p>
-                  One of the most significant ways that gadgets have evolved is
-                  through the rise of digital technology. Digital gadgets, such
-                  as smartphones, laptops, and tablets, have transformed the way
-                  we communicate, access information, and even entertain
-                  ourselves.
-                  <br />
-                  <br />
-                  With digital gadgets, we can access the internet from just
-                  about anywhere in the world, stream movies and TV shows, and
-                  even control our home appliances with a simple voice command.
-                  Digital gadgets have also made it easier than ever to work
-                  remotely, collaborate with colleagues, and stay connected with
-                  friends and family.
-                  <br />
-                  <br />
-                  As technology continues to evolve, so too do digital gadgets.
-                  From foldable phones to smartwatches, digital gadgets are
-                  becoming more versatile, powerful, and convenient than ever
-                  before.
-                </p>
-              </div>
+              <div
+                className="xl:mb-24 mb-8 content-blog"
+                dangerouslySetInnerHTML={{ __html: content }}
+              ></div>
 
               <div className="bg-[#F0F1F7] rounded-lg sm:py-5 py-3 sm:px-20 px-4">
                 <h3 className="text-center text-neutral-dark font-semibold text-lg mb-3">
@@ -251,7 +257,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                 </h2>
               </div>
 
-              <div className="lg:col-span-1 col-span-4 max-lg:order-last">
+              <div className="lg:col-span-1 col-span-4 max-lg:order-last max-sm:mt-2">
                 <div className="flex lg:justify-end max-lg:justify-center lg:pr-12 xl:pr-24 px-4 items-center gap-x-5">
                   <div className="my-custom-pagination-div-crm !w-fit flex " />
                   <div className="flex items-center">
@@ -307,6 +313,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                       title="Customer Journey : Definitions, analysis and best practices"
                       paragraph="When we set out to bring product analytics to our
                   business, we knew..."
+                      slug="/blog/oms-1.svg"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -316,6 +323,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                       title="How to optimize and expand your business with product analytics"
                       paragraph="When we set out to bring product analytics to our
                   business, we knew..."
+                      slug="/blog/oms-1.svg"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -325,6 +333,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                       title="How to optimize and expand your business with product analytics"
                       paragraph="When we set out to bring product analytics to our
                   business, we knew..."
+                      slug="/blog/oms-1.svg"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -334,6 +343,7 @@ const ViewBlogPage = ({ params }: { params: { slug: string } }) => {
                       title="How to optimize and expand your business with product analytics"
                       paragraph="When we set out to bring product analytics to our
                   business, we knew..."
+                      slug="/blog/oms-1.svg"
                     />
                   </SwiperSlide>
                 </Swiper>

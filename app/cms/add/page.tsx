@@ -149,13 +149,10 @@ const AddPage = () => {
       data.set("content", content);
       data.set("tags", JSON.stringify(tags));
 
-      const response = await fetch(
-        "https://preeminent-crostata-f5e2a5.netlify.app/api/blogs",
-        {
-          method: "POST",
-          body: data,
-        }
-      );
+      const response = await fetch("http://localhost:3000/api/blogs", {
+        method: "POST",
+        body: data,
+      });
 
       setIsLoading(false);
 
